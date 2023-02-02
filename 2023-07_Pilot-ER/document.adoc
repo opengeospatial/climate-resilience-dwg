@@ -40,7 +40,11 @@ include::sections/02-terms_and_definitions.adoc[]
 include::sections/03-references.adoc[]
 
 // Add clause files as needed
-include::sections/04-other-clauses.adoc[]
+include::sections/04-components.adoc[]
+include::sections/05-use cases.adoc[]
+include::sections/06-lessons_learned.adoc[]
+include::sections/07-future_work.adoc[]
+include::sections/08-summary_conclusions.adoc[]
 
 ////
 Annexes
