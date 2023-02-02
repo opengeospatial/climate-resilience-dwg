@@ -1,12 +1,12 @@
 
 [[clause-reference]]
-== Other clauses
+== Components
 
-//Insert clause content here
+//Insert Component content here
 
-Clause content.
+Component content.
 
 [NOTE]
 ====
-Add any other clauses as needed
+Add any other component as needed
 ====
