@@ -3,4 +3,139 @@
 
 // Insert introduction content adding subsections as needed
 
-Introduction content.
+=== Enhancing Interoperability for Climate Resilience Information Systems
+
+The OGC Climate Resilience Pilot will be the first phase of multiple long term climate activities aiming to evolve geospatial data, technologies, and other capabilities into valuable information for decision makers, scientists, policy makers, data providers, software developers, and service providers so we can make valuable, informed decisions to improve climate action. The goal is to help the location community develop more powerful visualization and communication tools to accurately address ongoing climate threats such as heat, drought, floods, fires as well as supporting the national determined contributions for greenhouse gas emission reduction. Climate resilience is often considered the use case of our lifetime, and the OGC community is uniquely positioned to accelerate solutions through collective problem solving with this initiative.
+
+[image: CCS_Pilot_Concept.png]
+
+The OGC Climate Resilience Community brings decision makers, scientists, policy makers, data providers, software developers, and service providers together. The goal is to enable everyone to take the relevant actions to address climate change and make well informed decisions for climate change adaptation. This includes scientists, decision makers, city managers, politicians, and last but not least, it includes everyone of us. So what do we need? We need data from lots of organizations, available at different scales for large and small areas to be integrated with scientific processes, analytical models, and simulation environments. We need data visualization and communication tools to shape the message in the right way for any client. Many challenges can be met through resources that adhere to FAIR principles. FAIR as in: Findable, Accessible, Interoperable, and Reusable. No single organization has all the data we need to understand the consequences of climate change. The OGC Climate Resilience Community identifies, discusses, and develops these resources. The OGC community builds the guidebooks and Best Practices, it experiments with new technologies to share data and information, and collaboratively addresses shared challenges.
+
+The OGC Climate Resilience Community has a vision to support efforts on climate actions and enable international partnerships (SDG 17), and move towards global interoperable open digital infrastructures providing climate resilience information on users demand. This pilot will contribute to establishing an OGC climate resilience concept store for the community where all appropriate climate information to build climate resilience information systems as open infrastructures can be found in one place, be it Information about data services, tools, software, handbooks, or a place to discuss experiences and needs. The concept store covers all phases of Climate Resilience, from initial hazards identification and mapping to vulnerability and risk analysis to options assessments, prioritization, and planning, and ends with implementation planning and monitoring capabilities. These major challenges can only be met through the combined efforts of many OGC members across government, industry, and academia.
+
+This Call for Participation solicits interests from organizations to join the upcoming Climate Resilience Pilot, an OGC Collaborative Solution and Innovation Program activity. This six-months Pilot is setting the stage for a series of follow up activities. It therefore focuses on use-case development, implementation, and exploration. It answers questions such as
+
+    What use-cases can be realized with the current data, services, analytical functions, and visualization capabilities that we have?
+
+    How much effort is it to realize these use-cases?
+
+    What is missing, or needs to be improved, in order to transfer the use-cases developed in the pilot to other areas?
+
+Interested organizations are invited to submit their use-case suggestions. During the pilot, these use-cases will be implemented and assessed collaboratively against a set of Research Questions defined further below. These questions allow aspects regarding data availability, integration, processing, and visualization to be evaluated consistently across all use cases. Together, the use cases will allow us to better understand and equip future Climate Resilience Information Systems (CRIS) and resilience frameworks. They allow us to identify interoperability issues and data integration challenges and pave the way for future collaborative solution development.
+
+=== Objectives
+
+The pilot has three objectives. First, to better understand what is currently possible with the available data and technology. Second, what additional data and technology needs to be developed in future to better meet the needs of the Climate Resilience Community; and third, to capture Best Practices, and to allow the Climate Community to copy and transform as many use-cases as possible to other locations or framework conditions.
+3. Background
+
+With growing local communities, an increase in climate-driven disasters, and an increasing risk of future natural hazards, the demand for National Resilience Frameworks and Climate Resilience Information Systems (CRIS) cannot be overstated. Climate Resilience Information Systems (CRIS) are enabling data-search, -fetch, -fusion, -processing and -visualization. They enable access, understanding, and use of federal data, facilitate integration of federal and state data with local data, and serve as local information hubs for climate resilience knowledge sharing.
+
+CRIS are already existing and operational, like the Copernicus Climate Change Service with the Climate Data Store. CRIS architectures can be further enhanced by providing climate scientific methods and visualization capabilities as climate building blocks. Based on FAIR principles, these building blocks enable in particular the reusability of Climate Resilience Information Systems features and capabilities. Reusability is an essential component when goals, expertises, and resources are aligned from the national to the local level. Framework conditions differ across the country, but building blocks enable as much reuse of existing Best Practices, tools, data, and services as possible.
+
+Goals and objectives of decision makers vary at different scales. At the municipal level, municipal leaders and citizens directly face climate-related hazards. Aspects thus come into focus such as reducing vulnerability and risk, building resilience through local measures, or enhancing emergency response. At the state level, the municipal efforts can be coordinated and supported by providing funding and enacting relevant policies. The national, federal, or international level provides funding, science data, and international coordination to enable the best analysis and decisions at the lower scales.
+
+[image: Interoperable_ScienceService.png]
+Figure 1. Schematic synergies within different climate and science services due to FAIR and open Infrastructures
+
+Productivity and decision making are enhanced when climate building blocks are exchangeable across countries, organizations, or administrative levels (see Figure below). This OGC Climate Resilience Pilot is a contribution towards an open, multi-level infrastructure that integrates data spaces, open science, and local-to-international requirements and objectives. It contributes to the technology and governance stack that enables the integration of data including historical observations, real time sensing data, reanalyses, forecasts or future projections. It addresses data-to-decision pipelines, data analysis and representation, and bundles everything in climate resilience building blocks. These building blocks are complemented by Best Practices, guidelines, and cook-books that enable multi–stakeholder decision making for the good of society in a changing natural environment.
+
+The OGC Innovation Program brings all groups together: The various members of the stakeholder group define use cases and requirements, the technologists and data providers experiment with new tools and data products in an agile development process. The scientific community provides results in appropriate formats and enables open science by providing applications that can be parameterized and executed on demand.
+
+[image: Climate_Resilience_Pilot_Interaction.png]
+Figure 2. The OGC Climate Resilience DWG and Pilot brings the climate resilience community together with infrastructure providers, policy makers, commercial companies, and the scientific community
+
+This OGC Climate Resilience Pilot is part of the OGC Climate Community Collaborative Solution and Innovation process, an open community process that uses the OGC as the governing body for collaborative activities among all members. A spiral approach is applied to connect technology enhancements, new data products, and scientific research with community needs and framework conditions at different scales. The spiral approach defines real world use cases, identifies gaps, produces new technology and data, and tests these against the real world use cases before entering the next iteration. Evaluation and validation cycles alternate and continuously define new work tasks. These tasks include documentation and toolbox descriptions on the consumer side, and data and service offerings, interoperability, and system architecture developments on the producer side. It is emphasized that research and development is not constrained to the data provider or infrastructure side. Many tasks need to be executed on the data consumer side in parallel and then merged with advancements on the provider side in regular intervals.
+
+Good experiences have been made using OGC API standards in the past. For example, the remote operations on climate simulations (roocs) use OGC API Processes for subsetting data sets to reduce the data volume being transported. Other systems use OGC STAC for metadata and data handling or OGC Earth Observation Exploitation Platform Best Practices for the deployment of climate building blocks or applications into CRIS architectures. Still data handling regarding higher complex climate impact assessments within FAIR and open infrastructures needs to be enhanced. There is no international recommendation or best practice on usage of existing API standards within individual CRIS. It is the goal of this pilot to contribute to the development of such a recommendation, respecting existing operational CRIS that are serving heterogen user groups
+
+[image: FAIR_Data_Spaces.png]
+
+Figure 3. Schematic Architecture of a Climate Resilience Information System. By respecting FAIR principles for the Climate Building Blocks the architecture enables open infrastructures to produce and deliver information on demand of the users needs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+As illustrated, big, raw data from multiple sources requires further processing in order to be ready for analysis and climate change impact assessments. Applying data enhancement steps, such as bias adjustments, re-gridding, or calculation of climate indicators and essential variables, leads to “Decision Ready Climate Data.” The spatial data infrastructures required for this integration should be designed with interoperable building blocks following FAIR data principles. Heterogeneous data from multiple sources can be enhanced, adjusted, refined, or quality controlled to provide Science Services data products for Climate Resilience. The OGC Climate Change Services Pilots will also illustrate the graphical exploration of the Decision Ready Climate Data. It will demonstrate how to design FAIR climate services information systems. The OGC Pilot demonstrators will illustrate the necessary tools and the visualisations to address climate actions moving towards climate resilience.
+
+By sponsoring the OGC Climate Change Service Pilot, organizations can collaborate on building the foundation for climate and non-climate data integration processes based on standardized APIs and resource models. The pilot demonstrators will unveil interoperability and integration issues, help to define the essential data processing functions, and establish a practical, repeatable, documented, community-driven and -vetted step away from existing, disconnected platforms and towards integration-ready services. To get in contact, please use the OGC Innovation Program contact formThough we have started the first pilot now, the response period for future activities remains open until further notice.
+2. Background
+
+OGC technologies already play an essential role in the context of climate data discovery, exchange, and analysis. As an example, the ESA Climate Change Initiative (CCI) implements steps necessary to generate a consistent set of Essential Climate Variables (ECVs). With OGC Web Map Service (WMS) and Web Coverage Services (WCS) for data access and visualisation, instances of the OGC Catalogue Service for the Web (CSW) to express metadata for all CCI data stored in the CCI data archive, the CCI builds on OGC technologies to satisfy Global Climate Observing System’s (GCOS) monitoring principles on data systems. CCI’s products are then further developed into operational systems by non-ESA entities including the Climate Data Store (CDS) of the Copernicus Climate Change Service (C3S), EUMETSAT and its Satellite Applications Facilities, and other climate service initiatives with their data integration and analysis systems (e.g., the Data Integration and Analysis Systems, DIAS, and the emerging Earth Environmental Information Platforms).
+
+Members of the climate change and impact community have prompted OGC to support the community with its standards, services, and best practices. They identified the opportunity for doing this most effectively is to target the interface between climate and other domains rather than seeking to model the full complexity within the climate domain itself. OGC standards provide a “lift up” towards the development of APIs for services by reducing the effort needed to establish community consensus while accelerating their adoption and impact.
+
+Technical Challenges
+
+Realizing the delivery of Decision Ready Data on demand to achieve Climate Resilience involves a number of technical challenges that have already been identified by the community. A subset will be selected and embedded in use-cases that will be defined jointly by Pilot Sponsors and the OGC team. The goal is to ensure a clear value-enhancement pipeline as illustrated in Figure 1, above. This includes, among other elements, a baseline of standardised operators for data reduction and analytics. These need to fit into an overall workflow that provides translation services between upstream model data and downstream output - basically from raw data, to analysis-ready data, to decision-ready data. The following technical challenges have been identified and will be treated in the focus areas cycles of the Pilot accordingly:
+
+    Big Data Challenge: Multiple obstacles still exist, creating big barriers for seamless information delivery starting from Data Discovery. Here the emergence of new data platforms, new processing functionalities, and thus new products, data discovery remains a challenge. In addition to existing solutions based on established metadata profiles and catalog services, new technologies such as OGC’s Spatio-Temporal Asset Catalog (STAC) and open Web APIs such as OGC API Records will be explored. Furthermore, aspects of Data Access need to be solved where the new OGC API suite of Web APIs for data access, subsetting, and processing are currently utilized very successfully in several domains. Several code sprints have shown that server-side solutions can be realized within days and clients can interact very quickly with these server endpoints, thus development time is radically reduced. A promising specialized candidate for climate data and non-climate data integration has been recently published in the form of the OGC API - Environmental Data Retrieval (EDR). But which additional APIs are needed for climate data? Is the current set of OGC APIs sufficiently qualified to support the data enhancement pipeline illustrated in Figure 1? If not, what modifications and extensions need to be made available? How do OGC APIs cooperate with existing technologies such as THREDDS and OPEnDAP? For challenges of data spaces, Data Cubes have recently been explored in the OGC data cube workshop. Ad hoc creation and embedded processing functions have been identified as essential ingredients for efficient data exploration and exchange. Is it possible to transfer these concepts to all stages of the processing pipeline? How to scale both ways from local, ad hoc cubes to pan-continental cubes and vice versa. How to extend cubes as part of data fusion and data integration processes?
+
+    Cross-Discipline Data Integration: Different disciplines such as Earth Observation, various social science, or climate modeling use different conceptual models in their data collection, production, and analytical processes. How can we map between these different models? What patterns have been used to transform conceptual models to logical models, and eventually physical models? The production of modern Decision-ready information needs the integration of several data sets, including census and demographics, further social science data, transportation infrastructure, hydrography, land use, topography and other data sets. This pilot cycle uses 'location' as the common denominator between these diverse data sets and works with several data providers and scientific disciplines. In terms of Data Exchange Formats the challenge is to know what data formats need to be supported at the various interfaces of the processing pipeline? What is the minimum constellation of required formats to cover the majority of use cases? What role do container formats play? Challenging on technical level is also the Data Provenance. Many archives include data from several production cycles, such as IPCC AR 5 and AR 6 models. In this context, long term support needs to be realized and full traceability from high level data products back to the original raw data. Especially in context of reliable data based policy, clear audit trails and accountability for the data to information evolution needs to be ensured.
+
+    Building Blocks for processing pipelines: With a focus on Machine Learning and Artificial Intelligence which plays an increasing role in the context of data science and data integration. This focus area needs to evaluate the applicability of machine learning models in the context of the value-enhancing processing pipeline. What information needs to be provided to describe machine learning models and corresponding training data sufficiently to ensure proper usage at various steps of the pipeline? Upcoming options to deploy ML/AI within processing APIs to enhance climate services are rising challenges e.g. on how to initiate or ingest training models and the appropriate learning extensions for the production phase of ML/AI. Heterogeneity in data spaces can be bridged with Linked Data and Data Semantics. Proper and common use of shared semantics is essential to guarantee solid value-enhancement processes. At the same time, resolvable links to procedures, sampling & data process protocols, and used applications will ensure transparency and traceability of decisions and actions based on data products. What level is currently supported? What infrastructure is required to support shared semantics? What governance mechanisms need to be put in place?
+
+
+
+5. Organizational Approach and Scope of Work
+
+Climate Resilience DWG Mission and Role:
+
+The Climate Resilience DWG will concern itself with technology and technology policy issues, focusing on geospatial information and technology interests as related to climate mitigation and adaptation as well as the means by which those issues can be appropriately factored into the OGC standards development process.
+
+The mission of the Climate Resilience DWG is to identify geospatial interoperability issues and challenges that impede climate action, then examine ways in which those challenges can be met through application of existing OGC Standards, or through development of new geospatial interoperability standards under the auspices of OGC.
+
+The role of the Climate Resilience DWG is to serve as a forum within OGC for climate related geo-informatics; to present, refine, and focus interoperability-related climate issues within the Technical Committee; and to serve where appropriate as a liaison to other industry, government, independent, research, and standards organizations active within the domains impacted by climate.
+6. Climate Resilience DWG Business Goals
+
+The Climate Resilience DWG will need to establish a set of business goals that frame the basis for determining the nature and type of recommendations made to OGC, framed around the above mentioned business issues. The DWG will be in orientation of the United Nations climate policy frames with respect of their regional or national interpretations and appropriate policies. Examples of the types of discussion for framing goals include the following.
+
+    Efforts should focus on working climate resilience issues and problems that result in a net gain for the community.
+
+    Minimize technical distinctions between Climate Resilience Information Systems that use geography, as this can lead to artificial barriers that limit the potential of all segments of the information community to come together and fully prosper.
+
+    Avoid placing artificial technical barriers on use of data required for climate actions.
+
+    Establish the means by which OGC can achieve interoperability and yet preserve the proprietary nature of data.
+
+    Define the supporting infrastructure for the community to achieve these goals.
+
+6.1. Activities planned for Climate Resilience DWG:
+
+Activities to be undertaken by the Climate Resilience DWG include but are not limited to:
+
+    Identify the OGC interface standards and encodings useful to apply FAIR concepts to climate change services platforms;
+
+    Liaise with other OGC Working Groups (WGs) to drive standards evolution;
+
+    Promote the usage of the aforementioned standards with climate change service providers and policy makers addressing international regional and local needs;
+
+    Liaise with external groups working on technologies relevant to establishing ecosystems of EO Exploitation Platforms;
+
+    Liaise with external groups working on relevant technologies;
+
+    Publish OGC Technical Papers, Discussion Papers or Best Practices on interoperable interfaces for climate change services;
+
+    Provide software toolkits to facilitate the deployment of climate change services platforms.
+
+
