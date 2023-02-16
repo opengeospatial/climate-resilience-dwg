@@ -6,6 +6,7 @@ in order to get them placed in the preface area (and not in the main content).
 Keywords specified in document preamble will display in this area
 after the abstract
 ////
+:TOC:
 
 [.preface]
 == Abstract
