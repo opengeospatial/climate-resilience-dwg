@@ -189,13 +189,45 @@ Retreve the file and choose a variable:
 sfsm_inst (Surface soil moisture percentile)
 ....
 
+
 Adjust legend color (0 is the least soil moisture), and get the
 following results:
 
 [cols="^",options="header",]
 |====
-|image:media/ARD_GMU-demo-sfsm_inst.png[image]
+|image:images/ARD_GMU-demo-sfsm_inst.png[image]
 |Surface soil moisture percentile (year 2019-2022)
 |====
 
 
+
+=== Solar climate atlas for Poland - Climate Resilience Information System
+Jakub P. Walawender (Freelance climate scientist and EO/GIS expert)
+email:contact@jakubwalawender.eu
+
+The project aims at updating previously created solar climate atlas for Poland by:
+
+* increasing spatial and temporal resolution of the datasets;
+* extending time span
+* replacing static maps with a dynamic and interactive interface;
+* using practical solar radiation parameters instead of physical variables;
+* making datasets (+ metadata) available for downloaded 
+in interoperable file formats for further use
+* sharing a solar climate knowledge base and data/service user guide 
+
+in order to:
+
+* advance development of the solar-smart society and economy in PL
+* provide know-how and tools, which are easily reusable in other geographical regions
+
+|===
+|image:images/Jakub-SolarConditionAtlas.png[]
+|Solar Climate atlas for Poland available on the IMGW website: https://klimat.imgw.pl/en/solar-atlas
+|===
+
+Newly created *solar climate data cube and web map service* will be more *FAIR* as they will be made available online, possibly on the official website of the Polish Hydrometeorological Service (IMGW) for an increased findability, upon future agreement (to be discussed) to make them more *Findable* by the general public. The whole process of data access (including authentication) will be transparent and accompanied by appropriate instructions so that the *Accessibility* could be much higher. The format of the datasets in the data cube will be an OGC netCDF standard compliant with the CF (Climate and Forecast) convention, which is suitable for encoding gridded data for space/time-varying phenomena and commonly known in the climate science community but also easily readable with other common spatial data processing and visualization software including most of the GIS software to keep fully *Interoperable*. Finally, even though the proposed solar climate information system (maps+ dataset) are limited to the area of Poland, all processing scripts will be made available on github along with a well-described processing steps (both Jupyter notebooks and instructional videos will be considered) to provide *Reusability* for other countries or geographical regions.
+
+*Two objectives for the pilot OGC Climate Resilience Pilot are:*
+
+* to document existing solar radiation datasets (satellite, model and reanalysis data) and services (both freely accessible and commercial)
+* to verify the accuracy of the in situ measurements and satellite climate data records for the selected solar radiation parameters using proper statistical methods
