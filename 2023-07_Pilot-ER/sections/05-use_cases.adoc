@@ -24,3 +24,178 @@ To demonstrate our ability to produce ARD and promote the use of Chinese satelli
 
 .Sentinel-2 RBG composite (red Band4, green Band3, blue Band2), over Hubei, acquired on October 22, 2020. (a) corresponds to the reflectance at the top of the atmosphere (L1C product), (b) corresponds to the surface reflectance after pre-processing.
 image::images/WHU-Sentinel2-RBG-composite.png[Sentinel2Composit]
+
+
+
+
+=== Analysis Ready Data (ARD) Use Case (D-100 Client instance by George Mason University)
+
+==== Background
+
+Definition of Analysis Ready Data (ARD) (defined by CEOS):
+
+....
+Analysis Ready Data (ARD) is remote sensing data and products that have been pre-processed and organized to allow immediate analysis with little additional user effort and interoperability both through time and with other datasets.
+....
+
+Major steps in preparing satellite data into ARD include conversion of
+raw reading into radiometric quantity, quality assessment, quantity
+normalization, and temporal integration. The ARD should follow the FAIR
+(Findable, Accessible, Interoperable, and Reusable) Data Principles.
+
+Immediate analysis requires that data obtained by the data users exactly
+matches users’ specification in the format, projection, spatial/temporal
+coverage and resolution, and parameters so that it can be ingested into
+user’s analysis system immediately without further efforts. Since
+individual data users and projects have different requirements
+personalized services for customizing the data must be provided in order
+to meet the requirement of immediate analysis, which we call ARD
+services.
+
+Essential Climate Variables (ECV) are key data sets for climate change
+studies. https://climatemonitoring.info/ecvinventory/[ECV Inventory]
+houses information on Climate Data Records (CDR) provided mostly by CEOS
+and CGMS member agencies. The inventory is a structured repository for
+the characteristics of two types of GCOS ECV CDRs:
+
+* Climate data records that exist and are accessible, including
+frequently updated interim CDRs
+* Climate data records that are planned to be delivered.
+
+The ECV Inventory is an open resource to explore existing and planned
+data records from space agency sponsored activities and provides a
+unique source of information on CDRs available internationally. Access
+links to the data are provided within the inventory, alongside details
+of the data’s provenance, integrity and application to climate
+monitoring.
+
+The client is used the existing
+https://gis.csiss.gmu.edu/carbon/cwicport/pages/main.html[CEOS WGISS
+Community Portal]. The portal is capable
+of providing automated discovery and customization services of ECV and
+satellite data. The client will be able to discover and access ECV and
+other remote sensing data and customize them into ARD for anywhere in
+the world to support various climate change resilience analysis.
+
+==== Approach
+
+The client instance is implemented as a Web application to support the
+creation and delivery of ARD for climate change impact assessment.
+
+The Carbon Portal conducted data discovery and access in two steps:
+
+* step 1: Data collection search
+* step 2: Granule search to search granules in the collection
+
+ARD services are enabled on results of granule search if the collection
+is an ECV. If the ECV data provider has implemented the WCS service for
+the dataset, the portal will directly communicate with ECV provider’s
+WCS server for ARD service. If the ECV data provider does not have the
+WCS service, the portal’s server will download entire granule and stage
+it on the portal server to provide ARD service.
+
+Most of ECV data provides don’t provide such service.
+
+The following figure is a software architecture of the CEOS WGISS Carbon
+Community Portal.
+
+[cols="^",options="header",]
+|====
+|image:media/ARD_GMU-architecture.png[image]
+|Software Architecture
+|====
+
+ECV Inventory v4.1 records are converted as a unified form of the portal
+predefined metadata format by a converting tool. Retrieve collection
+metadata for ECV entries from CWIC/FedEO OpenSearch referred by Data
+Record Information. There is 1251 ECV inventory records (Same as
+WGClimate, 870 for Existing, 381 for Planned). The portal supports
+totally 1910 predefined ECV relative collection datasets from ECV
+Records.
+
+ARD service for ECVs in case that providers have no WCS services:
+
+* Support when user select one granule entry
+* Download granule dataset file from given repository, and manipulate it
+for serving WCS
+* Stage the data in portal backend server and generate a list of all
+coverages in the granule
+* User specifies the specifications of data to download
+* User obtains the customized data by downloading via WCS GetCoverage
+request
+
+ARD service for ECVs with data providers’ WCS:
+
+* Directly talk to provider’s WCS
+* Without granule downloading and stage steps in the portal’s backend
+server.
+
+==== Use Case: The climate change impact on crop production in Turkmenistan
+
+The use case of the climate change impact on crop production in
+Turkmenistan. However, the portal can switch to another use case or
+support multiple use cases if this pilot requests us to do so.
+
+Drought is one of the major climate-related natural hazards that cause
+significant crop production loss in Turkmenistan. Climate change
+increases the risk of drought in Turkmenistan. Crop models (such as
+WOFOST) are often used to support the decision-making in long-term
+adaptation and mitigation. The client will be used to prepare data to be
+readily used as parameters and drivers in such modeling processes.
+Drought impact analysis data may include long time series of
+precipitation, temperature, or indices for crop conditions, water
+content, or evapotranspiration. Many of these climate data and products
+from satellite sensors are served at NASA's Goddard Earth Sciences Data
+and Information Services Center, such as GPM data products, MERRA
+assimilated climate data. These will be used in the case of drought
+impact assessment in Turkmenistan.
+
+The drought impact ARD case will demonstrate:
+
+[arabic]
+. Applicability of open standards and specifications in support of data
+discovery, data integration, data transformation, data processing, data
+dissemination and data visualization
+. Transparency of metadata, data quality and provenance
+. Efficiency of using ARD in modeling and analysis
+. Interoperable dissemination of ARD abiding by FAIR principles
+
+The searching is starting with the following information:
+
+* Keyword: surface soil moisture
+* Filter: daily
+* Date: 10/1/2021, 10/1/2020, 10/1/2019, 10/1/2018
+* Area: Turkmenistan (Bbox: 52.264(Left), 35.129(Bottom), 66.69(Right),
+42.8(Top))
+
+Choose a collection dataset:
+
+....
+Groundwater and Soil Moisture Conditions from GRACE and GRACE-FO Data Assimilation L4 7-days 0.25 x 0.25 degree Global V3.0 (GRACEDADM_CLSM025GL_7D) at GES DISC  
+....
+
+Choose the following granule data file:
+
+....
+GRACEDADM_CLSM025GL_7D.3.0:GRACEDADM_CLSM025GL_7D.A20220926.030.nc4 (for year 2022)
+GRACEDADM_CLSM025GL_7D.3.0:GRACEDADM_CLSM025GL_7D.A20210927.030.nc4 (for year 2021)
+GRACEDADM_CLSM025GL_7D.3.0:GRACEDADM_CLSM025GL_7D.A20200928.030.nc4 (for year 2020)
+GRACEDADM_CLSM025GL_7D.3.0:GRACEDADM_CLSM025GL_7D.A20190930.030.nc4 (for year 2019)
+....
+
+Retreve the file and choose a variable:
+
+....
+sfsm_inst (Surface soil moisture percentile)
+....
+
+Adjust legend color (0 is the least soil moisture), and get the
+following results:
+
+[cols="^",options="header",]
+|====
+|image:media/ARD_GMU-demo-sfsm_inst.png[image]
+|Surface soil moisture percentile (year 2019-2022)
+|====
+
+
