@@ -101,7 +101,7 @@ Community Portal.
 
 [cols="^",options="header",]
 |====
-|image:media/ARD_GMU-architecture.png[image]
+|image:images/ARD_GMU-architecture.png[image]
 |Software Architecture
 |====
 
