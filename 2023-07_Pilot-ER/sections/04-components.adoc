@@ -15,3 +15,8 @@ Currently, the Standardized Precipitation Index (SPI) is being calculated using 
 
 === Wuhan University (WHU)
 Wuhan University (WHU) is a university that plays a significant role in researching and teaching all aspects of surveying and mapping, remote sensing, photogrammetry, and geospatial information sciences in China. In this Climate Resilience Pilot, we will contribute two use-cases: a use-case for drought and wildfire impact, and a use-case for analysis ready data.
+
+=== Ecere Corporation
+
+Ecere is providing a deployment of its GNOSIS Map Server with a focus on a Sentinel-2 Level 2A data cube. _OGC API - Tiles_, _OGC API - Coverages_, _OGC API - Maps_, _OGC API - Discrete Global Grid Systems_, _Common Query Language (CQL2)_, and  _OGC API - Processes - Part 3: Workflows & Chaining_ are the supported standards and extensions for this task.
+We plan to use the process output to identify vegetation fuel type, then combine with weather data to assess wildfire hazards risk in Australia. 
