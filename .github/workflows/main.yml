@@ -1,7 +1,11 @@
-name: generate_23-001
+name: generate_2023-07_Pilot-ER
 on:
-  schedule:
-    - cron:  '1 22 * * *'
+  push:
+    branches:
+    - master
+    
+#  schedule:
+#    - cron:  '1 22 * * *'
 
 jobs:
   build:
