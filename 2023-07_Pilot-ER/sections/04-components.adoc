@@ -8,7 +8,7 @@
 Pixalytics are developing an OGC-compliant API service, see Figure 1 <<Pixalytics architecture>>, which will provide global information on droughts. The approach is to take global open data/datasets from organizations such as ESA/Copernicus, NASA/NOAA and the WMO and combine meteorology, hydrology, and remote sensing data to produce ARD data based on a composite of different indicators. Where globally calculated drought indicators already exist, these are being used in preference to their re-calculation, although consistency and the presence of uncertainties are also being considered.
 
 .Pixalytics architecture
-image::images/Pixalytics-architecture.png[Pixalytics-architecture]
+//image::images/Pixalytics-architecture.png[Pixalytics-architecture]
 
 Currently, the Standardized Precipitation Index (SPI) is being calculated using ERA5 reanalysis data from the Copernicus Climate Change Service. The API access is being set up following the Building Blocks for Climate Services (https://climateintelligence.github.io/smartduck-docs/) approach. Once all steps are working for SPI, the next step is adding soil moisture and vegetation drought indices. Also, work on how to combine indices into a single view/indicator is being considered.
 
