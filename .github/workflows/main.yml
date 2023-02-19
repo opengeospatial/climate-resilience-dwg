@@ -1,0 +1,32 @@
+name: generate_23-001
+on:
+  schedule:
+    - cron:  '1 22 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: metanorma/metanorma:latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          path: main
+      - name: Checkout other repo
+        uses: actions/checkout@v3       # checkout the repository content to github runner
+        with:
+          repository: opengeospatial/climate-resilience-dwg
+          path: 2023-07_Pilot-ER
+      - name: Generate document
+        run: |
+          cd 2023-07_Pilot-ER
+          mkdir target                  # Metanorma output will be there.
+          # Generate HTML only because the deltas are efficiently handled by versionning systems, contrarily to PDF binary.
+          metanorma compile --output-dir target --agree-to-terms --type ogc --extensions html 2023-07_Pilot-ER/document.adoc
+          # mv ./target/document.html ../main/23-016.html
+          cd ../main
+          git config --global user.name 'opengeospatial'
+          git config --global user.email 'opengeospatial@users.noreply.github.com'
+          git add 2023-07_Pilot-ER.html
+          git commit --message "Automated generation of HTML document"
+          git push
