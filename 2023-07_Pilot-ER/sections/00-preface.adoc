@@ -12,7 +12,7 @@ after the abstract
 == Abstract
 
 // Insert abstract content
-Abstract content.
+Abstract content. 
 
 
 [.preface]
