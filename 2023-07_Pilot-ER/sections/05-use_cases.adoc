@@ -101,7 +101,7 @@ Community Portal.
 
 [cols="^",options="header",]
 |====
-|//image:images/ARD_GMU-architecture.png[image]
+|  //image:images/ARD_GMU-architecture.png[image]
 |Software Architecture
 |====
 
@@ -195,7 +195,7 @@ following results:
 
 [cols="^",options="header",]
 |====
-|//image:images/ARD_GMU-demo-sfsm_inst.png[image]
+|  //image:images/ARD_GMU-demo-sfsm_inst.png[image]
 |Surface soil moisture percentile (year 2019-2022)
 |====
 
@@ -221,7 +221,7 @@ in order to:
 * provide know-how and tools, which are easily reusable in other geographical regions
 
 |===
-|//image:images/Jakub-SolarConditionAtlas.png[]
+|  //image:images/Jakub-SolarConditionAtlas.png[]
 |Solar Climate atlas for Poland available on the IMGW website: https://klimat.imgw.pl/en/solar-atlas
 |===
 
