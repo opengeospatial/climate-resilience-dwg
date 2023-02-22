@@ -23,12 +23,12 @@ jobs:
           path: 2023-07_Pilot-ER
       - name: Generate document
         run: |
-          cd 2023-07_Pilot-ER
-          ls
+          # cd 2023-07_Pilot-ER
+          pwd
           # mkdir target                  # Metanorma output will be there.
           # Generate HTML only because the deltas are efficiently handled by versionning systems, contrarily to PDF binary.
           
-          metanorma compile  -t ogc -x  xml,html,pdf --agree-to-terms document.adoc
+          metanorma compile  -t ogc -x  xml,html,pdf --agree-to-terms ./2023-07_Pilot-ER/document.adoc
            
           # mv ./target/document.html ../main/23-016.html
           # cd ../main
