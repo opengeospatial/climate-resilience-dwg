@@ -24,6 +24,7 @@ jobs:
       - name: Generate document
         run: |
           cd 2023-07_Pilot-ER
+          ls
           # mkdir target                  # Metanorma output will be there.
           # Generate HTML only because the deltas are efficiently handled by versionning systems, contrarily to PDF binary.
           
