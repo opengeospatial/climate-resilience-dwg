@@ -1,0 +1,37 @@
+image:
+  name: metanorma/metanorma
+  entrypoint: [ "" ]
+
+cache:
+  paths:
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+  #  - curl -L --retry 3 https://raw.githubusercontent.com/metanorma/metanorma-build-scripts/master/gemfile-to-bundle-add.sh | bash
+    - bundle install
+    - metanorma site generate --agree-to-terms -o site
+    - mv site public
+
+  artifacts:
+    paths:
+      - public
+
+pages:
+  dependencies:
+    - build
+  stage: deploy
+  script:
+    - |
+      curl --location --output artifacts.zip --header "JOB-TOKEN: $CI_JOB_TOKEN" \
+        "https://gitlab.ogc.org/api/v4/projects/$CI_PROJECT_ID/jobs/$CI_JOB_TOKEN/artifacts"
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+

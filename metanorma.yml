@@ -1,0 +1,9 @@
+---
+metanorma:
+  source:
+    files:
+      - 2023-07_Pilot-ER/document.adoc
+
+  collection:
+    organization: "OGC"
+    name: "OGC Resiliene Pilot"
