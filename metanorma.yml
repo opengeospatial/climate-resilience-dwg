@@ -1,0 +1,10 @@
+---
+metanorma:
+   source:
+    files:
+    - 2023-07_Pilot-ER/document.adoc
+    
+   Collection:
+    name: OGC Climate Resilience
+    organization: OGC
+    
