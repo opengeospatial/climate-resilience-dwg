@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="semantic" version="2.3.3">
+<bibdata type="standard">
+<title language="en" format="text/plain">Engineering report for OGC Climate Resilience DWG</title>
+<docidentifier type="ogc-external">http://www.opengis.net/doc/PER/eoep-Hack2018</docidentifier><docidentifier type="ogc-internal">18-046</docidentifier><docnumber>18-046</docnumber><date type="published"><on>2018-06-12</on></date><date type="issued"><on>2018-07-10</on></date><date type="received"><on>2018-12-20</on></date><contributor><role type="editor"/><person>
+<name><completename>Guy Schumann</completename></name>
+</person></contributor><contributor><role type="editor"/><person>
+<name><completename>Albert Kettner</completename></name>
+</person></contributor><contributor><role type="publisher"/><organization>
+<name>Open Geospatial Consortium</name>
+</organization></contributor><language>en</language><script>Latn</script><status><stage>approved</stage></status><copyright><from>2023</from><owner><organization>
+<name>Open Geospatial Consortium</name>
+</organization></owner></copyright><keyword>hackaton</keyword><keyword>application-to-the-cloud</keyword><keyword>testbed</keyword><keyword>docker</keyword><keyword>web service</keyword><ext><doctype>engineering-report</doctype><editorialgroup><committee>technical</committee></editorialgroup></ext></bibdata>
+<boilerplate>
+  <copyright-statement>
+    <clause>
+      <title>Copyright notice</title>
+
+      <p align="center" id="_c6911d2d-05cb-cdf9-a7b5-2381d889b7a0">Copyright
+      © 2023 Open Geospatial Consortium<br/>
+      To obtain additional rights of use, visit
+      <link target="https://www.ogc.org/legal">https://www.ogc.org/legal</link>
+    </p>
+  </clause>
+  <clause>
+    <title>Note</title>
+    <p align="left" id="_11e88dba-9912-1a89-a82d-7291bf232191">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+    <p align="left" id="_15067213-c07b-cba0-7e18-395ab2e00ab3">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+  </clause>
+</copyright-statement>
+<license-statement>
+  <clause>
+    <title>License Agreement</title>
+
+    <p id="_319164f2-21a2-0783-9988-1636951e3d55">Use of this document is subject to the license agreement at 
+    <link target="https://www.ogc.org/license">https://www.ogc.org/license</link></p>
+    </clause>
+  </license-statement>
+
+  <legal-statement>
+    
+  <clause>
+    <title>Notice</title>
+    <p id="_d77564dd-5c08-f5db-c385-3f48de70a288">This document is not an OGC Standard. This document is an OGC Public Engineering Report created as a deliverable in an OGC Interoperability Initiative and is <em>not an official position</em> of the OGC membership. It is distributed for review and comment. It is subject to change without notice and may not be referred to as an OGC Standard.</p>
+
+    <p id="_4fd16e4e-920f-8043-296a-05b51b2afc3c">Further, any OGC Engineering Report should not be referenced as required or mandatory technology in procurements. However, the discussions in this document could very well lead to the definition of an OGC Standard.</p>
+  </clause>
+
+
+  
+
+</legal-statement>
+
+
+
+
+<feedback-statement>
+  
+</feedback-statement>
+</boilerplate>
+<preface><clause id="_abstract" obligation="informative">
+<title>Abstract</title>
+<p id="_09b264dc-9da4-45a3-f46f-5eda8b0fe637">Abstract content.</p>
+</clause><clause id="_summary" obligation="informative">
+<title>Summary</title>
+<p id="_1253c36a-28c8-14c9-199b-9caca0e3a3ce">Summary content.</p>
+</clause><clause type="security" id="_84476eba-52da-934e-3a1a-a337e9f0023d" obligation="informative"><title>Security considerations</title><p id="_00cd3d40-4516-744c-2347-0a8ef76c4724">No security considerations have been made for this document.</p></clause></preface><sections>
+
+
+
+<clause id="_introduction" obligation="normative">
+<title>Introduction</title>
+<clause id="_enhancing_interoperability_for_climate_resilience_information_systems" obligation="normative">
+<title>Enhancing Interoperability for Climate Resilience Information Systems</title>
+<p id="_bfcb34f3-ea6c-3a7b-793a-60adfb8109ba">The OGC Climate Resilience Pilot will be the first phase of multiple long term climate activities aiming to evolve geospatial data, technologies, and other capabilities into valuable information for decision makers, scientists, policy makers, data providers, software developers, and service providers so we can make valuable, informed decisions to improve climate action. The goal is to help the location community develop more powerful visualization and communication tools to accurately address ongoing climate threats such as heat, drought, floods, fires as well as supporting the national determined contributions for greenhouse gas emission reduction. Climate resilience is often considered the use case of our lifetime, and the OGC community is uniquely positioned to accelerate solutions through collective problem solving with this initiative.</p>
+
+<p id="_7577c675-423b-76c0-b6dc-eaf098186186">As illustrated, big, raw data from multiple sources requires further processing in order to be ready for analysis and climate change impact assessments. Applying data enhancement steps, such as bias adjustments, re-gridding, or calculation of climate indicators and essential variables, leads to “Decision Ready Indicators.” The spatial data infrastructures required for this integration should be designed with interoperable building blocks following FAIR data principles. Heterogeneous data from multiple sources can be enhanced, adjusted, refined, or quality controlled to provide Science Services data products for Climate Resilience. The OGC Climate Change Services Pilots will also illustrate the graphical exploration of the Decision Ready Climate Data. It will demonstrate how to design FAIR climate services information systems. The OGC Pilot demonstrators will illustrate the necessary tools and the visualisations to address climate actions moving towards climate resilience.</p>
+</clause>
+
+<clause id="_the_role_of_the_pilot" obligation="normative">
+<title>The Role of the Pilot</title>
+<p id="_b9931dbb-5df7-7335-728a-e49a57f2f6c8">The OGC Climate Resilience Community brings decision makers, scientists, policy makers, data providers, software developers, and service providers together. The goal is to enable everyone to take the relevant actions to address climate change and make well informed decisions for climate change adaptation. This includes scientists, decision makers, city managers, politicians, and last but not least, it includes everyone of us. So what do we need? We need data from lots of organizations, available at different scales for large and small areas to be integrated with scientific processes, analytical models, and simulation environments. We need data visualization and communication tools to shape the message in the right way for any client. Many challenges can be met through resources that adhere to FAIR principles. FAIR as in: Findable, Accessible, Interoperable, and Reusable. No single organization has all the data we need to understand the consequences of climate change. The OGC Climate Resilience Community identifies, discusses, and develops these resources. The OGC community builds the guidebooks and Best Practices, it experiments with new technologies to share data and information, and collaboratively addresses shared challenges.</p>
+
+<p id="_2b80da73-b557-34d3-1ed3-fbeeada06133">The OGC Climate Resilience Community has a vision to support efforts on climate actions and enable international partnerships (SDG 17), and move towards global interoperable open digital infrastructures providing climate resilience information on users demand. This pilot will contribute to establishing an OGC climate resilience concept store for the community where all appropriate climate information to build climate resilience information systems as open infrastructures can be found in one place, be it Information about data services, tools, software, handbooks, or a place to discuss experiences and needs. The concept store covers all phases of Climate Resilience, from initial hazards identification and mapping to vulnerability and risk analysis to options assessments, prioritization, and planning, and ends with implementation planning and monitoring capabilities. These major challenges can only be met through the combined efforts of many OGC members across government, industry, and academia.</p>
+
+<p id="_f8d648ed-ecf7-9760-3f25-ed46c62d67dc">This Call for Participation solicits interests from organizations to join the upcoming Climate Resilience Pilot, an OGC Collaborative Solution and Innovation Program activity. This six-months Pilot is setting the stage for a series of follow up activities. It therefore focuses on use-case development, implementation, and exploration. It answers questions such as:</p>
+
+<ul id="_e67b9d44-3c59-3d66-34ba-7cdb159410c6"><li><p id="_2a7e9192-5da6-4ef3-aea0-2652580685b8">What use-cases can be realized with the current data, services, analytical functions, and visualization capabilities that we have?</p>
+</li>
+<li><p id="_b2681c3f-2bed-2c18-b4fe-7ee443fa0c0c">How much effort is it to realize these use-cases?</p>
+</li>
+<li><p id="_9ae154cc-d336-d8e7-6fca-7f6971210aad">What is missing, or needs to be improved, in order to transfer the use-cases developed in the pilot to other areas?</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_objectives" obligation="normative">
+<title>Objectives</title>
+<p id="_97f0eedc-9af7-86e6-b33a-4812c84a485f">The pilot has three objectives. First, to better understand what is currently possible with the available data and technology. Second, what additional data and technology needs to be developed in future to better meet the needs of the Climate Resilience Community; and third, to capture Best Practices, and to allow the Climate Community to copy and transform as many use-cases as possible to other locations or framework conditions.</p>
+</clause>
+
+<clause id="_background" obligation="normative">
+<title>Background</title>
+<p id="_65accfef-0a42-d429-d4e5-37040590d4e9">With growing local communities, an increase in climate-driven disasters, and an increasing risk of future natural hazards, the demand for National Resilience Frameworks and Climate Resilience Information Systems (CRIS) cannot be overstated. Climate Resilience Information Systems (CRIS) are enabling data-search, -fetch, -fusion, -processing and -visualization. They enable access, understanding, and use of federal data, facilitate integration of federal and state data with local data, and serve as local information hubs for climate resilience knowledge sharing.</p>
+
+<p id="_c50a4c5f-788f-2220-e727-c5ff4e5c81a0">CRIS are already existing and operational, like the Copernicus Climate Change Service with the Climate Data Store. CRIS architectures can be further enhanced by providing climate scientific methods and visualization capabilities as climate building blocks. Based on FAIR principles, these building blocks enable in particular the reusability of Climate Resilience Information Systems features and capabilities. Reusability is an essential component when goals, expertises, and resources are aligned from the national to the local level. Framework conditions differ across the country, but building blocks enable as much reuse of existing Best Practices, tools, data, and services as possible.</p>
+
+<p id="_9bc77f77-0c46-8cb5-848c-76861bb2f22f">Goals and objectives of decision makers vary at different scales. At the municipal level, municipal leaders and citizens directly face climate-related hazards. Aspects thus come into focus such as reducing vulnerability and risk, building resilience through local measures, or enhancing emergency response. At the state level, the municipal efforts can be coordinated and supported by providing funding and enacting relevant policies. The national, federal, or international level provides funding, science data, and international coordination to enable the best analysis and decisions at the lower scales.</p>
+
+<p id="_de63846a-4819-d408-4a23-ce227874140d">Productivity and decision making are enhanced when climate building blocks are exchangeable across countries, organizations, or administrative levels (see Figure below). This OGC Climate Resilience Pilot is a contribution towards an open, multi-level infrastructure that integrates data spaces, open science, and local-to-international requirements and objectives. It contributes to the technology and governance stack that enables the integration of data including historical observations, real time sensing data, reanalyses, forecasts or future projections. It addresses data-to-decision pipelines, data analysis and representation, and bundles everything in climate resilience building blocks. These building blocks are complemented by Best Practices, guidelines, and cook-books that enable multi–stakeholder decision making for the good of society in a changing natural environment.</p>
+
+<p id="_d758b198-5575-f96b-850e-e89b6f2b1218">The OGC Innovation Program brings all groups together: The various members of the stakeholder group define use cases and requirements, the technologists and data providers experiment with new tools and data products in an agile development process. The scientific community provides results in appropriate formats and enables open science by providing applications that can be parameterized and executed on demand.</p>
+
+<p id="_9a7efc38-a6ff-0830-4626-7c7b505f593a">This OGC Climate Resilience Pilot is part of the OGC Climate Community Collaborative Solution and Innovation process, an open community process that uses the OGC as the governing body for collaborative activities among all members. A spiral approach is applied to connect technology enhancements, new data products, and scientific research with community needs and framework conditions at different scales. The spiral approach defines real world use cases, identifies gaps, produces new technology and data, and tests these against the real world use cases before entering the next iteration. Evaluation and validation cycles alternate and continuously define new work tasks. These tasks include documentation and toolbox descriptions on the consumer side, and data and service offerings, interoperability, and system architecture developments on the producer side. It is emphasized that research and development is not constrained to the data provider or infrastructure side. Many tasks need to be executed on the data consumer side in parallel and then merged with advancements on the provider side in regular intervals.</p>
+
+<p id="_59393311-7cfc-91be-9db0-2ca9013bf7b7">Good experiences have been made using OGC API standards in the past. For example, the remote operations on climate simulations (roocs) use OGC API Processes for subsetting data sets to reduce the data volume being transported. Other systems use OGC STAC for metadata and data handling or OGC Earth Observation Exploitation Platform Best Practices for the deployment of climate building blocks or applications into CRIS architectures. Still data handling regarding higher complex climate impact assessments within FAIR and open infrastructures needs to be enhanced. There is no international recommendation or best practice on usage of existing API standards within individual CRIS. It is the goal of this pilot to contribute to the development of such a recommendation, respecting existing operational CRIS that are serving heterogen user groups</p>
+
+<p id="_c2b0942e-31d7-e36a-c555-71ab67ce7194">.</p>
+</clause>
+
+<clause id="_technical_challenges" obligation="normative">
+<title>Technical Challenges</title>
+<p id="_e76b0c51-5b0b-2eea-296a-6cf1b6ca1176">Realizing the delivery of Decision Ready Data on demand to achieve Climate Resilience involves a number of technical challenges that have already been identified by the community. A subset will be selected and embedded in use-cases that will be defined jointly by Pilot Sponsors and the OGC team. The goal is to ensure a clear value-enhancement pipeline as illustrated in Figure 1, above. This includes, among other elements, a baseline of standardised operators for data reduction and analytics. These need to fit into an overall workflow that provides translation services between upstream model data and downstream output — basically from raw data, to analysis-ready data, to decision-ready data. The following technical challenges have been identified and will be treated in the focus areas cycles of the Pilot accordingly:</p>
+
+<ul id="_7a0c4ca4-34e6-1e46-4ba7-85a352e52cf6"><li><p id="_1637da31-4af6-113d-9d5a-7489e55a2ea0">Big Data Challenge: Multiple obstacles still exist, creating big barriers for seamless information delivery starting from Data Discovery. Here the emergence of new data platforms, new processing functionalities, and thus new products, data discovery remains a challenge. In addition to existing solutions based on established metadata profiles and catalog services, new technologies such as OGC’s Spatio-Temporal Asset Catalog (STAC) and open Web APIs such as OGC API Records will be explored. Furthermore, aspects of Data Access need to be solved where the new OGC API suite of Web APIs for data access, subsetting, and processing are currently utilized very successfully in several domains. Several code sprints have shown that server-side solutions can be realized within days and clients can interact very quickly with these server endpoints, thus development time is radically reduced. A promising specialized candidate for climate data and non-climate data integration has been recently published in the form of the OGC API — Environmental Data Retrieval (EDR). But which additional APIs are needed for climate data? Is the current set of OGC APIs sufficiently qualified to support the data enhancement pipeline illustrated in Figure 1? If not, what modifications and extensions need to be made available? How do OGC APIs cooperate with existing technologies such as THREDDS and OPEnDAP? For challenges of data spaces, Data Cubes have recently been explored in the OGC data cube workshop. Ad hoc creation and embedded processing functions have been identified as essential ingredients for efficient data exploration and exchange. Is it possible to transfer these concepts to all stages of the processing pipeline? How to scale both ways from local, ad hoc cubes to pan-continental cubes and vice versa. How to extend cubes as part of data fusion and data integration processes?</p>
+</li>
+<li><p id="_531a8068-80ba-6123-fd5b-7af573c91b85">Cross-Discipline Data Integration: Different disciplines such as Earth Observation, various social science, or climate modeling use different conceptual models in their data collection, production, and analytical processes. How can we map between these different models? What patterns have been used to transform conceptual models to logical models, and eventually physical models? The production of modern Decision-ready information needs the integration of several data sets, including census and demographics, further social science data, transportation infrastructure, hydrography, land use, topography and other data sets. This pilot cycle uses ‘location’ as the common denominator between these diverse data sets and works with several data providers and scientific disciplines. In terms of Data Exchange Formats the challenge is to know what data formats need to be supported at the various interfaces of the processing pipeline? What is the minimum constellation of required formats to cover the majority of use cases? What role do container formats play? Challenging on technical level is also the Data Provenance. Many archives include data from several production cycles, such as IPCC AR 5 and AR 6 models. In this context, long term support needs to be realized and full traceability from high level data products back to the original raw data. Especially in context of reliable data based policy, clear audit trails and accountability for the data to information evolution needs to be ensured.</p>
+</li>
+<li><p id="_c844b645-c1d8-e581-8e78-fa5563f497d2">Building Blocks for processing pipelines: With a focus on Machine Learning and Artificial Intelligence which plays an increasing role in the context of data science and data integration. This focus area needs to evaluate the applicability of machine learning models in the context of the value-enhancing processing pipeline. What information needs to be provided to describe machine learning models and corresponding training data sufficiently to ensure proper usage at various steps of the pipeline? Upcoming options to deploy ML/AI within processing APIs to enhance climate services are rising challenges e.g. on how to initiate or ingest training models and the appropriate learning extensions for the production phase of ML/AI. Heterogeneity in data spaces can be bridged with Linked Data and Data Semantics. Proper and common use of shared semantics is essential to guarantee solid value-enhancement processes. At the same time, resolvable links to procedures, sampling &amp; data process protocols, and used applications will ensure transparency and traceability of decisions and actions based on data products. What level is currently supported? What infrastructure is required to support shared semantics? What governance mechanisms need to be put in place?</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_how_is_this_pilot_relevant_to_the_climate_resilience_domain_working_group" obligation="normative">
+<title>How is this Pilot Relevant to the Climate Resilience Domain Working Group?</title>
+<p id="_bc039159-ff2b-1149-6e64-a0d8bae7f35e">The Climate Resilience DWG will concern itself with technology and technology policy issues, focusing on geospatial information and technology interests as related to climate mitigation and adaptation as well as the means by which those issues can be appropriately factored into the OGC standards development process.</p>
+
+<p id="_8e4d9cb1-b1fe-bc18-8ed3-05ca7437757c">The mission of the Climate Resilience DWG is to identify geospatial interoperability issues and challenges that impede climate action, then examine ways in which those challenges can be met through application of existing OGC Standards, or through development of new geospatial interoperability standards under the auspices of OGC.</p>
+
+<p id="_341caa57-6984-e2b3-36c6-01718992109c">Activities to be undertaken by the Climate Resilience DWG include but are not limited to:</p>
+
+<ul id="_04a003eb-9f88-b09b-f758-b792ba7abee7"><li><p id="_4625774f-9b27-9085-a403-c8ce1f2bb471">Identify the OGC interface standards and encodings useful to apply FAIR concepts to climate change services platforms;</p>
+</li>
+<li><p id="_8b7b2e5b-10c4-c3b2-969b-4f2b8735cede">Liaise with other OGC Working Groups (WGs) to drive standards evolution;</p>
+</li>
+<li><p id="_84b8313f-b93b-b6b3-00ad-398dad058092">Promote the usage of the aforementioned standards with climate change service providers and policy makers addressing international regional and local needs;</p>
+</li>
+<li><p id="_839f4c86-952f-4644-a3ec-6594e7ecc4c9">Liaise with external groups working on technologies relevant to establishing ecosystems of EO Exploitation Platforms;</p>
+</li>
+<li><p id="_81d86200-745a-8090-9530-2c090453ffa7">Liaise with external groups working on relevant technologies;</p>
+</li>
+<li><p id="_6f1ba964-b8a6-7dd0-8746-6e752c2155e3">Publish OGC Technical Papers, Discussion Papers or Best Practices on interoperable interfaces for climate change services;</p>
+</li>
+<li><p id="_fa1df2bb-1229-e1ef-74a1-ef31c6c1253e">Provide software toolkits to facilitate the deployment of climate change services platforms.</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+<terms id="_terms_and_definitions" obligation="normative">
+<title>Terms, definitions and abbreviated terms</title><p id="_7fe04b5b-db41-5d9b-ebe1-463b3a0c16c9">This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p id="_e0235fe8-8273-26b4-faeb-a580ad58929f">This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the ‘ModSpec’. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p id="_1448dc16-8929-d666-6525-0249826c75e3">For the purposes of this document, the following additional terms and definitions apply.</p>
+
+<term id="term-example-term"><preferred><expression>
+<name>example term</name>
+</expression>
+</preferred>
+<definition><verbal-definition><p id="_06db0da1-214c-7f57-bd34-fd4f77edb6ed">term used for exemplary purposes</p></verbal-definition></definition>
+
+
+
+
+
+
+ <termnote id="_dba7a326-d460-4fd2-c200-c18e257c490b"><p id="_bfac9a8e-f9a1-75c6-e31d-dca8dc62be58">An example note.</p>
+</termnote><termexample id="_6e5e388f-3384-3fe0-1387-5c648e5561e6"><p id="_2d45db5a-97c4-2358-7890-3aa696c4b809">Here’s an example of an example term.</p>
+</termexample><termsource status="identical" type="authoritative"><origin bibitemid="rfc2616" type="inline" citeas="IETF&amp;#xa0;RFC&amp;#xa0;2616"/></termsource></term>
+
+<definitions id="_abbreviated_terms" type="abbreviated_terms" obligation="normative">
+<title>Abbreviated terms</title>
+<dl id="_72a810a4-b7b0-240c-1ed7-75712ff73acd"><dt id="symbol-ADES">ADES</dt><dd><p id="_4c79cbbc-876d-a192-6361-73d6d811095e">Application Deployment and Execution Service</p>
+</dd>
+<dt id="symbol-AP">AP</dt><dd><p id="_f9f9b9d6-d254-bf58-dd4f-f434eb5788d8">Application Package</p>
+</dd>
+<dt id="symbol-EMS">EMS</dt><dd><p id="_ee36bfdb-3ef9-dbd3-ef93-49edbe3afc80">Exploitation Platform Management Service</p>
+</dd></dl>
+</definitions></terms>
+
+
+
+<clause id="clause-reference" obligation="normative">
+<title>Components</title>
+<clause id="_pixalytics" obligation="normative">
+<title>Pixalytics</title>
+<p id="_25368928-1c9f-cf06-e474-aa60ea8c1f2c">Pixalytics are developing an OGC-compliant API service, see Figure 1 <xref target="Pixalytics_architecture" style="short"/>, which will provide global information on droughts. The approach is to take global open data/datasets from organizations such as ESA/Copernicus, NASA/NOAA and the WMO and combine meteorology, hydrology, and remote sensing data to produce ARD data based on a composite of different indicators. Where globally calculated drought indicators already exist, these are being used in preference to their re-calculation, although consistency and the presence of uncertainties are also being considered.</p>
+
+<p id="_1c38111d-b71d-28a8-934f-9b72a86c79cf">Currently, the Standardized Precipitation Index (SPI) is being calculated using ERA5 reanalysis data from the Copernicus Climate Change Service. The API access is being set up following the Building Blocks for Climate Services (<link target="https://climateintelligence.github.io/smartduck-docs/"/>) approach. Once all steps are working for SPI, the next step is adding soil moisture and vegetation drought indices. Also, work on how to combine indices into a single view/indicator is being considered.</p>
+</clause>
+
+<clause id="_wuhan_university_whu" obligation="normative">
+<title>Wuhan University (WHU)</title>
+<p id="_cdf6ad0e-3db7-09a1-61e8-f4491ec7fc43">Wuhan University (WHU) is a university that plays a significant role in researching and teaching all aspects of surveying and mapping, remote sensing, photogrammetry, and geospatial information sciences in China. In this Climate Resilience Pilot, we will contribute two use-cases: a use-case for drought and wildfire impact, and a use-case for analysis ready data.</p>
+</clause>
+</clause>
+
+<clause id="_use_cases" obligation="normative">
+<title>Use cases</title>
+<clause id="_drought_and_wildfire_impact_use_case" obligation="normative">
+<title>Drought and Wildfire Impact Use-case</title>
+<p id="_77e4dd2e-af3d-1b19-0c6f-32035cc49293">Drought and wildfire caused by climate change are one of the important factors affecting agricultural production, food security, and water shortage. The goal of WHU is to develop a use-case for drought and wildfire risk assessment for rapid response to drought and wildfire occurrences. Figure 1 shows the technical architecture on how WHU contributed to the use-case. It has the following features: 1) For data discovery, a catalogue service from data center following OGC API is provided allowing users to search geospatial data both available from WHU data stores and remote data stores from USGS, ESA, and NASA. 2) For data integration, data can be integrated into the WHU software in the form of geo date cubes with three efforts: formalizing cube dimensions for multi-source geospatial data, processing geospatial data query along cube dimensions, and organizing cube data for high-performance geoprocessing. 3) For data processing, a processing chain is enabled in WHU software using a code editor and modelbuilder. 4) For data visualization, a Web-based client for visualization of spatial data and statistics is provided using a virtual globe and charts.</p>
+
+<p id="_a3f814e2-746e-699f-d57e-222993b81842">Figure 2 a is the data center of the proposed use-case, which currently stores multiple sources data from different platforms including 20 years of precipitation data from GPM (Global Precipitation Measurement) used to calculate the drought index. The drought and wildfire risk assessment algorithms are integrated in the algorithm center, which can be invoked by the code editor or modelbuilder to perform drought and wildfire risk assessment. Figure 2b shows the Python code and visualization result of the drought risk assessment in Asia based on precipitation anomaly percentage (PAP) index.</p>
+</clause>
+
+<clause id="_analysis_ready_data_use_case" obligation="normative">
+<title>Analysis Ready Data Use-case</title>
+<p id="_49f36562-e198-84f9-0a60-ebf33c87b7ea">The technical design on how WHU contributed to the ARD use-case encompasses the query, download, and pre-processing of multi-source EO data. The query and download operators collect open EO data from open EO providers (USGS, ESA, and NASA). In addition to EO datasets, we also provide meteorological datasets including ECMWF climate reanalysis and MODIS atmospheric products. The pre-processing workflows create ARD for both optical and SAR imagery. Moreover, for applications that need spectral and angular harmonization, the pre-processing workflow supports the harmonization of multi-source optical imagery. Figure 1 shows the processing chain to produce harmonized ARD. The harmonization involves spatial co-registration, band conversion, and bidirectional reflectance distribution function (BRDF) correction.</p>
+
+<p id="_b2ea4d93-dd7d-f987-531c-787b559b4863">To demonstrate our ability to produce ARD and promote the use of Chinese satellite data, we will produce a surface reflectance ARD dataset through the harmonization of Gaofen-1 WFV (Wide Field of View), Gaofen-6 WFV, and Sentinel-2 data. Figure 2 shows the Sentinel-2 data before and after pre-processing. Besides, we’d like to coordinate with the ARD SWG to promote standards for ARD and ensure that the ARD we produce is stable and reusable. Furthermore, we wish to seek the assessment of CEOS-ARD in our long-term plan.</p>
+</clause>
+
+<clause id="_analysis_ready_data_ard_use_case_d_100_client_instance_by_george_mason_university" obligation="normative">
+<title>Analysis Ready Data (ARD) Use Case (D-100 Client instance by George Mason University)</title>
+<clause id="_background_2" obligation="normative">
+<title>Background</title>
+<p id="_4e565765-7752-821c-11a2-4651ff48c63b">Definition of Analysis Ready Data (ARD) (defined by CEOS):</p>
+
+<figure id="_bd72faef-bf34-7984-a12c-dc8fecffb076"><pre id="_bcc37b58-8968-8cf7-ad84-bf2b5b037cfc">Analysis Ready Data (ARD) is remote sensing data and products that have been pre-processed and organized to allow immediate analysis with little additional user effort and interoperability both through time and with other datasets.</pre></figure>
+
+<p id="_de2bbcb3-4e3c-7f7c-6b8f-8be1284a609a">Major steps in preparing satellite data into ARD include conversion of
+raw reading into radiometric quantity, quality assessment, quantity
+normalization, and temporal integration. The ARD should follow the FAIR
+(Findable, Accessible, Interoperable, and Reusable) Data Principles.</p>
+
+<p id="_b234c18d-269a-8b32-8713-79d05ec9f4cc">Immediate analysis requires that data obtained by the data users exactly
+matches users’ specification in the format, projection, spatial/temporal
+coverage and resolution, and parameters so that it can be ingested into
+user’s analysis system immediately without further efforts. Since
+individual data users and projects have different requirements
+personalized services for customizing the data must be provided in order
+to meet the requirement of immediate analysis, which we call ARD
+services.</p>
+
+<p id="_5673279d-d2ed-6b78-ca64-0f1892162318">Essential Climate Variables (ECV) are key data sets for climate change
+studies. <link target="https://climatemonitoring.info/ecvinventory/">ECV Inventory</link>
+houses information on Climate Data Records (CDR) provided mostly by CEOS
+and CGMS member agencies. The inventory is a structured repository for
+the characteristics of two types of GCOS ECV CDRs:</p>
+
+<ul id="_30fdfb11-aa8e-2002-5c0b-3c22af85ecd6"><li><p id="_acd20fdf-2e1a-68ef-e845-d7920a2525b2">Climate data records that exist and are accessible, including
+frequently updated interim CDRs</p>
+</li>
+<li><p id="_b123e850-6821-02db-066e-da4fa2309b89">Climate data records that are planned to be delivered.</p>
+</li>
+</ul>
+
+<p id="_dab5dc8c-2044-8505-e9d0-6d601bb46fc4">The ECV Inventory is an open resource to explore existing and planned
+data records from space agency sponsored activities and provides a
+unique source of information on CDRs available internationally. Access
+links to the data are provided within the inventory, alongside details
+of the data’s provenance, integrity and application to climate
+monitoring.</p>
+
+<p id="_f0912678-0bbf-534f-3d7c-e1fb8ac90d8d">The client is used the existing
+<link target="https://gis.csiss.gmu.edu/carbon/cwicport/pages/main.html">CEOS WGISS Community Portal</link>. The portal is capable
+of providing automated discovery and customization services of ECV and
+satellite data. The client will be able to discover and access ECV and
+other remote sensing data and customize them into ARD for anywhere in
+the world to support various climate change resilience analysis.</p>
+</clause>
+
+<clause id="_approach" obligation="normative">
+<title>Approach</title>
+<p id="_cfcc2c9c-2a91-99c8-974d-cb45bbf2c8af">The client instance is implemented as a Web application to support the
+creation and delivery of ARD for climate change impact assessment.</p>
+
+<p id="_81cda048-acc1-dccd-239a-6730a7d853eb">The Carbon Portal conducted data discovery and access in two steps:</p>
+
+<ul id="_a35e94a0-8f3c-6a51-dd92-7dab1f1bc579"><li><p id="_3764d559-271f-64e5-fd89-b1cf96635604">step 1: Data collection search</p>
+</li>
+<li><p id="_e3f51dd8-92d4-2cbb-4c24-0e4646b8c3c3">step 2: Granule search to search granules in the collection</p>
+</li>
+</ul>
+
+<p id="_45c5607b-c717-904e-a1f2-474fdcd30432">ARD services are enabled on results of granule search if the collection
+is an ECV. If the ECV data provider has implemented the WCS service for
+the dataset, the portal will directly communicate with ECV provider’s
+WCS server for ARD service. If the ECV data provider does not have the
+WCS service, the portal’s server will download entire granule and stage
+it on the portal server to provide ARD service.</p>
+
+<p id="_bcddbf98-4e1c-f6cf-7d30-19dc3919f83a">Most of ECV data provides don’t provide such service.</p>
+
+<p id="_62965e83-c2db-3aec-d92e-e0a1b7d6677c">The following figure is a software architecture of the CEOS WGISS Carbon
+Community Portal.</p>
+
+<table id="_4bcf5ece-c988-03a2-f721-ea204e4676e5"><thead><tr><th valign="middle" align="center">//image::images/ARD_GMU-architecture.png[image]</th>
+</tr></thead>
+<tbody><tr><td valign="middle" align="center">Software Architecture</td>
+</tr></tbody>
+</table>
+
+<p id="_072c8e6b-820c-617c-a488-52491064f4f9">ECV Inventory v4.1 records are converted as a unified form of the portal
+predefined metadata format by a converting tool. Retrieve collection
+metadata for ECV entries from CWIC/FedEO OpenSearch referred by Data
+Record Information. There is 1251 ECV inventory records (Same as
+WGClimate, 870 for Existing, 381 for Planned). The portal supports
+totally 1910 predefined ECV relative collection datasets from ECV
+Records.</p>
+
+<p id="_5531a074-7f80-0dbd-6141-f5bd4eb66716">ARD service for ECVs in case that providers have no WCS services:</p>
+
+<ul id="_03320d40-a2ed-40bd-d21b-4abc141bcf0a"><li><p id="_1fcfd2c5-94e8-9924-e8c1-64dbf3345011">Support when user select one granule entry</p>
+</li>
+<li><p id="_dc5f41e0-37c2-2844-9e41-17359e340cbf">Download granule dataset file from given repository, and manipulate it
+for serving WCS</p>
+</li>
+<li><p id="_9e1c0977-698c-438e-1ca8-522d5333519e">Stage the data in portal backend server and generate a list of all
+coverages in the granule</p>
+</li>
+<li><p id="_f3409393-c432-fe88-3a00-387884672b04">User specifies the specifications of data to download</p>
+</li>
+<li><p id="_39c5ee5f-a517-650e-f077-062f5385c400">User obtains the customized data by downloading via WCS GetCoverage
+request</p>
+</li>
+</ul>
+
+<p id="_13c1f2af-8b86-657e-99d9-68be690c8c18">ARD service for ECVs with data providers’ WCS:</p>
+
+<ul id="_c4ad6cbb-d032-99a5-fd06-ecb79c7321c4"><li><p id="_dfaf64e7-36bb-019d-e950-1fb0cdd75269">Directly talk to provider’s WCS</p>
+</li>
+<li><p id="_a04f8a1f-45cb-5de9-6fa4-7bd26f24307e">Without granule downloading and stage steps in the portal’s backend
+server.</p>
+</li>
+</ul>
+</clause>
+
+<clause id="_use_case_the_climate_change_impact_on_crop_production_in_turkmenistan" obligation="normative">
+<title>Use Case: The climate change impact on crop production in Turkmenistan</title>
+<p id="_ffcd3125-b434-72c2-fd21-b318b46c047a">The use case of the climate change impact on crop production in
+Turkmenistan. However, the portal can switch to another use case or
+support multiple use cases if this pilot requests us to do so.</p>
+
+<p id="_55677e96-3b5a-8c00-4f94-2030f43099a8">Drought is one of the major climate-related natural hazards that cause
+significant crop production loss in Turkmenistan. Climate change
+increases the risk of drought in Turkmenistan. Crop models (such as
+WOFOST) are often used to support the decision-making in long-term
+adaptation and mitigation. The client will be used to prepare data to be
+readily used as parameters and drivers in such modeling processes.
+Drought impact analysis data may include long time series of
+precipitation, temperature, or indices for crop conditions, water
+content, or evapotranspiration. Many of these climate data and products
+from satellite sensors are served at NASA’s Goddard Earth Sciences Data
+and Information Services Center, such as GPM data products, MERRA
+assimilated climate data. These will be used in the case of drought
+impact assessment in Turkmenistan.</p>
+
+<p id="_09202faa-2a11-89ba-cf4b-b9727c812fd1">The drought impact ARD case will demonstrate:</p>
+
+<ol id="_9755f6e6-bab4-a096-e025-08eda876765d" type="arabic"><li><p id="_270f5ba5-2ca7-bfea-9089-56b8e5f522d3">Applicability of open standards and specifications in support of data
+discovery, data integration, data transformation, data processing, data
+dissemination and data visualization</p>
+</li>
+<li><p id="_eaea012a-a0f7-a003-c384-d0c55cf626df">Transparency of metadata, data quality and provenance</p>
+</li>
+<li><p id="_86f28e08-a49f-ea5b-d7d8-cf15eead69c4">Efficiency of using ARD in modeling and analysis</p>
+</li>
+<li><p id="_6edbb2fb-dff4-4e73-454a-f4703011f226">Interoperable dissemination of ARD abiding by FAIR principles</p>
+</li>
+</ol>
+
+<p id="_f2bbc44c-659c-857a-b1c2-4fa2766b0ee4">The searching is starting with the following information:</p>
+
+<ul id="_5968daff-6e84-e810-8096-01ac0c651757"><li><p id="_7c529569-1131-1ead-e14a-6ddef54d44fa">Keyword: surface soil moisture</p>
+</li>
+<li><p id="_957eb37b-bee3-bba3-e04d-fc2f42d3b986">Filter: daily</p>
+</li>
+<li><p id="_ba7dd629-b320-a82b-6214-c3ff0ad03a24">Date: 10/1/2021, 10/1/2020, 10/1/2019, 10/1/2018</p>
+</li>
+<li><p id="_994865d7-68a5-eca0-62a7-bb1919748a2e">Area: Turkmenistan (Bbox: 52.264(Left), 35.129(Bottom), 66.69(Right),
+42.8(Top))</p>
+</li>
+</ul>
+
+<p id="_66ea3cfb-298f-df0d-eb17-cf432648e12d">Choose a collection dataset:</p>
+
+<figure id="_99e9fde8-6019-11c1-dda1-c5dd2a015228"><pre id="_63a1b6e6-33c6-e9e7-9356-0fef71eda186">Groundwater and Soil Moisture Conditions from GRACE and GRACE-FO Data Assimilation L4 7-days 0.25 x 0.25 degree Global V3.0 (GRACEDADM_CLSM025GL_7D) at GES DISC</pre></figure>
+
+<p id="_7499b708-f347-48c7-78e2-fd756d3cebdb">Choose the following granule data file:</p>
+
+<figure id="_6725772b-7ac8-7560-5725-f8907a8b058e"><pre id="_b14d5b18-fdfc-153d-b7f4-52c8008586d5">GRACEDADM_CLSM025GL_7D.3.0:GRACEDADM_CLSM025GL_7D.A20220926.030.nc4 (for year 2022)
+GRACEDADM_CLSM025GL_7D.3.0:GRACEDADM_CLSM025GL_7D.A20210927.030.nc4 (for year 2021)
+GRACEDADM_CLSM025GL_7D.3.0:GRACEDADM_CLSM025GL_7D.A20200928.030.nc4 (for year 2020)
+GRACEDADM_CLSM025GL_7D.3.0:GRACEDADM_CLSM025GL_7D.A20190930.030.nc4 (for year 2019)</pre></figure>
+
+<p id="_4d310c4c-52b3-13cd-6065-76c21285adea">Retreve the file and choose a variable:</p>
+
+<figure id="_ce57e195-95c7-e8f3-d8ef-cc7d36778af2"><pre id="_a3219d58-1388-7c50-eb29-8b98dda05a5b">sfsm_inst (Surface soil moisture percentile)</pre></figure>
+
+<p id="_4710ddbe-6a48-0d8c-4148-09eb7cdffeca">Adjust legend color (0 is the least soil moisture), and get the
+following results:</p>
+
+<table id="_84cc0ff2-3bc7-1292-421c-df5b56682e84"><thead><tr><th valign="middle" align="center">//image::images/ARD_GMU-demo-sfsm_inst.png[image]</th>
+</tr></thead>
+<tbody><tr><td valign="middle" align="center">Surface soil moisture percentile (year 2019-2022)</td>
+</tr></tbody>
+</table>
+</clause>
+</clause>
+
+<clause id="_solar_climate_atlas_for_poland_climate_resilience_information_system" obligation="normative">
+<title>Solar climate atlas for Poland — Climate Resilience Information System</title>
+<p id="_4323bccc-2598-7494-e9be-0decd3d6b3ee">Jakub P. Walawender (Freelance climate scientist and EO/GIS expert)
+email:contact@jakubwalawender.eu</p>
+
+<p id="_ba344e3d-37db-a51f-8e7e-cf36b837dc31">The project aims at updating previously created solar climate atlas for Poland by:</p>
+
+<ul id="_f4341a0b-211f-be89-19ba-d722f9bf8ff8"><li><p id="_2fc4ed67-8a17-0049-a923-fa1deabeaabf">increasing spatial and temporal resolution of the datasets;</p>
+</li>
+<li><p id="_fe8a7c99-0565-7425-daba-e66f0fed275d">extending time span</p>
+</li>
+<li><p id="_bb3ddce0-a2f0-48c5-8083-501cf3697b80">replacing static maps with a dynamic and interactive interface;</p>
+</li>
+<li><p id="_24e4f9d3-1fd4-d6c0-a401-975e95e00019">using practical solar radiation parameters instead of physical variables;</p>
+</li>
+<li><p id="_4f72a173-e54f-9717-5677-020bc9f341ea">making datasets (+ metadata) available for downloaded
+in interoperable file formats for further use</p>
+</li>
+<li><p id="_0973978b-0df8-c350-ba87-1d5e39a5ab8d">sharing a solar climate knowledge base and data/service user guide</p>
+</li>
+</ul>
+
+<p id="_6fed0b65-f976-b397-f934-bbeb73853510">in order to:</p>
+
+<ul id="_0a8d4b8e-9ebc-0c23-ba61-dce13808525f"><li><p id="_7266dd4e-03c6-dcde-056f-002aab9fdbb0">advance development of the solar-smart society and economy in PL</p>
+</li>
+<li><p id="_d38c1ae8-c465-0b23-04ac-abed0914ce06">provide know-how and tools, which are easily reusable in other geographical regions</p>
+</li>
+</ul>
+
+<table id="_a1b17d4c-0bb3-a7bc-da60-62b3cbc9b7a4"><tbody><tr><td valign="middle" align="left">//image::images/Jakub-SolarConditionAtlas.png[]</td>
+</tr><tr><td valign="middle" align="left">Solar Climate atlas for Poland available on the IMGW website: <link target="https://klimat.imgw.pl/en/solar-atlas"/></td>
+</tr></tbody>
+</table>
+
+<p id="_141ffc94-182b-6d9a-89c1-d60edb8a8d87">Newly created <strong>solar climate data cube and web map service</strong> will be more <strong>FAIR</strong> as they will be made available online, possibly on the official website of the Polish Hydrometeorological Service (IMGW) for an increased findability, upon future agreement (to be discussed) to make them more <strong>Findable</strong> by the general public. The whole process of data access (including authentication) will be transparent and accompanied by appropriate instructions so that the <strong>Accessibility</strong> could be much higher. The format of the datasets in the data cube will be an OGC netCDF standard compliant with the CF (Climate and Forecast) convention, which is suitable for encoding gridded data for space/time-varying phenomena and commonly known in the climate science community but also easily readable with other common spatial data processing and visualization software including most of the GIS software to keep fully <strong>Interoperable</strong>. Finally, even though the proposed solar climate information system (maps+ dataset) are limited to the area of Poland, all processing scripts will be made available on github along with a well-described processing steps (both Jupyter notebooks and instructional videos will be considered) to provide <strong>Reusability</strong> for other countries or geographical regions.</p>
+
+<p id="_df4811ce-afe8-00dd-569f-d9bd423499ae"><strong>Two objectives for the pilot OGC Climate Resilience Pilot are:</strong></p>
+
+<ul id="_456c9211-4c65-0eac-1f8e-5aadfcd2e6d1"><li><p id="_5fb5d315-bba3-62ae-18f7-fdb4bd706c40">to document existing solar radiation datasets (satellite, model and reanalysis data) and services (both freely accessible and commercial)</p>
+</li>
+<li><p id="_97ac0982-30d0-6a37-1014-1e8a11e5e664">to verify the accuracy of the in situ measurements and satellite climate data records for the selected solar radiation parameters using proper statistical methods</p>
+</li>
+</ul>
+</clause>
+</clause>
+
+
+
+
+
+
+</sections><annex id="annex-reference" obligation="normative">
+<title>Annex Title</title>
+<p id="_3cf2c112-28a0-7227-bc6e-eb6cf122c396">Annex content.</p>
+
+<note id="_350c0cbe-8464-1ee3-de5d-5f35c0e0096e"><p id="_ef6ee8a0-3cad-bb3c-18bd-a9364d9a17f0">Place annex material in sequential order and set <tt>obligation</tt> attribute as “normative” (default) or “informative” according to the case.</p>
+</note>
+</annex><annex id="_revision_history" obligation="informative">
+<title>Revision History</title>
+<table id="_27fe853d-4d2e-5610-29a4-b2d9e56d202d" unnumbered="true" width="90%"><thead><tr><th valign="middle" align="left">Date</th>
+<th valign="middle" align="left">Release</th>
+<th valign="middle" align="left">Author</th>
+<th valign="middle" align="left">Primary clauses modified</th>
+<th valign="middle" align="left">Description</th>
+</tr></thead>
+<tbody><tr><td valign="middle" align="left">2016-04-28</td>
+<td valign="middle" align="left">0.1</td>
+<td valign="middle" align="left">G. Editor</td>
+<td valign="middle" align="left">all</td>
+<td valign="middle" align="left">initial version</td>
+</tr></tbody>
+</table>
+</annex><bibliography><references id="_references" normative="true" obligation="informative">
+<title>Normative references</title><p id="_307b20e2-9e40-db56-abbf-2822ab2941cc">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+<bibitem id="openapi"><formattedref format="application/x-isodoc+xml">Open API Initiative: <strong>OpenAPI Specification 3.0.2</strong>, 2018 <link target="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md"/></formattedref><docidentifier>Open API Initiative</docidentifier></bibitem>
+<bibitem id="gmlsf"><formattedref format="application/x-isodoc+xml">van den Brink, L., Portele, C., Vretanos, P.: OGC 10-100r3, <strong>Geography Markup Language (GML) Simple Features Profile</strong>, 2012 <link target="http://portal.opengeospatial.org/files/?artifact_id=42729"/></formattedref><docidentifier>GMLSF</docidentifier></bibitem>
+<bibitem id="html5"><formattedref format="application/x-isodoc+xml">W3C: <strong>HTML5</strong>, W3C Recommendation, 2019 <link target="http://www.w3.org/TR/html5/"/></formattedref><docidentifier>HTML5</docidentifier><docnumber>5</docnumber></bibitem>
+<bibitem id="schema"><formattedref format="application/x-isodoc+xml"><strong>Schema.org:</strong> <link target="http://schema.org/docs/schemas.html"/></formattedref><docidentifier>Schema.org</docidentifier></bibitem>
+
+ <bibitem id="rfc2616" type="standard" schema-version="v1.2.1">  <fetched>2023-02-22</fetched>  
+<title type="main" format="text/plain">Hypertext Transfer Protocol — HTTP/1.1</title>
+  <uri type="src">https://www.rfc-editor.org/info/rfc2616</uri>  <docidentifier type="IETF" primary="true">RFC 2616</docidentifier>  <docidentifier type="DOI">10.17487/RFC2616</docidentifier>  <docnumber>RFC2616</docnumber>  <date type="published">    <on>1999-06</on>  </date>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">R. Fielding</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">J. Gettys</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">J. Mogul</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">H. Frystyk</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">L. Masinter</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">P. Leach</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">T. Berners-Lee</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      
+<name>RFC Publisher</name>
+    </organization>  </contributor>  <contributor>    <role type="authorizer"/>    <organization>      
+<name>RFC Series</name>
+    </organization>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_4e5d4849-cde5-1945-225b-980cb19a510e">HTTP has been in use by the World-Wide Web global information initiative since 1990.  This specification defines the protocol referred to as “HTTP/1.1”, and is an update to RFC 2068. [STANDARDS-TRACK]</p>
+  </abstract>  <relation type="obsoletedBy">    <bibitem>      <formattedref format="text/plain">RFC7230</formattedref>      <docidentifier type="IETF" primary="true">RFC7230</docidentifier>    </bibitem>
+  </relation>  <relation type="obsoletedBy">    <bibitem>      <formattedref format="text/plain">RFC7231</formattedref>      <docidentifier type="IETF" primary="true">RFC7231</docidentifier>    </bibitem>
+  </relation>  <relation type="obsoletedBy">    <bibitem>      <formattedref format="text/plain">RFC7232</formattedref>      <docidentifier type="IETF" primary="true">RFC7232</docidentifier>    </bibitem>
+  </relation>  <relation type="obsoletedBy">    <bibitem>      <formattedref format="text/plain">RFC7233</formattedref>      <docidentifier type="IETF" primary="true">RFC7233</docidentifier>    </bibitem>
+  </relation>  <relation type="obsoletedBy">    <bibitem>      <formattedref format="text/plain">RFC7234</formattedref>      <docidentifier type="IETF" primary="true">RFC7234</docidentifier>    </bibitem>
+  </relation>  <relation type="obsoletedBy">    <bibitem>      <formattedref format="text/plain">RFC7235</formattedref>      <docidentifier type="IETF" primary="true">RFC7235</docidentifier>    </bibitem>
+  </relation>  <series>    
+<title format="text/plain">RFC</title>
+    <number>2616</number>  </series>  <keyword>HTTP</keyword>  <keyword>Hypertext Transfer Protocol</keyword>  <keyword>World Wide Web</keyword>  <keyword>WWW</keyword>  <keyword>hypermedia</keyword></bibitem>
+ <bibitem id="rfc2818" type="standard" schema-version="v1.2.1">  <fetched>2023-02-22</fetched>  
+<title type="main" format="text/plain">HTTP Over TLS</title>
+  <uri type="src">https://www.rfc-editor.org/info/rfc2818</uri>  <docidentifier type="IETF" primary="true">RFC 2818</docidentifier>  <docidentifier type="DOI">10.17487/RFC2818</docidentifier>  <docnumber>RFC2818</docnumber>  <date type="published">    <on>2000-05</on>  </date>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">E. Rescorla</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      
+<name>RFC Publisher</name>
+    </organization>  </contributor>  <contributor>    <role type="authorizer"/>    <organization>      
+<name>RFC Series</name>
+    </organization>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_a0ce7b9d-1582-af08-71a3-8a5f7251a1b5">This memo describes how to use Transport Layer Security (TLS) to secure Hypertext Transfer Protocol (HTTP) connections over the Internet.  This memo provides information for the Internet community.</p>
+  </abstract>  <relation type="obsoletedBy">    <bibitem>      <formattedref format="text/plain">RFC9110</formattedref>      <docidentifier type="IETF" primary="true">RFC9110</docidentifier>    </bibitem>
+  </relation>  <series>    
+<title format="text/plain">RFC</title>
+    <number>2818</number>  </series>  <keyword>hypertext</keyword>  <keyword>transfer</keyword>  <keyword>protocol</keyword>  <keyword>transport</keyword>  <keyword>layer</keyword>  <keyword>security</keyword></bibitem>
+ <bibitem id="rfc3339" type="standard" schema-version="v1.2.1">  <fetched>2023-02-22</fetched>  
+<title type="main" format="text/plain">Date and Time on the Internet: Timestamps</title>
+  <uri type="src">https://www.rfc-editor.org/info/rfc3339</uri>  <docidentifier type="IETF" primary="true">RFC 3339</docidentifier>  <docidentifier type="DOI">10.17487/RFC3339</docidentifier>  <docnumber>RFC3339</docnumber>  <date type="published">    <on>2002-07</on>  </date>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">G. Klyne</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">C. Newman</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      
+<name>RFC Publisher</name>
+    </organization>  </contributor>  <contributor>    <role type="authorizer"/>    <organization>      
+<name>RFC Series</name>
+    </organization>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_6a27aaa0-e1d3-b9c4-83d1-f8d026a9729b">This document defines a date and time format for use in Internet protocols that is a profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.</p>
+  </abstract>  <series>    
+<title format="text/plain">RFC</title>
+    <number>3339</number>  </series>  <keyword>Timestamps</keyword>  <keyword>gregorian calendar</keyword>  <keyword>iso</keyword>  <keyword>International Organization for Standardization</keyword></bibitem>
+ <bibitem id="rfc8288" type="standard" schema-version="v1.2.1">  <fetched>2023-02-22</fetched>  
+<title type="main" format="text/plain">Web Linking</title>
+  <uri type="src">https://www.rfc-editor.org/info/rfc8288</uri>  <docidentifier type="IETF" primary="true">RFC 8288</docidentifier>  <docidentifier type="DOI">10.17487/RFC8288</docidentifier>  <docnumber>RFC8288</docnumber>  <date type="published">    <on>2017-10</on>  </date>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">M. Nottingham</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      
+<name>RFC Publisher</name>
+    </organization>  </contributor>  <contributor>    <role type="authorizer"/>    <organization>      
+<name>RFC Series</name>
+    </organization>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_8bd6ef20-8efe-3162-4d3f-78d8ce627325">This specification defines a model for the relationships between resources on the Web (“links”) and the type of those relationships (“link relation types”).</p>
+    <p id="_9de68953-1c3e-1172-9b8b-1e3a0e827503">It also defines the serialisation of such links in HTTP headers with the Link header field.</p>
+  </abstract>  <series>    
+<title format="text/plain">RFC</title>
+    <number>8288</number>  </series>  <keyword>link relation</keyword></bibitem>
+ <bibitem id="rfc7946" type="standard" schema-version="v1.2.1">  <fetched>2023-02-22</fetched>  
+<title type="main" format="text/plain">The GeoJSON Format</title>
+  <uri type="src">https://www.rfc-editor.org/info/rfc7946</uri>  <docidentifier type="IETF" primary="true">RFC 7946</docidentifier>  <docidentifier type="DOI">10.17487/RFC7946</docidentifier>  <docnumber>RFC7946</docnumber>  <date type="published">    <on>2016-08</on>  </date>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">H. Butler</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">M. Daly</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">A. Doyle</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">S. Gillies</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">S. Hagen</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename language="en" script="Latn">T. Schaub</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      
+<name>RFC Publisher</name>
+    </organization>  </contributor>  <contributor>    <role type="authorizer"/>    <organization>      
+<name>RFC Series</name>
+    </organization>  </contributor>  <language>en</language>  <script>Latn</script>  <abstract format="text/html" language="en" script="Latn">    <p id="_428ce6b8-09b7-3911-c988-2f902292fd07">GeoJSON is a geospatial data interchange format based on JavaScript Object Notation (JSON).  It defines several types of JSON objects and the manner in which they are combined to represent data about geographic features, their properties, and their spatial extents.  GeoJSON uses a geographic coordinate reference system, World Geodetic System 1984, and units of decimal degrees.</p>
+  </abstract>  <series>    
+<title format="text/plain">RFC</title>
+    <number>7946</number>  </series>  <keyword>JSON</keyword>  <keyword>Geospatial</keyword>  <keyword>JavaScript Object Notation</keyword></bibitem>
+</references><references id="annex-bibliography" normative="false" obligation="informative">
+<title>Bibliography</title><bibitem id="ogc10-092r3" type="standard" schema-version="v1.2.1">  <fetched>2023-02-22</fetched>  
+<title type="title-main" format="text/plain" language="en" script="Latn">NetCDF Binary Encoding Extension Standard: NetCDF Classic and 64-bit Offset Format</title>
+  
+<title type="main" format="text/plain" language="en" script="Latn">NetCDF Binary Encoding Extension Standard: NetCDF Classic and 64-bit Offset Format</title>
+  <uri type="obp">https://portal.ogc.org/files/?artifact_id=43734</uri>  <docidentifier type="OGC" primary="true">10-092r3</docidentifier><docidentifier type="metanorma">[NetCDF]</docidentifier>  <date type="published">    <on>2011-04-05</on>  </date>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename>Ben Domenico</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      
+<name>Open Geospatial Consortium</name>
+    </organization>  </contributor>  <edition>3</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">This document defines an OGC® Standard for encoding binary representations of space-time varying geo-referenced data. Specifically, this standard specifies the netCDF classic and 64-bit offset file binary encoding formats. This standard specifies a set of requirements that every netCDF classic or 64-bit offset binary encoding must fulfil.</abstract>  </bibitem><bibitem id="ogc14-084r2" type="standard" schema-version="v1.2.1">  <fetched>2023-02-22</fetched>  
+<title type="title-main" format="text/plain" language="en" script="Latn">OGC® Moving Features Encoding Extension: Simple Comma Separated Values (CSV)</title>
+  
+<title type="main" format="text/plain" language="en" script="Latn">OGC® Moving Features Encoding Extension: Simple Comma Separated Values (CSV)</title>
+  <uri type="obp">https://docs.ogc.org/is/14-084r2/14-084r2.html</uri>  <docidentifier type="OGC" primary="true">14-084r2</docidentifier><docidentifier type="metanorma">[nofetch]</docidentifier>  <date type="published">    <on>2015-02-17</on>  </date>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename>Akinori Asahara</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename>Ryosuke Shibasaki</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename>Nobuhiro Ishimaru</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename>David Burggraf</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      
+<name>Open Geospatial Consortium</name>
+    </organization>  </contributor>  <edition>2</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">This OGC® Standard specifies standard encoding representations of movement of geographic features. The primary use case is information exchange.</abstract>  </bibitem><bibitem id="ogc14-083r2" type="standard" schema-version="v1.2.1">  <fetched>2023-02-22</fetched>  
+<title type="title-main" format="text/plain" language="en" script="Latn">OGC® Moving Features Encoding Part I: XML Core</title>
+  
+<title type="main" format="text/plain" language="en" script="Latn">OGC® Moving Features Encoding Part I: XML Core</title>
+  <uri type="obp">https://docs.ogc.org/is/14-083r2/14-083r2.html</uri>  <docidentifier type="OGC" primary="true">14-083r2</docidentifier>  <date type="published">    <on>2015-02-17</on>  </date>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename>Akinori Asahara</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename>Ryosuke Shibasaki</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename>Nobuhiro Ishimaru</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="author"/>    <person>      
+<name>        <completename>David Burggraf</completename>      </name>
+    </person>  </contributor>  <contributor>    <role type="publisher"/>    <organization>      
+<name>Open Geospatial Consortium</name>
+    </organization>  </contributor>  <edition>2</edition>  <language>en</language>  <script>Latn</script>  <abstract format="text/plain" language="en" script="Latn">This OGC® Standard specifies standard encoding representations of movement of geographic features. The primary use case is information exchange.</abstract>  </bibitem><bibitem id="ogc11-165r2">
+  <formattedref format="application/x-isodoc+xml">OGC: OGC 11-165r2: CF-netCDF3 Data Model Extension standard, 2012</formattedref>
+  <docidentifier type="metanorma">[CF-netCDF3]</docidentifier>
+</bibitem><bibitem id="Simonis2018">
+  <formattedref format="application/x-isodoc+xml">Standardized Big Data Processing in Hybrid Clouds. In: Proceedings of the 4th International Conference on Geographical Information Systems Theory, Applications and Management — Volume 1: GISTAM, pp. 205–210. SciTePress (2018).</formattedref>
+  <docidentifier>Simonis, I.</docidentifier>
+  
+</bibitem><bibitem id="netcdf">
+  <formattedref format="application/x-isodoc+xml">Lawrence Livermore National Laboratory: NetCDF CF Metadata Conventions – <link target="http://cfconventions.org/"/></formattedref>
+  <docidentifier type="metanorma">[6]</docidentifier>
+</bibitem><bibitem id="acdd">
+  <formattedref format="application/x-isodoc+xml">ESIP: Attribute Convention for Data Discovery (ACDD) – <link target="http://wiki.esipfed.org/index.php/"/></formattedref>
+  <docidentifier type="metanorma">[7]</docidentifier>
+</bibitem>
+
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+</references></bibliography>
+</ogc-standard>

@@ -1,0 +1,54 @@
+./document.err errors
+
+
+== Anchors
+
+(XML Line 000249): normalised identifier in <xref target="Pixalytics_architecture" style="short"/> from Pixalytics architecture
+	<xref target="Pixalytics_architecture" style="short"/>
+(XML Line 000249): Crossreference target Pixalytics_architecture is undefined
+	<xref target="Pixalytics_architecture" style="short"/>
+
+
+== Style
+
+(): Abstract is missing!
+(): Preface is missing!
+(): Submitting Organizations is missing!
+(): Submitters is missing!
+(): Executive Summary required for Engineering Reports!
+
+
+== Metanorma XML Style Warning
+
+(XML Line 000351): Table should have title
+	<table id="_4bcf5ece-c988-03a2-f721-ea204e4676e5"><thead><tr><th valign="middle" align="center">//image::images/ARD_GMU-architecture.png[image]</th>
+	</tr></thead>
+	<tbody><tr><td valign="middle" align="center">Software Architecture</td>
+	</tr></tbody>
+	</table>
+(XML Line 000457): Table should have title
+	<table id="_84cc0ff2-3bc7-1292-421c-df5b56682e84"><thead><tr><th valign="middle" align="center">//image::images/ARD_GMU-demo-sfsm_inst.png[image]</th>
+	</tr></thead>
+	<tbody><tr><td valign="middle" align="center">Surface soil moisture percentile (year 2019-2022)</td>
+	</tr></tbody>
+	</table>
+(XML Line 000495): Table should have title
+	<table id="_a1b17d4c-0bb3-a7bc-da60-62b3cbc9b7a4"><tbody><tr><td valign="middle" align="left">//image::images/Jakub-SolarConditionAtlas.png[]</td>
+	</tr><tr><td valign="middle" align="left">Solar Climate atlas for Poland available on the IMGW website: <link target="https://klimat.imgw.pl/en/solar-atlas"/></td>
+	</tr></tbody>
+	</table>
+(XML Line 000522): Table should have title
+	<table id="_27fe853d-4d2e-5610-29a4-b2d9e56d202d" unnumbered="true" width="90%"><thead><tr><th valign="middle" align="left">Date</th>
+	<th valign="middle" align="left">Release</th>
+	<th valign="middle" align="left">Author</th>
+	<th valign="middle" align="left">Primary clauses modified</th>
+	<th valign="middle" align="left">Description</th>
+
+
+== Metanorma XML Syntax
+
+(XML Line 000062:58): element "clause" not allowed here; expected element "abstract" or "foreword"
+(XML Line 000065:57): element "clause" not allowed here; expected element "abstract" or "foreword"
+(XML Line 000068:102): element "clause" not allowed here; expected element "abstract" or "foreword"
+(XML Line 000068:269): element "preface" incomplete; missing required element "foreword"
+(XML Line 000181:86): element "definitions" not allowed here; expected the element end-tag or element "term"
