@@ -24,8 +24,16 @@
 	<th valign="middle" align="left">Description</th>
 
 
+== Document Attributes
+
+(): draft # published is not a recognised status
+
+
 == Metanorma XML Syntax
 
+(XML Line 000005:230): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
+(XML Line 000005:278): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
+(XML Line 000005:328): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
 (XML Line 000062:58): element "clause" not allowed here; expected element "abstract" or "foreword"
 (XML Line 000065:57): element "clause" not allowed here; expected element "abstract" or "foreword"
 (XML Line 000068:102): element "clause" not allowed here; expected element "abstract" or "foreword"

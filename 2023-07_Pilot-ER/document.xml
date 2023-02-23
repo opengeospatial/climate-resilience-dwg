@@ -2,13 +2,13 @@
 <ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="semantic" version="2.3.3">
 <bibdata type="standard">
 <title language="en" format="text/plain">Engineering report for OGC Climate Resilience DWG</title>
-<docidentifier type="ogc-external">http://www.opengis.net/doc/PER/eoep-Hack2018</docidentifier><docidentifier type="ogc-internal">18-046</docidentifier><docnumber>18-046</docnumber><date type="published"><on>2018-06-12</on></date><date type="issued"><on>2018-07-10</on></date><date type="received"><on>2018-12-20</on></date><contributor><role type="editor"/><person>
+<docidentifier type="ogc-external">http://www.opengis.net/doc/PER/eoep-Hack2018</docidentifier><docidentifier type="ogc-internal"># 18-046</docidentifier><docnumber># 18-046</docnumber><date type="published"><on># 2018-06-12</on></date><date type="issued"><on># 2018-07-10</on></date><date type="received"><on># 2018-12-20</on></date><contributor><role type="editor"/><person>
 <name><completename>Guy Schumann</completename></name>
 </person></contributor><contributor><role type="editor"/><person>
 <name><completename>Albert Kettner</completename></name>
 </person></contributor><contributor><role type="publisher"/><organization>
 <name>Open Geospatial Consortium</name>
-</organization></contributor><language>en</language><script>Latn</script><status><stage>approved</stage></status><copyright><from>2023</from><owner><organization>
+</organization></contributor><language>en</language><script>Latn</script><status><stage>draft # published</stage></status><copyright><from>2023</from><owner><organization>
 <name>Open Geospatial Consortium</name>
 </organization></owner></copyright><keyword>hackaton</keyword><keyword>application-to-the-cloud</keyword><keyword>testbed</keyword><keyword>docker</keyword><keyword>web service</keyword><ext><doctype>engineering-report</doctype><editorialgroup><committee>technical</committee></editorialgroup></ext></bibdata>
 <boilerplate>
