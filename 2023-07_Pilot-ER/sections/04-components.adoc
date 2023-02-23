@@ -9,7 +9,7 @@ Pixalytics are developing an OGC-compliant API service, see <<Pixalytics_archite
 
 [[Pixalytics_architecture]]
 .Pixalytics architecture
-//image::Pixalytics-architecture.png[Pixalytics-architecture]
+image::Pixalytics-architecture.png[Pixalytics-architecture]
 
 Currently, the Standardized Precipitation Index (SPI) is being calculated using ERA5 reanalysis data from the Copernicus Climate Change Service. The API access is being set up following the Building Blocks for Climate Services (https://climateintelligence.github.io/smartduck-docs/) approach. Once all steps are working for SPI, the next step is adding soil moisture and vegetation drought indices. Also, work on how to combine indices into a single view/indicator is being considered.
 
