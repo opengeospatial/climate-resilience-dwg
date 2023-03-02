@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="semantic" version="2.3.3">
+<ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="semantic" version="2.3.4">
 <bibdata type="standard">
 <title language="en" format="text/plain">Engineering report for OGC Climate Resilience DWG</title>
 <docidentifier type="ogc-external">http://www.opengis.net/doc/PER/eoep-Hack2018</docidentifier><docidentifier type="ogc-internal"># 18-046</docidentifier><docnumber># 18-046</docnumber><date type="published"><on># 2018-06-12</on></date><date type="issued"><on># 2018-07-10</on></date><date type="received"><on># 2018-12-20</on></date><contributor><role type="editor"/><person>
@@ -10,7 +10,7 @@
 <name>Open Geospatial Consortium</name>
 </organization></contributor><language>en</language><script>Latn</script><status><stage>draft # published</stage></status><copyright><from>2023</from><owner><organization>
 <name>Open Geospatial Consortium</name>
-</organization></owner></copyright><keyword>hackaton</keyword><keyword>application-to-the-cloud</keyword><keyword>testbed</keyword><keyword>docker</keyword><keyword>web service</keyword><ext><doctype>engineering-report</doctype><editorialgroup><committee>technical</committee></editorialgroup></ext></bibdata>
+</organization></owner></copyright><keyword>hackaton</keyword><keyword>application-to-the-cloud</keyword><keyword>testbed</keyword><keyword>docker</keyword><keyword>web service</keyword><ext><doctype>engineering-report</doctype><editorialgroup><committee>technical</committee></editorialgroup></ext></bibdata><metanorma-extension><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
 <boilerplate>
   <copyright-statement>
     <clause>
@@ -206,6 +206,12 @@
 <clause id="_wuhan_university_whu" obligation="normative">
 <title>Wuhan University (WHU)</title>
 <p id="_cdf6ad0e-3db7-09a1-61e8-f4491ec7fc43">Wuhan University (WHU) is a university that plays a significant role in researching and teaching all aspects of surveying and mapping, remote sensing, photogrammetry, and geospatial information sciences in China. In this Climate Resilience Pilot, we will contribute two use-cases: a use-case for drought and wildfire impact, and a use-case for analysis ready data.</p>
+</clause>
+
+<clause id="_ecere_corporation" obligation="normative">
+<title>Ecere Corporation</title>
+<p id="_e375298e-3f58-5445-12bf-eaee6c139b0c">Ecere is providing a deployment of its GNOSIS Map Server with a focus on a Sentinel-2 Level 2A data cube. <em>OGC API - Tiles</em>, <em>OGC API - Coverages</em>, <em>OGC API - Maps</em>, <em>OGC API — Discrete Global Grid Systems</em>, <em>Common Query Language (CQL2)</em>, and  <em>OGC API — Processes — Part 3: Workflows &amp; Chaining</em> are the supported standards and extensions for this task.
+We plan to use the process output to identify vegetation fuel type, then combine with weather data to assess wildfire hazards risk in Australia.</p>
 </clause>
 </clause>
 
@@ -487,10 +493,10 @@ in interoperable file formats for further use</p>
 
 </sections><annex id="annex-reference" obligation="normative">
 <title>Annex Title</title>
-<p id="_3cf2c112-28a0-7227-bc6e-eb6cf122c396">Annex content.</p>
+<p id="_f4c1396f-ce5b-857b-8cc0-15fb6c29587e">Annex content.<note id="_29474ecb-722d-7b2f-7a81-ddd70d722778"><p id="_a4d8bb15-6d72-ea12-71da-d176e4196e59">Place annex material in sequential order and set <tt>obligation</tt> attribute as “normative” (default) or “informative” according to the case.</p>
+</note></p>
 
-<note id="_350c0cbe-8464-1ee3-de5d-5f35c0e0096e"><p id="_ef6ee8a0-3cad-bb3c-18bd-a9364d9a17f0">Place annex material in sequential order and set <tt>obligation</tt> attribute as “normative” (default) or “informative” according to the case.</p>
-</note>
+
 </annex><annex id="_revision_history" obligation="informative">
 <title>Revision History</title>
 <table id="_27fe853d-4d2e-5610-29a4-b2d9e56d202d" unnumbered="true" width="90%"><thead><tr><th valign="middle" align="left">Date</th>
