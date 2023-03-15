@@ -1,8 +1,12 @@
 
 [[clause-reference]]
 == Components
+The various organizations and institutes that contribute to the Climate Resilience Pilot are described below. There input to the pilot is indicated in the figure below <<CRIS>>. 
 
-//Insert Component content here
+[[CRIS]]
+.CRIS overview
+image::CRIS.png[CRIS]
+
 === Pixalytics
 
 Pixalytics are developing an OGC-compliant API service, see <<Pixalytics_architecture>>, which will provide global information on droughts. The approach is to take global open data/datasets from organizations such as ESA/Copernicus, NASA/NOAA and the WMO and combine meteorology, hydrology, and remote sensing data to produce ARD data based on a composite of different indicators. Where globally calculated drought indicators already exist, these are being used in preference to their re-calculation, although consistency and the presence of uncertainties are also being considered.
