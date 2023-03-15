@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="semantic" version="2.3.4">
+<ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="semantic" version="2.3.6">
 <bibdata type="standard">
 <title language="en" format="text/plain">Engineering report for OGC Climate Resilience DWG</title>
 <docidentifier type="ogc-external">http://www.opengis.net/doc/PER/eoep-Hack2018</docidentifier><docidentifier type="ogc-internal"># 18-046</docidentifier><docnumber># 18-046</docnumber><date type="published"><on># 2018-06-12</on></date><date type="issued"><on># 2018-07-10</on></date><date type="received"><on># 2018-12-20</on></date><contributor><role type="editor"/><person>
@@ -212,6 +212,50 @@
 <title>Ecere Corporation</title>
 <p id="_e375298e-3f58-5445-12bf-eaee6c139b0c">Ecere is providing a deployment of its GNOSIS Map Server with a focus on a Sentinel-2 Level 2A data cube. <em>OGC API - Tiles</em>, <em>OGC API - Coverages</em>, <em>OGC API - Maps</em>, <em>OGC API — Discrete Global Grid Systems</em>, <em>Common Query Language (CQL2)</em>, and  <em>OGC API — Processes — Part 3: Workflows &amp; Chaining</em> are the supported standards and extensions for this task.
 We plan to use the process output to identify vegetation fuel type, then combine with weather data to assess wildfire hazards risk in Australia.</p>
+</clause>
+
+<clause id="_walawender" obligation="normative">
+<title>Walawender</title>
+</clause>
+
+<clause id="_safe_software" obligation="normative">
+<title>Safe Software</title>
+</clause>
+
+<clause id="_gmu_csiss" obligation="normative">
+<title>GMU_CSISS</title>
+</clause>
+
+<clause id="_pelagis" obligation="normative">
+<title>Pelagis</title>
+</clause>
+
+<clause id="_gatewaygeo" obligation="normative">
+<title>GatewayGEO</title>
+</clause>
+
+<clause id="_presagis" obligation="normative">
+<title>Presagis</title>
+</clause>
+
+<clause id="_laubwerk" obligation="normative">
+<title>Laubwerk</title>
+</clause>
+
+<clause id="_alps" obligation="normative">
+<title>AlpS</title>
+</clause>
+
+<clause id="_intactlab" obligation="normative">
+<title>Intactlab</title>
+</clause>
+
+<clause id="_gise_hub" obligation="normative">
+<title>GISE Hub</title>
+</clause>
+
+<clause id="_rss_hydro" obligation="normative">
+<title>RSS-Hydro</title>
 </clause>
 </clause>
 
