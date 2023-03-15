@@ -192,6 +192,10 @@
 
 <clause id="clause-reference" obligation="normative">
 <title>Components</title>
+<p id="_33acdd6e-c750-7775-c0f9-3c4b32cf9521">The various organizations and institutes that contribute to the Climate Resilience Pilot are described below. There input to the pilot is indicated in the figure below <xref target="CRIS" style="short"/>.</p>
+
+<p id="CRIS">images::CRIS.png[CRIS]</p>
+
 <clause id="_pixalytics" obligation="normative">
 <title>Pixalytics</title>
 <p id="_dc9cde79-38bd-85e1-3600-4be93f195036">Pixalytics are developing an OGC-compliant API service, see <xref target="Pixalytics_architecture" style="short"/>, which will provide global information on droughts. The approach is to take global open data/datasets from organizations such as ESA/Copernicus, NASA/NOAA and the WMO and combine meteorology, hydrology, and remote sensing data to produce ARD data based on a composite of different indicators. Where globally calculated drought indicators already exist, these are being used in preference to their re-calculation, although consistency and the presence of uncertainties are also being considered.</p>
