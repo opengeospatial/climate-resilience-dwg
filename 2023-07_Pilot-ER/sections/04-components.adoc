@@ -20,3 +20,25 @@ Wuhan University (WHU) is a university that plays a significant role in research
 
 Ecere is providing a deployment of its GNOSIS Map Server with a focus on a Sentinel-2 Level 2A data cube. _OGC API - Tiles_, _OGC API - Coverages_, _OGC API - Maps_, _OGC API - Discrete Global Grid Systems_, _Common Query Language (CQL2)_, and  _OGC API - Processes - Part 3: Workflows & Chaining_ are the supported standards and extensions for this task.
 We plan to use the process output to identify vegetation fuel type, then combine with weather data to assess wildfire hazards risk in Australia. 
+
+=== Walawender
+
+===Safe Software
+
+=== GMU_CSISS
+
+=== Pelagis
+
+=== GatewayGEO
+
+=== Presagis
+
+=== Laubwerk
+
+=== AlpS
+
+=== Intactlab
+
+=== GISE Hub
+
+=== RSS-Hydro
