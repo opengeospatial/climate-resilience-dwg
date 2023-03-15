@@ -23,7 +23,7 @@ We plan to use the process output to identify vegetation fuel type, then combine
 
 === Walawender
 
-===Safe Software
+=== Safe Software
 
 === GMU_CSISS
 
