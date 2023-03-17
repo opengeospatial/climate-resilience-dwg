@@ -35,7 +35,7 @@ CRIS are already existing and operational, like the Copernicus Climate Change Se
 
 Goals and objectives of decision makers vary at different scales. At the municipal level, municipal leaders and citizens directly face climate-related hazards. Aspects thus come into focus such as reducing vulnerability and risk, building resilience through local measures, or enhancing emergency response. At the state level, the municipal efforts can be coordinated and supported by providing funding and enacting relevant policies. The national, federal, or international level provides funding, science data, and international coordination to enable the best analysis and decisions at the lower scales.
 
-//image::images/Interoperable_ScienceService.png[]
+image::images/Interoperable_ScienceService.png[]
 
 .Schematic synergies within different climate and science services due to FAIR and open Infrastructures
 
