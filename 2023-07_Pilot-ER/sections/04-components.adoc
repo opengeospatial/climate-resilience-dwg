@@ -5,7 +5,7 @@ The various organizations and institutes that contribute to the Climate Resilien
 
 [[CRIS]]
 .CRIS overview
-image::CRIS.png[CRIS]
+image::images/CRIS.png[CRIS]
 
 === Pixalytics
 
