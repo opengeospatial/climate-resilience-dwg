@@ -4,11 +4,11 @@
 == Bibliography
 
 (XML Line 000694): Style override set for ordered list
-	<ol id="_7c627de9-d5a0-4fa1-a702-3787d9b2e004" type="arabic"><li><p id="_4c4a8844-b313-4e1e-9e83-769cc5a8e120">Applicability of open standards and specifications in support of data
+	<ol id="_da899238-8f00-4c02-b318-c72c1c944931" type="arabic"><li><p id="_74e1d549-612b-4118-b18b-58cbf5d43c8e">Applicability of open standards and specifications in support of data
 	discovery, data integration, data transformation, data processing, data
 	dissemination and data visualization</p>
 	</li>
-	<li><p id="_ff78eee4-5b80-4fa7-8b80-3472bfcdd825">Transparency of metadata, data quality and provenance</p>
+	<li><p id="_16b20eff-b596-4369-883a-a978461346b4">Transparency of metadata, data quality and provenance</p>
 
 
 == Style
@@ -56,16 +56,11 @@
 	<th valign="middle" align="left">Description</th>
 
 
-== Document Attributes
-
-(): draft # published is not a recognised status
-
-
 == Metanorma XML Syntax
 
-(XML Line 000005:230): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
-(XML Line 000005:278): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
-(XML Line 000005:328): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
+(XML Line 000005:176): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
+(XML Line 000005:221): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
+(XML Line 000005:268): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
 (XML Line 000062:58): element "clause" not allowed here; expected element "abstract" or "foreword"
 (XML Line 000065:57): element "clause" not allowed here; expected element "abstract" or "foreword"
 (XML Line 000068:102): element "clause" not allowed here; expected element "abstract" or "foreword"
