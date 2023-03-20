@@ -5,7 +5,7 @@
 Drought and wildfire caused by climate change are one of the important factors affecting agricultural production, food security, and water shortage. The goal of WHU is to develop a use-case for drought and wildfire risk assessment for rapid response to drought and wildfire occurrences. Figure 1 shows the technical architecture on how WHU contributed to the use-case. It has the following features: 1) For data discovery, a catalogue service from data center following OGC API is provided allowing users to search geospatial data both available from WHU data stores and remote data stores from USGS, ESA, and NASA. 2) For data integration, data can be integrated into the WHU software in the form of geo date cubes with three efforts: formalizing cube dimensions for multi-source geospatial data, processing geospatial data query along cube dimensions, and organizing cube data for high-performance geoprocessing. 3) For data processing, a processing chain is enabled in WHU software using a code editor and modelbuilder. 4) For data visualization, a Web-based client for visualization of spatial data and statistics is provided using a virtual globe and charts. 
 
 .The technical architecture of the use-case for drought and wildfire impact
-//image::WHU-drought-wildfire-impact.png[DroughtWildfire]
+image::WHU-drought-wildfire-impact.png[DroughtWildfire]
 
 
 Figure 2 a is the data center of the proposed use-case, which currently stores multiple sources data from different platforms including 20 years of precipitation data from GPM (Global Precipitation Measurement) used to calculate the drought index. The drought and wildfire risk assessment algorithms are integrated in the algorithm center, which can be invoked by the code editor or modelbuilder to perform drought and wildfire risk assessment. Figure 2b shows the Python code and visualization result of the drought risk assessment in Asia based on precipitation anomaly percentage (PAP) index.
@@ -30,7 +30,7 @@ image::WHU-processing-chain.png[ProcessingChain]
 To demonstrate our ability to produce ARD and promote the use of Chinese satellite data, we will produce a surface reflectance ARD dataset through the harmonization of Gaofen-1 WFV (Wide Field of View), Gaofen-6 WFV, and Sentinel-2 data. Figure 2 shows the Sentinel-2 data before and after pre-processing. Besides, we’d like to coordinate with the ARD SWG to promote standards for ARD and ensure that the ARD we produce is stable and reusable. Furthermore, we wish to seek the assessment of CEOS-ARD in our long-term plan.
 
 .Sentinel-2 RBG composite (red Band4, green Band3, blue Band2), over Hubei, acquired on October 22, 2020. (a) corresponds to the reflectance at the top of the atmosphere (L1C product), (b) corresponds to the surface reflectance after pre-processing.
-//image::WHU-Sentinel2-RBG-composite.png[Sentinel2Composit]
+image::WHU-Sentinel2-RBG-composite.png[Sentinel2Composit]
 
 
 
