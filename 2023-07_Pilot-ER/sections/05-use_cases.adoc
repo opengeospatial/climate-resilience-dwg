@@ -30,7 +30,7 @@ image::WHU-processing-chain.png[ProcessingChain]
 To demonstrate our ability to produce ARD and promote the use of Chinese satellite data, we will produce a surface reflectance ARD dataset through the harmonization of Gaofen-1 WFV (Wide Field of View), Gaofen-6 WFV, and Sentinel-2 data. Figure 2 shows the Sentinel-2 data before and after pre-processing. Besides, we’d like to coordinate with the ARD SWG to promote standards for ARD and ensure that the ARD we produce is stable and reusable. Furthermore, we wish to seek the assessment of CEOS-ARD in our long-term plan.
 
 .Sentinel-2 RBG composite (red Band4, green Band3, blue Band2), over Hubei, acquired on October 22, 2020. (a) corresponds to the reflectance at the top of the atmosphere (L1C product), (b) corresponds to the surface reflectance after pre-processing.
-image::WHU-Sentinel2-RBG-composite.png[Sentinel2Composit]
+//image::WHU-Sentinel2-RBG-composite.png[Sentinel2Composit]
 
 
 
