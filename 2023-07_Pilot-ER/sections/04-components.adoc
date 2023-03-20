@@ -169,4 +169,4 @@ The figure below shows a high level workflow diagram that illustrates the intera
 
 [[ClimatePilotData2InformationFlow]]
 .High level workflow diagram that illustrates the interactions between data, models and the various components
-image::images/Climate Pilot Data2Information Flow.png[Climate Pilot Data2Information Flow]
+image::images/Climate Pilot Data2Information Flow.PNG[Climate Pilot Data2Information Flow]
