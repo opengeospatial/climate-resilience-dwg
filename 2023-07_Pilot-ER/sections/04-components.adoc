@@ -94,7 +94,7 @@ Plan to use the process output to identify vegetation fuel type, then combine wi
 
 === GMU_CSISS
 
- Component: Analysis Ready Data (ARD).
+- Component: Analysis Ready Data (ARD).
 
 - Inputs: ECV record information, OpenSearch service endpoint (currently CMR(CWIC) and FedEO), download URLs for accessing NetCDF or HDF files.
 
