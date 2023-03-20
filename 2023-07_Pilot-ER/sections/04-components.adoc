@@ -118,7 +118,7 @@ Plan to use the process output to identify vegetation fuel type, then combine wi
 
 [[FMEARDworkflow]]
 .High level FME ARD workflow showing generation of climate scenario ARD and impacts from climate model, EO, IoT, infrastructure and base map inputs
-image::images/FME_ARD_workflow.png[FME_ARD_workflow]
+image::images/FME_ARD_workflow.PNG[FME_ARD_workflow]
 
 === GMU_CSISS
 
