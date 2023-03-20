@@ -117,8 +117,8 @@ Plan to use the process output to identify vegetation fuel type, then combine wi
  * As needed: GML, KML, PostGIS, geodatabase and about 400 other geospatial formats.
 
 [[FME ARD workflow]]
-.High level FME ARD workflow showing generation of climate scenario ARD and impacts from climate model, EO, IoT, infrastructure and base map inputs
-image::images/FME_ARD_workflow.png[FME ARD workflow]
+.High level FME ARD workflow showing generation of climate scenario ARD and impacts from climate model, EO, IoT, infrastructure and base map inputs.
+image::images/FME_ARD_workflow.png[FME_ARD_workflow]
 
 === GMU_CSISS
 
