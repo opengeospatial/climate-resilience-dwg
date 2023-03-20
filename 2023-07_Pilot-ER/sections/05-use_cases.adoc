@@ -17,7 +17,7 @@ Figure 2 a is the data center of the proposed use-case, which currently stores m
 image::WHU-DataCenter.png[DataCenter]
 
 .An example of the drought risk assessment in parts of Asia.
-image::WHU-Visualization-Result.png[VisualizationResult]
+//image::WHU-Visualization-Result.png[VisualizationResult]
 
 ---
 
