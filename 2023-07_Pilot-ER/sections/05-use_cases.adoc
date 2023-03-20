@@ -223,7 +223,7 @@ following results:
 //|====
 
 .Surface soil moisture percentile (year 2019-2022)
-image::images/ARD_GMU-demo-sfsm_inst.png[image]
+image::ARD_GMU-demo-sfsm_inst.png[image]
 
 
 
