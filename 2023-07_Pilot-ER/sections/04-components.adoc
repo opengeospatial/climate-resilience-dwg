@@ -5,7 +5,7 @@ The various organizations and institutes that contribute to the Climate Resilien
 
 [[CRIS]]
 .CRIS overview
-image::images/CRIS.png[CRIS]
+image::CRIS.png[CRIS]
 
 === ECMWF - Cppernicus
 
@@ -27,7 +27,7 @@ Pixalytics are developing an OGC-compliant API service, see <<Pixalytics_archite
 
 [[Pixalytics_architecture]]
 .Pixalytics architecture
-image::images/Pixalytics-architecture.png[Pixalytics-architecture]
+image::Pixalytics-architecture.png[Pixalytics-architecture]
 
 Currently, the Standardized Precipitation Index (SPI) is being calculated using ERA5 reanalysis data from the Copernicus Climate Change Service. The API access is being set up following the Building Blocks for Climate Services (https://climateintelligence.github.io/smartduck-docs/) approach. Once all steps are working for SPI, the next step is adding soil moisture and vegetation drought indices. Also, work on how to combine indices into a single view/indicator is being considered.
 
@@ -118,7 +118,7 @@ Plan to use the process output to identify vegetation fuel type, then combine wi
 
 [[FMEARDworkflow]]
 .High level FME ARD workflow showing generation of climate scenario ARD and impacts from climate model, EO, IoT, infrastructure and base map inputs
-image::images/FME_ARD_workflow.PNG[FME_ARD_workflow]
+image::FME_ARD_workflow.PNG[FME_ARD_workflow]
 
 === GMU_CSISS
 
@@ -188,4 +188,4 @@ The figure below shows a high level workflow diagram that illustrates the intera
 
 [[ClimatePilotData2InformationFlow]]
 .High level workflow diagram that illustrates the interactions between data, models and the various components
-image::images/Climate Pilot Data2Information Flow .png[Climate Pilot Data2Information Flow]
+image::Climate Pilot Data2Information Flow .png[Climate Pilot Data2Information Flow]
