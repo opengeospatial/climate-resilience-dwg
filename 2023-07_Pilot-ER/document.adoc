@@ -34,8 +34,8 @@
 
 
 // Clauses
-include::sections/00-preface.adoc[]
-// include::sections/01-introduction.adoc[]
+// include::sections/00-preface.adoc[]
+include::sections/01-introduction.adoc[]
 // include::sections/02-terms_and_definitions.adoc[]
 // include::sections/03-references.adoc[]
 
