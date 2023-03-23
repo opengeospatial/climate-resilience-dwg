@@ -7,7 +7,7 @@ The various organizations and institutes that contribute to the Climate Resilien
 
 - One of the objectives of the pilot is also to lower the barriers for users accessing CDS/ADS (Atmosperic Data Store) data and services and engage with a broader user community. Knowing from users which are these barriers (gaps) will allow this pilot to evolve as well.
 
-- A universal, well-defined, climate service workflow (from row data to information) as a roadmap to guide developers/users through the process.
+- A universal, well-defined, climate service workflow (from raw data to information) as a roadmap to guide developers/users through the process.
 
 - Improve Sentinel-2 data cube performance, add Climate data, add vegetation fuel type classification, add a wildfire risk assessment workflow.
 
