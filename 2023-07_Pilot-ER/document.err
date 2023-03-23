@@ -4,11 +4,11 @@
 == Bibliography
 
 (XML Line 000694): Style override set for ordered list
-	<ol id="_000761d8-5078-4785-92b7-3ee36f512b60" type="arabic"><li><p id="_7f2cebf1-60b1-4c77-baa1-c0fc2d3307b6">Applicability of open standards and specifications in support of data
+	<ol id="_5a44b67e-39d7-4c07-a70b-ec7693f31862" type="arabic"><li><p id="_ca3ce360-d42d-46dd-b729-541da29e9093">Applicability of open standards and specifications in support of data
 	discovery, data integration, data transformation, data processing, data
 	dissemination and data visualization</p>
 	</li>
-	<li><p id="_349a5a4f-5497-46c0-b0a3-2a6f5475def7">Transparency of metadata, data quality and provenance</p>
+	<li><p id="_8a0cf3ce-7069-4b66-b587-78da0e4808b2">Transparency of metadata, data quality and provenance</p>
 
 
 == Style
@@ -58,9 +58,9 @@
 
 == Metanorma XML Syntax
 
-(XML Line 000005:176): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
-(XML Line 000005:221): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
-(XML Line 000005:268): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
+(XML Line 000005:180): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
+(XML Line 000005:228): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
+(XML Line 000005:278): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
 (XML Line 000062:58): element "clause" not allowed here; expected element "abstract" or "foreword"
 (XML Line 000065:57): element "clause" not allowed here; expected element "abstract" or "foreword"
 (XML Line 000068:102): element "clause" not allowed here; expected element "abstract" or "foreword"
