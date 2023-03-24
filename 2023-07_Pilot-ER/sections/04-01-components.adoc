@@ -1,5 +1,3 @@
-[[clause-reference]]
-
 === ECMWF - Copernicus
 
 - Component: Copernicus services.
