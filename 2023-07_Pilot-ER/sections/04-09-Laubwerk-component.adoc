@@ -1,3 +1,4 @@
+
 === Laubwerk
 
 Laubwerk is a private company working on building a large database of vegetation that includes fully detailed 3D models as well as metadata to represent its properties.
