@@ -1,3 +1,4 @@
+
 === Jakub P. Walawender
 
 - Component: Solar climate atlas for Poland.
