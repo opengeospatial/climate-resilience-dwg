@@ -1,0 +1,29 @@
+=== Safe Software
+
+- Component:
+ * Climate ARD component - Data Cube to ARD.
+ * Impact Components general I/O (Heat, Drought, Flood).
+
+- Inputs: 
+ * Climate ARD component - Data Cube to ARD: Climate scenario data from climate services (NetCDF), for historic and future time periods
+ * Impact Components general I/O (Heat, Drought, Flood): Climate impact ARD from Safes ARD component, including EO data (MODIS, LANDSAT, SENTINEL products), Population/Infrastructure information (OSM), Basemaps, as well as specific requirements per impact:
+  * Drought: vegetation, soils, hydrology, basins
+  * Flood: DEM, hydrology, basins.
+
+- Outputs:
+ * Climate ARD component - Data Cube to ARD: Gridded data, including temperature, soil moisture and  precipitation - aggregate grids (GeoTIFF/COG), as well as Vector data, including temperature, soil moisture and  precipitation contours (Geopackage, GeoJSON, OGC API Features).
+ * Impact Components general I/O (Heat, Drought, Flood): Risk Contours (Geopackage, GeoJSON, OGC API Features).
+
+- What other component(s) can interact with the component: Pixalytics Component: consume variables for Drought Indicator produced by Safe’s ARD component. Any other component that requires climate scenario summary ARD to drive DRI.
+
+- What OGC standards or formats does the component use and produce: 
+ * OGC API Features
+ * Geopackage
+ * NetCDF
+ * GeoJSON
+ * GeoTIFF/COG
+ * As needed: GML, KML, PostGIS, geodatabase and about 400 other geospatial formats.
+
+[[FMEARDworkflow]]
+.High level FME ARD workflow showing generation of climate scenario ARD and impacts from climate model, EO, IoT, infrastructure and base map inputs
+image::FME_ARD_workflow.PNG[FME_ARD_workflow]
