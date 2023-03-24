@@ -1,3 +1,4 @@
+
 === RSS-Hydro
 
 RSS-Hydro has been part of several successful OGC testbeds, including the DP 21 to which this pilot is linked, not only in terms of ARD and IRD but also in terms of use cases. In this pilot, RSS-Hydro’s main technical contribution will be creating digestible OGC data types and formats for specific partner use cases, so the contribution will be focusing on producing ARD from publically available EO and model data, including hydrological model output as well as climate projections.
