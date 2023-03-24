@@ -41,7 +41,16 @@ include::sections/03-references.adoc[]
 
 // Add clause files as needed
 include::sections/04-components.adoc[]
-include::sections/04-01-components.adoc[]
+include::sections/04-01-ECMWF-component.adoc[]
+include::sections/04-02-Pixalytics-component.adoc
+include::sections/04-03-WHU-component.adoc
+include::sections/04-04-Ecere-component.adoc
+include::sections/04-05-Walawender-component.adoc
+include::sections/04-06-SafeSoftware-component.adoc
+include::sections/04-07-GMU-CSISS-component.adoc
+include::sections/04-08-AlpS-component.adoc
+include::sections/04-09-Laubwerk-component.adoc
+include::sections/04-10-RSS-Hydro-component.adoc
 include::sections/05-use_cases.adoc[]
 include::sections/06-lessons_learned.adoc[]
 include::sections/07-future_work.adoc[]
