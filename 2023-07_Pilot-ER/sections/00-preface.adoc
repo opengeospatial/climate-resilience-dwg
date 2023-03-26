@@ -14,13 +14,6 @@ after the abstract
 // Insert executive summary content including subsections as needed
 Executive Summary content.
 
-
-[.preface]
-== Keywords
-
-// Insert keywords as needed
-Keywords content.
-
 [.preface]
 == Contributors
 
