@@ -16,7 +16,32 @@ Abstract content.
 
 
 [.preface]
-== Summary
+== Executive Summary
 
-// Insert summary content including subsections as needed
-Summary content.
+// Insert executive summary content including subsections as needed
+Executive Summary content.
+
+
+[.preface]
+== Keywords
+
+// Insert keywords as needed
+Keywords content.
+
+[.preface]
+== Contributors
+
+// Company contributor names, summary of contribution like we collected in the Gdoc. 
+
+|====================
+|Name |Organization
+|Jeff Harrison (Editor) | The Carbon Project
+|Simon Jirka | 52°North GmbH
+|Christoph Stasch | 52°North GmbH
+|Peter Vretanos | CubeWerx
+|Keith Pomakis | CubeWerx
+|Craig Bruce | CubeWerx
+|Charles Heazel | Wisc Enterprises
+|Stephane Fellah | Image Matters
+|Dave Wesloh | NGA
+|====================
