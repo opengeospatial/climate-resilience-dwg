@@ -9,13 +9,6 @@ after the abstract
 :TOC:
 
 [.preface]
-== Abstract
-
-// Insert abstract content
-Abstract content. 
-
-
-[.preface]
 == Executive Summary
 
 // Insert executive summary content including subsections as needed
@@ -31,17 +24,9 @@ Keywords content.
 [.preface]
 == Contributors
 
-// Company contributor names, summary of contribution like we collected in the Gdoc. 
-
 |====================
-|Name |Organization
-|Jeff Harrison (Editor) | The Carbon Project
-|Simon Jirka | 52°North GmbH
-|Christoph Stasch | 52°North GmbH
-|Peter Vretanos | CubeWerx
-|Keith Pomakis | CubeWerx
-|Craig Bruce | CubeWerx
-|Charles Heazel | Wisc Enterprises
-|Stephane Fellah | Image Matters
-|Dave Wesloh | NGA
+|Name |Organization |Role or Summary of contribution
+|Guy Schumann (Lead Editor) | RSS-Hydro | Lead ER Editor 
+|Albert Kettner (Lead Editor) | RSS-Hydro/DFO | Lead ER Editor 
+
 |====================
