@@ -28,6 +28,6 @@ Executive Summary content.
 |Hanna Krimm | alpS GmbH |
 |Andrew Lavender | Pixalytics Ltd |
 |Samantha Lavender | Pixalytics Ltd |
-|Jakub Walawender, | Walawender, Jakub P. |
+|Jakub Walawender | Walawender, Jakub P. |
 
 |====================
