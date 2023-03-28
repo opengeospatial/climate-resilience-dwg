@@ -21,5 +21,13 @@ Executive Summary content.
 |Name |Organization |Role or Summary of contribution
 |Guy Schumann | RSS-Hydro | Lead ER Editor 
 |Albert Kettner | RSS-Hydro/DFO | Lead ER Editor 
+|Timm Dapper | Laubwerk GmbH |
+|Zhe Fang | Wuhan University | 
+|Dean Hintz | Safe Software, Inc. |
+|Jérôme Jacovella-St-Louis | Ecere Corporation |
+|Hanna Krimm | alpS GmbH |
+|Andrew Lavender | Pixalytics Ltd |
+|Samantha Lavender | Pixalytics Ltd |
+|Jakub Walawender, | Walawender, Jakub P. |
 
 |====================
