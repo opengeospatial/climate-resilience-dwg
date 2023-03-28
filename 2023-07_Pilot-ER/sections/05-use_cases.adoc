@@ -2,7 +2,7 @@
 == Use cases
 
 === Drought and Wildfire Impact Use-case
-Drought and wildfire caused by climate change are one of the important factors affecting agricultural production, food security, and water shortage. The goal of WHU is to develop a use-case for drought and wildfire risk assessment for rapid response to drought and wildfire occurrences. Figure 1 shows the technical architecture on how WHU contributed to the use-case. It has the following features: 1) For data discovery, a catalogue service from data center following OGC API is provided allowing users to search geospatial data both available from WHU data stores and remote data stores from USGS, ESA, and NASA. 2) For data integration, data can be integrated into the WHU software in the form of geo date cubes with three efforts: formalizing cube dimensions for multi-source geospatial data, processing geospatial data query along cube dimensions, and organizing cube data for high-performance geoprocessing. 3) For data processing, a processing chain is enabled in WHU software using a code editor and modelbuilder. 4) For data visualization, a Web-based client for visualization of spatial data and statistics is provided using a virtual globe and charts. 
+Drought and wildfire caused by climate change are one of the important factors affecting agricultural production, food security, and water shortage. The goal of WHU is to develop a use-case for drought and wildfire risk assessment for rapid response to drought and wildfire occurrences. Figure 1 shows the technical architecture on how WHU contributed to the use-case. It has the following features: 1) For data discovery, a catalogue service from data center following OGC API is provided allowing users to search geospatial data both available from WHU data stores and remote data stores from USGS, ESA, and NASA. 2) For data integration, data can be integrated into the WHU software in the form of geo date cubes with three efforts: formalizing cube dimensions for multi-source geospatial data, processing geospatial data query along cube dimensions, and organizing cube data for high-performance geoprocessing. 3) For data processing, a processing chain is enabled in WHU software using a code editor and modelbuilder. 4) For data visualization, a Web-based client for visualization of spatial data and statistics is provided using a virtual globe and charts.
 
 .The technical architecture of the use-case for drought and wildfire impact
 image::WHU-drought-wildfire-impact.png[DroughtWildfire]
@@ -188,7 +188,7 @@ Choose a collection dataset:
 
 ----
 
-Groundwater and Soil Moisture Conditions from GRACE and GRACE-FO Data Assimilation L4 7-days 0.25 x 0.25 degree Global V3.0 (GRACEDADM_CLSM025GL_7D) at GES DISC  
+Groundwater and Soil Moisture Conditions from GRACE and GRACE-FO Data Assimilation L4 7-days 0.25 x 0.25 degree Global V3.0 (GRACEDADM_CLSM025GL_7D) at GES DISC
 
 ----
 
@@ -237,9 +237,9 @@ The project aims at updating previously created solar climate atlas for Poland b
 * extending time span
 * replacing static maps with a dynamic and interactive interface;
 * using practical solar radiation parameters instead of physical variables;
-* making datasets (+ metadata) available for downloaded 
+* making datasets (+ metadata) available for downloaded
 in interoperable file formats for further use
-* sharing a solar climate knowledge base and data/service user guide 
+* sharing a solar climate knowledge base and data/service user guide
 
 in order to:
 
@@ -261,3 +261,6 @@ Newly created *solar climate data cube and web map service* will be more *FAIR* 
 
 * to document existing solar radiation datasets (satellite, model and reanalysis data) and services (both freely accessible and commercial)
 * to verify the accuracy of the in situ measurements and satellite climate data records for the selected solar radiation parameters using proper statistical methods
+
+=== D-100 Client (Pelagis)
+include::sections/pelagis/05-use_cases.adoc[]

@@ -1,7 +1,7 @@
 
 [[clause-reference]]
 == Components
-The various organizations and institutes that contribute to the Climate Resilience Pilot are described below. There input to the pilot is indicated in the figure below <<CRIS>>. 
+The various organizations and institutes that contribute to the Climate Resilience Pilot are described below. There input to the pilot is indicated in the figure below <<CRIS>>.
 
 [[CRIS]]
 .CRIS overview
@@ -11,14 +11,14 @@ image::CRIS.png[CRIS]
 
 - Component: Copernicus services.
 
-- Outputs: Copernicus Services, including Climate Data Store (CDS) https://cds.climate.copernicus.eu/ and Atmosphere Data Store (ADS) https://ads.atmosphere.copernicus.eu/. 
+- Outputs: Copernicus Services, including Climate Data Store (CDS) https://cds.climate.copernicus.eu/ and Atmosphere Data Store (ADS) https://ads.atmosphere.copernicus.eu/.
 
 - What other component(s) can interact with the component: CDS and ADS provide access to data via different interfaces: UI and API. It also offers a toolbox with a set of expert libraries to perform advanced operations on the available data. CDS and ADS catalogue metadata is also accessible via standard CSW. https://cds.climate.copernicus.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
 
-- What OGC standards or formats does the component use and produce: 
-  * CDS and ADS catalogues exposed via CSW. 
-  * Access to ESGF datasets via WPS. 
-  * WMS is offered in some published applications. 
+- What OGC standards or formats does the component use and produce:
+  * CDS and ADS catalogues exposed via CSW.
+  * Access to ESGF datasets via WPS.
+  * WMS is offered in some published applications.
   * CADS 2.0 (under construction) will implement OGC APIs.
 
 === Pixalytics
@@ -52,15 +52,15 @@ Wuhan University (WHU) is a university that plays a significant role in research
 
 - What other component(s) can interact with the component: .
 
-- What OGC standards or formats does the component use and produce: 
+- What OGC standards or formats does the component use and produce:
   * OGC API - Coverages to provide the data in Cube
   * OGC API - Processes to provide the calculation of drought indices
- 
+
 === Ecere Corporation
 
 Ecere is providing a deployment of its GNOSIS Map Server with a focus on a Sentinel-2 Level 2A data cube. _OGC API - Tiles_, _OGC API - Coverages_, _OGC API - Maps_, _OGC API - Discrete Global Grid Systems_, _Common Query Language (CQL2)_, and  _OGC API - Processes - Part 3: Workflows & Chaining_ are the supported standards and extensions for this task.
 
-Plan to use the process output to identify vegetation fuel type, then combine with weather data to assess wildfire hazards risk in Australia. 
+Plan to use the process output to identify vegetation fuel type, then combine with weather data to assess wildfire hazards risk in Australia.
 
 - Component: Data Cube and Wildfire vegetation fuel map / risk analysis.
 
@@ -70,9 +70,9 @@ Plan to use the process output to identify vegetation fuel type, then combine wi
 
 - What other component(s) can interact with the component: Any OGC API client component requiring efficient access to Sentinel-2 data, clients requiring climate data once made available, clients presenting vegetation fuel type, wildfire risk (once ready, might extend into DP2023).
 
-- What OGC standards or formats does the component use and produce: 
-  * OGC API (Coverage - with subsetting, scaling, range subsetting, coverage tiles; Tiles, DGGS (GNOSISGlobalGrid and ISEA9R), Maps (incl. map tiles), Styles), CQL2, OGC API - Processes with Part 3 for workflows (Nested Local/Remote Processes, Local/Remote Collection Input, Collection Output, Input/Output Field Modifiers) 
-  * Formats: GNOSIS Map Tiles (Gridded Coverage, Vector Features, Map imagery, and more); GeoTIFF; PNG (16-bit value single channel for coverage, RGBA for maps); JPEG. 
+- What OGC standards or formats does the component use and produce:
+  * OGC API (Coverage - with subsetting, scaling, range subsetting, coverage tiles; Tiles, DGGS (GNOSISGlobalGrid and ISEA9R), Maps (incl. map tiles), Styles), CQL2, OGC API - Processes with Part 3 for workflows (Nested Local/Remote Processes, Local/Remote Collection Input, Collection Output, Input/Output Field Modifiers)
+  * Formats: GNOSIS Map Tiles (Gridded Coverage, Vector Features, Map imagery, and more); GeoTIFF; PNG (16-bit value single channel for coverage, RGBA for maps); JPEG.
 
 === Jakub P. Walawender
 
@@ -86,8 +86,8 @@ Plan to use the process output to identify vegetation fuel type, then combine wi
 
 - What other component(s) can interact with the component: This component work (considering the final result) crosses all the components and all of them are actually important.
 
-- What OGC standards or formats does the component use and produce: 
-  * NetCDF compliant with the CF (Climate and Forecast) convention. 
+- What OGC standards or formats does the component use and produce:
+  * NetCDF compliant with the CF (Climate and Forecast) convention.
   * WMS, WCS, OGC API
 
 === Safe Software
@@ -96,7 +96,7 @@ Plan to use the process output to identify vegetation fuel type, then combine wi
  * Climate ARD component - Data Cube to ARD.
  * Impact Components general I/O (Heat, Drought, Flood).
 
-- Inputs: 
+- Inputs:
  * Climate ARD component - Data Cube to ARD: Climate scenario data from climate services (NetCDF), for historic and future time periods
  * Impact Components general I/O (Heat, Drought, Flood): Climate impact ARD from Safes ARD component, including EO data (MODIS, LANDSAT, SENTINEL products), Population/Infrastructure information (OSM), Basemaps, as well as specific requirements per impact:
   * Drought: vegetation, soils, hydrology, basins
@@ -108,7 +108,7 @@ Plan to use the process output to identify vegetation fuel type, then combine wi
 
 - What other component(s) can interact with the component: Pixalytics Component: consume variables for Drought Indicator produced by Safe’s ARD component. Any other component that requires climate scenario summary ARD to drive DRI.
 
-- What OGC standards or formats does the component use and produce: 
+- What OGC standards or formats does the component use and produce:
  * OGC API Features
  * Geopackage
  * NetCDF
@@ -130,11 +130,12 @@ image::FME_ARD_workflow.PNG[FME_ARD_workflow]
 
 - What other component(s) can interact with the component: .
 
-- What OGC standards or formats does the component use and produce: 
+- What OGC standards or formats does the component use and produce:
   * WCS for downloading image
   * WMS for showing layers on basemap
 
 === Pelagis
+include::sections/pelagis/04-components.adoc[]
 
 === GatewayGEO
 
@@ -161,7 +162,7 @@ image::FME_ARD_workflow.PNG[FME_ARD_workflow]
 === RSS-Hydro
 
 RSS-Hydro has been part of several successful OGC testbeds, including the DP 21 to which this pilot is linked, not only in terms of ARD and IRD but also in terms of use cases. In this pilot, RSS-Hydro’s main technical contribution will be creating digestible OGC data types and formats for specific partner use cases, so the contribution will be focusing on producing ARD from publically available EO and model data, including hydrological model output as well as climate projections.
-These ARD will feed into all use cases for all participants, with a particular focus toward the use cases proposed for Heat, Drought and Health Impacts by other participants in the pilot. 
+These ARD will feed into all use cases for all participants, with a particular focus toward the use cases proposed for Heat, Drought and Health Impacts by other participants in the pilot.
 
 Specifically, RSS-Hydro can provide access to the following satellite and climate projection data:
  * Wildfire – Fire Radiant Power (FRP) product from Sentinel 3 (NetCDF), 5p, MODIS products (fire detection), VIIRS (NOAA); possibly biomass availability (fire fuel).
