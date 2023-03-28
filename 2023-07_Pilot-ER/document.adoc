@@ -6,15 +6,15 @@
 :comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
 :committee: technical
 :comment: ### Internal reference number; mandatory
-:docnumber: ???
+:docnumber: XXX
 :comment: ### Date on which the standard was updated; mandatory
-:received-date: # 2023-??
+:received-date: # 2023-XX-XX
 :comment: ### Date on which the standard was approved by the issuing authority; mandatory
-:issued-date: # 2023-??
+:issued-date: # 2023-XX-XX
 :comment: ### Date on which the standard was published; mandatory
-:published-date: # 2023-??
+:published-date: # 2023-XX-XX
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
-:external-id: ???
+:external-id: XXXX
 :comment: ### Author one
 :fullname: Guy Schumann
 :comment: ### Author two
@@ -41,6 +41,22 @@ include::sections/03-references.adoc[]
 
 // Add clause files as needed
 include::sections/04-components.adoc[]
+include::sections/04-01-ECMWF-component.adoc[]
+include::sections/04-02-Pixalytics-component.adoc[]
+include::sections/04-03-WHU-component.adoc[]
+include::sections/04-04-Ecere-component.adoc[]
+include::sections/04-05-Walawender-component.adoc[]
+include::sections/04-06-SafeSoftware-component.adoc[]
+include::sections/04-07-GMU-CSISS-component.adoc[]
+include::sections/04-08-AlpS-component.adoc[]
+include::sections/04-09-Laubwerk-component.adoc[]
+include::sections/04-10-RSS-Hydro-component.adoc[]
+//include::sections/04-11-Pelagis-component.adoc[]
+//include::sections/04-12-GatewayGEO-component.adoc[]
+//include::sections/04-13-Presagis-component.adoc[]
+//include::sections/04-14-Intactlab-component.adoc[]
+//include::sections/04-15-GISE-Hub-component.adoc[]
+include::sections/04-99-lastpart-component.adoc[]
 include::sections/05-use_cases.adoc[]
 include::sections/06-lessons_learned.adoc[]
 include::sections/07-future_work.adoc[]

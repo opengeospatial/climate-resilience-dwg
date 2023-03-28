@@ -9,14 +9,17 @@ after the abstract
 :TOC:
 
 [.preface]
-== Abstract
+== Executive Summary
 
-// Insert abstract content
-Abstract content. 
-
+// Insert executive summary content including subsections as needed
+Executive Summary content.
 
 [.preface]
-== Summary
+== Contributors
 
-// Insert summary content including subsections as needed
-Summary content.
+|====================
+|Name |Organization |Role or Summary of contribution
+|Guy Schumann | RSS-Hydro | Lead ER Editor 
+|Albert Kettner | RSS-Hydro/DFO | Lead ER Editor 
+
+|====================

@@ -1,0 +1,20 @@
+
+=== Pixalytics
+
+Pixalytics are developing an OGC-compliant API service, see <<Pixalytics_architecture>>, which will provide global information on droughts. The approach is to take global open data/datasets from organizations such as ESA/Copernicus, NASA/NOAA and the WMO and combine meteorology, hydrology, and remote sensing data to produce ARD data based on a composite of different indicators. Where globally calculated drought indicators already exist, these are being used in preference to their re-calculation, although consistency and the presence of uncertainties are also being considered.
+
+[[Pixalytics_architecture]]
+.Pixalytics architecture
+image::Pixalytics-architecture.png[Pixalytics-architecture]
+
+Currently, the Standardized Precipitation Index (SPI) is being calculated using ERA5 reanalysis data from the Copernicus Climate Change Service. The API access is being set up following the Building Blocks for Climate Services (https://climateintelligence.github.io/smartduck-docs/) approach. Once all steps are working for SPI, the next step is adding soil moisture and vegetation drought indices. Also, work on how to combine indices into a single view/indicator is being considered.
+
+- Component: Drought indicator.
+
+- Inputs: Meteorological data, including Precipitation, plus Land Surface Temperature, Soil Moisture, Vegetation Index (or optical data to calculate it from).
+
+- Outputs: Drought Indices - as a time-series dataset output in JSON or COG format.
+
+- What other component(s) can interact with the component: a desire to link to visualization/DRI analysis components. A QGIS plugin has been updated to be able to perform a request and view the outputted JSON file (https://github.com/pixalytics-ltd/qgis-wps-plugin) and the WPS link is https://api.pixalytics.com/climate/wps?request=GetCapabilities&service=wps (under testing/improvement for robustness).
+
+- What OGC standards or formats does the component use and produce: Producing data on-the-fly using the Web Processing Service (WPS), so need to pull data through preferably an API route.

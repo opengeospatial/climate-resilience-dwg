@@ -1,0 +1,14 @@
+
+=== GMU_CSISS
+
+- Component: Analysis Ready Data (ARD).
+
+- Inputs: ECV record information, OpenSearch service endpoint (currently CMR(CWIC) and FedEO), download URLs for accessing NetCDF or HDF files.
+
+- Outputs: WCS service endpoint for accessing selected granule level product images (GeoTIFF, PNG, JPEG, etc.).
+
+- What other component(s) can interact with the component: .
+
+- What OGC standards or formats does the component use and produce: 
+  * WCS for downloading image
+  * WMS for showing layers on basemap

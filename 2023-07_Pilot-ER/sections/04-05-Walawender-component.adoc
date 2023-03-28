@@ -1,0 +1,16 @@
+
+=== Jakub P. Walawender
+
+- Component: Solar climate atlas for Poland.
+
+- Inputs: In situ solar radiation and sunshine duration data, satellite-based solar radiation and sunshine duration estimates (climate data records), various different geospoatial data from different sources (e.g. digital elevation model, climate zones, etc.).
+
+- Outputs:
+  * This pilot outputs: Review of available solar radiation datasets and web services, 2 scripts (solar climate data exploratory analysis tool, solar climate data preprocessing tool), report summarizing results of the exploratory data analysis and quality control including discussion of inconsistency factors.
+  * In the final result: solar radiation data cube for Poland (40 years of high resolution dataset for selected solar radiation variables), and analysis ready data (dedicated products for different solar-smart applications in the fields of renewable energy, agriculture, spatial planning, tourism, etc.), detailed analysis of the solar climate in Poland (incl. solar regionalisation) and online web map service with an interactive, self-explainable interface enabling easy on-demand information access.
+
+- What other component(s) can interact with the component: This component work (considering the final result) crosses all the components and all of them are actually important.
+
+- What OGC standards or formats does the component use and produce: 
+  * NetCDF compliant with the CF (Climate and Forecast) convention. 
+  * WMS, WCS, OGC API

@@ -1,0 +1,12 @@
+
+=== AlpS
+
+- Component: climate Communication and support for adaptation.
+
+- Inputs: Selected climate indicators (past and future, different scenarios), cartographic data (hazard zones, HQ areas, etc.), existing plans, strategies and concepts (regional development plans, climate protection strategies, previous analyses).
+
+- Outputs: Target group-specific communication material (factsheets, graphs), description of the vulnerability and visualization of risk maps, adaptation measures, strategies for adaptation to climate change. In the context of this pilot alpS will elaborate a guideline that helps to find a proper workshop-setup. alpS will illustrate the guideline with two to three best practice examples. As far as possible, alpS will test its findings in ongoing consultancies.
+
+- What other component(s) can interact with the component: .
+
+- What OGC standards or formats does the component use and produce: .
