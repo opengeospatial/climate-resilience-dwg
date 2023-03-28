@@ -3,11 +3,14 @@
 
 Ecere is providing a deployment of its GNOSIS Map Server with a focus on a Sentinel-2 Level 2A data cube. _OGC API - Tiles_, _OGC API - Coverages_, _OGC API - Maps_, _OGC API - Discrete Global Grid Systems_, _Common Query Language (CQL2)_, and  _OGC API - Processes - Part 3: Workflows & Chaining_ are the supported standards and extensions for this task.
 
-Plan to use the process output to identify vegetation fuel type, then combine with weather data to assess wildfire hazards risk in Australia. 
+The plan is to use machine learning process output from the Wildland Fire Fuel Indicator Workflow to identify vegetation fuel types from sentinel-2 bands, then combine with weather data to assess wildfire hazards risk in Australia.
+The workflow will use as input the sentinel-2 OGC API data cube from our GNOSIS Map Server.
 
 - Component: Data Cube and Wildfire vegetation fuel map / risk analysis.
 
 - Inputs: ESA Sentinel-2 L2A data (from AWS / Element 84), Temperature / Precipitation / Wind climate data, Reference data for training: vegetation fuel type classification, wildfire risk.
+
+The sentinel-2 Level 2A collection is provided at `https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a`
 
 - Outputs: OGC API (Coverage, Tiles, DGGS, Maps) for Sentinel-2 data (https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a) including full global coverage, all resolutions/scales, all bands that can be individually selected, CQL2 expressions for band arithmetics; climate data (to be added), vegetation fuel type (possibly by end of pilot, or for DP2023), wildfire risk workflow (possibly by end of pilot, or for DP2023).
 
@@ -16,3 +19,108 @@ Plan to use the process output to identify vegetation fuel type, then combine wi
 - What OGC standards or formats does the component use and produce: 
   * OGC API (Coverage - with subsetting, scaling, range subsetting, coverage tiles; Tiles, DGGS (GNOSISGlobalGrid and ISEA9R), Maps (incl. map tiles), Styles), CQL2, OGC API - Processes with Part 3 for workflows (Nested Local/Remote Processes, Local/Remote Collection Input, Collection Output, Input/Output Field Modifiers) 
   * Formats: GNOSIS Map Tiles (Gridded Coverage, Vector Features, Map imagery, and more); GeoTIFF; PNG (16-bit value single channel for coverage, RGBA for maps); JPEG. 
+
+
+==== Overview of standards and extensions available for outputs
+
+===== OGC API - DGGS
+
+There are two main requirements classes for this standard.
+
+- Data Retrieval (What is here? -- "give me the data for this zone"),
+- Zones Query (Where is it? -- "which zones match this collection and/or my query")
+
+Example of data retrieval queries:
+
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/dggs/GNOSISGlobalGrid/zones/3-4-11/data
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/dggs/ISEA9Diamonds/zones/E7-FAE/data
+
+Example of a zones query:
+
+    https://maps.gnosis.earth/ogcapi/collections/SRTM_ViewFinderPanorama/dggs/ISEA9Diamonds/zones
+    https://maps.gnosis.earth/ogcapi/collections/SRTM_ViewFinderPanorama/dggs/ISEA9Diamonds/zones?f=json (as a list of compact JSON IDs)
+
+Level, Row, Column (which encoded differently in the compact hexadecimal zone IDs) can be seen on the zone information page at:
+
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/dggs/GNOSISGlobalGrid/zones/3-4-11
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/dggs/ISEA9Diamonds/zones/E7-FAE
+
+There are several different discrete global grids. Two are implemented in our service:
+
+- Our GNOSIS Global Grid, which is geographic rather than projected, and is axis-aligned with latitudes and longitudes, but not equal area (though it tends towards equal area -- maximum variation is ~48% up to a very detailed level)
+- ISEA9R, which is a dual DGGS of ISEA3H even levels, using rhombuses/diamonds instead of hexagons, but much simpler to work with and can transport the hexagon area values as points on the rhombus vertices for those ISEA3H even levels. It is also axis-aligned to a CRS defined by rotating and skewing the ISEA projection.
+
+The primary advantage of OGC API - DGGS is:
+
+- for retrieving data from DGGS that are not axis-aligned or have geometry that cannot be represented as squares (e.g., hexagons), or
+- for the zone query capability, most useful for specifying queries (e.g. using CQL2). The extent to which we implement Zones Query at this moment is still limited.
+
+Examples of DGGS Zone information page:
+
+[#ecere_dggs1,reftext='{figure-caption} {counter:figure-num}']
+.GNOSIS Map Server information resource for GNOSIS Global Grid zone 5-24-6E
+image::images/ecere_dggs1.PNG[]
+
+[#ecere_dggs2,reftext='{figure-caption} {counter:figure-num}']
+.GNOSIS Map Server information resource for ISEA9Diamonds zone 5-24-6E
+image::images/ecere_dggs2.PNG[]
+
+[#ecere_dggs3,reftext='{figure-caption} {counter:figure-num}']
+.GNOSIS Map Server information resource for ISEA9Diamonds zone 5-24-6E sections
+image::images/ecere_dggs3.PNG[]
+
+===== OGC API - Coverages with OGC API - Tiles
+
+Because they are axis-aligned, both of these DGGS can be described as a TileMatrixSet, and therefore equivalent functionality to the OGC API - DGGS Data Retrieval requirements class can be achieved using OGC API - Tiles and the corresponding TileMatrixSets instead.
+
+Coverage Tile queries for the same zones:
+
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/coverage/tiles/GNOSISGlobalGrid/3/4/17
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/coverage/tiles/ISEA9Diamonds/4/373/288
+
+To request a different band than the default RGB (B04, B03, B02) bands:
+
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/coverage/tiles/GNOSISGlobalGrid/3/4/17?properties=B08
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/coverage/tiles/ISEA9Diamonds/4/373/288?properties=B08
+
+To retrieve coverage tiles with band arithmetic to compute NDVI:
+
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/coverage/tiles/GNOSISGlobalGrid/3/4/17?properties=(B08/10000-B04/10000)/(B08/10000+B04/10000)
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/coverage/tiles/ISEA9Diamonds/4/373/288?properties=(B08/10000-B04/10000)/(B08/10000+B04/10000)
+
+===== OGC API - Maps with OGC API - Tiles
+
+Map Tiles queries for the same zones:
+
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/map/tiles/GNOSISGlobalGrid/3/4/17
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/map/tiles/ISEA9Diamonds/4/373/288
+
+[#ecere_mapggg,reftext='{figure-caption} {counter:figure-num}']
+.GNOSIS Map Server Map of tiles 3/4/17 in GNOSISGlobalGrid
+image::images/ecere_mapggg.PNG[]
+
+To retrieve a map of the Scene Classification:
+
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/styles/scl/map/tiles/GNOSISGlobalGrid/3/4/17
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/styles/scl/map/tiles/ISEA9Diamonds/4/373/288
+
+[#ecere_ndvi,reftext='{figure-caption} {counter:figure-num}']
+.Sentinel-2 with image classification styling
+image::images/ecere_class.PNG[]
+
+To filter out the clouds:
+
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/map/tiles/GNOSISGlobalGrid/3/4/17?filter=SCL<8 or SCL >10
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/map/tiles/ISEA9Diamonds/4/373/288?filter=SCL<8 or SCL >10
+
+To get an NDVI map:
+
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/styles/ndvi/map/tiles/GNOSISGlobalGrid/3/4/17
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/styles/ndvi/map/tiles/ISEA9Diamonds/4/373/288
+
+[#ecere_ndvi,reftext='{figure-caption} {counter:figure-num}']
+.Sentinel-2 map with NDVI band arithmetic
+image::images/ecere_ndvi.PNG[]
+
+The same filter= and properties= should also work with the /coverage and /dggs end-points.
+The filter= also works with the /map end-points.
