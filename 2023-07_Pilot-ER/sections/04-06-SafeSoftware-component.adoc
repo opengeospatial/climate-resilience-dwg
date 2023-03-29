@@ -53,65 +53,68 @@ As our understanding of end user requirements continues to evolve, this will nec
 It is worth underlining that our ARD component depends on the appropriate data sources in order to produce the appropriate decision ready data (DRI) for downstream components. Risk factors include being able to locate and access suitable climate models and EO data of sufficient quality, resolution and timeliness to support indicators as the requirements and business rules associated with them evolve. Any data gaps encountered are documented under the lessons learned section. 
 
 
+[[SafeSoftware_1]]
+.Environment Canada NetCDF GCM  time series downscaled to Vancouver area. From: https://climate-change.canada.ca/climate-data/#/downscaled-data 
+image::SafeSoftware_1.png[SafeSoftware_1]
 
-Figure 1. Environment Canada NetCDF GCM  time series downscaled to Vancouver area
-From: https://climate-change.canada.ca/climate-data/#/downscaled-data 
-
-
-Figure 2. Data Cube to ARD: NetCDF to KML, Geopackage, GeoTIFF
+[[SafeSoftware_2]]
+.Data Cube to ARD: NetCDF to KML, Geopackage, GeoTIFF 
+image::SafeSoftware_2.png[SafeSoftware_2]
 
 Data workflow:
-Split data cube
-Set timestep parameters
-Compute timestep stats by band
-Compute time range stats by cell
-Classify by cell value range
-Convert grids to vector contour areas by class
+- Split data cube
+- Set timestep parameters
+- Compute timestep stats by band
+- Compute time range stats by cell
+- Classify by cell value range
+- Convert grids to vector contour areas by class
 
+[[SafeSoftware_3]]
+.Extracted timestep  grids: Monthly timesteps, period mean T, period max T 
+image::SafeSoftware_3.png[SafeSoftware_3]
 
+[[SafeSoftware_4]]
+.Convert raster temperature grids into temperature contour areas by class 
+image::SafeSoftware_4.png[SafeSoftware_4]
 
-Figure 3. Extracted timestep  grids: Monthly timesteps, period mean T, period max T
+[[SafeSoftware_5]]
+.Geopackage Vector Area Time Series: Max Yearly Temp 
+image::SafeSoftware_5.png[SafeSoftware_5]
 
-
-Figure 4. Convert raster temperature grids into temperature contour areas by class
-
-
-
-Geopackage Vector Area Time Series: Max Yearly Temp
-
-D100 - Client Instance: Heat Impact Component
+==== D100 - Client Instance: Heat Impact Component
 
 This component takes the climate scenario summary ARD results from the ARD component and analyzes them to derive estimated heat impacts over time, based on selected climate scenarios. Central to this is the identification of key heat impact indicators required by decision makers and the business rules needed to drive them. Process steps include data aggregation and statistical analysis of maximum temperature spikes, taking into account the cumulative impacts of multiple high temperature days. Data segmentation is based on maximum temperature exceeding a certain threshold T for N days in a row. This is because heat exhaustion effects are likely dependent on duration of heat spells, in addition to high maximum temperatures on certain days. 
 
+[[SafeSoftware_6]]
+.ARD Query: Monthly Max Temp Contours
+image::SafeSoftware_6.png[SafeSoftware_6]
 
-ARD Query: Monthly Max Temp Contours
+[[SafeSoftware_7]]
+.ARD Query: Max Mean Monthly Temp > 25C 
+image::SafeSoftware_7.png[SafeSoftware_7]
 
+[[SafeSoftware_8]]
+.Town of Lytton - location where entire town was devastated by fire during the heat wave of July 2021 - same location highlighted in ARD query from heat risk query in previous figure 
+image::SafeSoftware_8.png[SafeSoftware_8]
 
-ARD Query: Max Mean Monthly Temp > 25C
-
-
-Town of Lytton - location where entire town was devastated by fire during the heat wave of July 2021 - same location highlighted in ARD query from heat risk query in previous figure
-
-D100 - Client Instance: Flood and Water Resource Impact Component
+==== D100 - Client Instance: Flood and Water Resource Impact Component
 
 This component takes the climate scenario summary ARD results from the ARD component and analyzes them to derive estimated flood risk impacts over time, based on selected climate scenarios. Central to this will be the identification of key flood risk impact indicators required by decision makers and the business rules needed to drive them. This process includes data aggregation and statistical analysis of rainfall intensity over time, taking into account the cumulative impacts of multiple consecutive days. This involves, for example, data segmentation based on cumulative rainfall exceeding a certain threshold T within a certain time window (N hours or days), since cumulative rainfall and rainfall intensity over a short period are often more crucial than total rainfall over a longer period. These precipitation scenarios are evaluated by catch basin. This also requires integration with topography, DEMs, and hydrology related data such as river networks, water bodies. aquifers and watershed boundaries.
 
 The FME transformation workflow classifies and segments the time series grid data, followed by vectorization and generalization in order to generate flood contour polygons by time step. The results are loaded to a geopackage which is more readily consumable by a wider variety of GIS applications and analytic tools. We have found that this vectorized data is relatively easy to publish to OGC API Feature Services.
 
+[[SafeSoftware_9]]
+.FME approach for converting flood time series grids to geopackage ARD 
+image::SafeSoftware_9.png[SafeSoftware_9]
 
-FME approach for converting flood time series grids to geopackage ARD
+[[SafeSoftware_10]]
+.Flood Contour Geopackage ARD, showing flooded areas south of Winnipeg by date and depth, as displayed in FME Data Inspector.
+image::SafeSoftware_10.png[SafeSoftware_10]
 
-Flood Contour Geopackage ARD, showing flooded areas south of Winnipeg by date and depth, as displayed in FME Data Inspector.
-
-
-
-
-
-D100 - Client Instance: Drought Impact Component
+==== D100 - Client Instance: Drought Impact Component
 
 This component takes the climate scenario summary ARD results from the ARD component and analyze them to derive estimated drought risk impacts over time based on selected climate scenarios. This involves, for example, data segmentation based on cumulative rainfall below a certain threshold T within a certain time window (days, weeks or months), since cumulative rainfall over time will be crucial for computing water budgets by watershed or catch basin. Besides precipitation, climate models also generate soil moisture predictions which are used by this component to assess drought risk. This also requires integration with topography, DEMs and hydrology related data such as river networks, water bodies. aquifers and watershed boundaries. The specific business rules used to assess drought risk are still under development. FME provides a flexible data and business rule modeling framework. This means that as indicators and drought threshold rules are refined, it's relatively straightforward to adjust the business rules in this component to refine our risk projections. Also, business rule parameters can be externalized as execution parameters so that end users can control key aspects of the scenario drought risk assessment without having to modify the published FME workflow.
 
-Use Cases
-
+==== Use Cases
 Manitoba
 
