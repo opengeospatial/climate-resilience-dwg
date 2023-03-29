@@ -274,20 +274,17 @@ This project takes advantage of the efforts made through the OGC Marine DWG to d
 Table of service endpoints - their role, temporal and spatial resolution, and schema
 
 
-.architecture
-image::pelagis.png[Federated Architecture]
+// .architecture
+// image::pelagis.png[Federated Architecture]
 
 ---
 
-[%unnumbered]
-image::p1.png[stuff]
-
-.An example
-image::p2.png[stuff]
+// [%unnumbered]
+// image::p1.png[stuff]
+// .An example
+// image::p2.png[stuff]
 
 ---
-
-==== Use Case: Evaluate the Essential Climate Variables for the Northeast US Shelf (NES) ecosystem
-stuff here
-
-==== Use Case: Evaluate the mitigation opportunities from marine aquaculture
+// ==== Use Case: Evaluate the Essential Climate Variables for the Northeast US Shelf (NES) ecosystem
+// stuff here
+// ==== Use Case: Evaluate the mitigation opportunities from marine aquaculture
