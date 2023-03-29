@@ -20,4 +20,4 @@ Our approach to address the needs for the shared use of our ocean resources is t
 
 [#img-pelagis-architecture]
 .Architecture
-image::pelagis-architecture.png[Pelagis-architecture, ,align=center, width=600]
+image::pelagis.architecture.svg[Pelagis-architecture, ,align=center, width=600]
