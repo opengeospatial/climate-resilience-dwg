@@ -263,4 +263,31 @@ Newly created *solar climate data cube and web map service* will be more *FAIR* 
 * to verify the accuracy of the in situ measurements and satellite climate data records for the selected solar radiation parameters using proper statistical methods
 
 === D-100 Client (Pelagis)
-include::sections/pelagis/05-use_cases.adoc[]
+//Pelagis Use Case(s)
+The following use cases focus on the impact of climate change to coastal communities and opportunities to mitigate these effects through sustainable aquaculture best practices.
+==== Background
+
+==== Approach
+This project takes advantage of the efforts made through the OGC Marine DWG to define a 'federated marine spatial data infrastructure' (FMSDI).
+
+*Providers*
+Table of service endpoints - their role, temporal and spatial resolution, and schema
+
+
+.architecture
+image::pelagis.png[Federated Architecture]
+
+---
+
+[%unnumbered]
+image::p1.png[stuff]
+
+.An example
+image::p2.png[stuff]
+
+---
+
+==== Use Case: Evaluate the Essential Climate Variables for the Northeast US Shelf (NES) ecosystem
+stuff here
+
+==== Use Case: Evaluate the mitigation opportunities from marine aquaculture
