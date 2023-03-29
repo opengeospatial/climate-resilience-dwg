@@ -21,11 +21,9 @@ This pilot sets the starting point for the OGC Climate Resilience Community's vi
 
 Broadly speaking, this pilot attempts to answer questions such as:
 
-    What use-cases can be realized with the current data, services, analytical functions, and visualization capabilities that we have?
-
-    How much effort is it to realize these use-cases?
-
-    What is missing, or needs to be improved, in order to transfer the use-cases developed in the pilot to other areas?
+- What use-cases can be realized with the current data, services, analytical functions, and visualization capabilities that we have?
+- How much effort is it to realize these use-cases?
+- What is missing, or needs to be improved, in order to transfer the use-cases developed in the pilot to other areas?
 
 [.preface]
 == Contributors
