@@ -1,2 +1,11 @@
 
 === Intactlab
+
+As part of this pilot, Intactlab is looking at the following:
+
+- Contacting with several business stakeholders about wildfire needs and usages, including climate scenarios
+-	Starting experiments to access Emergency Geomatics Services (EGS) open data, as well as high-res LIDAR data
+-	Reviewing existing internal wildfire risk models
+-	Starting to benchmark and improve flood risk models
+-	Updating business-wide geospatial architectures bit by bit
+-	Conducting various experiments and analysis using QGIS, some of which will become our client demo
