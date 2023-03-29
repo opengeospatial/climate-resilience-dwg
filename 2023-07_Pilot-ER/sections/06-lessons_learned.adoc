@@ -11,4 +11,24 @@ The various organizations and institutes that contribute to the Climate Resilien
 
 - Improve Sentinel-2 data cube performance, add Climate data, add vegetation fuel type classification, add a wildfire risk assessment workflow.
 
+- Analysis ready data (ARD) principles can be applied to climate time series, not just EO. Good ARD should be useful for a range of scenarios and useful to answer a range of analytic questions. 
+
+- DP21: laid a good foundation for exploring data cube extraction and conversion to ARD with using the FME data integration platform. 
+
+- A variety of approaches were explored for extraction, simplification and transformation.
+
+- Various approaches were explored to select, split, aggregate, and summarize time series
+
+- Both band and cell statistics were evaluated
+
+- The goal was to generate ARD that can be queried to answer questions about climate trends
+
+- More experimentation needed: analytic, statistical, simplification & publication methods, including cloud native - NetCDF to COG, APIs
+
+- Classification rules: need to more closely model impacts of interest. For example, the business rules for temperature range and stat type need to be part of the 
+
+- classification process before conversion to vector.
+
+
+
 
