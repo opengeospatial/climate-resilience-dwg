@@ -19,6 +19,8 @@
 :fullname: Guy Schumann
 :comment: ### Author two
 :fullname_2: Albert Kettner
+:comment: ### Author three
+:fullname_3: Nils Hempelmann
 :comment: ### Role of the authors; optional. Supply only if correspoding author is an editor
 :role_2: editor
 :comment: ### Comma delimited keywords; mandatory
@@ -41,7 +43,7 @@ include::sections/03-references.adoc[]
 
 // Add clause files as needed
 include::sections/04-components.adoc[]
-include::sections/04-01-ECMWF-component.adoc[]
+// include::sections/04-01-ECMWF-component.adoc[]
 include::sections/04-02-Pixalytics-component.adoc[]
 include::sections/04-03-WHU-component.adoc[]
 include::sections/04-04-Ecere-component.adoc[]
