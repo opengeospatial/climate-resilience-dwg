@@ -22,7 +22,7 @@
 :comment: ### Role of the authors; optional. Supply only if correspoding author is an editor
 :role_2: editor
 :comment: ### Comma delimited keywords; mandatory
-:keywords: hackaton, application-to-the-cloud, testbed, docker, web service
+:keywords: Climate Resilience, data, ARD, component, use case, FAIR, Drought, Heat, Fire, Floods,
 :comment: ### Metanorma flavor; mandatory
 :mn-document-class: ogc
 :comment: ### Desired output formats; mandatory
@@ -60,7 +60,7 @@ include::sections/04-99-lastpart-component.adoc[]
 include::sections/05-use_cases.adoc[]
 include::sections/06-lessons_learned.adoc[]
 include::sections/07-future_work.adoc[]
-include::sections/08-summary_conclusions.adoc[]
+//include::sections/08-summary_conclusions.adoc[]
 
 ////
 Annexes
