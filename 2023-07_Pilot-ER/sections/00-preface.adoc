@@ -35,15 +35,19 @@ Broadly speaking, this pilot attempts to answer questions such as:
 |Albert Kettner | RSS-Hydro/DFO | Lead ER Editor 
 |Timm Dapper | Laubwerk GmbH |
 |Zhe Fang | Wuhan University | 
+|Hanwen Xu | Wuhan University |
+|Tianyu Tuo | Wuhan University |
 |Dean Hintz | Safe Software, Inc. |
 |Jérôme Jacovella-St-Louis | Ecere Corporation |
 |Hanna Krimm | alpS GmbH |
 |Andrew Lavender | Pixalytics Ltd |
 |Samantha Lavender | Pixalytics Ltd |
+|Jenny Cocks | Pixalytics Ltd |
 |Jakub Walawender | Walawender, Jakub P. |
 | Eugene Yu | GMU |
 | Gil Heo | GMU |
 | Glenn Laughlin | Pelagis Data Solutions |
+| Patrick Dion | Ecere |
 |Nils Hempelmann | OGC | Climate resilience Pilot Coordinator |
 
 |====================
