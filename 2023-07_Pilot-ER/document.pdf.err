@@ -1,12 +1,1 @@
-WARNING: Font file '/root/.metanorma/fonts/calibri.ttf' (font name 'Calibri', font style 'normal', font weight 'normal') doesn't exist. Replaced by '/root/.metanorma/fonts/NotoSans-Regular.ttf'.
-WARNING: Font file '/root/.metanorma/fonts/calibrib.ttf' (font name 'Calibri', font style 'normal', font weight 'bold') doesn't exist. Replaced by '/root/.metanorma/fonts/NotoSans-Bold.ttf'.
-WARNING: Font file '/root/.metanorma/fonts/calibrii.ttf' (font name 'Calibri', font style 'italic', font weight 'normal') doesn't exist. Replaced by '/root/.metanorma/fonts/NotoSans-Italic.ttf'.
-WARNING: Font file '/root/.metanorma/fonts/calibriz.ttf' (font name 'Calibri', font style 'italic', font weight 'bold') doesn't exist. Replaced by '/root/.metanorma/fonts/NotoSans-BoldItalic.ttf'.
-
 Font "Arial_MSFontService,normal,400" not found. Substituting with "any,normal,400".
-Font "Calibri_MSFontService,normal,400" not found. Substituting with "any,normal,400".
-WARNING: Font file '/root/.metanorma/fonts/calibri.ttf' (font name 'Calibri', font style 'normal', font weight 'normal') doesn't exist. Replaced by '/root/.metanorma/fonts/NotoSans-Regular.ttf'.
-WARNING: Font file '/root/.metanorma/fonts/calibrib.ttf' (font name 'Calibri', font style 'normal', font weight 'bold') doesn't exist. Replaced by '/root/.metanorma/fonts/NotoSans-Bold.ttf'.
-WARNING: Font file '/root/.metanorma/fonts/calibrii.ttf' (font name 'Calibri', font style 'italic', font weight 'normal') doesn't exist. Replaced by '/root/.metanorma/fonts/NotoSans-Italic.ttf'.
-WARNING: Font file '/root/.metanorma/fonts/calibriz.ttf' (font name 'Calibri', font style 'italic', font weight 'bold') doesn't exist. Replaced by '/root/.metanorma/fonts/NotoSans-BoldItalic.ttf'.
-
