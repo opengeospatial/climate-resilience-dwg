@@ -106,7 +106,7 @@ To retrieve a map of the Scene Classification:
 
 [#ecere_ndvi,reftext='{figure-caption} {counter:figure-num}']
 .Sentinel-2 with image classification styling
-image::images/ecere_class.PNG[]
+image::ecere_class.PNG[]
 
 To filter out the clouds:
 
