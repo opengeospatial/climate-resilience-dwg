@@ -48,6 +48,7 @@ Broadly speaking, this pilot attempts to answer questions such as:
 | Gil Heo | GMU |
 | Glenn Laughlin | Pelagis Data Solutions |
 | Patrick Dion | Ecere |
+| Tom Landry | Intact Financial Corporation |
 |Nils Hempelmann | OGC | Climate resilience Pilot Coordinator |
 
 |====================
