@@ -104,7 +104,7 @@ To retrieve a map of the Scene Classification:
     https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/styles/scl/map/tiles/GNOSISGlobalGrid/3/4/17
     https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/styles/scl/map/tiles/ISEA9Diamonds/4/373/288
 
-[#ecere_ndvi,reftext='{figure-caption} {counter:figure-num}']
+[#ecere_class,reftext='{figure-caption} {counter:figure-num}']
 .Sentinel-2 with image classification styling
 image::ecere_class.PNG[]
 
