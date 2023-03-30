@@ -115,6 +115,4 @@ image::SafeSoftware_10.png[SafeSoftware_10]
 
 This component takes the climate scenario summary ARD results from the ARD component and analyze them to derive estimated drought risk impacts over time based on selected climate scenarios. This involves, for example, data segmentation based on cumulative rainfall below a certain threshold T within a certain time window (days, weeks or months), since cumulative rainfall over time will be crucial for computing water budgets by watershed or catch basin. Besides precipitation, climate models also generate soil moisture predictions which are used by this component to assess drought risk. This also requires integration with topography, DEMs and hydrology related data such as river networks, water bodies. aquifers and watershed boundaries. The specific business rules used to assess drought risk are still under development. FME provides a flexible data and business rule modeling framework. This means that as indicators and drought threshold rules are refined, it's relatively straightforward to adjust the business rules in this component to refine our risk projections. Also, business rule parameters can be externalized as execution parameters so that end users can control key aspects of the scenario drought risk assessment without having to modify the published FME workflow.
 
-==== Use Cases
-Manitoba
 
