@@ -59,15 +59,15 @@ Examples of DGGS Zone information page:
 
 [#ecere_dggs1,reftext='{figure-caption} {counter:figure-num}']
 .GNOSIS Map Server information resource for GNOSIS Global Grid zone 5-24-6E
-image::images/ecere_dggs1.PNG[]
+image::ecere_dggs1.PNG[]
 
 [#ecere_dggs2,reftext='{figure-caption} {counter:figure-num}']
 .GNOSIS Map Server information resource for ISEA9Diamonds zone 5-24-6E
-image::images/ecere_dggs2.PNG[]
+image::ecere_dggs2.PNG[]
 
 [#ecere_dggs3,reftext='{figure-caption} {counter:figure-num}']
 .GNOSIS Map Server information resource for ISEA9Diamonds zone 5-24-6E sections
-image::images/ecere_dggs3.PNG[]
+image::ecere_dggs3.PNG[]
 
 ===== OGC API - Coverages with OGC API - Tiles
 
@@ -97,7 +97,7 @@ Map Tiles queries for the same zones:
 
 [#ecere_mapggg,reftext='{figure-caption} {counter:figure-num}']
 .GNOSIS Map Server Map of tiles 3/4/17 in GNOSISGlobalGrid
-image::images/ecere_mapggg.PNG[]
+image::ecere_mapggg.PNG[]
 
 To retrieve a map of the Scene Classification:
 
@@ -120,7 +120,7 @@ To get an NDVI map:
 
 [#ecere_ndvi,reftext='{figure-caption} {counter:figure-num}']
 .Sentinel-2 map with NDVI band arithmetic
-image::images/ecere_ndvi.PNG[]
+image::ecere_ndvi.PNG[]
 
 The same filter= and properties= should also work with the /coverage and /dggs end-points.
 The filter= also works with the /map end-points.
