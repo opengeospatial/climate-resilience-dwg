@@ -10,7 +10,7 @@ term used for exemplary purposes
 [.source]
 <<rfc2616>>
 
-NOTE: An example note.
+NOTE: DRAFT 
 
 [example]
 Here's an example of an example term.
