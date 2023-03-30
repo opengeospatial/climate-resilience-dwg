@@ -41,6 +41,9 @@ Broadly speaking, this pilot attempts to answer questions such as:
 |Andrew Lavender | Pixalytics Ltd |
 |Samantha Lavender | Pixalytics Ltd |
 |Jakub Walawender | Walawender, Jakub P. |
+| Eugene Yu | GMU |
+| Gil Heo | GMU |
+| Glenn Laughlin | Pelagis Data Solutions |
 |Nils Hempelmann | OGC | Climate resilience Pilot Coordinator |
 
 |====================
