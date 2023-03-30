@@ -1,0 +1,9 @@
+{
+    "0":  {
+            "OGC_doc_number": "nn-mmm",
+            "urn":"http://www.opengis.net/doc/PER/climate-resilience-pilot",
+            "title":"Engineering Report for the OGC Climate Resilience Pilot",
+            "version":"1.0",
+            "path":"2023-07_Pilot-ER/document.adoc"
+    }
+}
