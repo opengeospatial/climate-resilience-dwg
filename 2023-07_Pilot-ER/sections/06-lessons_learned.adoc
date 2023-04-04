@@ -3,7 +3,7 @@
 
 The various organizations and institutes that contribute to the Climate Resilience Pilot noted the following gaps or challenges that still require some work (in future):
 
-- At present participants have only implemented the first Drought Index (SPI) using precipitation data from the Copernicus Climate Data Store (CDS), but are open to / need other data sources.
+- The Drought indicator is currently implemented using data from the Copernicus Climate Data Store (CDS), and other sources/datasets are being tested to understand the speed/reliability/cost of accessing input data from different sources as the aim is to process on demand.
 
 - One of the objectives of the pilot is also to lower the barriers for users accessing CDS/ADS (Atmosperic Data Store) data and services and engage with a broader user community. Knowing from users which are these barriers (gaps) will allow this pilot to evolve as well.
 
