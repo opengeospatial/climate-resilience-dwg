@@ -38,6 +38,7 @@ Broadly speaking, this pilot attempts to answer questions such as:
 |Hanwen Xu | Wuhan University |
 |Tianyu Tuo | Wuhan University |
 |Dean Hintz | Safe Software, Inc. |
+|Kailin Opaleychuk | Safe Software, Inc. |
 |Jérôme Jacovella-St-Louis | Ecere Corporation |
 |Hanna Krimm | alpS GmbH |
 |Andrew Lavender | Pixalytics Ltd |
