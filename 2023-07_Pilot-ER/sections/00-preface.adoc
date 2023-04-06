@@ -41,7 +41,7 @@ Broadly speaking, this pilot attempts to answer questions such as:
 |Jérôme Jacovella-St-Louis | Ecere Corporation |
 |Hanna Krimm | alpS GmbH |
 |Andrew Lavender | Pixalytics Ltd |
-|Samantha Lavender | Pixalytics Ltd |
+|Samantha Lavender | Pixalytics Ltd | Development of drought indicator
 |Jenny Cocks | Pixalytics Ltd |
 |Jakub Walawender | Walawender, Jakub P. |
 | Eugene Yu | GMU |

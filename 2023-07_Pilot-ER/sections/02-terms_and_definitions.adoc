@@ -19,8 +19,13 @@ Here's an example of an example term.
 
 // Insert abbreviated terms content
 // For example
+ARD:: Analysis Ready Data
 ADES:: Application Deployment and Execution Service
 AP:: Application Package
+API:: Application Programming Interface
 EMS:: Exploitation Platform Management Service
+SMA:: Soil Moisture Anomaly
+SPI:: Standardized Precipitation Index
+WPS:: Web Processing Service
 
 
