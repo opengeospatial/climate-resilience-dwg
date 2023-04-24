@@ -288,3 +288,14 @@ Table of service endpoints - their role, temporal and spatial resolution, and sc
 // ==== Use Case: Evaluate the Essential Climate Variables for the Northeast US Shelf (NES) ecosystem
 // stuff here
 // ==== Use Case: Evaluate the mitigation opportunities from marine aquaculture
+
+
+=== Evolving physical risk in insurance
+
+==== Background
+
+==== Approach
+
+==== Use case 1
+
+==== Use case 2
