@@ -1,15 +1,28 @@
 
 === Intact Financial Corporation
 
-With a global team of 29,000 employees, Intact is the largest provider of Property & Casualty insurance in Canada, a leading specialty lines insurer with international expertise and a leader in personal and commercial lines in the U.K. and Ireland. Its purpose is to help people, businesses and society prosper in good times and 
-be resilient in bad times. The company has been on the front lines of climate change with our customers for more than a decade – getting them back on track and helping them adapt. As extreme weather is going to get worse over the next decade, Intact intends to double down on adapting to this changing environment and be better prepared for floods, wildfire and extreme heat.
-
-The Data Lab has grown to more than 500 data specialists. This team is focused on improving risk selection and making our operations as efficient as possible while creating outstanding interactions with customers.
-
 - Component: 
+  * Wildfire hazard map
 
 - Inputs:
-  * 
+  * National fire database polygon data
+  * Fire Weather Index (FWI) daily maps
+  * Land cover maps
+  * Drought conditions
+  * Digital Elevation Model (DEM)
+  * Population density
 
 - Outputs:
-  * 
+  * Wildfire hazard map, in GeoTiff
+  * Regional risk indicators, as tabular output in CSV format
+  
+- What other component(s) can interact with the component: Intact's component is developed for internal use. It is deployed in highly secured data environments, and as such it cannot readily interact with other components of the pilot. 
+
+- What OGC standards or formats does the component use and produce:
+  * GeoTiff
+  * NetCDF
+  * WPS
+
+==== Company Description 
+
+Intact is the largest provider of Property & Casualty insurance in Canada. Its purpose is to help people, businesses and society prosper in good times and be resilient in bad times. The company has been on the front lines of climate change with our customers for more than a decade – getting them back on track and helping them adapt. As extreme weather is going to get worse over the next decade, Intact intends to double down on adapting to this changing environment and be better prepared for floods, wildfire and extreme heat.
