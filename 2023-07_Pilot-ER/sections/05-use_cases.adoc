@@ -262,15 +262,31 @@ Newly created *solar climate data cube and web map service* will be more *FAIR* 
 * to document existing solar radiation datasets (satellite, model and reanalysis data) and services (both freely accessible and commercial)
 * to verify the accuracy of the in situ measurements and satellite climate data records for the selected solar radiation parameters using proper statistical methods
 
-=== Evolving physical risk in insurance (Intact)
+
+=== Wildfire risk in P&C insurance (Intact Financial Corporation)
 
 ==== Background
+Here we describe the role of an P&C insurance company in context of disaster and climate resilience. We introduce our main public references, being Intact Annual Report 2022 and Intact Social Impact & ESG Report 2022, both found on https://www.intactfc.com/English/investors/financial-reports-and-filings/annual-report/default.aspx[Intact Annual Reports page]. We lay out the goals of our participation.
 
 ==== Approach
+Here we very briefly present several use cases related to wildfire and other physical risks, at a very high level. These use cases are presented in logical order, from disaster to climate resilience. The intent is to brush a large picture of how insurance companies can contribute to climate resilience, and to leave room for other participants to link their own contributions. We describe what use cases we selected for the pilot, in this case wildfire hazard modelling and wildfire resilience. We tell why we think those two use cases are appropriate for the climate resilience pilot.
 
-==== Use case 1
+* Restoration
+* Claims
+* Wildfire Hazard modelling
+* Underwriting
+* CAT modelling
+* Risk management
+* Loss prevention
+* Wildfire resilience
+* Adaptation
 
-==== Use case 2
+==== Use case 1: Wildfire hazard model
+Here we describe the various experiments made on our components during the pilot. For this use case, the main actor is a scientist. The component was kept internal, we explain why. We enumerate the various open data repository we tested, and we describe the process at a high level. We show pictures of the output. We create logical links to other components that could have been used in the process.
+
+==== Use case 2: Wildfire resilience
+Here we describe the selected use case for insurance, where the main actor is either a forestry expert or a landscaper. We introduce the main reference that is https://www.intactcentreclimateadaptation.ca/wp-content/uploads/2022/02/FSC_ConstructionChecklist_FINAL.pdf[WILDFIRE-RESILIENCE BEST-PRACTICE 
+CHECKLIST FOR HOME CONSTRUCTION, RENOVATION AND LANDSCAPING]. We explain why this use case is a relevant target for Climate Resilience pilot. 
 
 
 === D-100 Client (Pelagis)
