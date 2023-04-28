@@ -13,7 +13,7 @@ Currently, the Standardized Precipitation Index (SPI) and Soil Moisture Anomaly 
 
 - Inputs: Meteorological data, including Precipitation, plus Land Surface Temperature, Soil Moisture, and Vegetation Index (or optical data to calculate it from).
 
-- Outputs: Drought Indices - as a time-series dataset output in JSON or COG format.
+- Outputs: Drought Indices - as a time-series dataset output in a choice of download formats: CSV, GeoJSON, CoverageJSON and NetCDF for point data and then COG for areas (to be developed).
 
 - What other component(s) can interact with the component: a desire to link to visualization/DRI analysis components. A QGIS plugin has been updated to be able to perform a request and view the outputted JSON file (https://github.com/pixalytics-ltd/qgis-wps-plugin), and the Web Processing Service (WPS) link is https://api.pixalytics.com/climate/wps?request=GetCapabilities&service=wps
 
@@ -33,8 +33,7 @@ The WPS service remains in development/under improvement and currently provides 
     inputs = [ ("start_date", '20200101'),
             ("end_date", '20221231'),
             ("latitude", '55.5'),
-            ("longitude", '-99.1'),
-            ("index", 'SPI')]
+            ("longitude", '-99.1')]
     
     execution = wps.execute("drought", inputs, "output")
 
@@ -51,4 +50,11 @@ The WPS service remains in development/under improvement and currently provides 
         print("Error: ",error.code, error.locator, error.text)
 ----
 
-- What OGC standards or formats does the component use and produce: Producing data on-the-fly using the WPS, so need to pull data through preferably an API route. The speed that the input data can be made available (i.e., extracting time-series subsets) governs the speed that the drought indicator provides data. To speed this up, input data that is not changing is being cached so that it runs significantly quicker when the API is called for a second time.
+- What OGC standards or formats does the component use and produce: Producing data on-the-fly using the WPS, so need to pull data through preferably an API route. The speed that the input data can be made available (i.e., extracting time-series subsets) governs the speed that the drought indicator provides data. To speed this up, input data that is not changing is being cached so that it runs significantly quicker when the API is called for a second time. 
+
+<<Pixalytics-output>> shows an example of the output visualized within Python using Streamlit with the intermediate data (cached as NetCDF files) as input.
+
+// This could be moved to a use case
+[[Pixalytics_output]]
+.Pixalytics output (Not the correct figure, to be updated)
+image::Pixalytics-output-example.png[Pixalytics-output]
