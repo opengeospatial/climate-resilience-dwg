@@ -3,7 +3,7 @@
 
 The various organizations and institutes that contribute to the Climate Resilience Pilot noted the following gaps or challenges that still require some work (in future):
 
-- The Drought indicator is currently implemented using data from the Copernicus Climate Data Store (CDS), and other sources/datasets are being tested to understand the speed/reliability/cost of accessing input data from different sources as the aim is to process on demand.
+- The Pixaltics Drought indicator is currently implemented using data from the Copernicus Climate Data Store (CDS), and other sources/datasets are being tested to understand the speed/reliability/cost of accessing input data from different sources as the aim is to process on demand. We tested the input precipitation using the   https://registry.opendata.aws/ecmwf-era5/[ERA5 data held within the Registry of Open Data on AWS] versus the CDS API and found the Amazon Web Service (AWS) Simple Storage Service (S3) stored data could be accessed faster once virtual Zarrs has been setup, but there is a question over provenance as the data on AWS was put there by an organization other than the data originator and the Zarr approach didn't work for more recent years as the S3 stored NetCDFs have chunking that is inconsistent. An issue has been raised for the Python kerchunck library to be able to cope with variable chunking.
 
 - One of the objectives of the pilot is also to lower the barriers for users accessing CDS/ADS (Atmosperic Data Store) data and services and engage with a broader user community. Knowing from users which are these barriers (gaps) will allow this pilot to evolve as well.
 
