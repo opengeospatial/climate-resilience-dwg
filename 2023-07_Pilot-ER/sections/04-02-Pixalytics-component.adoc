@@ -52,7 +52,7 @@ The WPS service remains in development/under improvement and currently provides 
 
 - What OGC standards or formats does the component use and produce: Producing data on-the-fly using the WPS, so need to pull data through preferably an API route. The speed that the input data can be made available (i.e., extracting time-series subsets) governs the speed that the drought indicator provides data. To speed this up, input data that is not changing is being cached so that it runs significantly quicker when the API is called for a second time. 
 
-<<Pixalytics-output>> shows an example of the output visualized within Python using Streamlit with the intermediate data (cached as NetCDF files) as input.
+<<Pixalytics_output>> shows an example of the output visualized within Python using Streamlit with the intermediate data (cached as NetCDF files) as input.
 
 // This could be moved to a use case
 [[Pixalytics_output]]
