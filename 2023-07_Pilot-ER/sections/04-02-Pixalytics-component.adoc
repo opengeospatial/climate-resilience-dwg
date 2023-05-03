@@ -58,3 +58,76 @@ The WPS service remains in development/under improvement and currently provides 
 [[Pixalytics_output]]
 .Pixalytics output (Not the correct figure, to be updated)
 image::Pixalytics-output-example.png[Pixalytics-output]
+
+==== Drought Indicator Descriptions
+The Drought Indicator API may be used to obtain any of the following indicators for a given latitude, longitude and time period.
+
+_Standardised Precipitation Index_
+
+The Standardised Precipitation Index (SPI) is a statistical value describing the amount of rainfall in a given time period relative to a longer time period for a given location. The SPI is a common drought indicator and provides an early warning of an impending drought. SPI is computed in monthly time intervals.
+
+_Soil Moisture Anomaly_
+
+The soil moisture anomaly (SMA) is another common indicator for agriculural drought, as it results from prolonged lack of rainfall and can preceed poor vegetation health. A surface SMA can be obtained from satellite data, or the SMA at greater depths into the soil from reanalyses or models. The SMA is computed relative to a long-term baseline period for a given location and is provided at a frequency of dekads.
+
+_Fraction of Absorbed Photosynthetically Active Radiation_
+
+The fraction of Absorbed Photosynthetically Active Radiation (fAPAR) is a satellite-derived value describing the proportion of solar radiation used directly by plants for growth and provides an indication of plant health. A drawback of using fAPAR as a drought indicator is that lower values can result from non-drought related events, such as disease. The fAPAR anomaly is computed relative to a long-term baseline perdiod for a given location and is provided at a freqency of dekads.
+
+_The Combined Drought Indicator_
+
+The Combined Drought Indicator (CDI, Sepulcre-Canto et al., 2012) provides an accessible measure of agricultural drought severity by assigning a Normal, Watch, Warning or Alert status to a particular region at a particular time. This allows a user without intimate knowledge of drought indicators to understand the current situation and take appropriate action.
+
+The CDI is computed by combining statistical measures of precipitation (SPI), soil moisture (SMA) and vegetation health (FAPAR). <<Table 1>> shows how these are combined to give the different statuses. As an example, if the SPI, SMA and fAPAR are -1.2, 0.7, and -0.9 respectively, the CDI level would be 'Watch'. If all three are below -1, the CDI would be 'Alert 1'.
+
+[%unnumbered]
+.Combined Drought Indicator statuses, adapted from Sepulcre-Canto et al. (2012)
+[width=100%,options="header"]
+[cols="18h,~,10,10,10"]
+|====================
+|CDI    |Description      |SPI  |SMA  |FAPAR
+|Normal |No drought       |     |     | 
+|Watch  |Lower than usual rainfall |< -1 |     | 
+|Warning|Dry soil following lower than usual rainfall |< -1 |< -1 |
+|Alert 1|Vegetation stress following lower than usual rainfall and dry soil|< -1 |< -1 |< -1
+|Alert 2|Vegetation stress following lower than usual rainfall (soil unaffected). |< -1 |     |< -1
+
+|====================
+
+==== Data Sources
+
+_The Global Drought Observatory_
+
+The Global Drought Observatory (GDO), owned by Copernicus Emergency Management Services, provides a global map of coarsely-gridded agricultural drought risk, along with a breakdown of the risk for each country. The drought risk is computed using the Combined Drought Indicator (CDI). The variables used to compute the CDI, and other drought-related variables, are provided in the user portal for download at https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2112, but the CDI itself is not available for download.
+
+[[GDO-screenshot]]
+.Global Drought Observatory Web Portal
+image::GDO_screenshot.png[GDO-screenshot]
+
+We obtain SMA and FAPAR from the GDO data download service. These are provided as netcdf files and contain pre-computed anomalies, so can be assimilated directly into the back-end.  The SMA uses a combination of the root soil moisture from the LISFLOOD model, the MODIS land surface temperature and the ESA CCI skin soil moisture (Cammaleri et al. 2016), and the FAPAR is from NASA optical imagery.
+
+
+_ERA5 Reanalysis from ECMWF CDS_
+
+The CDS portal provides an API interface to return either hourly or monthly averages of the ERA5 variables. Requesting the hourly data is necessary to compute anything which requires a frequency greater than monthly, which is the case for most drought indicators (e.g. SMA) which are in dekads. To ensure there is no anti-aliasing, the full 24hr dataset for each day of the month must be downloaded. This is very time-consuming and requests will fail if the number of datapoints exceeds the limit, which will occur for a period of 2 years or more, even for a single location.
+
+There is a separate application, which can also be accessed via API, to return daily data. The CDS employs a queue management system, which determines the priority of each request based partially on the computational demand of the request. The daily data retrieval relies upon an underlying service to compute the daily statistics from the hourly data, demanding more resources than simply extracting the hourly or monthly data which are pre-computed. This means the request is held in the queue for a long time (up to hours), so there is no time benefit over using the hourly data. However, for a longer time-period which would be rejected if requested hourly, this provides a workaround. A further benefit of requesting daily, rather than hourly, data is that the downloaded file is smaller.
+
+We compute SPI and SMA using variables from the CDS API. The SPI is computed from the total precipitation in monthly intervals. The SMA is computed from the soil water volume, which is available for 4 depth levels. The SMA for each depth is computed by calculating the z-score against a long term mean, using the same baseline time period as the SPI. The most relevant depth layer can then be selected by the user; for instance, a user interested in the health of crops with shallow roots may wish to access the surfacemost layer.
+
+_ERA5 Reanalysis from AWS_
+
+_NOAA?_
+
+_SafeSoftware?_
+
+==== Further work
+
+- Forward modelling?
+
+==== References
+Cammalleri C, Micale F, Vogt J. A novel soil moisture-based drought severity index (DSI) combining water deficit magnitude and frequency. HYDROLOGICAL PROCESSES 30 (2); 2016. p. 289-301. JRC96439 https://hess.copernicus.org/articles/21/6329/2017/
+
+Sepulcre-Canto, G., Horizon, S., Singleton, A., Carrao, H. and Vogt, J. (2012)  Development of a Combined Drought Indicator to detect agricultural drought in Europe. Nat. Hazards Earth Syst. Sci., 12, 3519–3531. doi:10.5194/nhess-12-3519-2012
+
+
