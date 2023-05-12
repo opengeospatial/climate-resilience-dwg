@@ -7,6 +7,21 @@
 //.CRIS overview
 //image::CRIS.png[CRIS]
 
+=== ECMWF - Copernicus
+
+- Component: Copernicus services.
+
+- Outputs: Copernicus Services, including Climate Data Store (CDS) https://cds.climate.copernicus.eu/ and Atmosphere Data Store (ADS) https://ads.atmosphere.copernicus.eu/. 
+
+- What other component(s) can interact with the component: CDS and ADS provide access to data via different interfaces: UI and API. It also offers a toolbox with a set of expert libraries to perform advanced operations on the available data. CDS and ADS catalogue metadata is also accessible via standard CSW. https://cds.climate.copernicus.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+
+- What OGC standards or formats does the component use and produce: 
+  * CDS and ADS catalogues exposed via CSW. 
+  * Access to ESGF datasets via WPS. 
+  * WMS is offered in some published applications. 
+  * CADS 2.0 (under construction) will implement OGC APIs.
+
+
 === AlpS
 
 - Component: climate Communication and support for adaptation.
