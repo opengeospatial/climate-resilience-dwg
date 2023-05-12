@@ -7,6 +7,35 @@
 //.CRIS overview
 //image::CRIS.png[CRIS]
 
+=== Intact Financial Corporation
+
+- Component: 
+  * Wildfire hazard map
+
+- Inputs:
+  * National fire database polygon data
+  * Fire Weather Index (FWI) daily maps
+  * Land cover maps
+  * Drought conditions
+  * Digital Elevation Model (DEM)
+  * Population density
+
+- Outputs:
+  * Wildfire hazard map, in GeoTiff
+  * Regional risk indicators, as tabular output in CSV format
+  
+- What other component(s) can interact with the component: Intact's component is developed for internal use. It is deployed in highly secured data environments, and as such it cannot readily interact with other components of the pilot. 
+
+- What OGC standards or formats does the component use and produce:
+  * GeoTiff
+  * NetCDF
+  * WPS
+
+==== Company Description 
+
+Intact is the largest provider of Property & Casualty insurance in Canada. Its purpose is to help people, businesses and society prosper in good times and be resilient in bad times. The company has been on the front lines of climate change with our customers for more than a decade – getting them back on track and helping them adapt. As extreme weather is going to get worse over the next decade, Intact intends to double down on adapting to this changing environment and be better prepared for floods, wildfire and extreme heat.
+
+
 === Pelagis
 The effects of climate change on coastal environments cannot be understated. As the carrying capacity of our oceans as a carbon sink is reaching its limits, research suggests that an integrated approach to oceans resource management can sustainably meet the needs of global food supplies, offset the rate of ocean acidification, and permanently remove CO2 from the atmosphere. However, accurately measuring both the effect of climate change as well as the mitigation effects of nature-based approaches remains a challenge.
 
