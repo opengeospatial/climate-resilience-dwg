@@ -7,6 +7,29 @@
 //.CRIS overview
 //image::CRIS.png[CRIS]
 
+=== Pelagis
+The effects of climate change on coastal environments cannot be understated. As the carrying capacity of our oceans as a carbon sink is reaching its limits, research suggests that an integrated approach to oceans resource management can sustainably meet the needs of global food supplies, offset the rate of ocean acidification, and permanently remove CO2 from the atmosphere. However, accurately measuring both the effect of climate change as well as the mitigation effects of nature-based approaches remains a challenge.
+
+Our participation in the Climate Resilience pilot focuses on enhancing our view of a global oceans observation system by combining real-world ground observations with analysis ready datasets. Monitoring aspects of our oceans through both a temporal and spatial continuum while providing traceability through the observations process allows stakeholders to better understand the stressors affecting the health of our oceans and investigate opportunities to mitigate the longer term implications related to climate change.
+
+==== About Us
+Pelagis is an OceanTech venture located in Nova Scotia, Canada. Our foundation focuses on the application of open geospatial technology and standards designed to promote the sustainable use of our ocean resources.  As a member of the Open Geospatial Consortium, we co-chair the Marine Domain Working Group with a focus on developing a federated model of the marine ecosystem (MSDI) compliant with the suite of OGC specifications and standards.
+
+==== Scope of Work
+The project effort centers around 3 key challenges
+* the ability to collect data relevant to Climate Resilience;
+* the ability to apply the data in a coherent and standardized manner in which to draw out context;
+* and the ability to impart insight to community members and stakeholders so as to identify, anticipate and mitigate the effects of climate change across both local and international boundaries.
+
+Each of these activities aligns with the best practices and standards of the OGC and are used as input to the MarineDWG MSDI reference model.
+
+==== Approach
+Our approach to address the needs for the shared use of our ocean resources is to make Marine Spatial Planning a core foundation on which to build out vertical applications. Our platform is based on a federated information model represented as a unified social graph. This provides a decentralized approach towards designing various data streams each represented by their well-known and/or standardized model. To date, service layers based on the OGC standards for Feature, Observations & Measurements, and Sensors APIs have been developed and extended for adoption within the marine domain model. Previous work provides for data discovery and processing of features based on the IHO S-100 standard (Marine Protected Areas, Marine Traffic Management, …); NOAA open data pipelines for major weather events (Hurricane Tracking, Ocean Drifters, Saildrones …); as well as connected observation systems as provided by IOOS and its Canadian variant, CIOOS.
+
+[#img-pelagis-architecture]
+.Architecture
+image::pelagis.architecture(1).svg[Pelagis-architecture, ,align=center, width=600]
+
 === Laubwerk
 
 Laubwerk is a private company working on building a large database of vegetation that includes fully detailed 3D models as well as metadata to represent its properties.
