@@ -7,7 +7,7 @@
 //.CRIS overview
 //image::CRIS.png[CRIS]
 
-=== ECMWF - Copernicus
+=== ECMWF - Copernicus (will be integrated with INTRODUCTION section)
 
 - Component: Copernicus services.
 
