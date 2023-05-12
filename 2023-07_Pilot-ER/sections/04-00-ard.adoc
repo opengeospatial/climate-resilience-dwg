@@ -9,3 +9,64 @@ CEOS defines Analysis Ready Data as satellite data that have been processed to a
 //[[CRIS]]
 //.CRIS overview
 //image::CRIS.png[CRIS]
+
+
+=== Pixalytics
+
+Pixalytics are developing an OGC-compliant Application Programming Interface (API) service, see <<Pixalytics_architecture>>, which will provide global information on droughts. The approach is to take global open data/datasets from organizations such as ESA/Copernicus, NASA/NOAA, and the WMO and combine meteorology, hydrology, and remote sensing data to produce ARD data based on a composite of different indicators. Where globally calculated drought indicators already exist, these are being used in preference to their re-calculation, although consistency and the presence of uncertainties are also being considered.
+
+[[Pixalytics_architecture]]
+.Pixalytics architecture
+image::Pixalytics-architecture.png[Pixalytics-architecture]
+
+Currently, the Standardized Precipitation Index (SPI) and Soil Moisture Anomaly (SMA) are being calculated using ERA5 reanalysis data from the Climate Data Store (CDS) of the Copernicus Climate Change Service. The API access is being set up following the Building Blocks for Climate Services (https://climateintelligence.github.io/smartduck-docs/) approach. Individual indices for precipitation (SPI), soil moisture (SMA), and vegetation drought are being worked on. Then, we will aim to combine them into a single view/indicator.
+
+- Component: Drought indicator.
+
+- Inputs: Meteorological data, including Precipitation, plus Land Surface Temperature, Soil Moisture, and Vegetation Index (or optical data to calculate it from).
+
+- Outputs: Drought Indices - as a time-series dataset output in a choice of download formats: CSV, GeoJSON, CoverageJSON and NetCDF for point data and then COG for areas (to be developed).
+
+- What other component(s) can interact with the component: a desire to link to visualization/DRI analysis components. A QGIS plugin has been updated to be able to perform a request and view the outputted JSON file (https://github.com/pixalytics-ltd/qgis-wps-plugin), and the Web Processing Service (WPS) link is https://api.pixalytics.com/climate/wps?request=GetCapabilities&service=wps
+
+The WPS service remains in development/under improvement and currently provides access to individual precipitation and soil moisture related indices. Example Python query for a location in Canada (Latitude: 55.5 N Longitude: 99.1 W) for the SPI time series, with data for these dates/this location already cached, so runs quicker:
+
+.Drought indicator calling code
+----
+    from owslib.wps import WebProcessingService, monitorExecution
+    
+	# contact the WPS client
+    wps = WebProcessingService("http://api.pixalytics.com/climate/wps", skip_caps=True, verbose=False)
+    
+    # GetCapabilities
+    wps.getcapabilities()
+
+	# Execute
+    inputs = [ ("start_date", '20200101'),
+            ("end_date", '20221231'),
+            ("latitude", '55.5'),
+            ("longitude", '-99.1')]
+    
+    execution = wps.execute("drought", inputs, "output")
+
+    monitorExecution(execution,download=True,filepath="temp.json")
+
+    # Wait 5 seconds and check
+    execution.checkStatus(sleepSecs=5)
+
+    # show status
+    print('Percent complete: {}'.format( execution.percentCompleted))
+
+	# If there's an error print the error information
+    for error in execution.errors:
+        print("Error: ",error.code, error.locator, error.text)
+----
+
+- What OGC standards or formats does the component use and produce: Producing data on-the-fly using the WPS, so need to pull data through preferably an API route. The speed that the input data can be made available (i.e., extracting time-series subsets) governs the speed that the drought indicator provides data. To speed this up, input data that is not changing is being cached so that it runs significantly quicker when the API is called for a second time. 
+
+<<Pixalytics_output>> shows an example of the output visualized within Python using Streamlit with the intermediate data (cached as NetCDF files) as input.
+
+// This could be moved to a use case
+[[Pixalytics_output]]
+.Pixalytics output (Not the correct figure, to be updated)
+image::Pixalytics-output-example.png[Pixalytics-output]
