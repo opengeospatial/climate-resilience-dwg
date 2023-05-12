@@ -6,3 +6,13 @@ The various organizations and institutes that contribute to the Climate Resilien
 [[CRIS]]
 .CRIS overview
 image::CRIS.png[CRIS]
+
+
+=== Component workflow
+
+The figure below shows a high level workflow diagram that illustrates the interactions between data, models and the various components.
+
+
+[[ClimatePilotData2InformationFlow]]
+.High level workflow diagram that illustrates the interactions between data, models and the various components
+image::ClimatePilotData2InformationFlow.png[ClimatePilotData2InformationFlow]
