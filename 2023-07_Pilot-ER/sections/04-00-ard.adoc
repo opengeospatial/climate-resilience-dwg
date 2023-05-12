@@ -70,3 +70,122 @@ The WPS service remains in development/under improvement and currently provides 
 [[Pixalytics_output]]
 .Pixalytics output (Not the correct figure, to be updated)
 image::Pixalytics-output-example.png[Pixalytics-output]
+
+
+
+=== Safe Software
+
+- Component:
+ * Climate ARD component - Data Cube to ARD.
+ * Impact Components general I/O (Heat, Drought, Flood).
+
+- Inputs: 
+ * Climate ARD component - Data Cube to ARD: Climate scenario data from climate services (NetCDF), for historic and future time periods
+ * Impact Components general I/O (Heat, Drought, Flood): Climate impact ARD from Safes ARD component, including EO data (MODIS, LANDSAT, SENTINEL products), Population/Infrastructure information (OSM), Basemaps, as well as specific requirements per impact:
+  * Drought: vegetation, soils, hydrology, basins
+  * Flood: DEM, hydrology, basins.
+
+- Outputs:
+ * Climate ARD component - Data Cube to ARD: Gridded data, including temperature, soil moisture and  precipitation - aggregate grids (GeoTIFF/COG), as well as Vector data, including temperature, soil moisture and  precipitation contours (Geopackage, GeoJSON, OGC API Features).
+ * Impact Components general I/O (Heat, Drought, Flood): Risk Contours (Geopackage, GeoJSON, OGC API Features).
+
+- What other component(s) can interact with the component: Pixalytics Component: consume variables for Drought Indicator produced by Safe’s ARD component. Any other component that requires climate scenario summary ARD to drive DRI.
+
+- What OGC standards or formats does the component use and produce: 
+ * OGC API Features
+ * Geopackage
+ * NetCDF
+ * GeoJSON
+ * GeoTIFF/COG
+ * As needed: GML, KML, PostGIS, geodatabase and about 400 other geospatial formats.
+
+[[FMEARDworkflow]]
+.High level FME ARD workflow showing generation of climate scenario ARD and impacts from climate model, EO, IoT, infrastructure and base map inputs
+image::FME_ARD_workflow.PNG[FME_ARD_workflow]
+
+==== Company Description 
+
+Using the FME platform, Safe Software has been a leader in supporting geospatial interoperability for more than 25 years. A central goal has been to promote FAIR principles, including data sharing across barriers and silos, with unparalleled support for a wide array of both vendor specific formats and open standards. Safe Software also provides a range of tools to support interoperability workflows. FME Workbench is a graphical authoring environment that allows users to rapidly prototype transformation workflows in a no-code environment. FME Server then allows users to publish data transforms to enterprise oriented service architectures. FME Cloud offers a low cost, easy to deploy and scalable environment for deploying transformation and integration services to the cloud.
+
+Open standards have always been a core strategy for Safe in order to support data sharing. SAIF (Spatial Archive Interchange Format) - the first format FME was built to support and the basis for the company name - was an open BC government standard that ultimately served as a basis for GML. We have supported open standards such as XML, JSON and OGC standards such as GML, KML, WMS, WFS for many years. 
+Safe has collaborated over the years with the open standards community. For example, we have actively participated in the CityGML and INSPIRE communities in Europe. We have also been active within the OGC community and participated in many OGC initiatives including Maritime Limits and Boundaries, IndoorGML pilots and most recently the 2021 Disaster Pilot. Safe also actively participates in a number of Domain and Standards working groups including CityGML SWG, MUDDI SWG, 3DIM, EDM, Digital Twins, Health DWGs to name a few. 
+
+==== Component Descriptions
+
+D100 - Client instance: Analysis Ready Data Component
+
+Our Analysis Ready Data component (ARD) uses the FME platform to consume regional climate model and EO data and generate FAIR datasets for downstream analysis and decision support. 
+
+The challenge to manage and mitigate the effects of climate change poses difficulties for spatial and temporal data integration. One of the biggest gaps to date has been the challenge of translating the outputs of global climate models into specific impacts at the local level.  FME is ideally suited to help explore options for bridging this gap given its ability to read datasets produced by climate models such as NetCDF or OGC WCS. Then aggregate, interpolate and restructure it as needed, inter-relate it with higher resolution local data, and then output it to whatever format or service is most appropriate for a given application domain or user community.
+
+Our ARD component supports the consumption of climate model outputs such as NetCDF, earth observation (EO) data, and the base map datasets necessary for downstream workflows including derivation of analysis ready datasets for impact analysis. It filters, interrelates and refines these datasets according to indicator requirements. After extraction, datasets are filtered by location and transformed to an appropriate resolution and CRS. Then the workflow classifies, resamples, simplifies and reprojects the data, and then defines feature IDs metadata and other properties to satisfy the target ARD requirements. This workflow is somewhat similar to what was needed to evaluate disaster impacts in DP21. Time ranges for climate scenarios are significantly longer - years rather than weeks for floods.
+
+Once the climate model, and other supporting datasets have been adequately extracted, prepared and integrated, the final step is to generate the data streams and datasets required by downstream components and clients. The FME platform is well suited to deliver data in formats as needed. This includes Geopackage format for offline use. For online access, other open standards data streams are available, such as GeoJSON, KML or GML, via WFS and OGC Features APIs and other open APIs. 
+
+As our understanding of end user requirements continues to evolve, this will necessitate changes in which data sources are selected and how they are refined, using a model based rapid prototyping approach. We anticipate that any operational system will need to support a growing range of climate change impacts and related domains. Tools and processes must be able to absorb and integrate new datasets into existing workflows with relative ease. As the pilot develops, data volumes will increase, requiring scalability methods to maintain performance and avoid overloading downstream components. Cloud based processing near cloud data sources using cloud native datasets (COG, STAC, etc) supports data scaling. Regarding the FME platform, this involves deployment of FME workflows to FME Cloud.
+
+It is worth underlining that our ARD component depends on the appropriate data sources in order to produce the appropriate decision ready data (DRI) for downstream components. Risk factors include being able to locate and access suitable climate models and EO data of sufficient quality, resolution and timeliness to support indicators as the requirements and business rules associated with them evolve. Any data gaps encountered are documented under the lessons learned section. 
+
+
+[[SafeSoftware_1]]
+.Environment Canada NetCDF GCM  time series downscaled to Vancouver area. From: https://climate-change.canada.ca/climate-data/#/downscaled-data 
+image::SafeSoftware_1.png[SafeSoftware_1]
+
+[[SafeSoftware_2]]
+.Data Cube to ARD: NetCDF to KML, Geopackage, GeoTIFF 
+image::SafeSoftware_2.png[SafeSoftware_2]
+
+Data workflow:
+- Split data cube
+- Set timestep parameters
+- Compute timestep stats by band
+- Compute time range stats by cell
+- Classify by cell value range
+- Convert grids to vector contour areas by class
+
+[[SafeSoftware_3]]
+.Extracted timestep  grids: Monthly timesteps, period mean T, period max T 
+image::SafeSoftware_3.png[SafeSoftware_3]
+
+[[SafeSoftware_4]]
+.Convert raster temperature grids into temperature contour areas by class 
+image::SafeSoftware_4.png[SafeSoftware_4]
+
+[[SafeSoftware_5]]
+.Geopackage Vector Area Time Series: Max Yearly Temp 
+image::SafeSoftware_5.png[SafeSoftware_5]
+
+==== D100 - Client Instance: Heat Impact Component
+
+This component takes the climate scenario summary ARD results from the ARD component and analyzes them to derive estimated heat impacts over time, based on selected climate scenarios. Central to this is the identification of key heat impact indicators required by decision makers and the business rules needed to drive them. Process steps include data aggregation and statistical analysis of maximum temperature spikes, taking into account the cumulative impacts of multiple high temperature days. Data segmentation is based on maximum temperature exceeding a certain threshold T for N days in a row. This is because heat exhaustion effects are likely dependent on duration of heat spells, in addition to high maximum temperatures on certain days. 
+
+[[SafeSoftware_6]]
+.ARD Query: Monthly Max Temp Contours
+image::SafeSoftware_6.png[SafeSoftware_6]
+
+[[SafeSoftware_7]]
+.ARD Query: Max Mean Monthly Temp > 25C 
+image::SafeSoftware_7.png[SafeSoftware_7]
+
+[[SafeSoftware_8]]
+.Town of Lytton - location where entire town was devastated by fire during the heat wave of July 2021 - same location highlighted in ARD query from heat risk query in previous figure 
+image::SafeSoftware_8.png[SafeSoftware_8]
+
+==== D100 - Client Instance: Flood and Water Resource Impact Component
+
+This component takes the climate scenario summary ARD results from the ARD component and analyzes them to derive estimated flood risk impacts over time, based on selected climate scenarios. Central to this will be the identification of key flood risk impact indicators required by decision makers and the business rules needed to drive them. This process includes data aggregation and statistical analysis of rainfall intensity over time, taking into account the cumulative impacts of multiple consecutive days. This involves, for example, data segmentation based on cumulative rainfall exceeding a certain threshold T within a certain time window (N hours or days), since cumulative rainfall and rainfall intensity over a short period are often more crucial than total rainfall over a longer period. These precipitation scenarios are evaluated by catch basin. This also requires integration with topography, DEMs, and hydrology related data such as river networks, water bodies. aquifers and watershed boundaries.
+
+The FME transformation workflow classifies and segments the time series grid data, followed by vectorization and generalization in order to generate flood contour polygons by time step. The results are loaded to a geopackage which is more readily consumable by a wider variety of GIS applications and analytic tools. We have found that this vectorized data is relatively easy to publish to OGC API Feature Services.
+
+[[SafeSoftware_9]]
+.FME approach for converting flood time series grids to geopackage ARD 
+image::SafeSoftware_9.png[SafeSoftware_9]
+
+[[SafeSoftware_10]]
+.Flood Contour Geopackage ARD, showing flooded areas south of Winnipeg by date and depth, as displayed in FME Data Inspector.
+image::SafeSoftware_10.png[SafeSoftware_10]
+
+==== D100 - Client Instance: Drought Impact Component
+
+This component takes the climate scenario summary ARD results from the ARD component and analyze them to derive estimated drought risk impacts over time based on selected climate scenarios. This involves, for example, data segmentation based on cumulative rainfall below a certain threshold T within a certain time window (days, weeks or months), since cumulative rainfall over time will be crucial for computing water budgets by watershed or catch basin. Besides precipitation, climate models also generate soil moisture predictions which are used by this component to assess drought risk. This also requires integration with topography, DEMs and hydrology related data such as river networks, water bodies. aquifers and watershed boundaries. The specific business rules used to assess drought risk are still under development. FME provides a flexible data and business rule modeling framework. This means that as indicators and drought threshold rules are refined, it's relatively straightforward to adjust the business rules in this component to refine our risk projections. Also, business rule parameters can be externalized as execution parameters so that end users can control key aspects of the scenario drought risk assessment without having to modify the published FME workflow.
+
