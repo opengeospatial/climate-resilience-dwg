@@ -273,17 +273,17 @@ image::Pixalytics-output-example.png[Pixalytics-output]
 
 _The Global Drought Observatory_
 
-The Global Drought Observatory (GDO), owned by the Copernicus Emergency Management Services, provides a global map of coarsely-gridded agricultural drought risk, along with a breakdown of the risk for each country. The drought risk is computed using the CDI, with the variables used to compute it and other drought-related variables provided in the user portal for download at https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2112, but the CDI itself is not available for download.
+The Global Drought Observatory (GDO), owned by the Copernicus Emergency Management Services, provides a global map of coarsely-gridded agricultural drought risk, along with a breakdown of the risk for each country. The drought risk is computed using the CDI, with the variables used to compute it and other drought-related variables provided in the user portal for https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2112[download], but the CDI itself is not available for download.
 
 [[GDO-screenshot]]
 .Global Drought Observatory Web Portal
 image::GDO_screenshot.png[GDO-screenshot]
 
-We obtain SMA and Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) from the GDO data download service. These are provided as netCDF files and contain pre-computed anomalies, so can be assimilated directly into the back-end. The SMA uses a combination of the root soil moisture from the LISFLOOD model, the MODIS land surface temperature and the ESA Climate Change Initiative (CCI) skin soil moisture [<<cite_Cammalleri_2016>>], and the FAPAR is from NASA optical imagery.
+We obtain SMA and Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) from the GDO data download service. These are provided as netCDF files and contain pre-computed anomalies, so can be assimilated directly into the back-end. The SMA uses a combination of the root soil moisture from the https://ec-jrc.github.io/lisflood-model/[LISFLOOD model], the MODIS land surface temperature and the ESA Climate Change Initiative (CCI) skin soil moisture [<<cite_Cammalleri_2016>>], and the FAPAR is from NASA optical imagery.
 
 _ERA5 Reanalysis from ECMWF CDS_
 
-The CDS portal provides an API interface to return either hourly or monthly averages of the ERA5 variables. Requesting the hourly data is necessary to compute anything which requires a frequency greater than monthly, which is the case for most drought indicators (e.g. SMA) which are in dekads. To ensure there is no anti-aliasing, the full 24hr dataset for each day of the month must be downloaded. This is very time-consuming and requests will fail if the number of datapoints exceeds the limit, which will occur for a period of 2 years or more, even for a single location.
+The CDS portal provides an API interface to return either hourly or monthly averages of the ERA5 variables. Requesting the hourly data is necessary to compute anything which requires a frequency greater than monthly, which is the case for most drought indicators (e.g. SMA) which are in dekads. To ensure there is no anti-aliasing, the full 24hr dataset for each day of the month must be downloaded. This is very time-consuming and requests will fail if the number of data points exceeds the limit, which will occur for a period of 2 years or more, even for a single location.
 
 There is a separate application, which can also be accessed via API, to return daily data. The CDS employs a queue management system, which determines the priority of each request based partially on the computational demand of the request. The daily data retrieval relies upon an underlying service to compute the daily statistics from the hourly data, demanding more resources than simply extracting the hourly or monthly data which are pre-computed. This means the request is held in the queue for a long time (up to hours), so there is no time benefit over using the hourly data. However, for a longer time-period which would be rejected if requested hourly, this provides a workaround. A further benefit of requesting daily, rather than hourly, data is that the downloaded file is smaller.
 
@@ -291,7 +291,7 @@ We compute SPI and SMA using variables from the CDS API. The SPI is computed fro
 
 _ERA5 Reanalysis from AWS_
 
-
+Input precipitation data was also tested using https://registry.opendata.aws/ecmwf-era5/[ERA5 data held within the Registry of Open Data on AWS] versus the CDS API and found the Amazon Web Service (AWS) Simple Storage Service (S3) stored data could be accessed faster once virtual Zarrs has been setup, but there is a question over provenance as the data on AWS was put there by an organization other than the data originator and the Zarr approach didn't work for more recent years as the S3 stored NetCDFs have chunking that is inconsistent. An issue was raised for the Python kerchunck library, to be able to cope with variable chunking, as this https://github.com/zarr-developers/zeps/blob/main/draft/ZEP0003.md[isn't current supported].
 
 _NOAA_
 
