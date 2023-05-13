@@ -125,9 +125,8 @@ _SafeSoftware?_
 
 - Forward modelling?
 
-==== References
-Cammalleri C, Micale F, Vogt J. A novel soil moisture-based drought severity index (DSI) combining water deficit magnitude and frequency. HYDROLOGICAL PROCESSES 30 (2); 2016. p. 289-301. JRC96439 https://hess.copernicus.org/articles/21/6329/2017/
 
-Sepulcre-Canto, G., Horizon, S., Singleton, A., Carrao, H. and Vogt, J. (2012)  Development of a Combined Drought Indicator to detect agricultural drought in Europe. Nat. Hazards Earth Syst. Sci., 12, 3519–3531. doi:10.5194/nhess-12-3519-2012
+
+
 
 

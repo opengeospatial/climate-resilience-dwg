@@ -31,3 +31,8 @@
 
 * [[[acdd,1]]], ESIP: Attribute Convention for Data Discovery (ACDD) – http://wiki.esipfed.org/index.php/
 
+// Pixalytics References
+
+* [[[cite_Cammalleri_2016,Cammalleri 2016]]], Cammalleri C, Micale F, Vogt J. A novel soil moisture-based drought severity index (DSI) combining water deficit magnitude and frequency. Hydrological Processes, 30(2), pp. 289-301. JRC96439. (2016). https://hess.copernicus.org/articles/21/6329/2017/
+
+* [[[cite_Sepulcre-Canto_2012,Sepulcre-Canto 2012]]], Sepulcre-Canto, G., Horizon, S., Singleton, A., Carrao, H. and Vogt, J. Development of a Combined Drought Indicator to detect agricultural drought in Europe. Nat. Hazards Earth Syst. Sci., 12, pp. 3519–3531. (2012). doi:10.5194/nhess-12-3519-2012
