@@ -36,18 +36,23 @@
 
 
 // Clauses
+include::sections/00-executive-summary.adoc[]
 include::sections/00-preface.adoc[]
 include::sections/01-introduction.adoc[]
+include::sections/04-01-datacubes.adoc[]
+include::sections/04-02-ard.adoc[]
+include::sections/04-03-dri.adoc[]
+include::sections/04-04-vis.adoc[]
+include::sections/04-05-communication.adoc[]
+include::sections/05-components.adoc[]
+include::sections/06-use_cases.adoc[]
+include::sections/07-lessons_learned.adoc[]
+include::sections/08-concusion-future_work.adoc[]
+
+//
 // include::sections/02-terms_and_definitions.adoc[]
 // include::sections/03-references.adoc[]
-include::sections/04-00-ard.adoc[]
-include::sections/04-00-dri.adoc[]
-// Add clause files as needed
-include::sections/04-components.adoc[]
-include::sections/05-use_cases.adoc[]
-include::sections/06-lessons_learned.adoc[]
-include::sections/07-future_work.adoc[]
-//include::sections/08-summary_conclusions.adoc[]
+
 
 ////
 Annexes

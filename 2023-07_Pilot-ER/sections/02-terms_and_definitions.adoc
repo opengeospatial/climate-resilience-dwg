@@ -18,7 +18,7 @@ Here's an example of an example term.
 === Abbreviated terms
 
 // Insert abbreviated terms content
-// For example
+
 ARD:: Analysis Ready Data
 ADES:: Application Deployment and Execution Service
 AP:: Application Package
