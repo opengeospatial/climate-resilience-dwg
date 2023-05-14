@@ -223,7 +223,7 @@ The Drought Severity Workflow (DSW) is built using individual drought indicators
 
 - Inputs: Meteorological data, including Precipitation, plus Land Surface Temperature, Soil Moisture, and Vegetation Index (or optical data to calculate it from).
 
-- Outputs: Drought Indices - default is CDI - as a time-series dataset output in a choice of download able formats: CSV, GeoJSON, CoverageJSON and NetCDF for point data and then COG for areas (to be developed).
+- Outputs: Drought Indices - default is CDI - as a time-series dataset output in a choice of download able formats: CSV, GeoJSON (default), CoverageJSON and NetCDF for point data and then COG for areas (to be developed).
 
 - What other component(s) can interact with the component: a desire to link to visualization/DRI analysis components. A QGIS plugin has been updated to be able to perform a request and view the outputted JSON file (https://github.com/pixalytics-ltd/qgis-wps-plugin), and the Web Processing Service (WPS) link is https://api.pixalytics.com/climate/wps?request=GetCapabilities&service=wps
 
