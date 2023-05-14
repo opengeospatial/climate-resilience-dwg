@@ -229,7 +229,7 @@ The Drought Severity Workflow (DSW) is built using individual drought indicators
 
 An example Python query for a location in Canada (Latitude: 55.5 N Longitude: 99.1 W) for the SPI time series, with data for these dates/this location already cached, so runs quicker:
 
-.Drought indicator calling code
+.Drought indicator calling code [needs to be updated]
 ----
     from owslib.wps import WebProcessingService, monitorExecution
     
