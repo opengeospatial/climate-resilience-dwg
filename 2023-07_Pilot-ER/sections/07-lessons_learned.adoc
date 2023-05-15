@@ -1,0 +1,41 @@
+
+== Lessons Learned
+
+The various organizations and institutes that contribute to the Climate Resilience Pilot noted the following gaps or challenges that still require some work (in future):
+
+- The Pixaltics Drought indicator is currently implemented using data from the Copernicus Climate Data Store (CDS), and other sources/datasets are being tested to understand the speed/reliability/cost of accessing input data from different sources as the aim is to process on demand. We tested the input precipitation using the   https://registry.opendata.aws/ecmwf-era5/[ERA5 data held within the Registry of Open Data on AWS] versus the CDS API and found the Amazon Web Service (AWS) Simple Storage Service (S3) stored data could be accessed faster once virtual Zarrs has been setup, but there is a question over provenance as the data on AWS was put there by an organization other than the data originator and the Zarr approach didn't work for more recent years as the S3 stored NetCDFs have chunking that is inconsistent. An issue has been raised for the Python kerchunck library to be able to cope with variable chunking.
+
+- One of the objectives of the pilot is also to lower the barriers for users accessing CDS/ADS (Atmosperic Data Store) data and services and engage with a broader user community. Knowing from users which are these barriers (gaps) will allow this pilot to evolve as well.
+
+- A universal, well-defined, climate service workflow (from raw data to information) as a roadmap to guide developers/users through the process.
+
+- Improve Sentinel-2 data cube performance, add Climate data, add vegetation fuel type classification, add a wildfire risk assessment workflow.
+
+- Analysis ready data (ARD) principles can be applied to climate time series, not just EO. Good ARD should be useful for a range of scenarios and useful to answer a range of analytic questions. 
+
+- DP21: laid a good foundation for exploring data cube extraction and conversion to ARD with using the FME data integration platform. 
+
+- A variety of approaches were explored for extraction, simplification and transformation.
+
+- Various approaches were explored to select, split, aggregate, and summarize time series
+
+- Both band and cell statistics were evaluated
+
+- The goal was to generate ARD that can be queried to answer questions about climate trends
+
+- More experimentation needed: analytic, statistical, simplification & publication methods, including cloud native - NetCDF to COG, APIs
+
+- Classification rules: need to more closely model impacts of interest. For example, the business rules for temperature range and stat type need to be part of the 
+
+- classification process before conversion to vector.
+
+- At present participants have only implemented the first Drought Index (SPI) using precipitation data from the Copernicus Climate Data Store (CDS), but are open to / need other data sources.
+
+- One of the objectives of the pilot is also to lower the barriers for users accessing CDS/ADS (Atmosperic Data Store) data and services and engage with a broader user community. Knowing from users which are these barriers (gaps) will allow this pilot to evolve as well.
+
+- A universal, well-defined, climate service workflow (from row data to information) as a roadmap to guide developers/users through the process.
+
+- Improve Sentinel-2 data cube performance, add Climate data, add vegetation fuel type classification, add a wildfire risk assessment workflow.
+
+
+

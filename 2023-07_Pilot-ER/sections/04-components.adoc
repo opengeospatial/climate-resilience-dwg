@@ -1,8 +1,0 @@
-
-[[clause-reference]]
-== Components
-The various organizations and institutes that contribute to the Climate Resilience Pilot are described below. There input to the pilot is indicated in the figure below <<CRIS>>.
-
-[[CRIS]]
-.CRIS overview
-image::CRIS.png[CRIS]

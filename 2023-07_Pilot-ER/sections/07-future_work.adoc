@@ -1,7 +1,0 @@
-
-== Future Work
-
-During the pilot, participants agreed to the following items where future work would be needed:
-
-- Further scenario tests should be explored, including comparison with historical norms - calculate difference between historical max temps and projected max temps. More analysis needs to be done with higher resolution time steps - weekly and daily. At the outset monthly time steps were used to make it easier to prototype workflows. Daily time step computations will take significantly more processing time.
-
