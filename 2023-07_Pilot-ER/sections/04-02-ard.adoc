@@ -49,165 +49,6 @@ In summary, the different ARD and IRD data can be created from the following dat
   * WMS for showing layers on basemap
 
 
-=== Jakub P. Walawender
-
-- Component: Solar climate atlas for Poland.
-
-- Inputs: In situ solar radiation and sunshine duration data, satellite-based solar radiation and sunshine duration estimates (climate data records), various different geospoatial data from different sources (e.g. digital elevation model, climate zones, etc.).
-
-- Outputs:
-  * This pilot outputs: Review of available solar radiation datasets and web services, 2 scripts (solar climate data exploratory analysis tool, solar climate data preprocessing tool), report summarizing results of the exploratory data analysis and quality control including discussion of inconsistency factors.
-  * In the final result: solar radiation data cube for Poland (40 years of high resolution dataset for selected solar radiation variables), and analysis ready data (dedicated products for different solar-smart applications in the fields of renewable energy, agriculture, spatial planning, tourism, etc.), detailed analysis of the solar climate in Poland (incl. solar regionalisation) and online web map service with an interactive, self-explainable interface enabling easy on-demand information access.
-
-- What other component(s) can interact with the component: This component work (considering the final result) crosses all the components and all of them are actually important.
-
-- What OGC standards or formats does the component use and produce: 
-  * NetCDF compliant with the CF (Climate and Forecast) convention. 
-  * WMS, WCS, OGC API
-  
-
-=== Ecere Corporation
-
-Ecere is providing a deployment of its GNOSIS Map Server with a focus on a Sentinel-2 Level 2A data cube. _OGC API - Tiles_, _OGC API - Coverages_, _OGC API - Maps_, _OGC API - Discrete Global Grid Systems_, _Common Query Language (CQL2)_, and  _OGC API - Processes - Part 3: Workflows & Chaining_ are the supported standards and extensions for this task.
-
-The plan is to use machine learning process output from the Wildland Fire Fuel Indicator Workflow to identify vegetation fuel types from sentinel-2 bands, then combine with weather data to assess wildfire hazards risk in Australia.
-The workflow will use as input the sentinel-2 OGC API data cube from our GNOSIS Map Server.
-
-- Component: Data Cube and Wildfire vegetation fuel map / risk analysis.
-
-- Inputs: ESA Sentinel-2 L2A data (from AWS / Element 84), Temperature / Precipitation / Wind climate data, Reference data for training: vegetation fuel type classification, wildfire risk.
-
-The sentinel-2 Level 2A collection is provided at `https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a`
-
-- Outputs: OGC API (Coverage, Tiles, DGGS, Maps) for Sentinel-2 data (https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a) including full global coverage, all resolutions/scales, all bands that can be individually selected, CQL2 expressions for band arithmetics; climate data (to be added), vegetation fuel type (possibly by end of pilot, or for DP2023), wildfire risk workflow (possibly by end of pilot, or for DP2023).
-
-- What other component(s) can interact with the component: Any OGC API client component requiring efficient access to Sentinel-2 data, clients requiring climate data once made available, clients presenting vegetation fuel type, wildfire risk (once ready, might extend into DP2023).
-
-- What OGC standards or formats does the component use and produce: 
-  * OGC API (Coverage - with subsetting, scaling, range subsetting, coverage tiles; Tiles, DGGS (GNOSISGlobalGrid and ISEA9R), Maps (incl. map tiles), Styles), CQL2, OGC API - Processes with Part 3 for workflows (Nested Local/Remote Processes, Local/Remote Collection Input, Collection Output, Input/Output Field Modifiers) 
-  * Formats: GNOSIS Map Tiles (Gridded Coverage, Vector Features, Map imagery, and more); GeoTIFF; PNG (16-bit value single channel for coverage, RGBA for maps); JPEG. 
-
-
-==== Overview of standards and extensions available for outputs
-
-===== OGC API - DGGS
-
-There are two main requirements classes for this standard.
-
-- Data Retrieval (What is here? -- "give me the data for this zone"),
-- Zones Query (Where is it? -- "which zones match this collection and/or my query")
-
-Example of data retrieval queries:
-
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/dggs/GNOSISGlobalGrid/zones/3-4-11/data
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/dggs/ISEA9Diamonds/zones/E7-FAE/data
-
-Example of a zones query:
-
-    https://maps.gnosis.earth/ogcapi/collections/SRTM_ViewFinderPanorama/dggs/ISEA9Diamonds/zones
-    https://maps.gnosis.earth/ogcapi/collections/SRTM_ViewFinderPanorama/dggs/ISEA9Diamonds/zones?f=json (as a list of compact JSON IDs)
-
-Level, Row, Column (which encoded differently in the compact hexadecimal zone IDs) can be seen on the zone information page at:
-
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/dggs/GNOSISGlobalGrid/zones/3-4-11
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/dggs/ISEA9Diamonds/zones/E7-FAE
-
-There are several different discrete global grids. Two are implemented in our service:
-
-- Our GNOSIS Global Grid, which is geographic rather than projected, and is axis-aligned with latitudes and longitudes, but not equal area (though it tends towards equal area -- maximum variation is ~48% up to a very detailed level)
-- ISEA9R, which is a dual DGGS of ISEA3H even levels, using rhombuses/diamonds instead of hexagons, but much simpler to work with and can transport the hexagon area values as points on the rhombus vertices for those ISEA3H even levels. It is also axis-aligned to a CRS defined by rotating and skewing the ISEA projection.
-
-The primary advantage of OGC API - DGGS is:
-
-- for retrieving data from DGGS that are not axis-aligned or have geometry that cannot be represented as squares (e.g., hexagons), or
-- for the zone query capability, most useful for specifying queries (e.g. using CQL2). The extent to which we implement Zones Query at this moment is still limited.
-
-Examples of DGGS Zone information page:
-
-[#ecere_dggs1,reftext='{figure-caption} {counter:figure-num}']
-.GNOSIS Map Server information resource for GNOSIS Global Grid zone 5-24-6E
-image::ecere_dggs1.PNG[]
-
-[#ecere_dggs2,reftext='{figure-caption} {counter:figure-num}']
-.GNOSIS Map Server information resource for ISEA9Diamonds zone 5-24-6E
-image::ecere_dggs2.PNG[]
-
-[#ecere_dggs3,reftext='{figure-caption} {counter:figure-num}']
-.GNOSIS Map Server information resource for ISEA9Diamonds zone 5-24-6E sections
-image::ecere_dggs3.PNG[]
-
-===== OGC API - Coverages with OGC API - Tiles
-
-Because they are axis-aligned, both of these DGGS can be described as a TileMatrixSet, and therefore equivalent functionality to the OGC API - DGGS Data Retrieval requirements class can be achieved using OGC API - Tiles and the corresponding TileMatrixSets instead.
-
-Coverage Tile queries for the same zones:
-
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/coverage/tiles/GNOSISGlobalGrid/3/4/17
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/coverage/tiles/ISEA9Diamonds/4/373/288
-
-To request a different band than the default RGB (B04, B03, B02) bands:
-
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/coverage/tiles/GNOSISGlobalGrid/3/4/17?properties=B08
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/coverage/tiles/ISEA9Diamonds/4/373/288?properties=B08
-
-To retrieve coverage tiles with band arithmetic to compute NDVI:
-
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/coverage/tiles/GNOSISGlobalGrid/3/4/17?properties=(B08/10000-B04/10000)/(B08/10000+B04/10000)
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/coverage/tiles/ISEA9Diamonds/4/373/288?properties=(B08/10000-B04/10000)/(B08/10000+B04/10000)
-
-===== OGC API - Maps with OGC API - Tiles
-
-Map Tiles queries for the same zones:
-
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/map/tiles/GNOSISGlobalGrid/3/4/17
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/map/tiles/ISEA9Diamonds/4/373/288
-
-[#ecere_mapggg,reftext='{figure-caption} {counter:figure-num}']
-.GNOSIS Map Server Map of tiles 3/4/17 in GNOSISGlobalGrid
-image::ecere_mapggg.PNG[]
-
-To retrieve a map of the Scene Classification:
-
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/styles/scl/map/tiles/GNOSISGlobalGrid/3/4/17
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/styles/scl/map/tiles/ISEA9Diamonds/4/373/288
-
-[#ecere_class,reftext='{figure-caption} {counter:figure-num}']
-.Sentinel-2 with image classification styling
-image::ecere_class.PNG[]
-
-To filter out the clouds:
-
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/map/tiles/GNOSISGlobalGrid/3/4/17?filter=SCL<8 or SCL >10
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/map/tiles/ISEA9Diamonds/4/373/288?filter=SCL<8 or SCL >10
-
-To get an NDVI map:
-
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/styles/ndvi/map/tiles/GNOSISGlobalGrid/3/4/17
-    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/styles/ndvi/map/tiles/ISEA9Diamonds/4/373/288
-
-[#ecere_ndvi,reftext='{figure-caption} {counter:figure-num}']
-.Sentinel-2 map with NDVI band arithmetic
-image::ecere_ndvi.PNG[]
-
-The same filter= and properties= should also work with the /coverage and /dggs end-points.
-The filter= also works with the /map end-points.
-
-
-=== Wuhan University (WHU)
-Wuhan University (WHU) is a university that plays a significant role in researching and teaching all aspects of surveying and mapping, remote sensing, photogrammetry, and geospatial information sciences in China. In this Climate Resilience Pilot, we will contribute two use-cases: a use-case for drought and wildfire impact, and a use-case for analysis ready data.
-
-- Component:  Data Cube and Drought Indicator.
-
-- Inputs: Climate data, including precipitation and temperature. Optical data, such as Landsat-8 and sentinel-2.
-
-- Outputs: Drought risk map and other results in the form of GeoTIFF after processing in a Data Cube.
-
-- What other component(s) can interact with the component: .
-
-- What OGC standards or formats does the component use and produce: 
-  * OGC API - Coverages to provide the data in Cube
-  * OGC API - Processes to provide the calculation of drought indices
-
 
 === Pixalytics
 
@@ -217,19 +58,19 @@ Pixalytics are developing an OGC-compliant Application Programming Interface (AP
 .Pixalytics architecture
 image::Pixalytics-architecture.png[Pixalytics-architecture]
 
-Currently, the Standardized Precipitation Index (SPI) and Soil Moisture Anomaly (SMA) are being calculated using ERA5 reanalysis data from the Climate Data Store (CDS) of the Copernicus Climate Change Service. The API access is being set up following the Building Blocks for Climate Services (https://climateintelligence.github.io/smartduck-docs/) approach. Individual indices for precipitation (SPI), soil moisture (SMA), and vegetation drought are being worked on. Then, we will aim to combine them into a single view/indicator.
+The Drought Severity Workflow (DSW) is built using individual drought indicators for precipitation (SPI), soil moisture (SMA), and vegetation drought that are together using the Combined Drought Indicator (CDI) as described by [<<cite_Sepulcre-Canto_2012>>]. The API access has been set up following the Building Blocks for Climate Services (https://climateintelligence.github.io/smartduck-docs/) approach.
 
-- Component: Drought indicator.
+- Component: D100 Drought indicator.
 
 - Inputs: Meteorological data, including Precipitation, plus Land Surface Temperature, Soil Moisture, and Vegetation Index (or optical data to calculate it from).
 
-- Outputs: Drought Indices - as a time-series dataset output in a choice of download formats: CSV, GeoJSON, CoverageJSON and NetCDF for point data and then COG for areas (to be developed).
+- Outputs: Drought Indices - default is CDI - as a time-series dataset output in a choice of download able formats: CSV, GeoJSON (default), CoverageJSON and NetCDF for point data and then COG for areas (to be developed).
 
 - What other component(s) can interact with the component: a desire to link to visualization/DRI analysis components. A QGIS plugin has been updated to be able to perform a request and view the outputted JSON file (https://github.com/pixalytics-ltd/qgis-wps-plugin), and the Web Processing Service (WPS) link is https://api.pixalytics.com/climate/wps?request=GetCapabilities&service=wps
 
-The WPS service remains in development/under improvement and currently provides access to individual precipitation and soil moisture related indices. Example Python query for a location in Canada (Latitude: 55.5 N Longitude: 99.1 W) for the SPI time series, with data for these dates/this location already cached, so runs quicker:
+An example Python query for a location in Canada (Latitude: 55.5 N Longitude: 99.1 W) for the SPI time series, with data for these dates/this location already cached, so runs quicker:
 
-.Drought indicator calling code
+.Drought indicator calling code [needs to be updated]
 ----
     from owslib.wps import WebProcessingService, monitorExecution
     
@@ -264,10 +105,47 @@ The WPS service remains in development/under improvement and currently provides 
 
 <<Pixalytics_output>> shows an example of the output visualized within Python using Streamlit with the intermediate data (cached as NetCDF files) as input.
 
-// This could be moved to a use case
 [[Pixalytics_output]]
-.Pixalytics output (Not the correct figure, to be updated)
+.Pixalytics output of the CDI for a point location in Canada (Latitude: 55.5 N Longitude: 99.1 W)
 image::Pixalytics-output-example.png[Pixalytics-output]
+
+
+==== Data Sources
+
+_The Global Drought Observatory_
+
+The Global Drought Observatory (GDO), owned by the Copernicus Emergency Management Services, provides a global map of coarsely-gridded agricultural drought risk, along with a breakdown of the risk for each country. The drought risk is computed using the CDI, with the variables used to compute it and other drought-related variables provided in the user portal for https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2112[download], but the CDI itself is not available for download.
+
+[[GDO-screenshot]]
+.Global Drought Observatory Web Portal
+image::GDO_screenshot.png[GDO-screenshot]
+
+We obtain SMA and Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) from the GDO data download service. These are provided as netCDF files and contain pre-computed anomalies, so can be assimilated directly into the back-end. The SMA uses a combination of the root soil moisture from the https://ec-jrc.github.io/lisflood-model/[LISFLOOD model], the MODIS land surface temperature and the ESA Climate Change Initiative (CCI) skin soil moisture [<<cite_Cammalleri_2016>>], and the FAPAR is from NASA optical imagery.
+
+_ERA5 Reanalysis from ECMWF CDS_
+
+The CDS portal provides an API interface to return either hourly or monthly averages of the ERA5 variables. Requesting the hourly data is necessary to compute anything which requires a frequency greater than monthly, which is the case for most drought indicators (e.g. SMA) which are in dekads. To ensure there is no anti-aliasing, the full 24hr dataset for each day of the month must be downloaded. This is very time-consuming and requests will fail if the number of data points exceeds the limit, which will occur for a period of 2 years or more, even for a single location.
+
+There is a separate application, which can also be accessed via API, to return daily data. The CDS employs a queue management system, which determines the priority of each request based partially on the computational demand of the request. The daily data retrieval relies upon an underlying service to compute the daily statistics from the hourly data, demanding more resources than simply extracting the hourly or monthly data which are pre-computed. This means the request is held in the queue for a long time (up to hours), so there is no time benefit over using the hourly data. However, for a longer time-period which would be rejected if requested hourly, this provides a workaround. A further benefit of requesting daily, rather than hourly, data is that the downloaded file is smaller.
+
+We compute SPI and SMA using variables from the CDS API. The SPI is computed from the total precipitation in monthly intervals. The SMA is computed from the soil water volume, which is available for 4 depth levels. The SMA for each depth is computed by calculating the z-score against a long term mean, using the same baseline time period as the SPI. The most relevant depth layer can then be selected by the user; for instance, a user interested in the health of crops with shallow roots may wish to access the surfacemost layer.
+
+_ERA5 Reanalysis from AWS_
+
+Input precipitation data was also tested using https://registry.opendata.aws/ecmwf-era5/[ERA5 data held within the Registry of Open Data on AWS] versus the CDS API and found the Amazon Web Service (AWS) Simple Storage Service (S3) stored data could be accessed faster once virtual Zarrs has been setup, but there is a question over provenance as the data on AWS was put there by an organization other than the data originator and the Zarr approach didn't work for more recent years as the S3 stored NetCDFs have chunking that is inconsistent. An issue was raised for the Python kerchunck library, to be able to cope with variable chunking, as this https://github.com/zarr-developers/zeps/blob/main/draft/ZEP0003.md[isn't current supported].
+
+_NOAA_
+
+In Progress
+
+_SafeSoftware_
+
+In Progress
+
+==== Further work
+
+- Forward modelling?
+
 
 
 
