@@ -1,10 +1,22 @@
 //[[clause-reference]]
-== Data visualization  // better title here
+== Data visualization  
 
 
-=== 5D Meta World // work from presagis 
+=== 5D Meta World 
 
 
+Presagis offered the V5D rapid 3D (trial) Digital Twin generation capability to Laubwerk
+Presagis gathered open source GIS dataset for the Hollywood region in order to match the location of the tree dataset from Laubwerk
+Using V5D, Presagis created a representative 3D digital twin of the building and terrain.
+Presagis imported Laubwerk tree point dataset providing vegetation type information inside V5D
+Presagis provided V5D Unreal plugin to Laubwerk in order to allow the insertion of the Laubwerk 3D tree (as Unreal assets) into the scene.
+Using V5D, Laubwerk is capable of adapting the tree model in order to demonstrate the impact of climate change on the city vegetation
+
+
+Presagis also provided to Laubwerk its V5D AI extracted vegetation dataset in order to complement the existing tree dataset as needed.
+
+image::presagis.png[image of the Presagis deliverable to Laubwerk. At this stage, all trees are using the same 3D model (palm tree). Laubwerk will use V5D to assign a representative 3D model based the on point feature attribution accessible in V5D. With V5D, this operation takes seconds to do and visualize the result in 3D.]
+ 
 
 === viszualisation of vegetation // work from laubwerk 
 
