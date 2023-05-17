@@ -10,12 +10,13 @@ CEOS defines Analysis Ready Data as satellite data that have been processed to a
 //.CRIS overview
 //image::CRIS.png[CRIS]
 
-=== RSS-Hydro
+//=== RSS-Hydro
 
-RSS-Hydro has been part of several successful OGC testbeds, including the DP 21 to which this pilot is linked, not only in terms of ARD and IRD but also in terms of use cases. In this pilot, RSS-Hydro’s main technical contribution will be creating digestible OGC data types and formats for specific partner use cases, so the contribution will be focusing on producing ARD from publically available EO and model data, including hydrological model output as well as climate projections.
-These ARD will feed into all use cases for all participants, with a particular focus toward the use cases proposed for Heat, Drought and Health Impacts by other participants in the pilot. 
+Several past successful OGC testbeds, including the DP 21 to which this pilot is linked, have looked at ARD and IRD but also in terms of use cases. In this pilot, some main technical contributions have been creating digestible OGC data types and formats for specific partner use cases, so producing ARD from publically available EO and model data, including hydrological and other type of model output as well as climate projections.
 
-Specifically, RSS-Hydro can provide access to the following satellite and climate projection data:
+These ARD will feed into all use cases for all participants, with a particular focus toward the use cases proposed for Heat, Drought and Health Impacts by participants in the pilot. 
+
+Specifically, participants, like RSS-Hydro, provide access to the following satellite and climate projection data:
  * Wildfire – Fire Radiant Power (FRP) product from Sentinel 3 (NetCDF), 5p, MODIS products (fire detection), VIIRS (NOAA); possibly biomass availability (fire fuel).
  * Land Surface Temp - Sentinel 3
  * Pollution - Sentinel 5p
