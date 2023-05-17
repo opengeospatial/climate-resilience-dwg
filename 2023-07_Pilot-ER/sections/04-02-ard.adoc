@@ -53,30 +53,30 @@ In summary, the different ARD and IRD data can be created from the following dat
 
 === Pixalytics
 
-Pixalytics are developing an OGC-compliant Application Programming Interface (API) service, see <<Pixalytics_architecture>>, which will provide global information on droughts. The approach is to take global open data/datasets from organizations such as ESA/Copernicus, NASA/NOAA, and the WMO and combine meteorology, hydrology, and remote sensing data to produce ARD data based on a composite of different indicators. Where globally calculated drought indicators already exist, these are being used in preference to their re-calculation, although consistency and the presence of uncertainties are also being considered.
+Pixalytics have developed an OGC-compliant Application Programming Interface (API) service, see <<Pixalytics_architecture>>, which will provide global information on droughts. The approach is to take global open data/datasets from organizations such as ESA/Copernicus, NASA/NOAA, and the WMO and combine meteorology, hydrology, and remote sensing data to produce ARD data based on a composite of different indicators. Where globally calculated drought indicators already exist, these are being used in preference to their re-calculation, although consistency and the presence of uncertainties are also being considered.
 
 [[Pixalytics_architecture]]
-.Pixalytics architecture
+.Pixalytics drought severity workflow architecture
 image::Pixalytics-architecture.png[Pixalytics-architecture]
 
-Currently, the Standardized Precipitation Index (SPI) and Soil Moisture Anomaly (SMA) are being calculated using ERA5 reanalysis data from the Climate Data Store (CDS) of the Copernicus Climate Change Service. The API access is being set up following the Building Blocks for Climate Services (https://climateintelligence.github.io/smartduck-docs/) approach. Individual indices for precipitation (SPI), soil moisture (SMA), and vegetation drought are being worked on. Then, we will aim to combine them into a single view/indicator.
+The Drought Severity Workflow (DSW) is built using individual drought indicators for precipitation (SPI), soil moisture (SMA), and vegetation drought that are together using the Combined Drought Indicator (CDI) as described by [<<cite_Sepulcre-Canto_2012>>]. The API access has been set up following the Building Blocks for Climate Services (https://climateintelligence.github.io/smartduck-docs/) approach.
 
-- Component: Drought indicator.
+- Component: D100 Drought indicator.
 
 - Inputs: Meteorological data, including Precipitation, plus Land Surface Temperature, Soil Moisture, and Vegetation Index (or optical data to calculate it from).
 
-- Outputs: Drought Indices - as a time-series dataset output in a choice of download formats: CSV, GeoJSON, CoverageJSON and NetCDF for point data and then COG for areas (to be developed).
+- Outputs: Drought Indices - default is CDI - as a time-series dataset output in a choice of download able formats: CSV, GeoJSON (default), CoverageJSON and NetCDF for point data and then COG for areas (to be developed).
 
 - What other component(s) can interact with the component: a desire to link to visualization/DRI analysis components. A QGIS plugin has been updated to be able to perform a request and view the outputted JSON file (https://github.com/pixalytics-ltd/qgis-wps-plugin), and the Web Processing Service (WPS) link is https://api.pixalytics.com/climate/wps?request=GetCapabilities&service=wps
 
-The WPS service remains in development/under improvement and currently provides access to individual precipitation and soil moisture related indices. Example Python query for a location in Canada (Latitude: 55.5 N Longitude: 99.1 W) for the SPI time series, with data for these dates/this location already cached, so runs quicker:
+An example Python query for a location in Canada (Latitude: 55.5 N Longitude: 99.1 W) for the SPI time series, with data for these dates/this location already cached, so runs quicker:
 
-.Drought indicator calling code
+.Drought indicator calling code that generated the default output, which is the CDI in GeoJSON format
 ----
     from owslib.wps import WebProcessingService, monitorExecution
     
 	# contact the WPS client
-    wps = WebProcessingService("http://api.pixalytics.com/climate/wps", skip_caps=True, verbose=False)
+    wps = WebProcessingService("http://api.pixalytics.com/climate/wps", skip_caps=True)
     
     # GetCapabilities
     wps.getcapabilities()
@@ -89,13 +89,14 @@ The WPS service remains in development/under improvement and currently provides 
     
     execution = wps.execute("drought", inputs, "output")
 
-    monitorExecution(execution,download=True,filepath="temp.json")
+    outfile = "temp.json"
+    monitorExecution(execution,download=True,filepath=outfile)
 
     # Wait 5 seconds and check
     execution.checkStatus(sleepSecs=5)
 
     # show status
-    print('Percent complete: {}'.format( execution.percentCompleted))
+    print('Percent complete {}%, generated {}'.format(execution.percentCompleted, outfile))
 
 	# If there's an error print the error information
     for error in execution.errors:
@@ -106,12 +107,48 @@ The WPS service remains in development/under improvement and currently provides 
 
 <<Pixalytics_output>> shows an example of the output visualized within Python using Streamlit with the intermediate data (cached as NetCDF files) as input.
 
-// This could be moved to a use case
 [[Pixalytics_output]]
-.Pixalytics output (Not the correct figure, to be updated)
+.Pixalytics output of the CDI for a point location in Canada (Latitude: 55.5 N Longitude: 99.1 W); generated using Copernicus Emergency Management Service information [2023]
 image::Pixalytics-output-example.png[Pixalytics-output]
 
 
+==== Data Sources
+
+_The Global Drought Observatory_
+
+The Global Drought Observatory (GDO), owned by the Copernicus Emergency Management Services, provides a global map of coarsely-gridded agricultural drought risk, along with a breakdown of the risk for each country. The drought risk is computed using the CDI, with the variables used to compute it and other drought-related variables provided in the user portal for https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2112[download], but the CDI itself is not available for download and so is being calculated in the DSW.
+
+[[GDO-screenshot]]
+.Global Drought Observatory Web Portal, https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2001
+image::GDO_screenshot.png[GDO-screenshot]
+
+We obtain SMA and Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) from the GDO data download service. These are provided as netCDF files and contain pre-computed anomalies, so can be assimilated directly into the back-end. The SMA uses a combination of the root soil moisture from the https://ec-jrc.github.io/lisflood-model/[LISFLOOD model], the MODIS land surface temperature and the ESA Climate Change Initiative (CCI) skin soil moisture [<<cite_Cammalleri_2016>>], and the FAPAR is from NASA optical imagery.
+
+_ERA5 Reanalysis from ECMWF CDS_
+
+The CDS portal provides an API interface to return either hourly or monthly averages of the ERA5 variables. Requesting the hourly data is necessary to compute anything which requires a frequency greater than monthly, which is the case for most drought indicators (e.g. SMA) which are in dekads. To ensure there is no anti-aliasing, the full 24hr dataset for each day of the month must be downloaded. This is very time-consuming and requests will fail if the number of data points exceeds the limit, which will occur for a period of 2 years or more, even for a single location.
+
+There is a separate application, which can also be accessed via API, to return daily data. The CDS employs a queue management system, which determines the priority of each request based partially on the computational demand of the request. The daily data retrieval relies upon an underlying service to compute the daily statistics from the hourly data, demanding more resources than simply extracting the hourly or monthly data which are pre-computed. This means the request is held in the queue for a long time (up to hours), so there is no time benefit over using the hourly data. However, for a longer time-period which would be rejected if requested hourly, this provides a workaround. A further benefit of requesting daily, rather than hourly, data is that the downloaded file is smaller.
+
+We compute SPI and SMA using variables from the CDS API. The SPI is computed from the total precipitation in monthly intervals. The SMA is computed from the soil water volume, which is available for 4 depth levels. The SMA for each depth is computed by calculating the z-score against a long term mean, using the same baseline time period as the SPI. The most relevant depth layer can then be selected by the user; for instance, a user interested in the health of crops with shallow roots may wish to access the surfacemost layer.
+
+_ERA5 Reanalysis from AWS_
+
+Input precipitation data was also tested using https://registry.opendata.aws/ecmwf-era5/[ERA5 data held within the Registry of Open Data on AWS] versus the CDS API and found the Amazon Web Service (AWS) Simple Storage Service (S3) stored data could be accessed faster once virtual Zarrs has been setup, but there is a question over provenance as the data on AWS was put there by an organization other than the data originator and the Zarr approach didn't work for more recent years as the S3 stored NetCDFs have chunking that is inconsistent. An issue was raised for the Python kerchunck library, to be able to cope with variable chunking, as this https://github.com/zarr-developers/zeps/blob/main/draft/ZEP0003.md[isn't current supported].
+
+_NOAA_
+
+In Progress
+
+_SafeSoftware_
+
+In Progress
+
+==== Further work
+
+The work in this Pilot has focused on building this initial version of the workflow, deploying it via WPS and pulling data from different sources to understand the advantages and disadvantages of the different sources, including straightforwardness and speed of accessibility. For future Pilot activities we plan to continue to build the robustness of the approach, including testing and improving on the robustness of the interfaces to the input data sources and output provided to other Pilot components.
+
+The current work has focused on the extraction and generation of a point time-series, and so there are plans to expand the code to the extraction and generation of a 3D data cube. This might involve changing the output API interface to the OGC Environmental Data Retrieval (EDR) API standard.
 
 === Safe Software
 
