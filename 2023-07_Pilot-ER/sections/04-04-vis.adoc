@@ -6,7 +6,7 @@
 
 
 
-=== Visualization of Vegetation
+=== Visualization Climate Impact on Vegetation
 
 One of the biggest challenges in communicating climate change is to tie global changes to the local impact they will have. Photorealistic visualization is a critical component for assessing and communicating the impact of environmental changes, and possibilities for mitigation. For this to work, it is crucial for visualizations to reflect the underlying data accurately and allow for quick iteration. In this regard, manual visualization processes are inferior. As much as possible, visualizations of real-life scenarios should be driven directly by available data of present states and simulations of possible scenarios. Our contribution is a first attempt at doing just that, determining what already works and what doesn't with existing data and technology.
 
