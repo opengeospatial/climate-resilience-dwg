@@ -52,10 +52,10 @@ In summary, the different ARD and IRD data can be created from the following dat
 
 === Pixalytics
 
-Pixalytics are developing an OGC-compliant Application Programming Interface (API) service, see <<Pixalytics_architecture>>, which will provide global information on droughts. The approach is to take global open data/datasets from organizations such as ESA/Copernicus, NASA/NOAA, and the WMO and combine meteorology, hydrology, and remote sensing data to produce ARD data based on a composite of different indicators. Where globally calculated drought indicators already exist, these are being used in preference to their re-calculation, although consistency and the presence of uncertainties are also being considered.
+Pixalytics have developed an OGC-compliant Application Programming Interface (API) service, see <<Pixalytics_architecture>>, which will provide global information on droughts. The approach is to take global open data/datasets from organizations such as ESA/Copernicus, NASA/NOAA, and the WMO and combine meteorology, hydrology, and remote sensing data to produce ARD data based on a composite of different indicators. Where globally calculated drought indicators already exist, these are being used in preference to their re-calculation, although consistency and the presence of uncertainties are also being considered.
 
 [[Pixalytics_architecture]]
-.Pixalytics architecture
+.Pixalytics drought severity workflow architecture
 image::Pixalytics-architecture.png[Pixalytics-architecture]
 
 The Drought Severity Workflow (DSW) is built using individual drought indicators for precipitation (SPI), soil moisture (SMA), and vegetation drought that are together using the Combined Drought Indicator (CDI) as described by [<<cite_Sepulcre-Canto_2012>>]. The API access has been set up following the Building Blocks for Climate Services (https://climateintelligence.github.io/smartduck-docs/) approach.
@@ -70,12 +70,12 @@ The Drought Severity Workflow (DSW) is built using individual drought indicators
 
 An example Python query for a location in Canada (Latitude: 55.5 N Longitude: 99.1 W) for the SPI time series, with data for these dates/this location already cached, so runs quicker:
 
-.Drought indicator calling code [needs to be updated]
+.Drought indicator calling code that generated the default output, which is the CDI in GeoJSON format
 ----
     from owslib.wps import WebProcessingService, monitorExecution
     
 	# contact the WPS client
-    wps = WebProcessingService("http://api.pixalytics.com/climate/wps", skip_caps=True, verbose=False)
+    wps = WebProcessingService("http://api.pixalytics.com/climate/wps", skip_caps=True)
     
     # GetCapabilities
     wps.getcapabilities()
@@ -88,13 +88,14 @@ An example Python query for a location in Canada (Latitude: 55.5 N Longitude: 99
     
     execution = wps.execute("drought", inputs, "output")
 
-    monitorExecution(execution,download=True,filepath="temp.json")
+    outfile = "temp.json"
+    monitorExecution(execution,download=True,filepath=outfile)
 
     # Wait 5 seconds and check
     execution.checkStatus(sleepSecs=5)
 
     # show status
-    print('Percent complete: {}'.format( execution.percentCompleted))
+    print('Percent complete {}%, generated {}'.format(execution.percentCompleted, outfile))
 
 	# If there's an error print the error information
     for error in execution.errors:
@@ -106,7 +107,7 @@ An example Python query for a location in Canada (Latitude: 55.5 N Longitude: 99
 <<Pixalytics_output>> shows an example of the output visualized within Python using Streamlit with the intermediate data (cached as NetCDF files) as input.
 
 [[Pixalytics_output]]
-.Pixalytics output of the CDI for a point location in Canada (Latitude: 55.5 N Longitude: 99.1 W)
+.Pixalytics output of the CDI for a point location in Canada (Latitude: 55.5 N Longitude: 99.1 W); generated using Copernicus Emergency Management Service information [2023]
 image::Pixalytics-output-example.png[Pixalytics-output]
 
 
@@ -114,10 +115,10 @@ image::Pixalytics-output-example.png[Pixalytics-output]
 
 _The Global Drought Observatory_
 
-The Global Drought Observatory (GDO), owned by the Copernicus Emergency Management Services, provides a global map of coarsely-gridded agricultural drought risk, along with a breakdown of the risk for each country. The drought risk is computed using the CDI, with the variables used to compute it and other drought-related variables provided in the user portal for https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2112[download], but the CDI itself is not available for download.
+The Global Drought Observatory (GDO), owned by the Copernicus Emergency Management Services, provides a global map of coarsely-gridded agricultural drought risk, along with a breakdown of the risk for each country. The drought risk is computed using the CDI, with the variables used to compute it and other drought-related variables provided in the user portal for https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2112[download], but the CDI itself is not available for download and so is being calculated in the DSW.
 
 [[GDO-screenshot]]
-.Global Drought Observatory Web Portal
+.Global Drought Observatory Web Portal, https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2001
 image::GDO_screenshot.png[GDO-screenshot]
 
 We obtain SMA and Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) from the GDO data download service. These are provided as netCDF files and contain pre-computed anomalies, so can be assimilated directly into the back-end. The SMA uses a combination of the root soil moisture from the https://ec-jrc.github.io/lisflood-model/[LISFLOOD model], the MODIS land surface temperature and the ESA Climate Change Initiative (CCI) skin soil moisture [<<cite_Cammalleri_2016>>], and the FAPAR is from NASA optical imagery.
@@ -144,10 +145,9 @@ In Progress
 
 ==== Further work
 
-- Forward modelling?
+The work in this Pilot has focused on building this initial version of the workflow, deploying it via WPS and pulling data from different sources to understand the advantages and disadvantages of the different sources, including straightforwardness and speed of accessibility. For future Pilot activities we plan to continue to build the robustness of the approach, including testing and improving on the robustness of the interfaces to the input data sources and output provided to other Pilot components.
 
-
-
+The current work has focused on the extraction and generation of a point time-series, and so there are plans to expand the code to the extraction and generation of a 3D data cube. This might involve changing the output API interface to the OGC Environmental Data Retrieval (EDR) API standard.
 
 === Safe Software
 
