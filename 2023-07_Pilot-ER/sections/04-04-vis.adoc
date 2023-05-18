@@ -50,19 +50,19 @@ The aforementioned data sources were combined to create a detailed visualization
 
 .Overview of the Visualized Region
 [img-laubwerk-overview]
-image::images/laubwerk_ogc-crp-2023_230406_v051_jws_camera6.png[Overview of the Visualized Region, ,align=center]
+image::laubwerk_ogc-crp-2023_230406_v051_jws_camera6.png[Overview of the Visualized Region, ,align=center]
 
 .Above the Corner Sunset Blvd and N Curson Ave Looking North-East
 [img-laubwerk-sunset-blvd-n-curson-ave]
-image::images/laubwerk_ogc-crp-2023_230406_v044_jws_camera1.png[Above the Corner Sunset Blvd and N Curson Ave Looking North, ,align=center]
+image::laubwerk_ogc-crp-2023_230406_v044_jws_camera1.png[Above the Corner Sunset Blvd and N Curson Ave Looking North, ,align=center]
 
 .Corner Franklin Ave And N Sierra Bonita Ave Looking East
 [img-laubwerk-franklin-ave-n-sierra-bonita-ave]
-image::images/laubwerk_ogc-crp-2023_230406_v044_jws_camera2.png[Corner Franklin Ave And N Sierra Bonita Ave Looking East, ,align=center]
+image::laubwerk_ogc-crp-2023_230406_v044_jws_camera2.png[Corner Franklin Ave And N Sierra Bonita Ave Looking East, ,align=center]
 
 .Corner Hollywood Blvd And Camino Palmero St Looking Looking North
 [img-laubwerk-hollywood-blvd-camino-palmero-st]
-image::images/laubwerk_ogc-crp-2023_230406_v051_jws_camera3.png[Corner Hollywood Blvd And Camino Palmero St Looking Looking North, ,align=center]
+image::laubwerk_ogc-crp-2023_230406_v051_jws_camera3.png[Corner Hollywood Blvd And Camino Palmero St Looking Looking North, ,align=center]
 
 TODO: Add renderings of additional scenarios.
 
