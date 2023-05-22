@@ -266,3 +266,108 @@ image::SafeSoftware_10.png[SafeSoftware_10]
 
 This component takes the climate scenario summary ARD results from the ARD component and analyze them to derive estimated drought risk impacts over time based on selected climate scenarios. This involves, for example, data segmentation based on cumulative rainfall below a certain threshold T within a certain time window (days, weeks or months), since cumulative rainfall over time will be crucial for computing water budgets by watershed or catch basin. Besides precipitation, climate models also generate soil moisture predictions which are used by this component to assess drought risk. This also requires integration with topography, DEMs and hydrology related data such as river networks, water bodies. aquifers and watershed boundaries. The specific business rules used to assess drought risk are still under development. FME provides a flexible data and business rule modeling framework. This means that as indicators and drought threshold rules are refined, it's relatively straightforward to adjust the business rules in this component to refine our risk projections. Also, business rule parameters can be externalized as execution parameters so that end users can control key aspects of the scenario drought risk assessment without having to modify the published FME workflow.
 
+
+=== Wuhan University (WHU)-Component
+
+Wuhan University (WHU) is a university that plays a significant role in researching and teaching all aspects of surveying and mapping, remote sensing, photogrammetry, and geospatial information sciences in China. In this Climate Resilience Pilot, WHU will contribute three components (ARD, Drought Indicator, and Data Cube) and one use-case (Drought Impact Use-cases). 
+
+==== Component: ARD 
+
+- Inputs: Gaofen L1A data and Sentinel-2 L1C data
+- Outputs: Surface Reflectance ARD
+- What other component(s) can interact with the component: Any components requiring access to surface reflectance data
+
+Surface Reflectance (SR) is the fraction of incoming solar radiation reflected from the Earth's surface for specific incidents or viewing cases. It can be used to detect the distribution and change of ground objects by leveraging the derived spectral, geometric, and textural features. Since a large amount of optical EO data has been released to the public, ARD can facilitate interoperability through time and multi-source datasets. As the probably most widely applied ARD product type, the SR ARD can contribute to climate resilience research. For example, the SR-derived NDVI series can be applied to monitor wildfire recovery by analyzing vegetation index increases. Several SR datasets have been assessed as ARD by CEOS, like the prestigious Landsat Collection 2 Level 2, and Sentinel-2 L2A, while many other datasets are still provided at a low processing level.
+
+WHU is developing a pre-processing framework for SR ARD generation. The framework supports radiometric calibration, geometric ratification, atmospheric correction, and cloud mask. To address the inconsistencies in observations from different platforms, including variations in band settings and viewing angles, we proposed a processing chain to produce harmonized ARD. This will enable us to generate SR ARD with consistent radiometric and geometric characteristics from multi-sensor data, resulting in improved temporal coverage. In the first stage of our mission, we are focusing on the harmonization of Chinese Gaofen data and Sentinel-2 data, as shown in Figure 1, the harmonization involves spatial co-registration, band conversion, and bidirectional reflectance distribution function (BRDF) correction. Figure 2 shows the Sentinel-2 data before and after pre-processing. Furthermore, we wish to seek the assessment of CEOS-ARD in our long-term plan.
+
+
+Figure 2 - Sentinel-2 RBG composite (red Band4, green Band3, blue Band2), over Hubei, acquired on October 22, 2020. (a) corresponds to the reflectance at the top of the atmosphere (L1C product); (b) corresponds to the surface reflectance after pre-processing.
+
+==== Component: Drought Indicator 
+- Inputs: Climate data, including precipitation and temperature
+- Outputs: Drought risk map derived from drought indicator
+- What other component(s) can interact with the component: Any components requiring access to drought risk map through OGC API
+- What OGC standards or formats does the component use and produce: OGC API - Processes
+
+Drought is a disaster whose onset, end, and extent are difficult to detect. Original meteorological data, such as precipitation, can be obtained through satellites and radar, which can be used for drought monitoring. However, the accuracy is easily affected by detection instruments and terrain occlusion, and the ability to retrieve special shapes, such as solid precipitation, is limited. In addition, many meteorological monitoring stations on the ground can provide local raw meteorological observation data. The SPEI is a model to monitor, quantitatively analyze, and determine the spatiotemporal range of the occurrence of drought using meteorological observation data from various regions. It should supplement the result of drought monitoring with satellite and radar.
+
+SPEI has two main characteristics: 1) it considers the deficits between precipitation and evapotranspiration comprehensively, that is, the balance of water; 2) multi-time scale characteristics. For 1) drought is caused by insufficient water resources. Precipitation can increase water, while evapotranspiration can reduce water. The differences between the two variables simultaneously and in space can characterize the balance of water. For 2), the deficits value of different usable water sources is distinct at different time scales due to the different evolution cycles of different types, resulting in various representations in temporal. By accumulating the difference between precipitation and evapotranspiration at different time scales, agricultural (soil moisture) droughts, hydrological (groundwater, streamflow, and reservoir) droughts, and other droughts can be distinguished by SPEI.
+
+In our project, the dataset for SPEI calculation is ERA5-Land monthly averaged data from 1950 to the present. We selected years of data about partial areas of East Asia for experiments. Through the following flow of the SPEI calculation, we obtain the SPEI value for assessments of drought impact. The flow of the SPEI calculation is shown in Figure 3.
+
+Figure 3 - Flow of the SPEI calculation
+
+WHU has provided the SPEI drought index calculation services through the OGC API - Processes, enabling interaction with other components. The current endpoint for OGC API - Processes is http://oge.whu.edu.cn/ogcapi/processes_api. This section will explain how to use this API for calculating the drought index.
+
+- Example：/processes
+http://oge.whu.edu.cn/ogcapi/processes_api/processes
+The API endpoint for retrieving the processes list.
+- Example：/processes/{processId}
+http://oge.whu.edu.cn/ogcapi/processes_api/processes/spei
+The API endpoint for retrieving a process description (e.g. spei). This returns the description of "spei" process, which contains the inputs and outputs information.
+- Example：/processes/{processId}/execution
+http://oge.whu.edu.cn/ogcapi/processes_api/processes/spei/execution
+The API endpoint for executing the process. The spei process exclusively supports asynchronous execution, resulting in the creation of a job for processing.
+The request body:
+
+{
+	"inputs": {
+		"startTime": "2010-01-01",
+		"endTime": "2020-01-01",
+       "timeScale": 5,
+		"extent": {
+			"bbox": [73.95, 17.95, 135.05, 54.05],
+			"crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+		}
+	}
+}
+
+- Example：/processes/{processId}/jobs/{jobId}
+http://oge.whu.edu.cn/ogcapi/processes_api/processes/spei/jobs/{jobId}
+The API endpoint for retrieving status of a job.
+- Example：/processes/{processId}/jobs/{jobId}/results
+http://oge.whu.edu.cn/ogcapi/processes_api/processes/spei/jobs/{jobId}/results
+The API endpoint for retrieving the results of a job, which are encoded as :
+[{
+		"value": {
+			"time": "2000_02_01",
+			"url": "http://oge.whu.edu.cn/api/oge-python/data/temp/9BC500C1B0E3438C090AF5C6F8602045/8d0357fb-8ffb-4e62-9c3a-55ad17a5831a/SPEI_2000_02_01.png"
+		}
+	},
+	......
+]
+
+Figure 4 - The SPEI results for the date 2000_02_01
+
+==== Component: Data Cube
+- Inputs: ERA5 temperature and precipitation data
+- Outputs: Results in the form of GeoTIFF after processing in Data Cubes
+- What other component(s) can interact with the component: Any components requiring access to temperature and precipitation data in part of Asia through OGC API
+- What OGC standards or formats does the component use and produce: OGC API- Coverages
+
+WHU has introduced GeoCube as a cube infrastructure for the management and large-scale analysis of multi-source data. GeoCube leverages the latest generation of OGC standard service interfaces, including OGC API-Coverages, OGC API-Features, and OGC API-Processes, to offer services encompassing data discovery, access, and processing of diverse data sources. The UML model of the GeoCube is given in Figure 5, and it has four dimensions: product, spatial, temporal, and band. Product dimension specifies the thematic axis for the geospatial data cube using the product name (e.g. ERA5_Precipitation or OSM_Water), type (e.g. raster, vector, or tabular), processes, and instrument name. For example, the product dimension can describe optical image products by recording information on the instrument and band. Spatial dimension specifies the spatial axis for the geospatial data cube using the grid code, grid type, city name, and province name. The cube uses a spatial grid for tiling to enable data readiness in a high-performance form. Temporal dimension specifies the temporal axis for the geospatial data using the phenomenon time and result time. Band dimension describes the band attribute of the raster products according to the band name, polarization mode that is reserved for SAR images, and product-level band. The product-level band is the information that is extracted from the original bands. For example, the Standardized Precipitation Evapotranspiration Index (SPEI) band is a product-level band that takes into account the hydrological process and evaluates the degree of drought by calculating the balance of precipitation and evaporation.
+
+Figure 5 - The UML model of WHU Data Cube.
+
+WHU has organized ERA5 temperature and precipitation data into a cube and offers climate data services through the OGC API - Coverages, supporting the computation of various climate indices. The API endpoint is http://oge.whu.edu.cn/ogcapi/coverages_api, allowing users to query and retrieve the desired data from the cube. This section provides examples demonstrating how to access the data from the cube using OGC API - Coverages.
+
+- Example：/collections
+http://oge.whu.edu.cn/ogcapi/coverages_api/collections?bbox=112.65942,29.23223,115.06959,31.36234&limit=10&time=2016-01-01T02:55:50Z/2018-01-01T02:55:50Z
+The API endpoint for querying datasets from the cube, and the query parameters including limit, bbox, and time.
+- Example：/collections/{collectionId}
+http://oge.whu.edu.cn/ogcapi/coverages_api/collections/2m_temperature_201602
+The API endpoint for retrieving the description of the coverage with the specified ID from the cube. 
+- Example：/collections/{collectionId}/coverage
+http://oge.whu.edu.cn/ogcapi/coverages_api/collections/2m_temperature_201602/coverage
+The API endpoint for retrieving the coverage in GeoTIFF format for the specified ID. Here is an example of the response:
+
+Figure 6 - The coverage with the ID "2m_temperature_201602" in the Asian region.
+
+- Example：/collections/{collectionId}/coverage/rangetype
+http://oge.whu.edu.cn/ogcapi/coverages_api/collections/2m_temperature_201602/coverage/rangetype
+The API endpoint for accessing the range type of the coverage, which is part of the band dimension members in the cube. In this example, the coverage consists of only one band dimension member.
+- Example：/collections/{collectionId}/coverage/domainset
+http://oge.whu.edu.cn/ogcapi/coverages_api/collections/2m_temperature_201602/coverage/domainset 
+The API endpoint for the domain set of the coverage, which is also the domain set of the cube.
+
