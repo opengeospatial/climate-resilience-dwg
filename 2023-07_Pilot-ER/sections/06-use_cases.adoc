@@ -29,8 +29,9 @@ image::WHU_image7.png[WHU_image7]
 
 ==== Case study 2: Drought Risk analysis of Yangtze River basin
 
-In the summer of 2022, an extreme drought hit the Yangtze River basin, posing huge impacts on agriculture, the ecosystem, and human livelihoods. It developed rapidly in the upper, middle, and lower reaches of the Yangtze River, intensifying on a large scale in 10 provinces (municipalities) in the basin (https://doi.org/10.1002/rvr2.23). The water area of Poyang Lake has been reduced by 90%, threatening the habitat for fish and migratory birds, etc. To analyze drought trends in the Yangtze River Basin, we visualized monthly SPEI for 2022, as shown in Figure 3. From the Figure, it can be seen that the drought index in the Yangtze River Basin has been rising since March. In July, the drought risk map turned light yellow, indicating a moderate drought. In August and September, the drought further intensified and reached an extreme drought situation. In October, the drought eased somewhat, and it had subsided mainly by November. 
+In the summer of 2022, an extreme drought hit the Yangtze River basin, posing huge impacts on agriculture, the ecosystem, and human livelihoods. It developed rapidly in the upper, middle, and lower reaches of the Yangtze River, intensifying on a large scale in 10 provinces (municipalities) in the basin (https://doi.org/10.1002/rvr2.23). The water area of Poyang Lake has been reduced by 90%, threatening the habitat for fish and migratory birds, etc. To analyze drought trends in the Yangtze River Basin, we visualized monthly SPEI for 2022, as shown in <<WHU_image8>>. From the Figure, it can be seen that the drought index in the Yangtze River Basin has been rising since March. In July, the drought risk map turned light yellow, indicating a moderate drought. In August and September, the drought further intensified and reached an extreme drought situation. In October, the drought eased somewhat, and it had subsided mainly by November. 
 
+[[WHU_image8]]
 .Drought risk map in part of China.
 image::WHU_image8.png[WHU_image8]
 
