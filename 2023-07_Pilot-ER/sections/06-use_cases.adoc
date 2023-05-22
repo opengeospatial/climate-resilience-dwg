@@ -4,8 +4,8 @@
 === Drought and Wildfire Impact Use-case
 Based on the ARD, drought indicator, and data cube components, WHU develops three use-cases based on self-developed Open Geospatial Engine (OGE) for drought impact for rapid response to drought occurrences. Figure 1 shows the technical architecture of the OGE. It has the following features: 1) For data discovery, a catalogue service from OGE data center following OGC API is provided, allowing users to search geospatial data both available from WHU data stores and remote data stores. 2) For data integration, data can be integrated into the WHU software in the form of data cubes with three efforts: formalizing cube dimensions for multi-source geospatial data, processing geospatial data query along cube dimensions, and organizing cube data for high-performance geoprocessing. 3) For data processing, a processing chain is enabled in OGE using a code editor and modelbuilder. 4) For data visualization, a Web-based client for visualization of spatial data and statistics is provided using a virtual globe and charts. 
 
-.The technical architecture of the use-case for drought impact.
-image::WHU-drought-wildfire-impact.png[DroughtWildfire]
+//.The technical architecture of the use-case for drought impact.
+//image::WHU-drought-wildfire-impact.png[DroughtWildfire]
 
 ==== Case study 1: Visualization for drought indicator
 
@@ -22,15 +22,15 @@ On the fundament of SPEI and OGE, we visualize the drought risk map on a virtual
 |5 | Extreme drought | SPEI≤-2.0
 |====================
 
-.Visualization of SPEI on a virtual globe.
-image::WHU_image7.png[WHU_image7]
+//.Visualization of SPEI on a virtual globe.
+//image::WHU_image7.png[WHU_image7]
 
 ==== Case study 2: Drought Risk analysis of Yangtze River basin
 
 In the summer of 2022, an extreme drought hit the Yangtze River basin, posing huge impacts on agriculture, the ecosystem, and human livelihoods. It developed rapidly in the upper, middle, and lower reaches of the Yangtze River, intensifying on a large scale in 10 provinces (municipalities) in the basin (https://doi.org/10.1002/rvr2.23). The water area of Poyang Lake has been reduced by 90%, threatening the habitat for fish and migratory birds, etc. To analyze drought trends in the Yangtze River Basin, we visualized monthly SPEI for 2022, as shown in Figure 3. From the Figure, it can be seen that the drought index in the Yangtze River Basin has been rising since March. In July, the drought risk map turned light yellow, indicating a moderate drought. In August and September, the drought further intensified and reached an extreme drought situation. In October, the drought eased somewhat, and it had subsided mainly by November. 
 
-.Drought risk map in part of China.
-image::WHU_image8.png[WHU_image8]
+//.Drought risk map in part of China.
+//image::WHU_image8.png[WHU_image8]
 
 
 ==== Case study 3: Drought risk analysis of Poyang Lake
@@ -39,11 +39,11 @@ Due to the extreme drought in the Yangtze River Basin, the water inflow into Poy
 
 In this use case, we collected Sentinel-2 SR and Landsat-8 SR, and produced Gaofen-1 WFV SR data in the center area of Poyang Lake (As shown in Figure 4) before and during the drought period. NDWI indices were calculated to monitor water area changes in Poyang Lake. Water bodies typically exhibit positive NDWI values, making it an effortless method to extract water areas. As illustrated in Figure 5, the first column represents Poyang Lake before the drought, while the last three columns represent Poyang Lake which was currently experiencing the drought. It is evident from the RGB composite that the water body of Poyang Lake has significantly decreased due to the drought weather. The water body extraction results by NDWI indicate that from May to October, the water area in the study area decreased from ~1800 square kilometers to ~350 square kilometers, representing a reduction of ~ 80% in water area.
 
-.The study area of the Poyang Lake case.
-image::WHU_image9.png[WHU_image9]
+//.The study area of the Poyang Lake case.
+//image::WHU_image9.png[WHU_image9]
 
-.The changes in Poyang Lake before and during the drought period.
-image::WHU_image10.png[WHU_image10]
+//.The changes in Poyang Lake before and during the drought period.
+//image::WHU_image10.png[WHU_image10]
 
 
 
