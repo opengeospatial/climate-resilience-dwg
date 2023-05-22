@@ -20,6 +20,7 @@ On the fundament of SPEI and OGE, we visualize the drought risk map on a virtual
 |3 | Moderate drought | -1.5<SPEI≤-1.0
 |4 | Severe drought | -2.0<SPEI≤-1.5
 |5 | Extreme drought | SPEI≤-2.0
+|====================
 
 .Visualization of SPEI on a virtual globe.
 image::WHU_image7.png[WHU_image7]
