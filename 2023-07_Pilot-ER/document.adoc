@@ -4,7 +4,7 @@
 :comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
 :status: draft
 :comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
-:committee: technical
+:committee: technical 
 :comment: ### Internal reference number; mandatory
 :docnumber: 23-020
 :comment: ### Date on which the standard was updated; mandatory
