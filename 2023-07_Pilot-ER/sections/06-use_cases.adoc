@@ -40,21 +40,23 @@ image::WHU_image8.png[WHU_image8]
 
 Due to the extreme drought in the Yangtze River Basin, the water inflow into Poyang Lake, the largest freshwater lake in China, declined dramatically due to continuous hot weather with little rain since early summer. Hence, we developed a use case of drought analysis applying multi-source SR ARD.
 
-In this use case, we collected Sentinel-2 SR and Landsat-8 SR, and produced Gaofen-1 WFV SR data in the center area of Poyang Lake (As shown in Figure 4) before and during the drought period. NDWI indices were calculated to monitor water area changes in Poyang Lake. Water bodies typically exhibit positive NDWI values, making it an effortless method to extract water areas. As illustrated in Figure 5, the first column represents Poyang Lake before the drought, while the last three columns represent Poyang Lake which was currently experiencing the drought. It is evident from the RGB composite that the water body of Poyang Lake has significantly decreased due to the drought weather. The water body extraction results by NDWI indicate that from May to October, the water area in the study area decreased from ~1800 square kilometers to ~350 square kilometers, representing a reduction of ~ 80% in water area.
+In this use case, we collected Sentinel-2 SR and Landsat-8 SR, and produced Gaofen-1 WFV SR data in the center area of Poyang Lake (As shown in <<WHU_image9>>) before and during the drought period. NDWI indices were calculated to monitor water area changes in Poyang Lake. Water bodies typically exhibit positive NDWI values, making it an effortless method to extract water areas. As illustrated in <<WHU_image10>>, the first column represents Poyang Lake before the drought, while the last three columns represent Poyang Lake which was currently experiencing the drought. It is evident from the RGB composite that the water body of Poyang Lake has significantly decreased due to the drought weather. The water body extraction results by NDWI indicate that from May to October, the water area in the study area decreased from ~1800 square kilometers to ~350 square kilometers, representing a reduction of ~ 80% in water area.
 
+[[WHU_image9]]
 .The study area of the Poyang Lake case.
 image::WHU_image9.png[WHU_image9]
 
+[[WHU_image10]]
 //.The changes in Poyang Lake before and during the drought period.
 //image::WHU_image10.png[WHU_image10]
 
 
-Figure 2 a is the data center of the proposed use-case, which currently stores multiple sources data from different platforms including 20 years of precipitation data from GPM (Global Precipitation Measurement) used to calculate the drought index. The drought and wildfire risk assessment algorithms are integrated in the algorithm center, which can be invoked by the code editor or modelbuilder to perform drought and wildfire risk assessment. Figure 2b shows the Python code and visualization result of the drought risk assessment in Asia based on precipitation anomaly percentage (PAP) index.
+<<DataCenter>> a is the data center of the proposed use-case, which currently stores multiple sources data from different platforms including 20 years of precipitation data from GPM (Global Precipitation Measurement) used to calculate the drought index. The drought and wildfire risk assessment algorithms are integrated in the algorithm center, which can be invoked by the code editor or modelbuilder to perform drought and wildfire risk assessment. Figure 2b shows the Python code and visualization result of the drought risk assessment in Asia based on precipitation anomaly percentage (PAP) index.
 
 
 ---
 
-[%unnumbered]
+[[DataCenter]]
 image::WHU-DataCenter.png[DataCenter]
 
 .An example of the drought risk assessment in parts of Asia.
