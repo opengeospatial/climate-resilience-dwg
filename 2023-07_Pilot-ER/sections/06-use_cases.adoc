@@ -42,10 +42,10 @@ In this use case, we collected Sentinel-2 SR and Landsat-8 SR, and produced Gaof
 .The study area of the Poyang Lake case.
 image::WHU_image9.png[WHU_image9]
 
-//.The changes in Poyang Lake before and during the drought period.
-//image::WHU_image10.png[WHU_image10]
+Test
 
-
+.The changes in Poyang Lake before and during the drought period.
+image::WHU_image10.png[WHU_image10]
 
 
 Figure 2 a is the data center of the proposed use-case, which currently stores multiple sources data from different platforms including 20 years of precipitation data from GPM (Global Precipitation Measurement) used to calculate the drought index. The drought and wildfire risk assessment algorithms are integrated in the algorithm center, which can be invoked by the code editor or modelbuilder to perform drought and wildfire risk assessment. Figure 2b shows the Python code and visualization result of the drought risk assessment in Asia based on precipitation anomaly percentage (PAP) index.
