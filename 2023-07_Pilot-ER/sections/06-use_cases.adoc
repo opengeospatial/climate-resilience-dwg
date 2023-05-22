@@ -42,8 +42,8 @@ In this use case, we collected Sentinel-2 SR and Landsat-8 SR, and produced Gaof
 .The study area of the Poyang Lake case.
 image::WHU_image9.png[WHU_image9]
 
-.The changes in Poyang Lake before and during the drought period.
-image::WHU_image10.png[WHU_image10]
+//.The changes in Poyang Lake before and during the drought period.
+//image::WHU_image10.png[WHU_image10]
 
 
 
