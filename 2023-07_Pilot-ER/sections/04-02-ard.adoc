@@ -285,7 +285,10 @@ WHU is developing a pre-processing framework for SR ARD generation. The framewor
 .The processing chain to produce harmonized ARD.
 image::WHU_image1.png[WHU_image1]
 
-Figure 2 - Sentinel-2 RBG composite (red Band4, green Band3, blue Band2), over Hubei, acquired on October 22, 2020. (a) corresponds to the reflectance at the top of the atmosphere (L1C product); (b) corresponds to the surface reflectance after pre-processing.
+[[WHU_image2]]
+.Sentinel-2 RBG composite (red Band4, green Band3, blue Band2), over Hubei, acquired on October 22, 2020. (a) corresponds to the reflectance at the top of the atmosphere (L1C product); (b) corresponds to the surface reflectance after pre-processing.
+image::WHU_image2.png[WHU_image2]
+
 
 ==== Component: Drought Indicator 
 - Inputs: Climate data, including precipitation and temperature
@@ -299,7 +302,9 @@ SPEI has two main characteristics: 1) it considers the deficits between precipit
 
 In our project, the dataset for SPEI calculation is ERA5-Land monthly averaged data from 1950 to the present. We selected years of data about partial areas of East Asia for experiments. Through the following flow of the SPEI calculation, we obtain the SPEI value for assessments of drought impact. The flow of the SPEI calculation is shown in Figure 3.
 
-Figure 3 - Flow of the SPEI calculation
+[[WHU_image3]]
+.Flow of the SPEI calculation.
+image::WHU_image3.png[WHU_image3]
 
 WHU has provided the SPEI drought index calculation services through the OGC API - Processes, enabling interaction with other components. The current endpoint for OGC API - Processes is http://oge.whu.edu.cn/ogcapi/processes_api. This section will explain how to use this API for calculating the drought index.
 
@@ -341,7 +346,9 @@ The API endpoint for retrieving the results of a job, which are encoded as :
 	......
 ]
 
-Figure 4 - The SPEI results for the date 2000_02_01
+[[WHU_image4]]
+.The SPEI results for the date 2000_02_01.
+image::WHU_image4.png[WHU_image4]
 
 ==== Component: Data Cube
 - Inputs: ERA5 temperature and precipitation data
@@ -351,7 +358,10 @@ Figure 4 - The SPEI results for the date 2000_02_01
 
 WHU has introduced GeoCube as a cube infrastructure for the management and large-scale analysis of multi-source data. GeoCube leverages the latest generation of OGC standard service interfaces, including OGC API-Coverages, OGC API-Features, and OGC API-Processes, to offer services encompassing data discovery, access, and processing of diverse data sources. The UML model of the GeoCube is given in Figure 5, and it has four dimensions: product, spatial, temporal, and band. Product dimension specifies the thematic axis for the geospatial data cube using the product name (e.g. ERA5_Precipitation or OSM_Water), type (e.g. raster, vector, or tabular), processes, and instrument name. For example, the product dimension can describe optical image products by recording information on the instrument and band. Spatial dimension specifies the spatial axis for the geospatial data cube using the grid code, grid type, city name, and province name. The cube uses a spatial grid for tiling to enable data readiness in a high-performance form. Temporal dimension specifies the temporal axis for the geospatial data using the phenomenon time and result time. Band dimension describes the band attribute of the raster products according to the band name, polarization mode that is reserved for SAR images, and product-level band. The product-level band is the information that is extracted from the original bands. For example, the Standardized Precipitation Evapotranspiration Index (SPEI) band is a product-level band that takes into account the hydrological process and evaluates the degree of drought by calculating the balance of precipitation and evaporation.
 
-Figure 5 - The UML model of WHU Data Cube.
+[[WHU_image5]]
+.The UML model of WHU Data Cube.
+image::WHU_image5.png[WHU_image5]
+
 
 WHU has organized ERA5 temperature and precipitation data into a cube and offers climate data services through the OGC API - Coverages, supporting the computation of various climate indices. The API endpoint is http://oge.whu.edu.cn/ogcapi/coverages_api, allowing users to query and retrieve the desired data from the cube. This section provides examples demonstrating how to access the data from the cube using OGC API - Coverages.
 
@@ -365,7 +375,9 @@ The API endpoint for retrieving the description of the coverage with the specifi
 http://oge.whu.edu.cn/ogcapi/coverages_api/collections/2m_temperature_201602/coverage
 The API endpoint for retrieving the coverage in GeoTIFF format for the specified ID. Here is an example of the response:
 
-Figure 6 - The coverage with the ID "2m_temperature_201602" in the Asian region.
+[[WHU_image6]]
+.The coverage with the ID "2m_temperature_201602" in the Asian region.
+image::WHU_image6.png[WHU_image6]
 
 - Example：/collections/{collectionId}/coverage/rangetype
 http://oge.whu.edu.cn/ogcapi/coverages_api/collections/2m_temperature_201602/coverage/rangetype
