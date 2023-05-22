@@ -281,6 +281,9 @@ Surface Reflectance (SR) is the fraction of incoming solar radiation reflected f
 
 WHU is developing a pre-processing framework for SR ARD generation. The framework supports radiometric calibration, geometric ratification, atmospheric correction, and cloud mask. To address the inconsistencies in observations from different platforms, including variations in band settings and viewing angles, we proposed a processing chain to produce harmonized ARD. This will enable us to generate SR ARD with consistent radiometric and geometric characteristics from multi-sensor data, resulting in improved temporal coverage. In the first stage of our mission, we are focusing on the harmonization of Chinese Gaofen data and Sentinel-2 data, as shown in Figure 1, the harmonization involves spatial co-registration, band conversion, and bidirectional reflectance distribution function (BRDF) correction. Figure 2 shows the Sentinel-2 data before and after pre-processing. Furthermore, we wish to seek the assessment of CEOS-ARD in our long-term plan.
 
+[[WHU_image1]]
+.The processing chain to produce harmonized ARD.
+image::WHU_image1.png[WHU_image1]
 
 Figure 2 - Sentinel-2 RBG composite (red Band4, green Band3, blue Band2), over Hubei, acquired on October 22, 2020. (a) corresponds to the reflectance at the top of the atmosphere (L1C product); (b) corresponds to the surface reflectance after pre-processing.
 
