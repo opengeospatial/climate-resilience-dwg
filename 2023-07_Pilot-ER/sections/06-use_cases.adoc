@@ -2,10 +2,18 @@
 == Use cases
 
 === Drought and Wildfire Impact Use-case
-Drought and wildfire caused by climate change are one of the important factors affecting agricultural production, food security, and water shortage. The goal of WHU is to develop a use-case for drought and wildfire risk assessment for rapid response to drought and wildfire occurrences. Figure 1 shows the technical architecture on how WHU contributed to the use-case. It has the following features: 1) For data discovery, a catalogue service from data center following OGC API is provided allowing users to search geospatial data both available from WHU data stores and remote data stores from USGS, ESA, and NASA. 2) For data integration, data can be integrated into the WHU software in the form of geo date cubes with three efforts: formalizing cube dimensions for multi-source geospatial data, processing geospatial data query along cube dimensions, and organizing cube data for high-performance geoprocessing. 3) For data processing, a processing chain is enabled in WHU software using a code editor and modelbuilder. 4) For data visualization, a Web-based client for visualization of spatial data and statistics is provided using a virtual globe and charts.
+Based on the ARD, drought indicator, and data cube components, WHU develops three use-cases based on self-developed Open Geospatial Engine (OGE) for drought impact for rapid response to drought occurrences. Figure 1 shows the technical architecture of the OGE. It has the following features: 1) For data discovery, a catalogue service from OGE data center following OGC API is provided, allowing users to search geospatial data both available from WHU data stores and remote data stores. 2) For data integration, data can be integrated into the WHU software in the form of data cubes with three efforts: formalizing cube dimensions for multi-source geospatial data, processing geospatial data query along cube dimensions, and organizing cube data for high-performance geoprocessing. 3) For data processing, a processing chain is enabled in OGE using a code editor and modelbuilder. 4) For data visualization, a Web-based client for visualization of spatial data and statistics is provided using a virtual globe and charts. 
 
-.The technical architecture of the use-case for drought and wildfire impact
+.The technical architecture of the use-case for drought impact.
 image::WHU-drought-wildfire-impact.png[DroughtWildfire]
+
+==== Case study 1: Visualization for drought indicator
+
+On the fundament of SPEI and OGE, we visualize the drought risk map on a virtual globe, as given in Figure 2(a). The color matching of the visualization result is referred to the classification standard for the drought grade of SPEI illustrated in Table 1. The red and orange area in the visualization result represents a trend of drought (SPEI≤-0.5), while the green and blue represent wetness. The SPEI is calculated for each month of the input dataset, and users can visualize the SPEI of any month on the virtual globe for flexible drought analysis. Meanwhile, the use case also supports cubes-based SPEI visualization for time series drought analysis as given in Figure 2(b), where the height of the cube is a range of time arranged in order of month, and each layer in the cube represents drought impact of one month.
+
+.Visualization of SPEI on a virtual globe.
+image::WHU_image7.png[WHU_image7]
+
 
 
 Figure 2 a is the data center of the proposed use-case, which currently stores multiple sources data from different platforms including 20 years of precipitation data from GPM (Global Precipitation Measurement) used to calculate the drought index. The drought and wildfire risk assessment algorithms are integrated in the algorithm center, which can be invoked by the code editor or modelbuilder to perform drought and wildfire risk assessment. Figure 2b shows the Python code and visualization result of the drought risk assessment in Asia based on precipitation anomaly percentage (PAP) index.
