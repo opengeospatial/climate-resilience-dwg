@@ -138,7 +138,8 @@ Input precipitation data was also tested using https://registry.opendata.aws/ecm
 
 _NOAA_
 
-In Progress
+The NOAA API is OGC-compliant and easy to access using OGC-style queries, however is still at an early stage of development and only runs from 9am to 5pm EST, Monday to Friday. Several sources of precipitation data are provided including grided observational data from NOAA's https://www.drought.gov/data-maps-tools/global-historical-climatology-network-ghcn[Global Historical Climatology Network] https://www.drought.gov/data-maps-tools/gridded-climate-datasets-noaas-nclimgrid-monthly[(nClimGrid)] and CMIP data from the https://www.nasa.gov/nex/gddp[NASA-GDDP] and https://loca.ucsd.edu/[LOCA2] downscaling projects. These datasets are only available for continental North America.
+We use the precipitation parameter from nClimGrid to compute a monthly SPI with data from 1985 to the present day. This can also be incorporated into the CDI. Further work could include using the LOCA2 projections to predict the SPI in future months/years.
 
 _SafeSoftware_
 
