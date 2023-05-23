@@ -136,14 +136,14 @@ _ERA5 Reanalysis from AWS_
 
 Input precipitation data was also tested using https://registry.opendata.aws/ecmwf-era5/[ERA5 data held within the Registry of Open Data on AWS] versus the CDS API and found the Amazon Web Service (AWS) Simple Storage Service (S3) stored data could be accessed faster once virtual Zarrs has been setup, but there is a question over provenance as the data on AWS was put there by an organization other than the data originator and the Zarr approach didn't work for more recent years as the S3 stored NetCDFs have chunking that is inconsistent. An issue was raised for the Python kerchunck library, to be able to cope with variable chunking, as this https://github.com/zarr-developers/zeps/blob/main/draft/ZEP0003.md[isn't current supported].
 
-_NOAA_
+_NOAA API_
 
 The NOAA API is OGC-compliant and easy to access using OGC-style queries, however is still at an early stage of development and only runs from 9am to 5pm EST, Monday to Friday. Several sources of precipitation data are provided including grided observational data from NOAA's https://www.drought.gov/data-maps-tools/global-historical-climatology-network-ghcn[Global Historical Climatology Network] https://www.drought.gov/data-maps-tools/gridded-climate-datasets-noaas-nclimgrid-monthly[(nClimGrid)] and CMIP data from the https://www.nasa.gov/nex/gddp[NASA-GDDP] and https://loca.ucsd.edu/[LOCA2] downscaling projects. These datasets are only available for continental North America.
 We use the precipitation parameter from nClimGrid to compute a monthly SPI with data from 1985 to the present day. This can also be incorporated into the CDI. Further work could include using the LOCA2 projections to predict the SPI in future months/years.
 
-_SafeSoftware_
+_Safe Software_
 
-In Progress
+We reviewed the GeoJSON point data extracted from the https://climate-change.canada.ca/climate-data/#/downscaled-data[Climate scenario RPC4.5 downscaled for Canada] provided by Safe Software. As the provided point dataset contains precipitation anomaly data (percentage change compared to a reference period), then it isn't a straightforward input for calculating SPI but can be visualized alongside it as another view of the meteorological drought conditions. 
 
 ==== Further work
 
