@@ -21,7 +21,7 @@ With the target user group of non technical decission makers, the workflow from 
 
 // key findings, lessons learnd
 // In addressing this vision we began with a climate architecture and plugged in data, tools, and services to test the validity and thoroughness of the concept.
-The pilot points out the challenges on how to bring information to the decission makers. Even a dedicated chapter and focus  on comunication is included in the pilots work. Speceal approaches showing the comunication options to non technical people who are in charege of local climate ressilince action startegies. 
+The pilot points out the challenges on how to provide information to the decission makers. Therefore, a dedicated chapter and focus  on comunication is included in the pilots work. This chapter highlights special approaches showing the comunication options to non technical people who often are in charge of local climate ressilince action strategies. 
 
 
 //suggestions for the future
