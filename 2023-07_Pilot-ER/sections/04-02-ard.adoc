@@ -47,17 +47,16 @@ In summary, the different ARD and IRD data can be created from the following dat
 
 //=== GMU_CSISS
 
-Other Inputs: ECV record information, OpenSearch service endpoint (currently CMR(CWIC) and FedEO), download URLs for accessing NetCDF or HDF files.
+Another highly relevant input are the Essential Climate Variables (ECV) Inventory (https://climatemonitoring.info/ecvinventory/) houses information on Climate Data Records (CDR) provided mostly by CEOS and CGMS member agencies. The inventory is a structured repository for the characteristics of two types of GCOS ECV CDRs:
 
-- Outputs: WCS service endpoint for accessing selected granule level product images (GeoTIFF, PNG, JPEG, etc.).
+    Climate data records that exist and are accessible, including frequently updated interim CDRs;
+    Climate data records that are planned to be delivered.
 
-- What other component(s) can interact with the component: .
+The ECV Inventory is an open resource to explore existing and planned data records from space agency sponsored activities and provides a unique source of information on CDRs available internationally. Access links to the data are provided within the inventory, alongside details of the data’s provenance, integrity and application to climate monitoring.
 
-- What OGC standards or formats does the component use and produce: 
-  * WCS for downloading image
-  * WMS for showing layers on basemap
+Participants, particularly GMU CSISS have also demonstrated the use of ECV record information as input with OpenSearch service endpoint (currently CMR(CWIC) and FedEO), and downloading URLs for accessing NetCDF or HDF files. 
 
-
+Outputs in this case include WCS service endpoint for accessing selected granule level product images (GeoTIFF, PNG, JPEG, etc.), focusing on the WCS for downloading images and WMS for showing layers on a basemap.
 
 === Pixalytics
 
