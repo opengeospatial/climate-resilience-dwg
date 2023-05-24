@@ -11,6 +11,7 @@ CEOS defines Analysis Ready Data as satellite data that have been processed to a
 //image::CRIS.png[CRIS]
 
 //=== RSS-Hydro
+=== Transforming climate relevant raw data to ARD
 
 Several past successful OGC testbeds, including the DP 21 to which this pilot is linked, have looked at ARD and IRD but also in terms of use cases. In this pilot, some main technical contributions have been creating digestible OGC data types and formats for specific partner use cases, so producing ARD from publically available EO and model data, including hydrological and other type of model output as well as climate projections.
 
@@ -54,11 +55,13 @@ Another highly relevant input are the Essential Climate Variables (ECV) Inventor
 
 The ECV Inventory is an open resource to explore existing and planned data records from space agency sponsored activities and provides a unique source of information on CDRs available internationally. Access links to the data are provided within the inventory, alongside details of the data’s provenance, integrity and application to climate monitoring.
 
-Participants, particularly GMU CSISS have also demonstrated the use of ECV record information as input with OpenSearch service endpoint (currently CMR(CWIC) and FedEO), and downloading URLs for accessing NetCDF or HDF files. 
+Participants, particularly GMU CSISS have demonstrated the use of ECV record information as input with OpenSearch service endpoint (currently CMR(CWIC) and FedEO), and downloading URLs for accessing NetCDF or HDF files. 
 
 Outputs in this case include WCS service endpoint for accessing selected granule level product images (GeoTIFF, PNG, JPEG, etc.), focusing on the WCS for downloading images and WMS for showing layers on a basemap.
 
-=== Pixalytics
+=== Use of API services for climate related use cases
+
+//=== Pixalytics
 
 Pixalytics have developed an OGC-compliant Application Programming Interface (API) service, see <<Pixalytics_architecture>>, which will provide global information on droughts. The approach is to take global open data/datasets from organizations such as ESA/Copernicus, NASA/NOAA, and the WMO and combine meteorology, hydrology, and remote sensing data to produce ARD data based on a composite of different indicators. Where globally calculated drought indicators already exist, these are being used in preference to their re-calculation, although consistency and the presence of uncertainties are also being considered.
 
@@ -158,7 +161,8 @@ The work in this Pilot has focused on building this initial version of the workf
 
 The current work has focused on the extraction and generation of a point time-series, and so there are plans to expand the code to the extraction and generation of a 3D data cube. This might involve changing the output API interface to the OGC Environmental Data Retrieval (EDR) API standard.
 
-=== Safe Software
+//=== Safe Software
+=== From raw data to ARD with the FME engine 
 
 - Component:
  * Climate ARD component - Data Cube to ARD.
@@ -274,8 +278,8 @@ image::SafeSoftware_10.png[SafeSoftware_10]
 
 This component takes the climate scenario summary ARD results from the ARD component and analyze them to derive estimated drought risk impacts over time based on selected climate scenarios. This involves, for example, data segmentation based on cumulative rainfall below a certain threshold T within a certain time window (days, weeks or months), since cumulative rainfall over time will be crucial for computing water budgets by watershed or catch basin. Besides precipitation, climate models also generate soil moisture predictions which are used by this component to assess drought risk. This also requires integration with topography, DEMs and hydrology related data such as river networks, water bodies. aquifers and watershed boundaries. The specific business rules used to assess drought risk are still under development. FME provides a flexible data and business rule modeling framework. This means that as indicators and drought threshold rules are refined, it's relatively straightforward to adjust the business rules in this component to refine our risk projections. Also, business rule parameters can be externalized as execution parameters so that end users can control key aspects of the scenario drought risk assessment without having to modify the published FME workflow.
 
-
-=== Wuhan University (WHU)-Component
+=== A framework example for climate ARD generation
+// === Wuhan University (WHU)-Component
 
 Wuhan University (WHU) is a university that plays a significant role in researching and teaching all aspects of surveying and mapping, remote sensing, photogrammetry, and geospatial information sciences in China. In this Climate Resilience Pilot, WHU will contribute three components (ARD, Drought Indicator, and Data Cube) and one use-case (Drought Impact Use-cases). 
 
