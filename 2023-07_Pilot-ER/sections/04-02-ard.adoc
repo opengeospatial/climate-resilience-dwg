@@ -16,7 +16,7 @@ Several past successful OGC testbeds, including the DP 21 to which this pilot is
 
 These ARD will feed into all use cases for all participants, with a particular focus toward the use cases proposed for Heat, Drought and Health Impacts by participants in the pilot. 
 
-Specifically, participants, like RSS-Hydro, provide access to the following satellite and climate projection data:
+Specifically, participants provide access to the following satellite and climate projection data:
 
 - Wildfire: Fire Radiant Power (FRP) product from Sentinel 3 (NetCDF), 5p, MODIS products (fire detection), VIIRS (NOAA); possibly biomass availability (fire fuel).
 
@@ -30,7 +30,7 @@ Specifically, participants, like RSS-Hydro, provide access to the following sate
 
 - Hydrological model simulation outputs at (sub)basin scale (within reason)
 
-The created ARD in various OGC interoperable formats created digestible dataflows for the proposed OGC Use Cases. This proposed data chain by several participants is similar to DP21. A generated climate indicator or EO remotely sensed data (NASA, NOAA, ESA,  etc.) from various sources are "simplified"to GeoTIFF and / or vectorized geopackage per time step by other participants' tools, such as the FME software (by SafeSoftware). Another option as an intermediate data type (IRD) can be COG - cloud optimized geotiff which would make access more efficient. The COG GeoTIFFs are optimized for cloud so data sharing can be made more efficient. ARD and IRD should become more service / cloud based wherever possible.
+The created ARD in various OGC interoperable formats created digestible dataflows for the proposed OGC Use Cases. This proposed data chain by several participants is similar to DP21, in which contributors, like RSS-Hydro, SafeSoftware, and others also participated. A generated climate indicator or EO remotely sensed data (NASA, NOAA, ESA,  etc.) from various sources are "simplified"to GeoTIFF and / or vectorized geopackage per time step by other participants' tools, such as the FME software (by SafeSoftware). Another option as an intermediate data type (IRD) can be COG - cloud optimized geotiff which would make access more efficient. The COG GeoTIFFs are optimized for cloud so data sharing can be made more efficient. ARD and IRD should become more service / cloud based wherever possible.
 
 Besides the data format, data structures and semantics required to support the desired DRI’s are important. The time series / raster, and classification to vector contour transform is an approach that worked well in DP21 and has been a good starting point also in this pilot. For example, together in the FME processing engine, time series grids can be aggregated across timesteps to mean or max values, then classify them into ranges suitable for decision making, and then write them out and expose them as time tagged vector contour tables.
 
