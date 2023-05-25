@@ -9,7 +9,7 @@ In recognizing the impacts of climate change and monitoring the environment to a
 
 //Vision
 // Albert: Suddenly 'software reuse' is introduced. needs some rewording!
-Policy instruments should include technological guidelines, for example mandate the use of international standards for data formats, metadata and machine to machine communication protocols, in order to foster interoperability and software reuse. This would strengthen international collaboration on software development, and in turn contribute to the deployment of effective, robust and scientifically credible climate resilince information systems. With increased data access and interoperability of data, processing tools and data infrastructure, it can reduce human and economic costs and ensure appropriate policies are implemented to benefit all.
+Policy instruments should include technological guidelines, for example mandate the use of international standards for data formats, metadata and machine to machine communication protocols, in order to foster interoperability and software reuse. This would strengthen international collaboration on software development, and in turn contribute to the deployment of effective, robust and scientifically credible climate resilience information systems. With increased data access and interoperability of data, processing tools and data infrastructure, it can reduce human and economic costs and ensure appropriate policies are implemented to benefit all.
 
 //outcome
 //The participants in this project highlighted the gaps and risks in our architecture including some significant needs in the areas of… and recommend further development of …
