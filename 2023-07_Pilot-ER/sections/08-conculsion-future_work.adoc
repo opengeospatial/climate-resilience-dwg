@@ -1,9 +1,16 @@
 
-== Future Work // 
+== Future Work
+
+// Sam - I've written with some initial suggestions based on the text that was here and from reading the introductory sections
+
+Being the first Pilot, there has been significant underpinning work on the component elements that has supported an improved understanding of what is currently possible and what needs to be developed. Future pilots will support the filling-in of identified gaps and support the definition of best practices guidelines.
 
 During the pilot, participants agreed to the following items where future work would be needed:
 
-- Further scenario tests should be explored, including comparison with historical norms - calculate difference between historical max temps and projected max temps. More analysis needs to be done with higher resolution time steps - weekly and daily. At the outset monthly time steps were used to make it easier to prototype workflows. Daily time step computations will take significantly more processing time.
+- Further integration is needed of the contributor components so that the full workflow, from raw data to visualizations and communcation, exists.
+- Additional scenario tests should be explored, including comparison with historical norms, e.g. calculating the difference between historical maximum temperatures and projected maximum temperatures. 
+- More analysis needs to be undertaken with higher resolution time steps - weekly and daily. At the outset monthly time steps were used to make it easier to prototype workflows. Daily time step computations will take significantly more processing time.
+- 
 
 
 
