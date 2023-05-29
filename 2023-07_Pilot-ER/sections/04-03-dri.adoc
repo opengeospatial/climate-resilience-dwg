@@ -3,7 +3,7 @@
 == ARD to Decision Ready Indicator (DRI) 
 
 
-=== Intact Financial Corporation
+=== Intact Financial Corporation (To be finalized by Intact's push to the main branch)
 
 - Component: 
   * Wildfire hazard map
@@ -32,13 +32,14 @@
 Intact is the largest provider of Property & Casualty insurance in Canada. Its purpose is to help people, businesses and society prosper in good times and be resilient in bad times. The company has been on the front lines of climate change with our customers for more than a decade – getting them back on track and helping them adapt. As extreme weather is going to get worse over the next decade, Intact intends to double down on adapting to this changing environment and be better prepared for floods, wildfire and extreme heat.
 
 
-=== Pelagis
+// === Pelagis
+=== A federated information model for marine and coastal climate risk indicators
+
 The effects of climate change on coastal environments cannot be understated. As the carrying capacity of our oceans as a carbon sink is reaching its limits, research suggests that an integrated approach to oceans resource management can sustainably meet the needs of global food supplies, offset the rate of ocean acidification, and permanently remove CO2 from the atmosphere. However, accurately measuring both the effect of climate change as well as the mitigation effects of nature-based approaches remains a challenge.
 
-Our participation in the Climate Resilience pilot focuses on enhancing our view of a global oceans observation system by combining real-world ground observations with analysis ready datasets. Monitoring aspects of our oceans through both a temporal and spatial continuum while providing traceability through the observations process allows stakeholders to better understand the stressors affecting the health of our oceans and investigate opportunities to mitigate the longer term implications related to climate change.
-
-==== About Us
 Pelagis is an OceanTech venture located in Nova Scotia, Canada. Our foundation focuses on the application of open geospatial technology and standards designed to promote the sustainable use of our ocean resources.  As a member of the Open Geospatial Consortium, we co-chair the Marine Domain Working Group with a focus on developing a federated model of the marine ecosystem (MSDI) compliant with the suite of OGC specifications and standards.
+
+Pelagis' participation in the Climate Resilience pilot focuses on enhancing our view of a global oceans observation system by combining real-world ground observations with analysis ready datasets. Monitoring aspects of our oceans through both a temporal and spatial continuum while providing traceability through the observations process allows stakeholders to better understand the stressors affecting the health of our oceans and investigate opportunities to mitigate the longer term implications related to climate change.
 
 ==== Scope of Work
 The project effort centers around 3 key challenges
@@ -49,7 +50,7 @@ The project effort centers around 3 key challenges
 Each of these activities aligns with the best practices and standards of the OGC and are used as input to the MarineDWG MSDI reference model.
 
 ==== Approach
-Our approach to address the needs for the shared use of our ocean resources is to make Marine Spatial Planning a core foundation on which to build out vertical applications. Our platform is based on a federated information model represented as a unified social graph. This provides a decentralized approach towards designing various data streams each represented by their well-known and/or standardized model. To date, service layers based on the OGC standards for Feature, Observations & Measurements, and Sensors APIs have been developed and extended for adoption within the marine domain model. Previous work provides for data discovery and processing of features based on the IHO S-100 standard (Marine Protected Areas, Marine Traffic Management, …); NOAA open data pipelines for major weather events (Hurricane Tracking, Ocean Drifters, Saildrones …); as well as connected observation systems as provided by IOOS and its Canadian variant, CIOOS.
+The approach to address the needs for the shared use of Prelagis ocean resources is to make Marine Spatial Planning a core foundation on which to build out vertical applications. Prelagis platform is based on a federated information model represented as a unified social graph. This provides a decentralized approach towards designing various data streams each represented by their well-known and/or standardized model. To date, service layers based on the OGC standards for Feature, Observations & Measurements, and Sensors APIs have been developed and extended for adoption within the marine domain model. Previous work provides for data discovery and processing of features based on the IHO S-100 standard (Marine Protected Areas, Marine Traffic Management, …); NOAA open data pipelines for major weather events (Hurricane Tracking, Ocean Drifters, Saildrones …); as well as connected observation systems as provided by IOOS and its Canadian variant, CIOOS.
 
 [#img-pelagis-architecture]
 .Architecture
