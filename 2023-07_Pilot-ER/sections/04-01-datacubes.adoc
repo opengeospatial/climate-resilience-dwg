@@ -10,17 +10,18 @@
 //- Inputs: In situ solar radiation and sunshine duration data, satellite-based solar radiation and sunshine duration estimates (climate data records), various different geospoatial data from different sources (e.g. digital elevation model, climate zones, etc.).
 
 //- Outputs:
-  * This pilot outputs: Review of available solar radiation datasets and web services, 2 scripts (solar climate data exploratory analysis tool, solar climate data preprocessing tool), report summarizing results of the exploratory data analysis and quality control including discussion of inconsistency factors.
-  * In the final result: solar radiation data cube for Poland (40 years of high resolution dataset for selected solar radiation variables), and analysis ready data (dedicated products for different solar-smart applications in the fields of renewable energy, agriculture, spatial planning, tourism, etc.), detailed analysis of the solar climate in Poland (incl. solar regionalisation) and online web map service with an interactive, self-explainable interface enabling easy on-demand information access.
+//  * This pilot outputs: Review of available solar radiation datasets and web services, 2 scripts (solar climate data exploratory analysis tool, solar climate data preprocessing tool), report summarizing results of the exploratory data analysis and quality control including discussion of inconsistency factors.
+//  * In the final result: solar radiation data cube for Poland (40 years of high resolution dataset for selected solar radiation variables), and analysis ready data (dedicated products for different solar-smart applications in the fields of renewable energy, agriculture, spatial planning, tourism, etc.), detailed analysis of the solar climate in Poland (incl. solar regionalisation) and online web map service with an interactive, self-explainable interface enabling easy on-demand information access.
 
 //- What other component(s) can interact with the component: This component work (considering the final result) crosses all the components and all of them are actually important.
 
 //- What OGC standards or formats does the component use and produce: 
-  * NetCDF compliant with the CF (Climate and Forecast) convention. 
-  * WMS, WCS, OGC API
+//  * NetCDF compliant with the CF (Climate and Forecast) convention. 
+//  * WMS, WCS, OGC API
   
 
-=== Ecere Corporation
+//=== Ecere Corporation
+=== Using Datacubes for wildfire risk analysis
 
 Ecere is providing a deployment of its GNOSIS Map Server with a focus on a Sentinel-2 Level 2A data cube. _OGC API - Tiles_, _OGC API - Coverages_, _OGC API - Maps_, _OGC API - Discrete Global Grid Systems_, _Common Query Language (CQL2)_, and  _OGC API - Processes - Part 3: Workflows & Chaining_ are the supported standards and extensions for this task.
 
@@ -147,16 +148,14 @@ The same filter= and properties= should also work with the /coverage and /dggs e
 The filter= also works with the /map end-points.
 
 
-=== Wuhan University (WHU)
-Wuhan University (WHU) is a university that plays a significant role in researching and teaching all aspects of surveying and mapping, remote sensing, photogrammetry, and geospatial information sciences in China. In this Climate Resilience Pilot, we will contribute two use-cases: a use-case for drought and wildfire impact, and a use-case for analysis ready data.
+//=== Wuhan University (WHU)
+=== Datacubes for drought indicators
 
-- Component:  Data Cube and Drought Indicator.
+Wuhan University (WHU) is a university that plays a significant role in researching and teaching all aspects of surveying and mapping, remote sensing, photogrammetry, and geospatial information sciences in China. In this Climate Resilience Pilot, we will contribute two use-cases: a use-case for drought and wildfire impact, and a use-case for analysis ready data.
 
 - Inputs: Climate data, including precipitation and temperature. Optical data, such as Landsat-8 and sentinel-2.
 
 - Outputs: Drought risk map and other results in the form of GeoTIFF after processing in a Data Cube.
-
-- What other component(s) can interact with the component: .
 
 - What OGC standards or formats does the component use and produce: 
   * OGC API - Coverages to provide the data in Cube
