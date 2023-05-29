@@ -156,8 +156,8 @@ _Safe Software extraction of climate forecast data_
 We reviewed the GeoJSON Feature point data extracted from the https://climate-change.canada.ca/climate-data/#/downscaled-data[Climate scenario RPC4.5 downscaled for Canada] provided by Safe Software. As a preliminary test of combining the reanalysis and forecast data the SPI was calculated using reanalysis data up until the end of 2022 and then forecast data for 2023 and 2024; see comparisons in <<Pixalytics_forecast>>. 
 
 [[Pixalytics_forecast]]
-.Plot of the ECMWF precipitation and SPI, extended using the climate forecast data compared to the GDO calculated SPI; generated using Copernicus Emergency Management Service information, Copernicus Climate Service and  Canadian Centre for Climate Services data [2023]
-image::Pixalytics-forecast-example.png[Pixalytics-forecast]
+.Plot of the ECMWF precipitation and SPI, extended using the Canadian climate forecast data, compared to the GDO calculated SPI; generated using Copernicus Emergency Management Service information, Copernicus Climate Service and  Canadian Centre for Climate Services data [2023]
+image::Pixalytics-forecast.png[Pixalytics-forecast-example]
 
 ==== Further work
 
