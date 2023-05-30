@@ -3,7 +3,7 @@
 
 Participants of the various organizations and institutes that contribute to the Climate Resilience Pilot noted the following gaps or challenges do still exist and require additional work (in future) to overcome:
 
-Currently, the Pixaltics Drought indicator utilizes data from the Copernicus Climate Data Store (CDS). However, the project is in the process of testing various other sources and datasets to assess the speed, reliability, and cost of accessing input data from different providers. The goal is to enable on-demand data processing.
+Currently, the Pixalytics Drought indicator utilizes data from the Copernicus Climate Data Store (CDS). However, the project is in the process of testing various other sources and datasets to assess the speed, reliability, and cost of accessing input data from different providers. The goal is to enable on-demand data processing.
 
 During the testing phase, we compared the input precipitation data obtained from the ERA5 dataset within the Registry of Open Data on AWS to the CDS API. It was found that accessing the data stored on Amazon Web Service (AWS) Simple Storage Service (S3) was faster once virtual Zarrs were set up. However, there are concerns regarding the data's provenance, as it was uploaded to AWS by an organization other than the original data provider. Additionally, the Zarr approach faced challenges when dealing with more recent years' data, as the NetCDFs stored on S3 had inconsistent chunking. To address this issue, a request has been submitted to enhance the Python kerchunk library's ability to handle variable chunking. We are pointing this out as it is not specific to this datasource; these challenges can happen to any large datasource that needs to transform into Zarrs to operate faster.
 
