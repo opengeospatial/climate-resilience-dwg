@@ -9,7 +9,7 @@
 |Timm Dapper | Laubwerk GmbH |
 |Zhe Fang | Wuhan University | 
 |Hanwen Xu | Wuhan University |
-|Tianyu Tuo | Wuhan University |
+|Peng Yue | Wuhan University |
 |Dean Hintz | Safe Software, Inc. |
 |Kailin Opaleychuk | Safe Software, Inc. |
 |Jérôme Jacovella-St-Louis | Ecere Corporation |
