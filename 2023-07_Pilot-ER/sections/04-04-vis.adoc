@@ -64,7 +64,7 @@ It should be stressed that this is a visualization of a possible outcome, but th
 
 .Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Status Quo)
 [img-laubwerk-sunset-blvd-n-curson-ave]
-//image::laubwerk_ogc-crp_230526_v079_jws_2020-camera1.png[Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Status Quo), ,align=center]
+image::laubwerk_ogc-crp_230526_v079_jws_2020-camera1.png[Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Status Quo), ,align=center]
 
 .Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Scenarios)
 [img-laubwerk-sunset-blvd-n-curson-ave-scenarios]
