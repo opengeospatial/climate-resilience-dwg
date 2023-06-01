@@ -74,11 +74,11 @@ image::laubwerk_ogc-crp_230526_v078_jws_camera6-composite.png[Overview of the Vi
 
 .Corner Franklin Ave And N Sierra Bonita Ave Looking East (Status Quo)
 [img-laubwerk-franklin-ave-n-sierra-bonita-ave]
-// image::laubwerk_ogc-crp_230526_v079_jws_2020-camera2.png[Corner Franklin Ave And N Sierra Bonita Ave Looking East (Status Quo), ,align=center]
+image::laubwerk_ogc-crp_230526_v079_jws_2020-camera2.png[Corner Franklin Ave And N Sierra Bonita Ave Looking East (Status Quo), ,align=center]
 
 .Corner Franklin Ave And N Sierra Bonita Ave Looking East (Scenarios)
 [img-laubwerk-franklin-ave-n-sierra-bonita-ave-scenarios]
-// image::laubwerk_ogc-crp_230525_v077_jws_camera2-composite.png[Corner Franklin Ave And N Sierra Bonita Ave Looking East (Scenarios), ,align=center]
+image::laubwerk_ogc-crp_230525_v077_jws_camera2-composite.png[Corner Franklin Ave And N Sierra Bonita Ave Looking East (Scenarios), ,align=center]
 
 <<<
 
