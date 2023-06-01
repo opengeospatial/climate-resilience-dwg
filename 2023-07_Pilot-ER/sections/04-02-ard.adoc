@@ -201,12 +201,13 @@ image::SafeSoftware_1.png[SafeSoftware_1]
 .Data Cube to ARD: NetCDF to KML, Geopackage, GeoTIFF 
 image::SafeSoftware_2.png[SafeSoftware_2]
 
-Data workflow:
+Original Data workflow:
 - Split data cube
 - Set timestep parameters
 - Compute timestep stats by band
 - Compute time range stats by cell
-- Convert grids to vector points
+- Classify by cell value range
+- Convert grids to vector contours
 
 [[SafeSoftware_3]]
 .Extracted timestep  grids: Monthly timesteps, period mean T, period max T 
@@ -222,15 +223,45 @@ image::SafeSoftware_5.png[SafeSoftware_5]
 
 ===== ARD Development Observations
 
+[[FME_Inspector_NetCDF_MB_temp]]
+.FME Data Inspector: RCM NetCDF data cube for Manitoba temperature 2020-2099
+image::FME_Inspector_NetCDF_MB_temp.png[FME_Inspector_NetCDF_MB_temp]]
+
 Disaster Pilot 2021 laid a good foundation for exploring data cube extraction and conversion to ARD with using the FME data integration platform.  A variety of approaches were explored for extraction, simplification and transformation including approaches to select, split, aggregate, and summarize time series. However, more experimentation was needed to generate ARD that can be queried to answer questions about climate trends. This evolution of ARD was one of the goals for this CRP. This goal includes better support for both basic queries, and analytics, statistical methods, simplification & publication methods, including cloud native - NetCDF to Geopackage, GeoJSON and OGC, APIs.
 
 In consultation with other participants, we learned fairly early on in the pilot that our approach to temperature and precipitation contours or polygons inherited from our work in DP21 on flood contours involved too much data simplification to be useful. For example, contouring required grid classification into segments, such as 5 degree C or 10mm of precipitation etc. However, this effective loss of detail oversimplified the data to the point where it no longer held enough variation over local areas to be useful. In discussion with other participants, it was determined that simply converting multidimensional data cubes to vector time series point data served the purpose of simplifying the data structure for ease of access, but retained the ECV precision needed to support a wider range of data interpretations for indicator derivation. It also meant that as a data provider we did not need to anticipate or encode interpretation of indicator business rules into our data simplification process. By simply providing ECV data points, the end user was free to run queries to find locations and time steps where temp > or precipitation < some threshold of interest.
 
 Initially it was thought that classification rules need to more closely model impacts of interest. For example, the business rules for a heat wave might use a temperature range and stat type as part of the classification process before conversion to vector. However, this imposes the burden of domain knowledge on the data provider rather than on the climate service end user who is much more likely to understand the domain they wish to apply the data to and how best to interpret it.
 
-Further scenario tests were explored, including comparison with historical norms. Calculations were made using the difference between projected ECVs and historical ECVs. These ECV deltas may well serve as a useful starting point for climate change risk indicator development. They also serve as an approach for normalizing climate impacts when the absolute units are not the main focus. Interesting patterns emerged for the LA area that we ran this process on deltas between projected and historical precipitation. While summers are typically dry and winters are wet and prone to flash floods. Initial data exploration seemed to show an increase in drought patterns in the spring and fall. More analysis needs to be done to see if this is a general pattern or simply one that emerged from the climate scenario we ran. However, this  is the type of trend that local planners and managers may benefit from having the ability to explore once they have better access to climate model scenario outputs along with the ability to query and analyze them.
+[[FME_ARD_Workflow_MB_precip]]
+.Modified ARD Worflow: NetCDF data cube to precipitation point time series in Geopackage for Manitoba
+image::FME_ARD_Workflow_MB_precip.png[FME_ARD_Workflow_MB_precip]]
+
+Modified ARD Data workflow:
+- Split data cube
+- Set timestep parameters
+- Compute timestep stats by band
+- Compute time range stats by cell
+- Convert grids to vector contours
+
+Further scenario tests were explored, including comparison with historical norms. Calculations were made using the difference between projected climate variables and historical climate variables. These climate variable deltas may well serve as a useful starting point for climate change risk indicator development. They also serve as an approach for normalizing climate impacts when the absolute units are not the main focus. Interesting patterns emerged for the LA area that we ran this process on deltas between projected and historical precipitation. While summers are typically dry and winters are wet and prone to flash floods. Initial data exploration seemed to show an increase in drought patterns in the spring and fall. More analysis needs to be done to see if this is a general pattern or simply one that emerged from the climate scenario we ran. However, this  is the type of trend that local planners and managers may benefit from having the ability to explore once they have better access to climate model scenario outputs along with the ability to query and analyze them.
+
+[[FME_ARD_Workflow_LA_precip_diff]]
+.Modified ARD Worflow: NetCDF data cube to precipitation delta grids (future - historical) in Geopackage for LA
+image::FME_ARD_Workflow_LA_precip_diff.png[FME_ARD_Workflow_LA_precip_diff]]
+
+ARD Climate Variable Delta Data workflow:
+- Split data cubes from historic and future netcdf inputs
+- Set timestep parameters
+- Compute historic mean for 1950 - 1980 per month based on historic time series input
+- Multiply historic mean by -1
+- Use RasterMosaiker to sum all future grids with -1 * historic mean grid for that month
+- Normalize environmental variable difference by dividing by historic range for that month delta / (max - min)
+- Convert grids to vector contours
+- Define monthly environment variables from band and range values
 
 More analysis needs to be done with higher resolution time steps - weekly and daily. At the outset monthly time steps were used to make it easier to prototype workflows. Daily time step computations will take significantly more processing time. Future pilots should explore ways of better supporting scalability of processing through automation and cloud computing approaches such as the use of cloud native formats (STAC, COG, ZARR etc).
+
 
 ===== OGC API Features Service
 
