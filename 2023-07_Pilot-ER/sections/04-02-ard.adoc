@@ -269,6 +269,8 @@ Compared to OGC WFS2, OGC APIs are a simpler and more modern standard based on a
 
 Once correctly configured, OGC API feature services seemed to perform well and likely are more efficient than the equivalent WFS2 / GML feature services. A key aspect of performance improvement was achieving query parameter continuity by passing query settings from the client all the way to the database reader configuration. For example, it was important to make sure the spatial extent and feature limits from the end user client were implemented in the database SQL extraction query and not just at an intermediate stage. We will need to explore better use of caching to further optimize performance. There may also be opportunities for pyramiding time series vector data at a lower resolution for wide area requests. This may better serve those interested in observing large area patterns who don't necessarily need full resolution at the local level.
 
+It should also be noted that while OGC API services should be a priority for standards support, for a climate and disaster management context, given the relative recent nature of these standards many users may be less than familiar with or prepared to use these standards. As such, there should also be provision to access data directly in well accepted open standards such as GeoJSON, CSV, GeoTIFF, Geopackage or Shape. In this project, some users preferred direct access to GeoJSON or CSV over OGC API access.
+
 
 === A framework example for climate ARD generation
 // === Wuhan University (WHU)-Component
