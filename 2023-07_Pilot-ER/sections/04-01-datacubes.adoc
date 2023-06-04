@@ -181,8 +181,8 @@ https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:byPressureLevel:tempe
 Tiles
 
 https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/styles/precipitation/map/tiles/WebMercatorQuad/1/1/0?datetime=2022-09-04
- 
- https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/coverage/tiles/WebMercatorQuad/1/1/0?f=geotiff&datetime=2022-09-04
+
+https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/coverage/tiles/WebMercatorQuad/1/1/0?f=geotiff&datetime=2022-09-04
 (GeoTIFF Coverage Tile)
 
 DGGS
