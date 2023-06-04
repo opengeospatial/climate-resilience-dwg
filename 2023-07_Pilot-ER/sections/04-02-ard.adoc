@@ -412,8 +412,11 @@ This data is being updated to CMIP6 and will be available in the latter half of 
 ==== Climate Indices
 
 To provide a more approachable context to future climate, a collection of 47 indices of future temperature and precipitation are computed. These indices build upon prior work on Climdex indices and additional indices developed for National Climate Assessment 4 (NCA4). 
+
 •	Cooling Degree Days: Cooling degree days (annual cumulative number of degrees by which the daily average temperature is greater than 65°F) [degree days (degF)]
+
 •	Consecutive Dry Days: Annual maximum number of consecutive dry days (days with total precipitation less than 0.01 inches)
+
 •	Consecutive Dry Days Jan Jul Aug: Summer maximum number of consecutive dry days (days with total precipitation less than 0.01 inches in June, July, and August)
 •	Consecutive Wet Days: Annual maximum number of consecutive wet days (days with total precipitation greater than or equal to 0.01 inches)
 •	First Freeze Day: Date of the first fall freeze (annual first occurrence of a minimum temperature at or below 32degF in the fall)
