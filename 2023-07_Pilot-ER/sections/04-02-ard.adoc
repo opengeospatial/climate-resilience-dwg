@@ -397,3 +397,151 @@ The API endpoint for accessing the range type of the coverage, which is part of 
 http://oge.whu.edu.cn/ogcapi/coverages_api/collections/2m_temperature_201602/coverage/domainset 
 The API endpoint for the domain set of the coverage, which is also the domain set of the cube.
 
+=== ESRI Climate Resilience Data
+
+==== Climate Projection Data
+
+To make climate projection data more easily usable we transformed CMIP5 data (version 1 of our project), now working on CMIP6, into an Analysis Ready Data collection of indices of future temperature and precipitation. Climate summaries for the contiguous 48 states were derived from data generated for the 4th National Climate Assessment. These data were accessed from the Scenarios for the National Climate Assessment website. The 30-year mean values for 4 time periods (historic, early-, mid-, and late-century) and two climate scenarios (RCP 4.5 and 8.5) were derived from the Localized Constructed Analogs (LOCA) downscaled climate model ensembles, processed by the Technical Support Unit at NOAA’s National Center for Environmental Information. 
+
+•	Historical: 1976-2005
+•	Early-Century: 2016-2045
+•	Mid-Century: 2036-2065
+•	Late-Century: 2070-2099
+
+In order to display the full range of projections from individual climate models for each period, data originally obtained from USGS THREDDS servers were accessed via the Regional Climate Center’s Applied Climate Information System (ACIS). This webservice facilitated processing of the raw data values to obtain the climate hazard metrics available in CMRA.
+
+As LOCA was only generated for the contiguous 48 states (and the District of Columbia), alternatives were used for Alaska and Hawaii. In Alaska, the Bias Corrected Spatially Downscaled (BCSD) method was used. Data were accessed from USGS THREDDS servers. The same variables provided for LOCA were calculated from BCSD ensemble means. However, only RCP 8.5 was available. Minimum, maximum, and mean values for county and census tracts were calculated in the same way as above. For Hawaii, statistics for two summary geographies were accessed from the U.S. Climate Resilience Toolkit’s Climate Explorer: Northern Islands (Honolulu County, Kauaʻi County) and Southern Islands (Maui County, Hawai'i County).
+
+This data is being updated to CMIP6 and will be available in the latter half of 2023. The system is being expanded globally using NASA NEX CMIP6 data using the same time periods and climate scenarios.
+
+==== Climate Indices
+
+To provide a more approachable context to future climate, a collection of 47 indices of future temperature and precipitation are computed. These indices build upon prior work on Climdex indices and additional indices developed for National Climate Assessment 4 (NCA4). 
+
+•	Cooling Degree Days: Cooling degree days (annual cumulative number of degrees by which the daily average temperature is greater than 65°F) [degree days (degF)]
+
+•	Consecutive Dry Days: Annual maximum number of consecutive dry days (days with total precipitation less than 0.01 inches)
+
+•	Consecutive Dry Days Jan Jul Aug: Summer maximum number of consecutive dry days (days with total precipitation less than 0.01 inches in June, July, and August)
+
+•	Consecutive Wet Days: Annual maximum number of consecutive wet days (days with total precipitation greater than or equal to 0.01 inches)
+
+•	First Freeze Day: Date of the first fall freeze (annual first occurrence of a minimum temperature at or below 32degF in the fall)
+
+•	Growing Degree Days: Growing degree days, base 50 (annual cumulative number of degrees by which the daily average temperature is greater than 50°F) [degree days (degF)]
+
+•	Growing Degree Days Modified: Modified growing degree days, base 50 (annual cumulative number of degrees by which the daily average temperature is greater than 50°F; before calculating the daily average temperatures, daily maximum temperatures above 86°F and daily minimum temperatures below 50°F are set to those values) [degree days (degF)]
+
+•	Growing-season: Length of the growing (frost-free) season (the number of days between the last occurrence of a minimum temperature at or below 32degF in the spring and the first occurrence of a minimum temperature at or below 32degF in the fall)
+
+•	Growing Season 28F: Length of the growing season, 28°F threshold (the number of days between the last occurrence of a minimum temperature at or below 28°F in the spring and the first occurrence of a minimum temperature at or below 28°F in the fall)
+
+•	Growing Season 41F: Length of the growing season, 41°F threshold (the number of days between the last occurrence of a minimum temperature at or below 41°F in the spring and the first occurrence of a minimum temperature at or below 41°F in the fall)
+
+•	Heating Degree Days: Heating degree days (annual cumulative number of degrees by which the daily average temperature is less than 65°F) [degree days (degF)]
+
+•	Last Freeze Day: Date of the last spring freeze (annual last occurrence of a minimum temperature at or below 32degF in the spring)
+
+•	Precip Above 99th pctl: Annual total precipitation for all days exceeding the 99th percentile, calculated with reference to 1976-2005 [inches]
+
+•	Precip Annual Total: Annual total precipitation [inches]
+
+•	Precip Days Above 99th pctl: Annual number of days with precipitation exceeding the 99th percentile, calculated with reference to 1976-2005 [inches]
+
+•	Precip 1in: Annual number of days with total precipitation greater than 1 inch
+
+•	Precip 2in: Annual number of days with total precipitation greater than 2 inches
+
+•	Precip 3in: Annual number of days with total precipitation greater than 3 inches
+
+•	Precip 4in: Annual number of days with total precipitation greater than 4 inches
+
+•	Precip Max 1 Day: Annual highest precipitation total for a single day [inches]
+
+•	Precip Max 5 Day: Annual highest precipitation total over a 5-day period [inches]
+
+•	Daily Avg Temperature: Daily average temperature [degF]
+
+•	Daily Max Temperature: Daily maximum temperature [degF]
+
+•	Temp Max Days Above 99th pctl: Annual number of days with maximum temperature greater than the 99th percentile, calculated with reference to 1976-2005
+
+•	Temp Max Days Below 1st pctl: Annual number of days with maximum temperature lower than the 1st percentile, calculated with reference to 1976-2005
+
+•	Days Above 100F: Annual number of days with a maximum temperature greater than 100degF
+
+•	Days Above 105F: Annual number of days with a maximum temperature greater than 105degF
+
+•	Days Above 110F: Annual number of days with a maximum temperature greater than 110degF
+
+•	Days Above 115F: Annual number of days with a maximum temperature greater than 115degF
+
+•	Temp Max 1 Day: Annual single highest maximum temperature [degF]
+
+•	Days Above 32F: Annual number of icing days (days with a maximum temperature less than 32degF)
+
+•	Temp Max 5 Day: Annual highest maximum temperature averaged over a 5-day period [degF]
+
+•	Days Above 86F: Annual number of days with a maximum temperature greater than 86degF
+
+•	Days Above 90F: Annual number of days with a maximum temperature greater than 90degF
+
+•	Days Above 95F: Annual number of days with a maximum temperature greater than 95degF
+
+•	Temp Min: Daily minimum temperature [degF]
+
+•	Temp Min Days Above 75F: Annual number of days with a minimum temperature greater than 75degF
+
+•	Temp Min Days Above 80F: Annual number of days with a minimum temperature greater than 80degF
+
+•	Temp Min Days Above 85F: Annual number of days with a minimum temperature greater than 85degF
+
+•	Temp Min Days Above 90F: Annual number of days with a minimum temperature greater than 90degF
+
+•	Temp Min Days Above 99th pctl: Annual number of days with minimum temperature greater than the 99th percentile, calculated with reference to 1976-2005
+
+•	Temp Min Days Below 1st pctl: Annual number of days with minimum temperature lower than the 1st percentile, calculated with reference to 1976-2005
+
+•	Temp Min Days Below 28F: Annual number of days with a minimum temperature less than 28degF
+
+•	Temp Min Max 5 Day: Annual highest minimum temperature averaged over a 5-day period [degF]
+
+•	Temp Min 1 Day: Annual single lowest minimum temperature [degF]
+
+•	Temp Min 32F: Annual number of frost days (days with a minimum temperature less than 32degF)
+
+•	Temp Min 5 Day: Annual lowest minimum temperature averaged over a 5-day period [degF]
+
+The individual web services of climate indices and raster data for download can be accessed at: https://resilience.climate.gov/pages/climate-model-content-gallery
+
+Or for each scenario:
+
+- Historical: https://resilience.climate.gov/maps/nationalclimate::u-s-climate-thresholds-loca-historical/about
+- RCP 4.5 Early Century: https://resilience.climate.gov/maps/nationalclimate::u-s-climate-thresholds-loca-rcp-4-5-early-century/about
+- RCP 4.5 Mid Century: https://resilience.climate.gov/maps/nationalclimate::u-s-climate-thresholds-loca-rcp-4-5-mid-century/explore?location=34.597533%2C-95.830000%2C5.00
+- RCP 4.5 Late Century: https://resilience.climate.gov/maps/nationalclimate::u-s-climate-thresholds-loca-rcp-4-5-late-century/about
+- RCP 8.5 Early Century: https://resilience.climate.gov/maps/nationalclimate::u-s-climate-thresholds-loca-rcp-8-5-early-century/about
+- RCP 8.5 Mid Century: https://resilience.climate.gov/maps/nationalclimate::u-s-climate-thresholds-loca-rcp-8-5-mid-century/about
+- RCP 8.5 Late Century: https://resilience.climate.gov/maps/nationalclimate::u-s-climate-thresholds-loca-rcp-8-5-late-century/explore?location=34.561983%2C-95.830000%2C5.00
+
+The data can be viewed directly in the online map viewer or opened in ArcGIS Online, ArcGIS Desktop, or a StoryMap. To view in other softwares GeoService and KMZ URLs are on the right side of the page under View API Resources.
+
+[[esri_viewAPI]]
+.View API Resources
+image::esri_viewAPI.png[esri_viewAPI]
+
+==== Summarized Indices for Locations
+
+To support easier interpretation and local decision making, the above indices were summarized by county, census tract, and tribal areas using the Zonal Statistics as Table utility in ArcGIS Pro. The results were joined into the corresponding geography polygons. A minimum, maximum, and mean value for each variable was calculated. This process was repeated for each time range and scenario. Precomputing enables quick map and graph response in the web application, and also provides as easily reusable download for someone who wants to utilize the data elsewhere.
+
+To reuse the summarized services outside of the CRMA application or to download the processed data visit the links below for the geography of interest. 
+
+- Counties: https://resilience.climate.gov/datasets/nationalclimate::climate-mapping-resilience-and-adaptation-cmra-climate-assessment-data/explore?layer=0&location=0.000000%2C0.000000%2C2.74
+- Census Tracts: https://resilience.climate.gov/datasets/nationalclimate::climate-mapping-resilience-and-adaptation-cmra-climate-assessment-data/explore?layer=1&location=-0.000000%2C0.000000%2C2.76
+- American Indian/Alaska Native/Native Hawaiian Areas: https://resilience.climate.gov/datasets/nationalclimate::climate-mapping-resilience-and-adaptation-cmra-climate-assessment-data/explore?layer=2&location=-0.000000%2C0.000000%2C2.71 
+
+On these pages, a list of buttons allow you to filter the selection to a subset by attribute or geography, download into a variety of formats, and translate the descriptive documentation for viewing in other languages.
+
+[[esri_buttons]]
+.List of buttons
+image::esri_buttons.png[esri_viewAPI]

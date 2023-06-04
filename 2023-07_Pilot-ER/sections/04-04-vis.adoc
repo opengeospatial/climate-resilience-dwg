@@ -64,21 +64,21 @@ image::laubwerk_ogc-crp_230526_v078_jws_camera6-composite.png[Overview of the Vi
 
 .Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Status Quo)
 [img-laubwerk-sunset-blvd-n-curson-ave]
-// image::laubwerk_ogc-crp_230526_v079_jws_2020-camera1.png[Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Status Quo), ,align=center]
+image::laubwerk_ogc-crp_230526_v079_jws_2020-camera1.png[Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Status Quo), ,align=center]
 
 .Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Scenarios)
 [img-laubwerk-sunset-blvd-n-curson-ave-scenarios]
-// image::laubwerk_ogc-crp_230526_v079_jws_camera1-composite.png[Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Scenarios), ,align=center]
+image::laubwerk_ogc-crp_230526_v079_jws_camera1-composite.png[Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Scenarios), ,align=center]
 
 <<<
 
 .Corner Franklin Ave And N Sierra Bonita Ave Looking East (Status Quo)
 [img-laubwerk-franklin-ave-n-sierra-bonita-ave]
-//image::laubwerk_ogc-crp_230526_v079_jws_2020-camera2.png[Corner Franklin Ave And N Sierra Bonita Ave Looking East (Status Quo), ,align=center]
+image::laubwerk_ogc-crp_230526_v079_jws_2020-camera2.png[Corner Franklin Ave And N Sierra Bonita Ave Looking East (Status Quo), ,align=center]
 
 .Corner Franklin Ave And N Sierra Bonita Ave Looking East (Scenarios)
 [img-laubwerk-franklin-ave-n-sierra-bonita-ave-scenarios]
-// image::laubwerk_ogc-crp_230525_v077_jws_camera2-composite.png[Corner Franklin Ave And N Sierra Bonita Ave Looking East (Scenarios), ,align=center]
+image::laubwerk_ogc-crp_230525_v077_jws_camera2-composite.png[Corner Franklin Ave And N Sierra Bonita Ave Looking East (Scenarios), ,align=center]
 
 <<<
 
@@ -88,7 +88,7 @@ image::laubwerk_ogc-crp_230526_v079_jws_2020-camera3.png[Corner Hollywood Blvd A
 
 .Corner Hollywood Blvd And Camino Palmero St Looking Looking North (Scenarios)
 [img-laubwerk-hollywood-blvd-camino-palmero-st-scenarios]
-// image::laubwerk_ogc-crp_230525_v077_jws_camera3-composite.png[Corner Hollywood Blvd And Camino Palmero St Looking Looking North (Scenarios), ,align=center]
+image::laubwerk_ogc-crp_230525_v077_jws_camera3-composite.png[Corner Hollywood Blvd And Camino Palmero St Looking Looking North (Scenarios), ,align=center]
 
 ==== Challenges and Learnings
 
@@ -104,3 +104,33 @@ This hyper-locality brings to light a number of problems with the granularity, a
 * There may be further factors that need to be considered, which are not part of any of the existing data sources. In this specific case we have the pretty high average age and also various pests and diseases that the Mexican fan palm (_Washingtonia robusta_), which has become such a distinctive feature of Southern California, especially Los Angeles, is suffering from. While this isn't directly related to climate change, it still needs to be considered for any visualization to be accurate. 
 
 As was expected, the data-driven visualization of very local phenomena and changes is a challenging problem which surfaces lots of issues in terms of data availability as well as standardization and compatibility of storage formats.
+
+=== ESRI's Web Application
+
+Decision makers, public authorities, and citizens will primarily access the data via a custom web application, providing a simple dashboard interface for viewing interactive maps and graphs of the indices, and output formatted reports. The indices are group by 5 climate hazard types (Wildfire, Heat, Drought, Inland Flooding, Coastal Inundation). The current US project (https://livingatlas.arcgis.com/assessment-tool/explore/details) can be explored to gain context of what the global project will be. 
+
+[[esri_project]]
+.US Project view
+image::esri_project.png[esri_project]
+ 
+[[esri_project_2]]
+.US Project view
+image::esri_project_2.png[esri_project_2]
+ 
+The application also outputs formatted reports by county or census tract summarizing the data in a format easy to share with others.
+
+[[esri_project_3]]
+.Application output reports
+image::esri_project_3.png[esri_project_3]
+
+For each of those 5 climate hazards there is a corresponding StoryMap to further explain that hazard type, visualize the current and future hazard, and provide links to additional relevant resources.
+
+•	Extreme Heat: https://storymaps.arcgis.com/stories/5e482f11d2514191bb89c20638d98b3c
+
+•	Drought: https://storymaps.arcgis.com/stories/634ee231bb6743b88d23bda96fb838e9
+
+•	Wildfire: https://storymaps.arcgis.com/stories/ae2a8072429643f395f8f509df955ae6
+
+•	Flooding: https://storymaps.arcgis.com/stories/4ea811276aa641018f3a8d4e28585244
+
+•	Coastal Inundation: https://storymaps.arcgis.com/stories/f3ce292c0211400699b6e36985e561a6
