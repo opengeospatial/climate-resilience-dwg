@@ -10,7 +10,23 @@ During the pilot, participants agreed to the following items were specific actio
 - Further integration of the contributor components so that full workflows, from raw data to visualization and communication, can be tested.
 - Exploring additional scenario tests including comparisons with historical norms, e.g. calculating the difference between historical maximum temperatures and projected maximum temperatures. 
 - More analysis with higher resolution time steps - weekly and daily. At the outset monthly time steps have been used to make it easier to prototype workflows. Daily time step computations will take significantly more processing time.
-- 
+
+For ESRI's contribution, the first version of CRMA was well received, it is widely used by the intended users and there is high interest by many others. Before the first version was released we had requests for other countries, and customizations of the project.
+
+Due to many customization requests version 2 is being developed from inception with the intent for all code, from data processing python to web application Javascript to be available in Github repositories with documentation of typical customization workflows. 
+
+•	Use other climate projection data
+
+•	Compute other indices
+
+•	Summarize to other geographies
+
+•	Customize the web application
+
+The project is not only a solution, but a pattern for others to adapt to their data, geography, goals.
+
+Version 2 data development is underway and will include more indices, both imperial and metric units, and min/max/mean for statistics instead of only areal mean. We will update all modeling to to CMIP6, and expand from US to global. Anticipated release in Q4 2023.
+
 
 
 
