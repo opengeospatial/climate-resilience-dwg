@@ -195,7 +195,10 @@ https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/dggs/I
 
 Zones query -- Where is it?:
 Where is maximum daily temperature greater than 300 degrees Kelvins on September 4, 2022? (at precision level of GNOSIS Global Grid level 6)    
-(GeoJSON output)
+
+[#ecere_CDS_geojson,reftext='{figure-caption} {counter:figure-num}']
+.GeoJSON output
+image::ecere_CDS_geojson.png[]
  
 https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/dggs/GNOSISGlobalGrid/zones?filter=tasmax%3E300&datetime=2022-09-04&zone-level=6&f=json
 
@@ -230,6 +233,7 @@ Maps
 https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/map?width=2048&subset=pressure(750)&bgcolor=0x002040
  
 Tiles
+
 https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/map/tiles/WorldCRS84Quad/0/0/0?subset=pressure(750)&bgcolor=0x002040
 
 https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/coverage/tiles/WorldCRS84Quad/0/0/0?f=geotiff&subset=pressure(750)
@@ -255,7 +259,9 @@ Zones query -- Where is it?:
 Where is relative humidity at 850 hPa greater than 80% on April 3rd, 2023? (at precision level of GNOSIS Global Grid level 6)
 https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/dggs/GNOSISGlobalGrid/zones?subset=pressure(850)&datetime=2023-04-03&filter=r%3E80&zone-level=6&f=geojson
 
-(GeoJSON output)
+[#ecere_CDS_geojson_2,reftext='{figure-caption} {counter:figure-num}']
+.GeoJSON output
+image::ecere_CDS_geojson_2.png[]
  
 https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/dggs/GNOSISGlobalGrid/zones?subset=pressure(850)&datetime=2023-04-03&filter=r%3E80&zone-level=6&f=json
 
@@ -273,6 +279,10 @@ https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/dggs/
 We hope that our API and these climate datasets proves useful to other participants and can be part of Technology Integration Experiments for the pilots and/or Testbed 19 GeoDataCube. 
 
 We have also been working on our client to visualize these data sources from local netCDF files, our native GNOSIS data store, or remotely through OGC APIs, and we are working on support for EDR in order to perform integration experiments with the NOAA EDR API.
+
+[#ecere_CDS_visclient,reftext='{figure-caption} {counter:figure-num}']
+.GeoJSON output
+image::ecere_CDS_visclient.png[]
  
 We are also planning work on demonstrating the integration of these datasets as cross-collection queries and with our OGC API - Processes implementation including support for Part 3 - Workflows and Chaining.
 
