@@ -7,6 +7,22 @@ Currently, the Pixalytics Drought indicator utilizes data from the Copernicus Cl
 
 During the testing phase, we compared the input precipitation data obtained from the ERA5 dataset within the Registry of Open Data on AWS to the CDS API. It was found that accessing the data stored on Amazon Web Service (AWS) Simple Storage Service (S3) was faster once virtual Zarrs were set up. However, there are concerns regarding the data's provenance, as it was uploaded to AWS by an organization other than the original data provider. Additionally, the Zarr approach faced challenges when dealing with more recent years' data, as the NetCDFs stored on S3 had inconsistent chunking. To address this issue, a request has been submitted to enhance the Python kerchunk library's ability to handle variable chunking. We are pointing this out as it is not specific to this datasource; these challenges can happen to any large datasource that needs to transform into Zarrs to operate faster.
 
+For ESRI's contribution, a few things learned in building CMRA version 1 and the last 6 months since its release:
+
+•	Survey responses and conversations with users of the CRMA app and the underlying data have confirmed that providing open and usable data is equally important to providing a well designed web application. Both are needed, for different audiences.
+
+•	There will always be groups that want their own application with their branding, even if its only slightly different than original.
+
+•	Consider meaningful units of geography to summarize by based on the intended users/end-use. The polygons needs to be suitable size for the decisions being made, but not so small as to challenge the spatial resolution of the climate projection data.
+
+•	When processing climate data into means, it’s critical to capture the extremes in space, time, and members. For version 2 we will compute the min, max, and mean of each variable and scenario combination.
+
+•	It is important to communicate what variables are useful for what applications/considerations. E.g., why is 40 deg C a critical threshold? We are building this to expand access to a potentially less scientific and less climate aware audience and more explanation will be useful.
+
+•	It is important to have a holistic integrated approach to data, tools, workflow documentation, and communities of practice. 
+
+•	As we expand to a global system, issues of local downscaling and local weighting of models comes into question. Downscaled models do not exist in most of the world at a fine enough resolution to responsibly answer the type of questions users want to ask.
+
 The pilot project aims to achieve multiple objectives, one of which is to reduce the obstacles that users face when accessing CDS/ADS (Atmospheric Data Store) data and services. By identifying these barriers or gaps from the users' perspective, the pilot can adapt and evolve accordingly. This approach ensures that the project engages a broader user community and facilitates their interaction with CDS/ADS.
 
 To provide a clear direction for developers and users, the pilot intends to establish a universal and well-defined climate service workflow. This workflow will serve as a roadmap, guiding individuals through the entire process from raw data to actionable information. By offering a structured framework, the project aims to enhance efficiency and streamline the utilization of climate services.
@@ -32,7 +48,6 @@ Further experimentation is required to enhance the project's capabilities. This 
 Currently, the participants have implemented the first Drought Index (SPI) using precipitation data from the Copernicus Climate Data Store (CDS). However, they are open to incorporating additional data sources as per the project's requirements. This flexibility ensures that the pilot project remains adaptable to evolving needs and can utilize diverse datasets to enhance its outputs.
 
 In summary, the pilot project seeks to overcome barriers and engage a wider user community by facilitating access to CDS/ADS data and services. A well-defined climate service workflow will guide developers and users through the entire process, ensuring efficiency and effectiveness. Enhancements to the Sentinel-2 data cube, the inclusion of climate data and vegetation fuel type classification, and the development of a wildfire risk assessment workflow will expand the project's capabilities. By applying ARD principles and refining classification rules, the project aims to generate valuable insights into climate trends. Ongoing experimentation and the exploration of different methods contribute to the project's continuous improvement.
-
 
 
 
