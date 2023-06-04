@@ -36,7 +36,6 @@ CRIS are already existing and operational, like the Copernicus Climate Change Se
 Goals and objectives of decision makers vary at different scales. At the municipal level, municipal leaders and citizens directly face climate-related hazards. Aspects thus come into focus such as reducing vulnerability and risk, building resilience through local measures, or enhancing emergency response. At the state level, the municipal efforts can be coordinated and supported by providing funding and enacting relevant policies. The national, federal, or international level provides funding, science data, and international coordination to enable the best analysis and decisions at the lower scales.
 
 image::Interoperable_ScienceService.png[]
-
 .Schematic synergies within different climate and science services due to FAIR and open Infrastructures
 
 Productivity and decision making are enhanced when climate building blocks are exchangeable across countries, organizations, or administrative levels (see Figure below). This OGC Climate Resilience Pilot is a contribution towards an open, multi-level infrastructure that integrates data spaces, open science, and local-to-international requirements and objectives. It contributes to the technology and governance stack that enables the integration of data including historical observations, real time sensing data, reanalyses, forecasts or future projections. It addresses data-to-decision pipelines, data analysis and representation, and bundles everything in climate resilience building blocks. These building blocks are complemented by Best Practices, guidelines, and cook-books that enable multi–stakeholder decision making for the good of society in a changing natural environment.
@@ -52,7 +51,14 @@ Good experiences have been made using OGC API standards in the past. For example
 
 image::FAIR_Data_Spaces.png[]
 .Schematic Architecture of a Climate Resilience Information System. By respecting FAIR principles for the Climate Building Blocks the architecture enables open infrastructures to produce and deliver information on demand of the users needs
-.
+
+=== Climate Indices
+
+To make planning decisions to build resilience and adapt to future climate, government officials from local to national, as well as corporate leaders and citizens need an approachable yet scientifically rigorous view of their local climate. We propose a dynamic web mapping interface and report generation tool backed by a suite of web services and downloadable data. All data and web service deliverables will be provided following FAIR principles at no cost, using the appropriate OGC standards. 
+
+The climate indices describe 47 measures of future temperature and precipitation in 3 future time periods (early, mid, late century) under 2 emission scenarios RCP 4.5 and 8.5. These indices were created to inform understanding of 5 climate hazards (Wildfire, Heat, Drought, Inland Flooding, Coastal Inundation). Wildfire and drought are the current focus of the disaster pilot and these climate indices will provide useful in those projects when considering future climate.
+
+The project will present a pattern with reproducible workflows in an open Github repo showing the full process of transforming climate science data (CMIP model outputs) into a collection of analysis ready data layers (47 temperature and precipitation indices) and transforming those into decision ready information as climate indices summarized to local geographies such as counties and other subnational boundaries. 
 
 === Technical Challenges
 
