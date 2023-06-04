@@ -109,7 +109,13 @@ As was expected, the data-driven visualization of very local phenomena and chang
 
 Decision makers, public authorities, and citizens will primarily access the data via a custom web application, providing a simple dashboard interface for viewing interactive maps and graphs of the indices, and output formatted reports. The indices are group by 5 climate hazard types (Wildfire, Heat, Drought, Inland Flooding, Coastal Inundation). The current US project (https://livingatlas.arcgis.com/assessment-tool/explore/details) can be explored to gain context of what the global project will be. 
 
-
+[[esri_project]]
+.US Project view
+image::esri_project.png[esri_project]
+ 
+ [[esri_project_2]]
+.US Project view
+image::esri_project_2.png[esri_project_2]
  
 The application also outputs formatted reports by county or census tract summarizing the data in a format easy to share with others.
  
