@@ -147,5 +147,126 @@ image::ecere_ndvi.PNG[]
 The same filter= and properties= should also work with the /coverage and /dggs end-points.
 The filter= also works with the /map end-points.
 
+==== GNOSIS implementation of OGC API for climate data cube (2016-2025 CMIP5 data)
+
+There is now a fairly complete set of variables from the CMIP5 global dataset (from the Copernicus Climate Data Store) for the 2016-2025 time period available from our GNOSIS data cube implementation at:
+    https://maps.gnosis.earth/ogcapi/collections/climate:cmip5
+    
+The variables on a single pressure level are organized as a single collection (coverage / data cube) at: https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure (consisting of 9 fields: specific humidity, precipitation, snowfall, sea level pressure, downwelling shortwave radiation, wind speed, mean surface air temperature, maximum daily air temperature, minimum daily air temperature), while the variables on multiple pressure levels are organized into three separate collections:
+    https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:byPressureLevel:temperature
+    https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:byPressureLevel:gpHeight
+    https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:byPressureLevel:windSpeed (consisting of two separate fields for Eastward and Northward wind velocity)
+    
+The temporal resolution of this dataset is daily, while the source spatial resolution is 2.5 degrees longitude x 2 degrees of latitude, and it is for 8 different pressure levels.
+Currently, the API supports requesting data from this data using OGC API - Tiles (coverage tiles as well as map tiles), Coverages, Maps and DGGS.
+With all these APIs, a specific pressure level can be specified for the multi-pressure using e.g., subset=pressure(500), while a specific time can be requested using e.g., datetime=2022-03-01 or subset=time("2022-03-01").
+With Coverages and Maps, a spatial area of interest can be specified using either e.g., bbox=10,20,30,40 or subset=Lat(20:40),Lon(10:30).
+
+At the moment, our Coverages API is limited to 2D output formats (spatial trim, slicing by time and pressure): GeoTIFF and PNG (16-bit output, currently fixed scale: 2.98 and offset: 16384).
+We are planning to add support for n-dimensional output formats, including netCDF, CIS JSON and eventually CoverageJSON as well.
+Currently, separate API requests with the above parameters are needed for different times/pressure levels.
+For coverage output, the fields can be selected using properties= (a single field for PNG, and one or more fields for GeoTIFF) e.g., properties=tasmin,tasmax
+The fields can also be derived using CQL2 expressions that can perform arithmetic e.g., properties=pr*1000.
+
+With all these APIs, it is also possible to filter fields with filter= also specified as a CQL2 expression e.g., filter=tasmax>300 (unmatched cells will be replaced by NODATA values).
+The domains of the collections are described in the collection description (inside the extent property) as well as in the Coverages CIS DomainSet resource e.g.,
+    https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure?f=json
+    https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/coverage/domainset?f=json
+The ranges of the collections are described in the Coverages CIS RangeType resource as per the example below, and we are also planning to implement describing in a /schema resource that will be harmonized with the OGC API - Features schema.
+    https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/coverage/rangetype?f=json
+Some sample requests:
+Maps
+    https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/styles/precipitation/map?datetime=2022-09-04
+ 
+
+    https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:byPressureLevel:windSpeed/map?subset=pressure(850)&height=1024
+
+ 
+(proper symbolization here will require support for wind barbs -- in the meantime the Eastward and Northward velocity are assigned to the green and blue color channels)
+    https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:byPressureLevel:temperature/map?subset=pressure(850)
+ 
+Tiles
+https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/styles/precipitation/map/tiles/WebMercatorQuad/1/1/0?datetime=2022-09-04
+ 
+
+    https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/coverage/tiles/WebMercatorQuad/1/1/0?f=geotiff&datetime=2022-09-04
+(GeoTIFF Coverage Tile)
+DGGS
+Data retrieval -- What is here? (equivalent to Coverage Tiles requests for DGGSs whose zone geometry can be described by a 2D Tile Matrix Set e.g., GNOSISGlobalGrid, ISEA9R, rHealPix):
+    https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/dggs/GNOSISGlobalGrid/zones/0-0-3/data?f=geotiff&datetime=2022-09-04
+    https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/dggs/ISEA9Diamonds/zones/A7-0/data?f=geotiff&datetime=2022-09-04
+Zones query -- Where is it?:
+Where is maximum daily temperature greater than 300 degrees Kelvins on September 4, 2022? (at precision level of GNOSIS Global Grid level 6)    
+    (GeoJSON output)
+ 
+
+   https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/dggs/GNOSISGlobalGrid/zones?filter=tasmax%3E300&datetime=2022-09-04&zone-level=6&f=json
+    (Plain JSON Zone ID list output)
+    https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/dggs/GNOSISGlobalGrid/zones?filter=tasmax%3E300&datetime=2022-09-04&zone-level=6&f=uint64
+    (Binary 64-bit integer Zone IDs)
+    https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/dggs/GNOSISGlobalGrid/zones?filter=tasmax%3E300&datetime=2022-09-04&zone-level=6&f=geotiff
+    (GeoTIFF output)
+(using the default compact-zones=true where children zones are replaced by parent zone if all children zones are included)
+By creating a kind of mask at a specifically requested resolution level, DGGS Zones Query can potentially greatly help parallelization and orchestration of spatial queries combining multiple datasets across multiple services, allowing to perform early optimizations with lazy evaluation.
+Coverages
+https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/coverage?f=png&properties=(tasmax-250)*400
+ 
+
+https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/coverage?f=geotiff&properties=tas,tasmax,tasmin,pr,psl&subset=Lat(-90:90),Lon(0:180)&height=400&datetime=2020-05-20
+(GeoTIFF coverage with 5 bands for each field)
+
+As a test of higher resolution data, we also loaded an hourly dataset for the ERA5 relative humidity for the April 1-6, 2023 period at:
+    https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity
+The spatial resolution for this one is also higher at 0.25 degrees longitude x 0.25 degrees latitude, and the data is for 37 different pressure levels.
+Some sample requests:
+Maps
+
+    https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/map?width=2048&subset=pressure(750)&bgcolor=0x002040
+
+ 
+Tiles
+    https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/map/tiles/WorldCRS84Quad/0/0/0?subset=pressure(750)&bgcolor=0x002040
+ 
+    https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/coverage/tiles/WorldCRS84Quad/0/0/0?f=geotiff&subset=pressure(750)
+(GeoTIFF coverage tile)
+Coverages
+    https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/coverage?f=png&subset=pressure(750),Lat(-90:90),Lon(0:180),time(%222023-04-03%22)&properties=r*200&filter=r%3E20
+ 
+    https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/coverage?f=geotiff&subset=pressure(750),Lat(-90:90),Lon(0:180),time(%222023-04-03%22)
+(GeoTIFF Coverage)
+DGGS
+Data retrieval -- What is here? (equivalent to Coverage Tiles requests for DGGSs whose zone geometry can be described by a 2D Tile Matrix Set e.g., GNOSISGlobalGrid, ISEA9R, rHealPix): 
+    https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/dggs/GNOSISGlobalGrid/zones/0-0-3/data?f=geotiff&datetime=2023-04-03
+    https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/dggs/ISEA9Diamonds/zones/A7-0/data?f=geotiff&datetime=2023-04-03
+Zones query -- Where is it?:
+Where is relative humidity at 850 hPa greater than 80% on April 3rd, 2023? (at precision level of GNOSIS Global Grid level 6)
+    https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/dggs/GNOSISGlobalGrid/zones?subset=pressure(850)&datetime=2023-04-03&filter=r%3E80&zone-level=6&f=geojson
+    (GeoJSON output)
+ 
+    https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/dggs/GNOSISGlobalGrid/zones?subset=pressure(850)&datetime=2023-04-03&filter=r%3E80&zone-level=6&f=json
+    (Plain Zone ID list output)
+
+    https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/dggs/GNOSISGlobalGrid/zones?subset=pressure(850)&datetime=2023-04-03&filter=r%3E80&zone-level=6&f=uint64
+    (Binary 64-bit integer Zone IDs)
+    https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/dggs/GNOSISGlobalGrid/zones?subset=pressure(850)&datetime=2023-04-03&filter=r%3E80&zone-level=6&f=geotiff
+    (GeoTIFF output)
+(using the default compact-zones=true where children zones are replaced by parent zone if all children zones are included)
+
+We hope that our API and these climate datasets proves useful to other participants and can be part of Technology Integration Experiments for the pilots and/or Testbed 19 GeoDataCube. 
+
+We have also been working on our client to visualize these data sources from local netCDF files, our native GNOSIS data store, or remotely through OGC APIs, and we are working on support for EDR in order to perform integration experiments with the NOAA EDR API.
+ 
+We are also planning work on demonstrating the integration of these datasets as cross-collection queries and with our OGC API - Processes implementation including support for Part 3 - Workflows and Chaining.
+
+One process we are putting together is a machine learning prediction process for classifying fuel vegetation types, based on sentinel-2 Level 2A accessed through our API at:
+    https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a
+ 
+The initial training data will be using this Fuel vegetation Type coverage for the whole continental US from landfire.gov available from our API at :
+    https://maps.gnosis.earth/ogcapi/collections/wildfire:USFuelVegetationTypes
+ 
+More work is being done on loading additional fire danger indices from the Copernicus Climate Data Store.
+
+
+
 
 
