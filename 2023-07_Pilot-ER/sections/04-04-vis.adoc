@@ -113,21 +113,24 @@ Decision makers, public authorities, and citizens will primarily access the data
 .US Project view
 image::esri_project.png[esri_project]
  
- [[esri_project_2]]
+[[esri_project_2]]
 .US Project view
 image::esri_project_2.png[esri_project_2]
  
 The application also outputs formatted reports by county or census tract summarizing the data in a format easy to share with others.
- 
+
+[[esri_project_3]]
+.Application output reports
+image::esri_project_3.png[esri_project_3]
+
 For each of those 5 climate hazards there is a corresponding StoryMap to further explain that hazard type, visualize the current and future hazard, and provide links to additional relevant resources.
 
-•	Extreme Heat
+•	Extreme Heat: https://storymaps.arcgis.com/stories/5e482f11d2514191bb89c20638d98b3c
 
-•	Drought
+•	Drought: https://storymaps.arcgis.com/stories/634ee231bb6743b88d23bda96fb838e9
 
-•	Wildfire
+•	Wildfire: https://storymaps.arcgis.com/stories/ae2a8072429643f395f8f509df955ae6
 
-•	Flooding
+•	Flooding: https://storymaps.arcgis.com/stories/4ea811276aa641018f3a8d4e28585244
 
-•	Coastal Inundation
-
+•	Coastal Inundation: https://storymaps.arcgis.com/stories/f3ce292c0211400699b6e36985e561a6
