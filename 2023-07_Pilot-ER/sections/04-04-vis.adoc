@@ -104,3 +104,24 @@ This hyper-locality brings to light a number of problems with the granularity, a
 * There may be further factors that need to be considered, which are not part of any of the existing data sources. In this specific case we have the pretty high average age and also various pests and diseases that the Mexican fan palm (_Washingtonia robusta_), which has become such a distinctive feature of Southern California, especially Los Angeles, is suffering from. While this isn't directly related to climate change, it still needs to be considered for any visualization to be accurate. 
 
 As was expected, the data-driven visualization of very local phenomena and changes is a challenging problem which surfaces lots of issues in terms of data availability as well as standardization and compatibility of storage formats.
+
+=== ESRI's Web Application
+
+Decision makers, public authorities, and citizens will primarily access the data via a custom web application, providing a simple dashboard interface for viewing interactive maps and graphs of the indices, and output formatted reports. The indices are group by 5 climate hazard types (Wildfire, Heat, Drought, Inland Flooding, Coastal Inundation). The current US project (https://livingatlas.arcgis.com/assessment-tool/explore/details) can be explored to gain context of what the global project will be. 
+
+
+ 
+The application also outputs formatted reports by county or census tract summarizing the data in a format easy to share with others.
+ 
+For each of those 5 climate hazards there is a corresponding StoryMap to further explain that hazard type, visualize the current and future hazard, and provide links to additional relevant resources.
+
+•	Extreme Heat
+
+•	Drought
+
+•	Wildfire
+
+•	Flooding
+
+•	Coastal Inundation
+
