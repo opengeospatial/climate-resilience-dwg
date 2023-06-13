@@ -3,34 +3,35 @@
 == ARD to Decision Ready Indicator (DRI) 
 
 
-=== Intact Financial Corporation (To be finalized by Intact's push to the main branch)
+=== Wildfire hazard component
 
-- Component: 
-  * Wildfire hazard map
+To develop its component, Intact migrated its previous proprietary wildfire hazard model to a private on-premise data science environment. For key inputs to the model, external connections to several open data repositories were established. To facilitate these access tests, several public open source datasets, such as climate model outputs, Earth observations, weather and geospatial, were vetted by the appropriate cybersecurity boards. The tests also informed experts of changes in platforms offerings, of new data products specifications, applicable licenses, and of current authoritative scientific references. 
+    
+[[Figure3_Intact]]
+.Two samples of IFC’s current national wildfire hazard map
+image::Figure3_Intact[Figure3_Intact]
 
-- Inputs:
-  * National fire database polygon data
-  * Fire Weather Index (FWI) daily maps
-  * Land cover maps
-  * Drought conditions
-  * Digital Elevation Model (DEM)
-  * Population density
+The table found in Appendix shows the datasets accessed by Intact during the pilot. Below is a summarized list of the key datasets required to produce or update a wildfire hazard map.
 
-- Outputs:
-  * Wildfire hazard map, in GeoTiff
-  * Regional risk indicators, as tabular output in CSV format
+•	National fire database polygon data
+
+•	Fire Weather Index (FWI) daily maps
+
+•	Land cover maps
+
+•	Drought conditions
+
+•	Digital Elevation Model (DEM)
+
+•	Population density
+
+•	Fuel and vegetation data
+
+Intact’s wildfire hazard map is developed exclusively for internal use. Aside from intellectual property terms, it is meant to be deployed in highly secured data environments, and as such it cannot readily interact with other components of the pilot at this point of time. The intent is to develop geospatial infrastructures and legal terms that would allow a closer collaboration with pilot’s participants.
+
+Very early in the project, Intact also developed an H3 synthetic exposure dataset (see next figure) composed of 14M points spread out across the country in a statically representative pattern. The purpose of this dataset was to facilitate visualization and analysis of the exposure. It was also supposed to allow pilot participants to have a common exposure reference on which to develop decision-ready use cases for insurance, thus advancing towards standardization. Unfortunately, time constraints prevented update and sharing of this dataset. 
   
-- What other component(s) can interact with the component: Intact's component is developed for internal use. It is deployed in highly secured data environments, and as such it cannot readily interact with other components of the pilot. 
-
-- What OGC standards or formats does the component use and produce:
-  * GeoTiff
-  * NetCDF
-  * WPS
-
-==== Company Description 
-
-Intact is the largest provider of Property & Casualty insurance in Canada. Its purpose is to help people, businesses and society prosper in good times and be resilient in bad times. The company has been on the front lines of climate change with our customers for more than a decade – getting them back on track and helping them adapt. As extreme weather is going to get worse over the next decade, Intact intends to double down on adapting to this changing environment and be better prepared for floods, wildfire and extreme heat.
-
+Figure: IFC’s exposure synthetic dataset, with Montreal – Ottawa corridor on the left, and close-up of Montreal on the right. Color scale represent relative risk density in each cell, while points are representative individual risks.
 
 // === Pelagis
 === A federated information model for marine and coastal climate risk indicators
