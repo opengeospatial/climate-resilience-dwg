@@ -20,8 +20,18 @@ The table below shows the datasets accessed by Intact during the pilot.
 |Dataset |Source |URL |Notes
 |National Fire Database fire polygon data | NRCan | https://cwfis.cfs.nrcan.gc.ca/datamart/download/nfdbpoly | Unable to establish SSL connection into private network
 |Fire Weather Index and its components	| NRCan | https://cwfis.cfs.nrcan.gc.ca/downloads/fwi_obs/ | Unable to establish SSL connection into private network
-
-
+|Forest Fuels |	NRCan | ftp://ftp.nofc.cfs.nrcan.gc.ca/pub/fire/cwfis/data/fuels/ |
+|Vegetation concentration and mass | NRCan | http://tree.pfc.forestry.ca/ | 503 Service Unavailable from private network
+|Daily reanalysis composites | NOAA | https://psl.noaa.gov/data/composites/day/ |
+|Monthly reanalysis composites | NOAA | https://psl.noaa.gov/cgi-bin/data/composites/printpage.pl |
+|Global temperature anomalies/trends | NASA | https://data.giss.nasa.gov/gistemp/maps/ |
+|Elevation at 30 meters | NASA | https://lpdaac.usgs.gov/products/nasadem_hgtv001/ |
+|Canadian Drought | Monitor | AAFC | https://agriculture.canada.ca/atlas/data_donnees/canadianDroughtMonitor/data_donnees/shp/ |
+|Canadian Lightning Detection Network |	NRCan | ftp://ftp.nofc.cfs.nrcan.gc.ca/pub/fire/CLDN/ | Connection timed out, can’t find alternate source
+|Topography | USGS | https://topotools.cr.usgs.gov/gmted_viewer/viewer.htm | Interactive map, not layers
+|Road segments | NRCan | ftp://ftp.nofc.cfs.nrcan.gc.ca/pub/fire/cwfis/data/base_data | Connection timed out, can’t find alternate source
+|Population of the world | Columbia U. | https://beta.sedac.ciesin.columbia.edu/data/set/gpw-v4-population-density/data-download |
+|CanVec Manmade Structures| NRCan http://ftp.geogratis.gc.ca/pub/nrcan_rncan/vector/canvec/shp/ManMade/ | 503 Service Unavailable from private network
 
 |====================
 
