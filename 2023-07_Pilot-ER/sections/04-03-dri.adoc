@@ -31,7 +31,7 @@ The table below shows the datasets accessed by Intact during the pilot.
 |Topography | USGS | https://topotools.cr.usgs.gov/gmted_viewer/viewer.htm | Interactive map, not layers
 |Road segments | NRCan | ftp://ftp.nofc.cfs.nrcan.gc.ca/pub/fire/cwfis/data/base_data | Connection timed out, can’t find alternate source
 |Population of the world | Columbia U. | https://beta.sedac.ciesin.columbia.edu/data/set/gpw-v4-population-density/data-download |
-|CanVec Manmade Structures| NRCan http://ftp.geogratis.gc.ca/pub/nrcan_rncan/vector/canvec/shp/ManMade/ | 503 Service Unavailable from private network
+|CanVec Manmade Structures| NRCan | http://ftp.geogratis.gc.ca/pub/nrcan_rncan/vector/canvec/shp/ManMade/ | 503 Service Unavailable from private network |
 
 |====================
 
