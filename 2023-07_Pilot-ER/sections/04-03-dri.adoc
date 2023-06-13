@@ -26,7 +26,7 @@ The table below shows the datasets accessed by Intact during the pilot.
 |Monthly reanalysis composites | NOAA | https://psl.noaa.gov/cgi-bin/data/composites/printpage.pl |
 |Global temperature anomalies/trends | NASA | https://data.giss.nasa.gov/gistemp/maps/ |
 |Elevation at 30 meters | NASA | https://lpdaac.usgs.gov/products/nasadem_hgtv001/ |
-|Canadian Drought | Monitor | AAFC | https://agriculture.canada.ca/atlas/data_donnees/canadianDroughtMonitor/data_donnees/shp/ |
+|Canadian Drought Monitor | AAFC | https://agriculture.canada.ca/atlas/data_donnees/canadianDroughtMonitor/data_donnees/shp/ |
 |Canadian Lightning Detection Network |	NRCan | ftp://ftp.nofc.cfs.nrcan.gc.ca/pub/fire/CLDN/ | Connection timed out, can’t find alternate source
 |Topography | USGS | https://topotools.cr.usgs.gov/gmted_viewer/viewer.htm | Interactive map, not layers
 |Road segments | NRCan | ftp://ftp.nofc.cfs.nrcan.gc.ca/pub/fire/cwfis/data/base_data | Connection timed out, can’t find alternate source
