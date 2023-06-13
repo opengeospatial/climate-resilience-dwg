@@ -42,6 +42,11 @@ Safe Software is a leader in supporting geospatial interoperability and automati
 
 Open standards have always been a core strategy for Safe to better support data sharing. The FME platform can be seen as a bridge between the many supported vendor protocols and open standards such as XML, JSON and OGC standards such as GML, KML, WMS, WFS and OGC APIs.  Safe has collaborated extensively over the years with the open standards community. Safe actively participates in the CityGML and INSPIRE communities in Europe. We are also active within the OGC community and participated in many initiatives including test beds, pilots such as Maritime Limits and Boundaries and IndoorGML, and most recently the 2021 Disaster Pilot and 2023 Climate Resilience Pilot. Safe also actively participates in a number of Domain and Standards working groups.
 
+=== About Intact
+
+Intact Financial Corporation (IFC) is the largest provider of Property & Casualty (P&C) insurance in Canada. Its purpose is to help people, businesses and society prosper in good times and be resilient in bad times [1]. The company has been on the front lines of climate change with our customers for more than a decade – getting them back on track and helping them adapt. As extreme weather is going to get worse over the next decade, Intact intends to double down on adapting to this changing environment and be better prepared for floods, wildfire and extreme heat [2].
+
+With close to 500 experts in data, artificial intelligence, machine learning and pricing, the Intact Data Lab has deployed almost 300 AI models in production to-date. It is focused on improving risk selection and making operations as efficient as possible while creating outstanding interactions with customers. Within Intact’s Data Lab, the Centre for Climate and Geospatial Analytics (CCGA) uses weather, climate, and geospatial data along with machine learning models and claims data to develop risk maps and other specialized products to the business. 
 
 
 [[clause-reference]]
