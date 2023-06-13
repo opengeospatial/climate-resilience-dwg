@@ -19,6 +19,7 @@ The table below shows the datasets accessed by Intact during the pilot.
 |====================
 |Dataset |Source |URL |Notes
 |National Fire Database fire polygon data | NRCan | https://cwfis.cfs.nrcan.gc.ca/datamart/download/nfdbpoly | Unable to establish SSL connection into private network
+|Fire Weather Index and its components	| NRCan | https://cwfis.cfs.nrcan.gc.ca/downloads/fwi_obs/ | Unable to establish SSL connection into private network
 
 
 
