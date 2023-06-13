@@ -61,11 +61,8 @@ Definition of Analysis Ready Data (ARD) (defined by CEOS):
 
 [%unnumbered]
 
-----
 
 Analysis Ready Data (ARD) is remote sensing data and products that have been pre-processed and organized to allow immediate analysis with little additional user effort and interoperability both through time and with other datasets.
-
-----
 
 Major steps in preparing satellite data into ARD include conversion of
 raw reading into radiometric quantity, quality assessment, quantity
