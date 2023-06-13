@@ -16,6 +16,29 @@ References are to follow the Springer LNCS style, with the exception that option
 
 // Typical reference entries (without auto-fetch)
 // Reference content will display as written
+
+[1] Intact Annual Report 2022,  Intact Annual Reports page
+
+[2] Intact Social Impact & ESG Report 2022,  Intact Annual Reports page
+
+[3] Bar-Massafa et al., The wildland – urban interface in Europe: Spatial patterns and associations with socioeconomic and demographic variables, Landscape and Urban Planning, July 2023
+
+[4] Erni et al., Exposure of the Canadian wildland–human interface and population to wildland fire, under current and future climate conditions, Canadian Journal of Forest Research, September 2021
+
+[5] Johnston et al., Mapping Canadian wildland fire interface areas, International Journal of Wildland Fire 2018, 27, 1–14
+
+[6] Wildfire costs show need for preventative measures on Canadianunderwriter.ca
+
+[7] Climate change and fire, Natural Resources Canada.
+
+[8] FireSmart, The Home Ignition Zone | FireSmart Canada
+
+[9] Intact Foundation. On-line. In the Community - Climate Resilience (intactfc.com)
+
+[10] Kearns, E. et al., The Construction of Probabilistic Wildfire Risk Estimates for Individual Real Estate Parcels for the Contiguous United States, Fire 2022, 5, 117
+
+[11] NOAA News & Features, NOAA and NSF to create research center in response to insurance industry climate needs | National Oceanic and Atmospheric Administration
+
 * [[[openapi,Open API Initiative]]], Open API Initiative: *OpenAPI Specification 3.0.2*, 2018 https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md
 
 * [[[gmlsf,GMLSF]]], van den Brink, L., Portele, C., Vretanos, P.: OGC 10-100r3, *Geography Markup Language (GML) Simple Features Profile*, 2012 http://portal.opengeospatial.org/files/?artifact_id=42729
