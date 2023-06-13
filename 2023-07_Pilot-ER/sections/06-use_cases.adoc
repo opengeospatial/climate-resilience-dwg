@@ -280,32 +280,44 @@ Newly created *solar climate data cube and web map service* will be more *FAIR* 
 * to document existing solar radiation datasets (satellite, model and reanalysis data) and services (both freely accessible and commercial)
 * to verify the accuracy of the in situ measurements and satellite climate data records for the selected solar radiation parameters using proper statistical methods
 
+=== Wildfire resilience in insurance (Intact)
 
-=== Wildfire risk in P&C insurance (Intact Financial Corporation)
+The main focus of IFC's participation to this project is to better understand end-to-end hazard and risk modelling workflows, in turn supporting the climate services required for decision-making in the business. This participation is also intended to further open up Intact Lab to the outside world, by exchanging information on wildfire risks and climate resiliency in the context of the insurance industry.
 
-==== Background
-Here we describe the role of an P&C insurance company in context of disaster and climate resilience. We introduce our main public references, being Intact Annual Report 2022 and Intact Social Impact & ESG Report 2022, both found on https://www.intactfc.com/English/investors/financial-reports-and-filings/annual-report/default.aspx[Intact Annual Reports page]. We lay out the goals of our participation.
+The project centered the efforts around these challenges:
 
-==== Approach
-Here we very briefly present several use cases related to wildfire and other physical risks, at a very high level. These use cases are presented in logical order, from disaster to climate resilience. The intent is to brush a large picture of how insurance companies can contribute to climate resilience, and to leave room for other participants to link their own contributions. We describe what use cases we selected for the pilot, in this case wildfire hazard modelling and wildfire resilience. We tell why we think those two use cases are appropriate for the climate resilience pilot.
+•	Identify current usages of wildfire maps at Intact by interviewing various business units;
 
-* Restoration
-* Claims
-* Wildfire Hazard modelling
-* Underwriting
-* CAT modelling
-* Risk management
-* Loss prevention
-* Wildfire resilience
-* Adaptation
+•	Revisit and update previous wildfire hazard map, using external open data sources;
 
-==== Use case 1: Wildfire hazard model
-Here we describe the various experiments made on our components during the pilot. For this use case, the main actor is a scientist. The component was kept internal, we explain why. We enumerate the various open data repository we tested, and we describe the process at a high level. We show pictures of the output. We create logical links to other components that could have been used in the process.
+•	Identify and seek collaboration opportunities with pilot participants;
 
-==== Use case 2: Wildfire resilience
-Here we describe the selected use case for insurance, where the main actor is either a forestry expert or a landscaper. We introduce the main reference that is https://www.intactcentreclimateadaptation.ca/wp-content/uploads/2022/02/FSC_ConstructionChecklist_FINAL.pdf[WILDFIRE-RESILIENCE BEST-PRACTICE 
-CHECKLIST FOR HOME CONSTRUCTION, RENOVATION AND LANDSCAPING]. We explain why this use case is a relevant target for Climate Resilience pilot. 
+•	Inform internal architectural, infrastructure and procurement processes of new geospatial standards and trends;
 
+•	Identify and develop insurance wildfires risk use cases to help build resilient communities.
+
+These activities should align with the best practices and standards of the OGC and current and proposed themes in OGC’s climate resilience Domain Working Group (DWG). 
+
+Wildfire risk in Canada is prominent and even though major events do not occur every year, they can cause unprecedented damage. Costs from the wildfire events of summer 2021 in British Columbia reached $77 and $78 millions in insured damage at White Rock Lake and Lytton, respectively [6]. Wildfire activity is expected to go up due to an increase in fire-prone conditions across the country [7]. 
+
+In an insurance company, wildfire risk impacts the work of a wide array of users, such as claim adjusters, insurance brokers, engineers, data scientists, actuaries, portfolio managers, and executives. IFC’s stakeholders were invited to provide information about current and potential uses of wildfire risk products within their operations. This information was used to identify use cases supporting this pilot project, as well as prospective proof-of-concepts for wildfire resiliency. It was determined that wildfires can impact numerous activities in the business, including but not limited to restoration, claims, portfolio management, CAT modelling, risk management and loss prevention. A resiliency and adaptation use case relevant to the topic of climate resilience is presented below.
+
+Through granting programs, Intact is investing in communities across Canada to protect people from the effects of climate change and build more resilient communities [9]. The Regional Municipality of Wood Buffalo and the community of Lac La Biche are both at an increased risk of being affected by wildfires. Their respective programs provide rebates and other incentives to residents to participate in home FireSmart assessments, and to upgrade their homes.
+  
+Figure: FireSmart Canada’s Home Ignition Zones [8]
+
+Homeowners are informed of building materials options in the immediate zone to reduce their risk of serious property damage. Residents and communities are also presented with landscaping practices for the intermediate zone, further helping reduce the risk of wildfires in the area. The Acadia First Nation’s member communities are acting in the extended zone, creating 10 to 30 meters fire breaks to increase time for emergency response in case of fire and decrease the risk of fire spread. 
+
+Ignition zones can be seen as interfaces between individual homes or structures, and the surrounding area. In the scientific literature, the area where wildland meets or mixes with human-built structures is called the Wildland-Urban Interface (WUI). As the WUI is the area that is the most at risk of wildfire, it is important to closely consider it when modelling risk. The first WUI dataset for Canada was generated in 2018, and it was identified that 3.8% of the national land area is located in the WUI [5].  
+
+   
+Figure: Wildland-Urban Interface for Canada, on the left. Extraction of the WUI using satellite-derived imagery, on the right. [5]
+
+A more comprehensive view of the WUI considers industrial areas as well public infrastructures, such as power lines and railroads. This area is called the Wildland-Human Interface (WHI) and covers 13.0% of the national land. It is estimated that within the WHI, 19.4% of the area is in zone of wildfire recurrence ≤250 years [4]. By the end of the century, this number could increase to 28.8% under Representative Concentration Pathway (RCP) 2.6 low emissions scenario, and to 43.3% under RCP 8.5 high emissions scenario. Integrating WUI in climate scenarios can help conduct portfolio stress testing and evaluate future risk. 
+
+As cities will keep sprawling as population increases, the WUI is also expected to grow. This is an issue since increased fire activity due to climate change is to be expected. Furthermore, this increased exposure will reach more vulnerable communities. It was shown that WUI is significantly related to socioeconomic variables such as GDP per capita, population density, road density and proportion of population above 65 years old [3]. 
+
+The Canadian WUI dataset [5] is unfortunately not available for download but could be replicated with open data sources, for instance through Natural Resources Canada (NRCAN) spatial infrastructures. When developing a WUI dataset, an important parameter for users to finetune is the ember transport distance. Values can vary between the median value of maximum travel distances, which is 600m (Storey et al, 2020), and the maximum travel distance of 2400m which is the official standard in the United States. Novel wildfire risk models can also dynamically adapt fuel classes within the WUI to represent propagation more accurately [10]. Producing, hosting and integrating WUI datasets can therefore support creation of better risk indices, but also help identify vulnerable areas to support further adaptation.
 
 === D-100 Client (Pelagis)
 //Pelagis Use Case(s)
