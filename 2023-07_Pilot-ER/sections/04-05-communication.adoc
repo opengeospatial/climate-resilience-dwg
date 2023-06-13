@@ -3,16 +3,15 @@
 
 Climate change is happening, and mitigation efforts will simply not be enough  to tackle its impacts. Thus, climate action, mitigation as well as adaptation, at the local level is needed. The alpS GmbH supports communities, regions, and industrial partners in their sustainable development and in dealing with the consequences, opportunities, and risks of climate change. Over the last 20 years alpS has worked with more than 250 municipalities and industrial partners.
 
-In the understanding of alpS, climate change consultancy services are successful, if they trigger the implementation of proactive measures that are supported by a large part of actors. However, the degree of effectiveness of the consultancy services of alpS as a function of various communication methods (e. g. intro presentations including processed local climate data, information processing, moderation techniques, discussion tools) and scientific know-how has never been systematically investigated. In the pilot project, alpS therefore evaluated its inventory of methods used in its climate change adaptation workshops and started with the improvement of individual aspects.
+In the understanding of alpS, climate change consultancy services are successful, if they trigger the implementation of proactive measures that are supported by a large part of actors. However, the degree of effectiveness of the consultancy services of alpS as a function of various communication methods (e. g. intro presentations including processed local climate data, information processing, moderation techniques, discussion tools) and scientific know-how has never been systematically investigated. In the pilot project, alpS therefore evaluated its inventory of methods used in its climate change adaptation workshops and started with the improvement of the workshop setup and aspects of communication.
 
 === Approach
 alpS conducted a structured evaluation of available datasets of participatory processes with the aim to improve the level of information about climate change impacts and to identify the broadest accepted way of presenting user-related scientific statements. The assessment of adaptation cycles at different spatial levels allowed the further development and improvement of suitable interoperable solutions.
-==== Evaluation of workshops
 
 A set of questions was developed to measure the success of vulnerability workshops.  This involved developing questions on workshop content (e.g., climate information, methodological approach) and permanence (e.g., adaptation measures implemented), in addition to external factors that influence workshop outcomes (e.g., political backing, human resources, time spent, financial commitment to adaptation, geographic conditions). Using a three-step process, workshop participants were surveyed before the workshop, immediately after the workshop, and six months after the workshop. As part of a pre-test, communities were surveyed that were just before or after a workshop at the time of the Climate Resilience Pilot, or where six months had already passed.
 
-
-(Three-part questionnaire in German language to be attached here or in the appendix)
+.Three-part questionnaire
+image::images/alps_quest.png[images/alps_quest, 700]
 
 === Main results
 Assessment of climate impacts must be done at local level
