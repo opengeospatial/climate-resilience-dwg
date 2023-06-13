@@ -300,15 +300,18 @@ Wildfire risk in Canada is prominent and even though major events do not occur e
 In an insurance company, wildfire risk impacts the work of a wide array of users, such as claim adjusters, insurance brokers, engineers, data scientists, actuaries, portfolio managers, and executives. IFC’s stakeholders were invited to provide information about current and potential uses of wildfire risk products within their operations. This information was used to identify use cases supporting this pilot project, as well as prospective proof-of-concepts for wildfire resiliency. It was determined that wildfires can impact numerous activities in the business, including but not limited to restoration, claims, portfolio management, CAT modelling, risk management and loss prevention. A resiliency and adaptation use case relevant to the topic of climate resilience is presented below.
 
 Through granting programs, Intact is investing in communities across Canada to protect people from the effects of climate change and build more resilient communities [9]. The Regional Municipality of Wood Buffalo and the community of Lac La Biche are both at an increased risk of being affected by wildfires. Their respective programs provide rebates and other incentives to residents to participate in home FireSmart assessments, and to upgrade their homes.
-  
-Figure: FireSmart Canada’s Home Ignition Zones [8]
+
+[[Figure1_Intact]]
+.FireSmart Canada’s Home Ignition Zones [8]
+image::Figure1_Intact.png[Figure1_Intact]
 
 Homeowners are informed of building materials options in the immediate zone to reduce their risk of serious property damage. Residents and communities are also presented with landscaping practices for the intermediate zone, further helping reduce the risk of wildfires in the area. The Acadia First Nation’s member communities are acting in the extended zone, creating 10 to 30 meters fire breaks to increase time for emergency response in case of fire and decrease the risk of fire spread. 
 
 Ignition zones can be seen as interfaces between individual homes or structures, and the surrounding area. In the scientific literature, the area where wildland meets or mixes with human-built structures is called the Wildland-Urban Interface (WUI). As the WUI is the area that is the most at risk of wildfire, it is important to closely consider it when modelling risk. The first WUI dataset for Canada was generated in 2018, and it was identified that 3.8% of the national land area is located in the WUI [5].  
 
-   
-Figure: Wildland-Urban Interface for Canada, on the left. Extraction of the WUI using satellite-derived imagery, on the right. [5]
+[[Figure2_Intact]]
+.Wildland-Urban Interface for Canada, on the left. Extraction of the WUI using satellite-derived imagery, on the right. [5]
+image::Figure2_Intact.png[Figure2_Intact]
 
 A more comprehensive view of the WUI considers industrial areas as well public infrastructures, such as power lines and railroads. This area is called the Wildland-Human Interface (WHI) and covers 13.0% of the national land. It is estimated that within the WHI, 19.4% of the area is in zone of wildfire recurrence ≤250 years [4]. By the end of the century, this number could increase to 28.8% under Representative Concentration Pathway (RCP) 2.6 low emissions scenario, and to 43.3% under RCP 8.5 high emissions scenario. Integrating WUI in climate scenarios can help conduct portfolio stress testing and evaluate future risk. 
 
