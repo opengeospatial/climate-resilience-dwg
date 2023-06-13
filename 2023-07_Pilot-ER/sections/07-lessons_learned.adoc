@@ -23,6 +23,12 @@ For ESRI's contribution, a few things learned in building CMRA version 1 and the
 
 •	As we expand to a global system, issues of local downscaling and local weighting of models comes into question. Downscaled models do not exist in most of the world at a fine enough resolution to responsibly answer the type of questions users want to ask.
 
+For IFC, the following lessons learned are highlighted:
+
+•	Definition of common documentation guidelines for terms and licences of endpoints would facilitate approval in cybersecurity-heavy environments. Individual security reviews for each participants and their endpoints is a tedious process. Having common terms as defined in OGC’s master agreement, alongside applicable open source licences, would facilitate endpoint whitelisting.
+
+•	In insurance companies, catastrophe (CAT) modeling is often looking at past events to establish probabilistic indices and maps [11]. Increasingly, climate projections are making their way into the CAT models. There is an opportunity for the OGC to advance standards in how these models are conceived, packaged, distributed and executed.
+
 The pilot project aims to achieve multiple objectives, one of which is to reduce the obstacles that users face when accessing CDS/ADS (Atmospheric Data Store) data and services. By identifying these barriers or gaps from the users' perspective, the pilot can adapt and evolve accordingly. This approach ensures that the project engages a broader user community and facilitates their interaction with CDS/ADS.
 
 To provide a clear direction for developers and users, the pilot intends to establish a universal and well-defined climate service workflow. This workflow will serve as a roadmap, guiding individuals through the entire process from raw data to actionable information. By offering a structured framework, the project aims to enhance efficiency and streamline the utilization of climate services.
