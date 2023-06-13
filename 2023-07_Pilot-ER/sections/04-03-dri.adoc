@@ -13,7 +13,7 @@ image::Figure3_Intact.png[Figure3_Intact]
 
 The table below shows the datasets accessed by Intact during the pilot. 
 
-==== Technical Interoperability Experiments (TIE) Table
+===== Technical Interoperability Experiments (TIE) Table
 [%unnumbered]
 [width="90%",options="header"]
 |====================
