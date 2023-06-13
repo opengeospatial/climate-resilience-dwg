@@ -11,7 +11,20 @@ To develop its component, Intact migrated its previous proprietary wildfire haza
 .Two samples of IFC’s current national wildfire hazard map
 image::Figure3_Intact.png[Figure3_Intact]
 
-The table found in Appendix shows the datasets accessed by Intact during the pilot. Below is a summarized list of the key datasets required to produce or update a wildfire hazard map.
+The table below shows the datasets accessed by Intact during the pilot. 
+
+==== Technical Interoperability Experiments (TIE) Table
+[%unnumbered]
+[width="90%",options="header"]
+|====================
+|Dataset |Source |URL |Notes
+|National Fire Database fire polygon data | NRCan | https://cwfis.cfs.nrcan.gc.ca/datamart/download/nfdbpoly | Unable to establish SSL connection into private network
+
+
+
+|====================
+
+Below is a summarized list of the key datasets required to produce or update a wildfire hazard map.
 
 •	National fire database polygon data
 
