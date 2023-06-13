@@ -9,7 +9,7 @@ To develop its component, Intact migrated its previous proprietary wildfire haza
     
 [[Figure3_Intact]]
 .Two samples of IFC’s current national wildfire hazard map
-image::Figure3_Intact[Figure3_Intact]
+image::Figure3_Intact.png[Figure3_Intact]
 
 The table found in Appendix shows the datasets accessed by Intact during the pilot. Below is a summarized list of the key datasets required to produce or update a wildfire hazard map.
 
@@ -31,7 +31,9 @@ Intact’s wildfire hazard map is developed exclusively for internal use. Aside 
 
 Very early in the project, Intact also developed an H3 synthetic exposure dataset (see next figure) composed of 14M points spread out across the country in a statically representative pattern. The purpose of this dataset was to facilitate visualization and analysis of the exposure. It was also supposed to allow pilot participants to have a common exposure reference on which to develop decision-ready use cases for insurance, thus advancing towards standardization. Unfortunately, time constraints prevented update and sharing of this dataset. 
   
-Figure: IFC’s exposure synthetic dataset, with Montreal – Ottawa corridor on the left, and close-up of Montreal on the right. Color scale represent relative risk density in each cell, while points are representative individual risks.
+[[Figure4_Intact]]
+.IFC’s exposure synthetic dataset, with Montreal – Ottawa corridor on the left, and close-up of Montreal on the right. Color scale represent relative risk density in each cell, while points are representative individual risks
+image::Figure4_Intact.png[Figure4_Intact]
 
 // === Pelagis
 === A federated information model for marine and coastal climate risk indicators
