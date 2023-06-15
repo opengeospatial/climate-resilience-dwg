@@ -321,4 +321,4 @@ The Canadian WUI dataset [5] is unfortunately not available for download but cou
 
 === D-100 Client (Pelagis)
 // Coastal environment use cases [Pelagis]
-include::06-03-marine.adoc[]
+include::06-01-marine.adoc[]
