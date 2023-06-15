@@ -23,11 +23,14 @@ Active contact person in the community is necessary
 
 
 ==== Improvement of communication
-In the current workshop design of the vulnerability workshops of alpS, local climate impacts are assessed on a matrix. The responses from workshop participants highlighted the importance of clear, unambiguous, and simple language when communicating climate impacts. Inspired by the responses of the workshop participants, the wording of climate impacts was optimized and broken down in the context of an impact chain from climatic influence to first-order climate impacts to further climate impacts.
+In the current workshop design of the vulnerability workshops of alpS, local climate impacts are assessed on a matrix. The responses from workshop participants highlighted the importance of clear, unambiguous, and simple language when communicating climate impacts. Inspired by the responses of the workshop participants, the wording of climate impacts was optimized and broken down in the context of an impact chain from climatic effect  to direct and indirect climate impacts.
 
-(Graphic of the developed climate impact chain for the forestry sector follows)
+.Climate impact chain for the forestry sector
+image::images/alps_chain.png[]
 
 === Outlook
+Overall, the consensus at the Closing Workshop in Huntsville was to focus more on stakeholder participation and to start from the stakeholders' questions instead of the raw data. This would put communication at the center of upcoming project phases.
+
 
 === Summary
 - Component: Climate communication and support for adaptation.
@@ -36,6 +39,6 @@ In the current workshop design of the vulnerability workshops of alpS, local cli
 
 - Outputs: Target group-specific communication material (factsheets, graphs), description of the vulnerability and visualization of risk maps, adaptation measures, strategies for adaptation to climate change. In the context of this pilot alpS improved its communication methods and shared its findings to allow the Climate Community to copy and transform as many use-cases as possible to other locations or framework condition.
 
-- What other component(s) can interact with the component: All components that deliver dri.
+- What other component(s) can interact with the component: All components that deliver dri. Also, any component that needs user feedback or a test group, or that wants to develop data as part of a participatory process.
 
 - What OGC standards or formats does the component use and produce: Processed local climate data, NetCDF.
