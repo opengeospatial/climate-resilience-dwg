@@ -23,6 +23,7 @@ ARD:: Analysis Ready Data
 ADES:: Application Deployment and Execution Service
 AP:: Application Package
 API:: Application Programming Interface
+Carrying Capacity:: An area both suitable and available for human activity based on the state of the ecosystem and competitive pressures for shared resources
 CEOS:: Committee on Earth Observation Satellites
 ECV:: Essential Climate Variable
 EMS:: Exploitation Platform Management Service
