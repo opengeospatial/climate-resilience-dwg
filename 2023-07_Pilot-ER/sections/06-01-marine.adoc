@@ -20,45 +20,6 @@ The framework takes advantage of previous efforts made through the OGC MarineDWG
 
 This use case extends the concept of Analysis Ready Data to include processed data pipelines sourced from in-situ observation collections and sampling programs.  Raw data, such as NetCDF datasets provided through the NOAA Saildrone program for monitoring ocean conditions, are processed into an 'ARD' encoded using the OGC Moving Features specification, mf-json.  Extending the concept of ARD to include datasets sourced from non-satellite based observing platforms allows for a consistent view of important datasets independent of their originating platforms and associated processes and procedures.  Where possible, this use case applies the OGC OMSv3 concepts of Host, Observation and Observable collections over a common spatio-temporal coverage area to reduce raw data measurements to analysis ready data.
 
-
-==== From Raw Data to ARD and Decision Ready Indicators
-The United Nations Framework Convention on Climate Change (UNFCCC) is supported through a number of organizations providing key observation data related to climate change.  Of primary interest to this use case is the Global Climate Observing System (GCOS) and Global Ocean Observing System (GOOS), and the Joint Working Group on Climate (WG Climate) of the Committee on Earth Observation Satellites (CEOS).  In-situ data sources are provided through a number of program initiatives sponsored through NOAA and provide key indicators for climate change that cannot be directly inferred from raw satellite information.
-
-GCOS defines 54 Essential Climate Variables of which 18 ECVs apply to the oceans domain.  Of these, only 6 ECVs may be inferred from satellite based earth observations while the remainder must be inferred through in-situ site observations and/or sampling programs.
-
-[cols="1,3, 2, 2"]
-|===
-| Variable | Description | Source of Indicator | Resolution
-
-| Ocean Colour | Provides indictation of phytoplankton based on Ocean Colour Radiance (OCR) | ESA CEOS | Spatial and temporal resolution
-| Carbon Dioxide Partial Pressure | Primary indicator of the exchange of CO~2~ at the ocean surface | NOAA | Spatial and temporal resolution
-| Ocean Acidity | pH of ocean water as measured at varying depths and locations | NOAA PMEL | Spatial and temporal resolution
-| Phytoplankton | Indicator of the health of the ecosystem associated with the food web and directly a result of increased CO~2~ and eutrophication | NOAA | Spatial and temporal resolution
-| Sea Ice | Sea ice coverage associated with the ocean surface and a concern reflected in warming surface temperatures and sea level rise | | Spatial and temporal resolution
-| Sea Level | Sea level global mean and variability leading to sea level rise | | Spatial and temporal resolution
-| Sea State | Wave height, direction, wavelength as indicators of energy at the ocean surface | | Spatial and temporal resolution
-| Sea-surface Salinity | The proportion of ocean water comprised of salt and indicator of mortality rates in shellfish | | Spatial and temporal resolution
-| Sea-surface Temperature | Directly affects major weather patterns and ecosystems | ESA CEOS; NOAA Monitoring Stations; NOAA Saildrone program | Spatial and temporal resolution
-| Surface Current | Transports heat, salt and passive tracers and has a large impact on seaborne commerce and fishing | | Spatial and temporal resolution
-|===
-
-Social and economic key indicators
-
-[cols="1,3, 2, 2"]
-|===
-| Variable | Description | Source of Indicator | Resolution
-
-| AQ Landings | Annual yields associated with Aquaculture sites within a region of interest | MaineAQ | ST_Resolution<TBD>
-| GDP | Gross Domestic Product ($USD) associated with dependent human activities within the region of interest | US Census | ST_Resolution<TBD>
-| Employment | Number of individuals dependent on the targeted ecosystem | US Census | ST_Resolution<TBD>
-| Population | Number of people inhabiting the area of interest associated with the ecosystem | US Census | ST_Resolution<TBD>
-|===
-
-==== Approach
-
-Each ECV applicable to the use case is resolved to a service endpoint representing the area of interest, associated samplings and observations, and where possible inferred from earth observation datasets transformed as 'analysis ready'.
-Earth observation datasets are sourced through the ESA GCOS service endpoint; Ocean related samplings and in-situ observations are sourced through NOAA; socio-economic data is sourced from various open data portals available through government agencies.
-
 The use case is modelled as a federated service employing a recognized schema compliant with OGC and/or external industry standards. A user query resolves each ECV to its source and combines the related feature and observation data into a 'decision ready dataset' for further exploration.
 
 .Storyline

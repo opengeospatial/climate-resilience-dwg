@@ -1,17 +1,17 @@
 
 //[[clause-reference]]
-== ARD to Decision Ready Indicator (DRI) 
+== ARD to Decision Ready Indicator (DRI)
 
 
 === Wildfire hazard component
 
-To develop its component, Intact migrated its previous proprietary wildfire hazard model to a private on-premise data science environment. For key inputs to the model, external connections to several open data repositories were established. To facilitate these access tests, several public open source datasets, such as climate model outputs, Earth observations, weather and geospatial, were vetted by the appropriate cybersecurity boards. The tests also informed experts of changes in platforms offerings, of new data products specifications, applicable licenses, and of current authoritative scientific references. 
-    
+To develop its component, Intact migrated its previous proprietary wildfire hazard model to a private on-premise data science environment. For key inputs to the model, external connections to several open data repositories were established. To facilitate these access tests, several public open source datasets, such as climate model outputs, Earth observations, weather and geospatial, were vetted by the appropriate cybersecurity boards. The tests also informed experts of changes in platforms offerings, of new data products specifications, applicable licenses, and of current authoritative scientific references.
+
 [[Figure3_Intact]]
 .Two samples of IFC’s current national wildfire hazard map
 image::Figure3_Intact.png[Figure3_Intact]
 
-The table below shows the datasets accessed by Intact during the pilot. 
+The table below shows the datasets accessed by Intact during the pilot.
 
 ===== Technical Interoperability Experiments (TIE) Table
 [%unnumbered]
@@ -53,22 +53,58 @@ Below is a summarized list of the key datasets required to produce or update a w
 
 Intact’s wildfire hazard map is developed exclusively for internal use. Aside from intellectual property terms, it is meant to be deployed in highly secured data environments, and as such it cannot readily interact with other components of the pilot at this point of time. The intent is to develop geospatial infrastructures and legal terms that would allow a closer collaboration with pilot’s participants.
 
-Very early in the project, Intact also developed an H3 synthetic exposure dataset (see next figure) composed of 14M points spread out across the country in a statically representative pattern. The purpose of this dataset was to facilitate visualization and analysis of the exposure. It was also supposed to allow pilot participants to have a common exposure reference on which to develop decision-ready use cases for insurance, thus advancing towards standardization. Unfortunately, time constraints prevented update and sharing of this dataset. 
-  
+Very early in the project, Intact also developed an H3 synthetic exposure dataset (see next figure) composed of 14M points spread out across the country in a statically representative pattern. The purpose of this dataset was to facilitate visualization and analysis of the exposure. It was also supposed to allow pilot participants to have a common exposure reference on which to develop decision-ready use cases for insurance, thus advancing towards standardization. Unfortunately, time constraints prevented update and sharing of this dataset.
+
 [[Figure4_Intact]]
 .IFC’s exposure synthetic dataset, with Montreal – Ottawa corridor on the left, and close-up of Montreal on the right. Color scale represent relative risk density in each cell, while points are representative individual risks
 image::Figure4_Intact.png[Figure4_Intact]
 
 // === Pelagis
-=== A federated information model for marine and coastal climate risk indicators
 
-The effects of climate change on coastal environments cannot be understated. As the carrying capacity of our oceans as a carbon sink is reaching its limits, research suggests that an integrated approach to oceans resource management can sustainably meet the needs of global food supplies, offset the rate of ocean acidification, and permanently remove CO2 from the atmosphere. However, accurately measuring both the effect of climate change as well as the mitigation effects of nature-based approaches remains a challenge.
-
-Pelagis is an OceanTech venture located in Nova Scotia, Canada. Our foundation focuses on the application of open geospatial technology and standards designed to promote the sustainable use of our ocean resources.  As a member of the Open Geospatial Consortium, we co-chair the Marine Domain Working Group with a focus on developing a federated model of the marine ecosystem (MSDI) compliant with the suite of OGC specifications and standards.
-
+=== The Blue Economy
 Pelagis' participation in the Climate Resilience pilot focuses on enhancing our view of a global oceans observation system by combining real-world ground observations with analysis ready datasets. Monitoring aspects of our oceans through both a temporal and spatial continuum while providing traceability through the observations process allows stakeholders to better understand the stressors affecting the health of our oceans and investigate opportunities to mitigate the longer term implications related to climate change.
 
-==== Scope of Work
+The approach to address the needs for a sustainable ocean economy is to make Marine Spatial Planning a core foundation on which to build out vertical applications. Pelagis' platform is based on a federated information model represented as a unified social graph. This provides a decentralized approach towards designing various data streams each represented by their well-known and/or standardized model. To date, service layers based on the OGC standards for Feature, Observations & Measurements, and Sensors APIs have been developed and extended for adoption within the marine domain model. Previous work provides for data discovery and processing of features based on the IHO S-100 standard (Marine Protected Areas, Marine Traffic Management, …); NOAA open data pipelines for major weather events (Hurricane Tracking, Ocean Drifters, Saildrones …); as well as connected observation systems as provided by IOOS and its Canadian variant, CIOOS.
+
+
+==== From Raw Data to ARD and Decision Ready Indicators
+The United Nations Framework Convention on Climate Change (UNFCCC) is supported through a number of organizations providing key observation data related to climate change.  Of primary interest to this project scenario is the Global Climate Observing System (GCOS) and Global Ocean Observing System (GOOS), and the Joint Working Group on Climate (WG Climate) of the Committee on Earth Observation Satellites (CEOS).  In-situ data sources are provided through a number of program initiatives sponsored through NOAA and provide key indicators for climate change that cannot be directly inferred from raw satellite information.
+
+GCOS defines 54 Essential Climate Variables of which 18 ECVs apply to the oceans domain.  Of these, only 6 ECVs may be inferred from satellite based earth observations while the remainder must be inferred through in-situ site observations and/or sampling programs.
+
+The following table identifies the ocean-specific ECVs and associated providers.
+[cols="1,3, 2"]
+|===
+| Variable | Description | Source of Indicator
+
+| Ocean Colour | Provides indictation of phytoplankton based on Ocean Colour Radiance (OCR) | ESA CEOS
+| Carbon Dioxide Partial Pressure | Primary indicator of the exchange of CO~2~ at the ocean surface | NOAA
+| Ocean Acidity | pH of ocean water as measured at varying depths and locations | NOAA PMEL
+| Phytoplankton | Indicator of the health of the ecosystem associated with the food web and directly a result of increased CO~2~ and eutrophication | NOAA
+| Sea Ice | Sea ice coverage associated with the ocean surface and a concern reflected in warming surface temperatures and sea level rise |
+| Sea Level | Sea level global mean and variability leading to sea level rise |
+| Sea State | Wave height, direction, wavelength as indicators of energy at the ocean surface |
+| Sea-surface Salinity | The proportion of ocean water comprised of salt and indicator of mortality rates in shellfish |
+| Sea-surface Temperature | Directly affects major weather patterns and ecosystems | ESA CEOS; NOAA Monitoring Stations; NOAA Saildrone program
+| Surface Current | Transports heat, salt and passive tracers and has a large impact on seaborne commerce and fishing |
+|===
+
+As well, social and economic key indicators related to the area of interest are ingested to identify relationships between the immediate effects of climate change on the associated human activity.
+
+[cols="1,3, 2"]
+|===
+| Variable | Description | Source of Indicator
+
+| AQ Landings | Annual yields associated with Aquaculture sites within a region of interest | MaineAQ
+| GDP | Gross Domestic Product ($USD) associated with dependent human activities within the region of interest | US Census
+| Employment | Number of individuals dependent on the targeted ecosystem | US Census
+| Population | Number of people inhabiting the area of interest associated with the ecosystem | US Census
+|===
+
+==== Approach
+Each ECV applicable to the use case is resolved as a service endpoint representing the area of interest, associated samplings and observations, and where possible inferred from earth observation datasets transformed as 'analysis ready'.
+Earth observation datasets are sourced through the ESA GCOS service endpoint; Ocean related samplings and in-situ observations are sourced through NOAA; socio-economic data is sourced from various open data portals available through government agencies.
+
 The project effort centers around 3 key challenges
 * the ability to collect data relevant to Climate Resilience;
 * the ability to apply the data in a coherent and standardized manner in which to draw out context;
@@ -76,46 +112,42 @@ The project effort centers around 3 key challenges
 
 Each of these activities aligns with the best practices and standards of the OGC and are used as input to the MarineDWG MSDI reference model.
 
-==== Approach
-The approach to address the needs for the shared use of Prelagis ocean resources is to make Marine Spatial Planning a core foundation on which to build out vertical applications. Prelagis platform is based on a federated information model represented as a unified social graph. This provides a decentralized approach towards designing various data streams each represented by their well-known and/or standardized model. To date, service layers based on the OGC standards for Feature, Observations & Measurements, and Sensors APIs have been developed and extended for adoption within the marine domain model. Previous work provides for data discovery and processing of features based on the IHO S-100 standard (Marine Protected Areas, Marine Traffic Management, …); NOAA open data pipelines for major weather events (Hurricane Tracking, Ocean Drifters, Saildrones …); as well as connected observation systems as provided by IOOS and its Canadian variant, CIOOS.
 
 [#img-pelagis-architecture]
 .Architecture
 image::pelagis.architecture(1).svg[Pelagis-architecture, ,align=center, width=600]
 
-
-
 === ECMWF - Copernicus (will be integrated with INTRODUCTION section)
 
 - Component: Copernicus services.
 
-- Outputs: Copernicus Services, including Climate Data Store (CDS) https://cds.climate.copernicus.eu/ and Atmosphere Data Store (ADS) https://ads.atmosphere.copernicus.eu/. 
+- Outputs: Copernicus Services, including Climate Data Store (CDS) https://cds.climate.copernicus.eu/ and Atmosphere Data Store (ADS) https://ads.atmosphere.copernicus.eu/.
 
 - What other component(s) can interact with the component: CDS and ADS provide access to data via different interfaces: UI and API. It also offers a toolbox with a set of expert libraries to perform advanced operations on the available data. CDS and ADS catalogue metadata is also accessible via standard CSW. https://cds.climate.copernicus.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
 
-- What OGC standards or formats does the component use and produce: 
-  * CDS and ADS catalogues exposed via CSW. 
-  * Access to ESGF datasets via WPS. 
-  * WMS is offered in some published applications. 
+- What OGC standards or formats does the component use and produce:
+  * CDS and ADS catalogues exposed via CSW.
+  * Access to ESGF datasets via WPS.
+  * WMS is offered in some published applications.
   * CADS 2.0 (under construction) will implement OGC APIs.
-  
-  
+
+
 ==== DRI: Heat Impact and Drought Impact Components - Safe Software
 
 ===== Heat Impact DRI Component
 
-This component takes the climate scenario summary ARD results from the ARD component and analyzes them to derive estimated heat impacts over time, based on selected climate scenarios. Central to this is the identification of key heat impact indicators required by decision makers and the business rules needed to drive them. Process steps include data aggregation and statistical analysis of maximum temperature spikes, taking into account the cumulative impacts of multiple high temperature days. Heat exhaustion effects are likely dependent on duration of heat spells, in addition to high maximum temperatures on certain days. 
+This component takes the climate scenario summary ARD results from the ARD component and analyzes them to derive estimated heat impacts over time, based on selected climate scenarios. Central to this is the identification of key heat impact indicators required by decision makers and the business rules needed to drive them. Process steps include data aggregation and statistical analysis of maximum temperature spikes, taking into account the cumulative impacts of multiple high temperature days. Heat exhaustion effects are likely dependent on duration of heat spells, in addition to high maximum temperatures on certain days.
 
 [[SafeSoftware_6]]
 .ARD Query: Monthly Max Temp Contours
 image::SafeSoftware_6.png[SafeSoftware_6]
 
 [[SafeSoftware_7]]
-.ARD Query: Max Mean Monthly Temp > 25C 
+.ARD Query: Max Mean Monthly Temp > 25C
 image::SafeSoftware_7.png[SafeSoftware_7]
 
 [[SafeSoftware_8]]
-.Town of Lytton - location where entire town was devastated by fire during the heat wave of July 2021 - same location highlighted in ARD query from heat risk query in previous figure 
+.Town of Lytton - location where entire town was devastated by fire during the heat wave of July 2021 - same location highlighted in ARD query from heat risk query in previous figure
 image::SafeSoftware_8.png[SafeSoftware_8]
 
 ===== Drought Impact DRI Component
@@ -124,7 +156,7 @@ This component takes the climate scenario summary ARD results from the ARD compo
 
 For the LA use case, we worked with Laubwerk to provide them with climate change impact data that could help drive a drought impact that could affect their future landscape visualization model. The idea is that based on changes to climatic variables, certain areas may be more or less suited to different vegetation types, causing the distribution of vegetation to change over time. For more on their component, please refer to section 7: From Data To Visualization.
 
-In the case of this visualization component, simply providing precipitation totals per month were not sufficient to drive the needs of their vegetation model. In this case we did not have an intermediate drought model to feed climate variables to. In the absence of a more comprehensive drought model, we decided to develop a proxy drought risk indicator by normalizing the difference between future precipitation and past. 
+In the case of this visualization component, simply providing precipitation totals per month were not sufficient to drive the needs of their vegetation model. In this case we did not have an intermediate drought model to feed climate variables to. In the absence of a more comprehensive drought model, we decided to develop a proxy drought risk indicator by normalizing the difference between future precipitation and past.
 
 Calculations were made using the difference between time series grids of projected precipitation and historical grids of mean precipitation per month. These precipitation deltas were then divided by the historical max - mean per month to derive a precipitation index. The goal was to provide a value between -1 and +1 where 1 = 100% of past mean precipitation for that month. Naturally this approach can generate values that exceed the range of -1 to 1 if the projected precipitation values exceed the historic max or min. The goal was not so much to predict future absolute precipitation values but rather generate an estimated for precipitation trends given the influence of climate change. For example, this approach can help answer the question - in 30 years for a given location, compare to historical norms, by what percentage do we expect precipitation to increase or decrease. Laubwerk can then take these results and decide what degree of drought stress will cause a specific vegetation species to die out for a particular location.
 
@@ -146,7 +178,7 @@ This approach is only a start and just scratches the surface in terms of what is
 
 To support future drought risk estimates for Manitoba, we also provided a precipitation forecast time series to Pixalytics as an input to their drought analytics and DRI component. Their component provides a much more sophisticated indicator of drought probability since in addition to precipitation it also takes into account soil moisture and vegetation. The goal was to extract precipitation totals per time step from the downscaled RCM - regional climate model ECV outputs for Manitoba based on CMIP5 (Coupled Model Intercomparison Project Phase 5) model results obtained from Environment Canada. For this use case the grids have a spatial resolution of roughly 10km and a temporal resolution a monthly time step. Pixalytics then ran their drought model based on these precipitation estimates in order to asses potential future drought risk in southern Manitoba. The data was provided to Pixalytics initially as a GeoJSON feed of 2d points derived from the data cube cells with precipitation totals per cell. We later also provided this same data feed as a OGC API Feature service.
 
-For future phases of the climate or disaster pilots, it may be useful to explore additional approaches for both precipitation data analysis and combination with other related datasets and external models. It may be useful to segment cumulative rainfall below a certain threshold Pt within a certain time window (days, weeks or months), since cumulative rainfall over time will be crucial for computing water budgets by watershed or catch basin. To do this we would like to test the use of a higher resolution time step such as daily, to see if the increased resolution reveals patterns of interest that the coarser monthly time step does not. There are also other statistical RCM results that might be useful to make available (mean, min, max). Besides precipitation, climate models also generate soil moisture predictions which could used by this component to assess drought risk. This component would also benefit from integration with topography, DEMs and hydrology related data such as river networks, water bodies, aquifers and watershed boundaries. Therefore rather than just computing precipitation deltas at the cell level, it would likely be useful to sum precipitation by catch basin and compute future trends that may indicate potential drought or flood. 
+For future phases of the climate or disaster pilots, it may be useful to explore additional approaches for both precipitation data analysis and combination with other related datasets and external models. It may be useful to segment cumulative rainfall below a certain threshold Pt within a certain time window (days, weeks or months), since cumulative rainfall over time will be crucial for computing water budgets by watershed or catch basin. To do this we would like to test the use of a higher resolution time step such as daily, to see if the increased resolution reveals patterns of interest that the coarser monthly time step does not. There are also other statistical RCM results that might be useful to make available (mean, min, max). Besides precipitation, climate models also generate soil moisture predictions which could used by this component to assess drought risk. This component would also benefit from integration with topography, DEMs and hydrology related data such as river networks, water bodies, aquifers and watershed boundaries. Therefore rather than just computing precipitation deltas at the cell level, it would likely be useful to sum precipitation by catch basin and compute future trends that may indicate potential drought or flood.
 
 The specific business rules used to assess drought risk are still under development. FME provides a flexible data and business rule modeling framework. This means that as indicators and drought threshold rules are refined, it's relatively straightforward to adjust the business rules in this component to refine our risk projections. Also, business rule parameters can be externalized as execution parameters so that end users can control key aspects of the scenario drought risk assessment without having to modify the published FME workflow.
 
