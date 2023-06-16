@@ -2,7 +2,7 @@
 == Use cases
 
 === Drought Impact Use Cases (Wuhan University)
-Based on the ARD, drought indicator, and data cube components, WHU develops three use-cases based on self-developed Open Geospatial Engine (OGE) for drought impact for rapid response to drought occurrences. <<DroughtWildfire>> shows the technical architecture of the OGE. It has the following features: 1) For data discovery, a catalogue service from OGE data center following OGC API is provided, allowing users to search geospatial data both available from WHU data stores and remote data stores. 2) For data integration, data can be integrated into the WHU software in the form of data cubes with three efforts: formalizing cube dimensions for multi-source geospatial data, processing geospatial data query along cube dimensions, and organizing cube data for high-performance geoprocessing. 3) For data processing, a processing chain is enabled in OGE using a code editor and modelbuilder. 4) For data visualization, a Web-based client for visualization of spatial data and statistics is provided using a virtual globe and charts. 
+Based on the ARD, drought indicator, and data cube components, WHU develops three use-cases based on self-developed Open Geospatial Engine (OGE) for drought impact for rapid response to drought occurrences. <<DroughtWildfire>> shows the technical architecture of the OGE. It has the following features: 1) For data discovery, a catalogue service from OGE data center following OGC API is provided, allowing users to search geospatial data both available from WHU data stores and remote data stores. 2) For data integration, data can be integrated into the WHU software in the form of data cubes with three efforts: formalizing cube dimensions for multi-source geospatial data, processing geospatial data query along cube dimensions, and organizing cube data for high-performance geoprocessing. 3) For data processing, a processing chain is enabled in OGE using a code editor and modelbuilder. 4) For data visualization, a Web-based client for visualization of spatial data and statistics is provided using a virtual globe and charts.
 
 [[DroughtWildfire]]
 .The technical architecture of the use-case for drought impact.
@@ -29,7 +29,7 @@ image::WHU_image7.png[WHU_image7]
 
 ==== Case study 2: Drought Risk analysis of Yangtze River basin
 
-In the summer of 2022, an extreme drought hit the Yangtze River basin, posing huge impacts on agriculture, the ecosystem, and human livelihoods. It developed rapidly in the upper, middle, and lower reaches of the Yangtze River, intensifying on a large scale in 10 provinces (municipalities) in the basin (https://doi.org/10.1002/rvr2.23). The water area of Poyang Lake has been reduced by 90%, threatening the habitat for fish and migratory birds, etc. To analyze drought trends in the Yangtze River Basin, we visualized monthly SPEI for 2022, as shown in <<WHU_image8>>. From the Figure, it can be seen that the drought index in the Yangtze River Basin has been rising since March. In July, the drought risk map turned light yellow, indicating a moderate drought. In August and September, the drought further intensified and reached an extreme drought situation. In October, the drought eased somewhat, and it had subsided mainly by November. 
+In the summer of 2022, an extreme drought hit the Yangtze River basin, posing huge impacts on agriculture, the ecosystem, and human livelihoods. It developed rapidly in the upper, middle, and lower reaches of the Yangtze River, intensifying on a large scale in 10 provinces (municipalities) in the basin (https://doi.org/10.1002/rvr2.23). The water area of Poyang Lake has been reduced by 90%, threatening the habitat for fish and migratory birds, etc. To analyze drought trends in the Yangtze River Basin, we visualized monthly SPEI for 2022, as shown in <<WHU_image8>>. From the Figure, it can be seen that the drought index in the Yangtze River Basin has been rising since March. In July, the drought risk map turned light yellow, indicating a moderate drought. In August and September, the drought further intensified and reached an extreme drought situation. In October, the drought eased somewhat, and it had subsided mainly by November.
 
 [[WHU_image8]]
 .Drought risk map in part of China.
@@ -293,9 +293,9 @@ The project centered the efforts around these challenges:
 
 •	Identify and develop insurance wildfires risk use cases to help build resilient communities.
 
-These activities should align with the best practices and standards of the OGC and current and proposed themes in OGC’s climate resilience Domain Working Group (DWG). 
+These activities should align with the best practices and standards of the OGC and current and proposed themes in OGC’s climate resilience Domain Working Group (DWG).
 
-Wildfire risk in Canada is prominent and even though major events do not occur every year, they can cause unprecedented damage. Costs from the wildfire events of summer 2021 in British Columbia reached $77 and $78 millions in insured damage at White Rock Lake and Lytton, respectively [6]. Wildfire activity is expected to go up due to an increase in fire-prone conditions across the country [7]. 
+Wildfire risk in Canada is prominent and even though major events do not occur every year, they can cause unprecedented damage. Costs from the wildfire events of summer 2021 in British Columbia reached $77 and $78 millions in insured damage at White Rock Lake and Lytton, respectively [6]. Wildfire activity is expected to go up due to an increase in fire-prone conditions across the country [7].
 
 In an insurance company, wildfire risk impacts the work of a wide array of users, such as claim adjusters, insurance brokers, engineers, data scientists, actuaries, portfolio managers, and executives. IFC’s stakeholders were invited to provide information about current and potential uses of wildfire risk products within their operations. This information was used to identify use cases supporting this pilot project, as well as prospective proof-of-concepts for wildfire resiliency. It was determined that wildfires can impact numerous activities in the business, including but not limited to restoration, claims, portfolio management, CAT modelling, risk management and loss prevention. A resiliency and adaptation use case relevant to the topic of climate resilience is presented below.
 
@@ -305,43 +305,20 @@ Through granting programs, Intact is investing in communities across Canada to p
 .FireSmart Canada’s Home Ignition Zones [8]
 image::Figure1_Intact.png[Figure1_Intact]
 
-Homeowners are informed of building materials options in the immediate zone to reduce their risk of serious property damage. Residents and communities are also presented with landscaping practices for the intermediate zone, further helping reduce the risk of wildfires in the area. The Acadia First Nation’s member communities are acting in the extended zone, creating 10 to 30 meters fire breaks to increase time for emergency response in case of fire and decrease the risk of fire spread. 
+Homeowners are informed of building materials options in the immediate zone to reduce their risk of serious property damage. Residents and communities are also presented with landscaping practices for the intermediate zone, further helping reduce the risk of wildfires in the area. The Acadia First Nation’s member communities are acting in the extended zone, creating 10 to 30 meters fire breaks to increase time for emergency response in case of fire and decrease the risk of fire spread.
 
-Ignition zones can be seen as interfaces between individual homes or structures, and the surrounding area. In the scientific literature, the area where wildland meets or mixes with human-built structures is called the Wildland-Urban Interface (WUI). As the WUI is the area that is the most at risk of wildfire, it is important to closely consider it when modelling risk. The first WUI dataset for Canada was generated in 2018, and it was identified that 3.8% of the national land area is located in the WUI [5].  
+Ignition zones can be seen as interfaces between individual homes or structures, and the surrounding area. In the scientific literature, the area where wildland meets or mixes with human-built structures is called the Wildland-Urban Interface (WUI). As the WUI is the area that is the most at risk of wildfire, it is important to closely consider it when modelling risk. The first WUI dataset for Canada was generated in 2018, and it was identified that 3.8% of the national land area is located in the WUI [5].
 
 [[Figure2_Intact]]
 .Wildland-Urban Interface for Canada, on the left. Extraction of the WUI using satellite-derived imagery, on the right. [5]
 image::Figure2_Intact.png[Figure2_Intact]
 
-A more comprehensive view of the WUI considers industrial areas as well public infrastructures, such as power lines and railroads. This area is called the Wildland-Human Interface (WHI) and covers 13.0% of the national land. It is estimated that within the WHI, 19.4% of the area is in zone of wildfire recurrence ≤250 years [4]. By the end of the century, this number could increase to 28.8% under Representative Concentration Pathway (RCP) 2.6 low emissions scenario, and to 43.3% under RCP 8.5 high emissions scenario. Integrating WUI in climate scenarios can help conduct portfolio stress testing and evaluate future risk. 
+A more comprehensive view of the WUI considers industrial areas as well public infrastructures, such as power lines and railroads. This area is called the Wildland-Human Interface (WHI) and covers 13.0% of the national land. It is estimated that within the WHI, 19.4% of the area is in zone of wildfire recurrence ≤250 years [4]. By the end of the century, this number could increase to 28.8% under Representative Concentration Pathway (RCP) 2.6 low emissions scenario, and to 43.3% under RCP 8.5 high emissions scenario. Integrating WUI in climate scenarios can help conduct portfolio stress testing and evaluate future risk.
 
-As cities will keep sprawling as population increases, the WUI is also expected to grow. This is an issue since increased fire activity due to climate change is to be expected. Furthermore, this increased exposure will reach more vulnerable communities. It was shown that WUI is significantly related to socioeconomic variables such as GDP per capita, population density, road density and proportion of population above 65 years old [3]. 
+As cities will keep sprawling as population increases, the WUI is also expected to grow. This is an issue since increased fire activity due to climate change is to be expected. Furthermore, this increased exposure will reach more vulnerable communities. It was shown that WUI is significantly related to socioeconomic variables such as GDP per capita, population density, road density and proportion of population above 65 years old [3].
 
 The Canadian WUI dataset [5] is unfortunately not available for download but could be replicated with open data sources, for instance through Natural Resources Canada (NRCAN) spatial infrastructures. When developing a WUI dataset, an important parameter for users to finetune is the ember transport distance. Values can vary between the median value of maximum travel distances, which is 600m (Storey et al, 2020), and the maximum travel distance of 2400m which is the official standard in the United States. Novel wildfire risk models can also dynamically adapt fuel classes within the WUI to represent propagation more accurately [10]. Producing, hosting and integrating WUI datasets can therefore support creation of better risk indices, but also help identify vulnerable areas to support further adaptation.
 
 === D-100 Client (Pelagis)
-//Pelagis Use Case(s)
-The following use cases focus on the impact of climate change to coastal communities and opportunities to mitigate these effects through sustainable aquaculture best practices.
-==== Background
-
-==== Approach
-This project takes advantage of the efforts made through the OGC Marine DWG to define a 'federated marine spatial data infrastructure' (FMSDI).
-
-*Providers*
-Table of service endpoints - their role, temporal and spatial resolution, and schema
-
-
-// .architecture
-// image::pelagis.png[Federated Architecture]
-
----
-
-// [%unnumbered]
-// image::p1.png[stuff]
-// .An example
-// image::p2.png[stuff]
-
----
-// ==== Use Case: Evaluate the Essential Climate Variables for the Northeast US Shelf (NES) ecosystem
-// stuff here
-// ==== Use Case: Evaluate the mitigation opportunities from marine aquaculture
+// Coastal environment use cases [Pelagis]
+include::06-01-marine.adoc[]

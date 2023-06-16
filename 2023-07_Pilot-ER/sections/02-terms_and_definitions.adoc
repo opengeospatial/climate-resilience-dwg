@@ -10,7 +10,7 @@ term used for exemplary purposes
 [.source]
 <<rfc2616>>
 
-NOTE: DRAFT 
+NOTE: DRAFT
 
 [example]
 Here's an example of an example term.
@@ -23,10 +23,17 @@ ARD:: Analysis Ready Data
 ADES:: Application Deployment and Execution Service
 AP:: Application Package
 API:: Application Programming Interface
+Carrying Capacity:: An area both suitable and available for human activity based on the state of the ecosystem and competitive pressures for shared resources
+CEOS:: Committee on Earth Observation Satellites
+ECV:: Essential Climate Variable
 EMS:: Exploitation Platform Management Service
+GOOS:: Global Ocean Observing System
+GCOS:: Global Climate Observing System
+OMSv3:: OGC Observations & Measurements 3.0
+RCI:: Regional Climate Indicator
 S3:: Simple Storage Service
 SMA:: Soil Moisture Anomaly
 SPI:: Standardized Precipitation Index
+UNFCCC:: United Nations Framework Convention on Climate Change
+WG Climate:: Joint Working Group on Climate
 WPS:: Web Processing Service
-
-

@@ -1,0 +1,57 @@
+//
+// Coastal zone climate resilience and adaptation use cases
+// Pelagis D100 Contribution
+//
+=== Climate Resilience for Coastal Ecosystems
+The following use case(s) examine various scenarios designed to qualify the risks and pending impacts of climate change to coastal ecosystems. The scenarios are designed to leverage Analysis Ready Datasets combined with in-situ observations to draw direct relationships between a changing environment and dependent human activities.
+
+The core of this exercise is focused on the application of OGC standards & specifications as adapters to accessing various datasets supporting key ocean and coastal climate indicators.
+
+==== Ocean Acidification & Food Security
+The ocean is responsible for upwards of 30% of the absorption of carbon dioxide from the atmosphere. As CO~2~ is taken in, it combines with the water to form carbonic acid causing the pH to lower. As concentrations of CO~2~ in the atmosphere continue to increase, the pH of the ocean has fallen by as much a 0.1 pH units - representing a 30% increase in ocean acidity.
+As acidity rises, available carbonate ions bond with excess hydrogen ions, impeding the development of calcifying organisms such as oysters and shellfish.  Of critical importance is the recognition that, as ocean acidity increases, the ability of the ocean to effectively act as a carbon sink for atmospheric CO~2~ is directly reduced further spiralling the future impact of anthropogenic activities and CO~2~ emissions.
+
+This use case attempts to relate the trends in changing climate variables to the ocean's  ability to support the shellfish aquaculture industry along the North-East coastline of the United States.  Of particular importance is the direct relationship between essential climate variables and the carrying capacity of coastal environments to support dependent socio-economic activities. Indirectly this use case attempts to identify the role of coastal ecosystems within a nature-based climate resilience strategy.
+
+==== Background
+The study combines publicly available socio-economic data with climate change indicators relevant to an area of interest off the coast of Maine USA.  This area is supported through a number of observation platforms to measure ocean surface temperatures, salinity, wave heights and other important characteristics related to the ocean's state.  Raw data processed to ARD provide additional metrics of the ocean's regional climate indicators.
+
+The framework takes advantage of previous efforts made through the OGC MarineDWG implementing a 'federated marine spatial data infrastructure' (FMSDI). In this case, the framework is designed to incorporate each data source as an independent service endpoint encoded as an OGC-compliant implementation of Feature, Coverage and/or Observation Collection. The service endpoints are developed and aligned with the OGC Features API, OGC EDR API and the OGC Observations, Measurements & Sampling (OMSv3) standards respectively. The goal being to take advantage of these standards and specifications as an adapter to the custom encoding of each raw data source allowing for a predictable semantic relationship and a loosely-coupled distributed feature schema.
+
+This use case extends the concept of Analysis Ready Data to include processed data pipelines sourced from in-situ observation collections and sampling programs.  Raw data, such as NetCDF datasets provided through the NOAA Saildrone program for monitoring ocean conditions, are processed into an 'ARD' encoded using the OGC Moving Features specification, mf-json.  Extending the concept of ARD to include datasets sourced from non-satellite based observing platforms allows for a consistent view of important datasets independent of their originating platforms and associated processes and procedures.  Where possible, this use case applies the OGC OMSv3 concepts of Host, Observation and Observable collections over a common spatio-temporal coverage area to reduce raw data measurements to analysis ready data.
+
+The use case is modelled as a federated service employing a recognized schema compliant with OGC and/or external industry standards. A user query resolves each ECV to its source and combines the related feature and observation data into a 'decision ready dataset' for further exploration.
+
+.Storyline
+[example]
+As a user, I want to see the effect of rising sea surface temperatures, salinity and other key ECVs on local aquaculture production for my area of interest.
+
+In this use case, site information available through the Maine open data portal is used to define an area of interest. Related socio-economic variables for the area of interest and the topic are resolved against the state government's open data portal (GDP, employment metrics, etc.).  The area of interest is used to refine the ARD datasets applicable to the area and associated ECV measurements across the time period of interest are processed and aggregated using a weighted average approach. The net result is an indicator of the relationship between the set of ECV measurements as a trend with milestones representing the harvest yields for each defined time period.
+
+// TBD - include image showing ECV trends aligned with harvest yeilds on an annual basis
+
+==== Challenges, Resolutions & Lessons Learned
+* Spatial Resolution
+* Temporal Resolution
+* Pub/Sub Event Model
+* Provenance [ accuracy, reliability, peer-review, ...]
+* Map, Binning and Global Grids
+* Weighted relationships between observable properties and features of interest
+
+
+==== Future Work
+**Catalog Services**
+When combining EO observation datasets with in-situ observations and sampling programs, an inordinant amount of effort is required to find acceptable sources of ARD datasets.  Although individual organizations tend to align with the ISO 19115 metadata standard for describing ARD datasets, there is limited support apart from manual efforts to discover aligned ARD datasets provided across multiple providers.
+Recently, the OGC announced an effort to establish the GeoDCAT working group.  This effort, combined with efforts aligned with the OGC OMS SWG, would be beneficial if the goal is to address the requirement to harvest metadata across multiple providers in one 'centralized' service endpoint.
+
+**Temporal Resolution**
+Typically when addressing spatial analysis, the temporal resolution of the datasets is assumed to be aligned.  In the case of climate modelling and raw EO datasets, care must be taken to ensure the temporal resolution of the ARD aligns with the temporal dimension of in-situ observations, sampling programs, and real-world feature datasets.
+
+**Scalability**
+Considering the volume of data to describe climate trends specific to an area of interest, the methodology of how raw data through to ARD is loaded into a client environment needs to be addressed.  The integration framework in support of the above use case tends to instantiate local copies of raw data and ARD datasets into the compute environment for processing and analysis.  The OGC GeoDatacube initiative is well positioned to play a role in addressing the scalability requirements although it's unclear whether this approach addresses a loosely coupled, distributed data pipelines or requires local cacheing of datasets within the GDC processing workflow.
+
+
+
+
+// ==== Rising Sea Levels, Coastal Erosion and Storm Surge
+// TBD

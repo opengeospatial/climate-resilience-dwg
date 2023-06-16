@@ -4,10 +4,10 @@
 [width="90%",options="header"]
 |====================
 |Name |Organization |Role or Summary of contribution
-|Guy Schumann | RSS-Hydro | Lead ER Editor 
-|Albert Kettner | RSS-Hydro/DFO | Lead ER Editor 
+|Guy Schumann | RSS-Hydro | Lead ER Editor
+|Albert Kettner | RSS-Hydro/DFO | Lead ER Editor
 |Timm Dapper | Laubwerk GmbH |
-|Zhe Fang | Wuhan University | 
+|Zhe Fang | Wuhan University |
 |Hanwen Xu | Wuhan University |
 |Peng Yue | Wuhan University |
 |Dean Hintz | Safe Software, Inc. |
@@ -20,7 +20,7 @@
 |Jakub Walawender | Walawender, Jakub P. |
 | Eugene Yu | GMU |
 | Gil Heo | GMU |
-| Glenn Laughlin | Pelagis Data Solutions |
+| Glenn Laughlin | Pelagis Data Solutions | Coastal Resilience & Climate Adaptation
 | Patrick Dion | Ecere |
 | Tom Landry | Intact Financial Corporation |
 |Nils Hempelmann | OGC | Climate resilience Pilot Coordinator |
@@ -46,8 +46,10 @@ Open standards have always been a core strategy for Safe to better support data 
 
 Intact Financial Corporation (IFC) is the largest provider of Property & Casualty (P&C) insurance in Canada. Its purpose is to help people, businesses and society prosper in good times and be resilient in bad times [1]. The company has been on the front lines of climate change with our customers for more than a decade – getting them back on track and helping them adapt. As extreme weather is going to get worse over the next decade, Intact intends to double down on adapting to this changing environment and be better prepared for floods, wildfire and extreme heat [2].
 
-With close to 500 experts in data, artificial intelligence, machine learning and pricing, the Intact Data Lab has deployed almost 300 AI models in production to-date. It is focused on improving risk selection and making operations as efficient as possible while creating outstanding interactions with customers. Within Intact’s Data Lab, the Centre for Climate and Geospatial Analytics (CCGA) uses weather, climate, and geospatial data along with machine learning models and claims data to develop risk maps and other specialized products to the business. 
+With close to 500 experts in data, artificial intelligence, machine learning and pricing, the Intact Data Lab has deployed almost 300 AI models in production to-date. It is focused on improving risk selection and making operations as efficient as possible while creating outstanding interactions with customers. Within Intact’s Data Lab, the Centre for Climate and Geospatial Analytics (CCGA) uses weather, climate, and geospatial data along with machine learning models and claims data to develop risk maps and other specialized products to the business.
 
+=== About Pelagis
+Pelagis is an OceanTech venture located in Nova Scotia, Canada. Our foundation focuses on the application of open geospatial technology and standards designed to promote the sustainable use of our ocean resources. As a member of the Open Geospatial Consortium, we co-chair the Marine Domain Working Group responsible for developing a spatially-aware federated service model of marine and coastal ecosystems.
 
 [[clause-reference]]
 == Components
@@ -65,4 +67,3 @@ The figure below shows a high level workflow diagram that illustrates the intera
 [[ClimatePilotData2InformationFlow]]
 .High level workflow diagram that illustrates the interactions between data, models and the various components
 image::ClimatePilotData2InformationFlow.png[ClimatePilotData2InformationFlow]
-
