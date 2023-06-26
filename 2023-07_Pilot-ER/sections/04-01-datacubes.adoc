@@ -1,17 +1,17 @@
 //[[clause-reference]]
 
-== Raw data to datacubes 
+== Raw data to Datacubes 
 
 === Introduction
 
-Raw data and data cubes are two different forms of organizing and structuring data in the context of data analysis and data warehousing.
+Raw data and Datacubes are two different forms of organizing and structuring data in the context of data analysis and data warehousing.
 
 . Raw Data refers to the unprocessed, unorganized, and unstructured data that is collected or generated directly from various sources. It can include a variety of forms such as text, numbers, (geo) images, audio, video, or any other form of data. Raw data often lacks formatting or context and requires further processing or manipulation before it can be effectively analyzed or used for decision-making purposes. Raw data is typically stored in databases or data storage systems.
-. Data Cubes, also known as multidimensional cubes are a structured form of data representation that organizes and aggregates raw data into a multi-dimensional format. Data cubes are designed to facilitate efficient and fast analysis of data from different dimensions or perspectives. They are commonly used in data warehousing.
+. Datacubes, also known as multidimensional cubes are a structured form of data representation that organizes and aggregates raw data into a multi-dimensional format. Datacubes are designed to facilitate efficient and fast analysis of data from different dimensions or perspectives. They are commonly used in data warehousing.
 
-Data cubes organize data into a multi-dimensional structure typically comprising dimensions, hierarchies, and cells. Dimensions represent various attributes or factors that define the data, such as time, geography, or products. Hierarchies represent the levels of detail within each dimension. Cells typically store the aggregated data values at the intersection of dimensions.
+Datacubes organize data into a multi-dimensional structure typically comprising dimensions, hierarchies, and cells. Dimensions represent various attributes or factors that define the data, such as time, geography, or products. Hierarchies represent the levels of detail within each dimension. Cells typically store the aggregated data values at the intersection of dimensions.
 
-Data cubes enable users to perform complex analytical operations like slicing, dicing, drilling down, or rolling up data across different dimensions. They provide a summarized and pre-aggregated view of data that can significantly speed up query processing and analysis compared to working directly with raw data, something that is very valuable for the climate resilience community. Therefore, Data cubes are often used to support decision-making processes. The example below highlights an climate resilience related example of how to create and make available data cubes for wildfire risk analysis.
+Datacubes enable users to perform complex analytical operations like slicing, dicing, drilling down, or rolling up data across different dimensions. They provide a summarized and pre-aggregated view of data that can significantly speed up query processing and analysis compared to working directly with raw data, something that is very valuable for the climate resilience community. Therefore, Datacubes are often used to support decision-making processes. The example below highlights an climate resilience related example of how to create and make available Datacubes for wildfire risk analysis.
 
 
 //=== Jakub P. Walawender
