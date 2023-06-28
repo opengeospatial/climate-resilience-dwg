@@ -1,29 +1,92 @@
 //[[clause-reference]]
-== Pathways to a shared understanding of climate impacts at the local level (alpS)
+== Pathways to a shared understanding of climate impacts at the local level - stakeholders as a starting point for processing climate information (alpS)
 
 Climate change is happening, and mitigation efforts will simply not be enough  to tackle its impacts. Thus, climate action, mitigation as well as adaptation, at the local level is needed. The alpS GmbH supports communities, regions, and industrial partners in their sustainable development and in dealing with the consequences, opportunities, and risks of climate change. Over the last 20 years alpS has worked with more than 250 municipalities and industrial partners.
 
-In the understanding of alpS, climate change consultancy services are successful, if they trigger the implementation of proactive measures that are supported by a large part of actors. However, the degree of effectiveness of the consultancy services of alpS as a function of various communication methods (e. g. intro presentations including processed local climate data, information processing, moderation techniques, discussion tools) and scientific know-how has never been systematically investigated. In the pilot project, alpS therefore evaluated its inventory of methods used in its climate change adaptation workshops. From the results, a guide is currently developed to help find an appropriate workshop setup. The guide will be illustrated with best practice examples and tested in ongoing consultations. First steps in improving communication are already being implemented.
+In the understanding of alpS, climate change consultancy services are successful, if they trigger the implementation of proactive measures that are supported by a large part of actors. However, the degree of effectiveness of the consultancy services of alpS as a function of various communication methods (e. g. intro presentations including processed local climate data, information processing, moderation techniques, discussion tools) and scientific know-how has never been systematically investigated. In the pilot project, alpS therefore evaluated its inventory of methods used in its climate change adaptation workshops and started with the improvement of the workshop setup and aspects of communication.
+
+In addition, during the course of this Climate Resilience Pilot, the importance of stakeholder participation became apparent. At the final workshop in Huntsville, all participants agreed that there needs to be more focus on stakeholder engagement and that questions should come from the stakeholders rather than the raw data. This would put communication with stakeholders at the center of the upcoming phases of the project.
+
+=== Climate adaptation processes
+One way to introduce adaptation processes is to frame them as a cycle. It starts with the evaluation of past, present and future climatic conditions to define the exposure of a system to the impacts of climate change. Assessing the sensitivity of a system towards the impacts of climate change with local experts based on the exposure forms the second step. Thus, the vulnerability of a system results from its exposure and sensitivity, on the basis of which targeted adaptation measures can be implemented. Finally, the fifth stage is monitoring and evaluation. At this point the cycle starts over again. In the entire  program, the focus is on supporting the communities to secure the living and economic space at the local level, which requires a well-founded assessment of the climate risks supported by local experts. The aim is to minimize risks, take necessary measures and raise awareness of precautionary planning, especially with regard to the consequences of climate change.
+
+The conducted evaluation focuses on one participatory element of adaptation cycles, the vulnerability assessment workshops. The workshops aim to initiate stakeholder participation, raise local awareness of climate change impacts, gather expert input on sensitivity and implement an adaptation process that is widely accepted. 
 
 === Approach
 alpS conducted a structured evaluation of available datasets of participatory processes with the aim to improve the level of information about climate change impacts and to identify the broadest accepted way of presenting user-related scientific statements. The assessment of adaptation cycles at different spatial levels allowed the further development and improvement of suitable interoperable solutions.
 
-First, a set of questions was developed to measure the success of vulnerability workshops.  This involved developing questions on workshop content (e.g., climate information, methodological approach) and permanence (e.g., adaptation measures implemented), in addition to external factors that influence workshop outcomes (e.g., political backing, human resources, time spent, financial commitment to adaptation, geographic conditions). Using a three-step process, workshop participants were surveyed before the workshop, immediately after the workshop, and six months after the workshop. As part of a pre-test, communities were surveyed that were just before or after a workshop at the time of the Climate Resilience Pilot, or where six months had already passed.
+A set of questions was developed to measure the success of vulnerability workshops.  This involved developing questions on workshop content (e.g., climate information, methodological approach) and permanence (e.g., adaptation measures implemented), in addition to external factors that influence workshop outcomes (e.g., political backing, human resources, time spent, financial commitment to adaptation, geographic conditions). 
 
-(Three-part questionnaire in German language could be attached here)
+In a three-stage process, workshop participants were surveyed before the workshop, immediately after the workshop, and six months after the workshop. The following figure provides an overview of the survey process (Figure 1). In total, six communities or regions were asked for a pilot survey. Three of the communities and regions were interviewed shortly before the workshop, one community was interviewed immediately after a workshop implementation and two communities and regions were interviewed more than six months after their workshop participation. In order to supplement the comparatively small pilot survey, experiences from previous consulting cycles are also taken into account in the following.
 
-=== Steps in improving communication
-In the current workshop design of the vulnerability workshops of alpS, local climate impacts are assessed on a matrix. The responses from workshop participants highlighted the importance of clear, unambiguous, and simple language when communicating climate impacts. Inspired by the responses of the workshop participants, the wording of climate impacts was optimized and broken down in the context of an impact chain from climatic influence to first-order climate impacts to further climate impacts.
+.Three-part questionnaire
+image::images/alps_quest.png[images/alps_quest, 700]
 
-(Graphic of the developed climate impact chain for a field of action follows)
+=== Main results
+
+In all surveyed municipalities or regions, it could be shown that the assessment of climate impacts has to be done on the local level. Regional adaptation strategies and climate information provide a good overview and starting point for the municipal level, but especially for topographically heterogeneous areas such as mountainous areas. It is therefore necessary to reassess climate impacts from a community perspective, taking into account the local risk landscape. A detailed consideration of the risks and the subsequent intersection of risks with the consequences of climate change promote awareness, clarify the community's concern and facilitate the implementation of measures due to safety aspects. For this, climate infomation must be prepared accordingly. Climate data must not be too complicated, but should not leave anything out. Especially climate impacts for which the community's sensitivity is assessed in the vulnerability workshop by local actors must be  accurate, consistent and not duplicative. To achieve this, the climate impact chain will be introduced in the next section.
+
+The breadth of content in initiating adaptation measures often leads to overburdening the community. The limitation to selected climate impacts is achieved through the identification of adaptation needs. This leads to the necessary focus on a few but urgent adaptation measures. The elaboration of measures has to be done individually and in consideration of the communities' ideas. Showing good examples of adaptation is useful and provides inspiration, however, in surveyed communities and regions mostly new measures were developed, which are exactly tailored to local conditions and needs. Necessary measures can partly be implemented directly by the municipality or only in cooperation with other actors (landowners, other municipalities, etc.). Both the development of measures and the process support have to be carried out against this background.
+
+Supporting communities all the way through to implemented measures is considered essential, as is collaboration among various locally based organizations and neutral, science-based external support that conveys seriousness and increases stakeholder confidence in the adaptation process. In addition, an active (contact) person with sufficient time resources is needed in each community to bring together the relevant actors and to follow up the topic beyond the events. Only in this way successful adaptation can take place.
 
 
+=== Improvement of the workshop setup and aspects of communication
+As part of the Climate Resilience Pilot, alpS was able to optimize two aspects in the adaptation process. The creation of climate impact chains for different sectors is a response to the results of the survey. The climate impact chain improves consitency and the understanding of climate impacts. A second aspect is the guideline to deal with external factors. This improvement could be introduced in the course of the questionnaire creation. The pretest conducted before the workshop, which specifically asks about these external factors, enables a direct response and preparation for dealing with not controllable factors in the process.
+
+
+==== Climate Impact Chain
+In the current workshop design of the vulnerability workshops of alpS, local climate impacts are assessed on a matrix. The responses from workshop participants highlighted the importance of clear, unambiguous, and simple language when communicating climate impacts. Inspired by the responses of the workshop participants, the wording of climate impacts was optimized and broken down in the context of an impact chain from climatic effect  to direct and indirect climate impacts (Figure 2). Thus, it is easy to understand which climatic effects drive climate impacts. This facilitates the data-driven assessment of the exposure of individual communities.
+
+
+.Climate impact chain for the forestry sector
+image::images/alps_chain.png[]
+
+==== Dealing with not controlled external influences
+Conducting a vulnerability assessment workshop as part of the adaptation process is a complex sub-process. Its success depends on many factors, some of which are controlled by the moderator but others are not. The latter are here called “external factors” and encompass influences and motivations of individual participants. The identification of the relevant external factors is important because if the existence and markedness of external factors for a particular workshop is known, adequate predefined responses can be implemented to better control the sub-process.
+
+Indeed, the question of what motivates climate change adaptation behavior is widely discussed in literature. In a meta-analysis over 106 studies van Valkengoed, A., & Steg, L. (2019) investigate the relationship between adaptation behavior of households and 13 motivational factors. These factors are included in various theoretical frameworks but are rather generalized and not concrete enough to be taken into account here. In fact, anything that influences the workshop participants can have an impact on the workshop outcome and could therefore be called a factor. However, in order to keep the application of the guideline practicable, the catalog of external factors is limited to the key factors, which in addition should also be easy to research and observe. 
+
+The evaluation of the existence and markedness of external factors on the basis of the compiled catalog needs to be performed from the participants’ perspective: How strongly do they (consciously or subconsciously) perceive an external influence. And does this external influence meet with an optimistic or pessimistic basic attitude? Are the participants rather jaded or thin-skinned?
+
+We have learned that it is a good possibility to gather information about the background and motivation of individual participants in preparatory talks with the organizer.
+
+Catalog of external factors:
+
+1.	Natural space the municipality / company is located in:
+2.	Number of inhabitants / number of employees: 
+3.	Vulnerabilities are known that are affected by climate change:
+a.	strong dependence on a few infrastructures
+b.	strong dependence on a few companies / sectors of the economy
+c.	demographic characteristics
+d.	shortages in emergency responses
+4.	The municipality / company depends on its neighbors to carry out its adaptation measures (e.g. upstream/downstream riparian community set of problems).
+5.	In case of a suffered catastrophe (here or elsewhere): Have neglected precautions  led to legal or political consequences ?
+6.	The municipality / company has experience with weather extremes or unusual seasonal conditions.
+7.	The municipality / company is affected by other geophysical, geopolitical, social or economic crises.
+8.	The handling of climate change in the media is present.
+9.	Political backing is given.
+10.	Provided human resources are sufficient.
+11.	Monetary commitment for climate adaptation is sufficient.
+12.	Participants are legally obligated to take precautions.
+13.	Risks of increased devaluation of real estate, equity investments, property, plant and equipment as well as increased depreciation, interest and insurance costs exist.
+14.	Participants recognize different needs, advantages and benefits.
+15.	Individuals are willing to take responsibility.
+16.	Different perception of the environment: outdoor professionals (e.g. farmers, foresters) as well as indoor professionals are participating.
+17.	Different levels of knowledge: accepted experts for individual topics (e.g. infrastructure, public health) are participating.
+
+
+=== Outlook
+Overall, the consensus at the Closing Workshop in Huntsville was to focus more on stakeholder participation and to start from the stakeholders' questions instead of the raw data. alpS is experienced in implementing and guiding participatory processes. In the coming project phase, alpS could offer a concept that enables data providers to identify their stakeholders, jointly define questions and collect targeted feedback.
+
+
+=== Summary
 - Component: Climate communication and support for adaptation.
 
-- Inputs: Selected climate indicators (past and future, different scenarios), cartographic data (hazard zones, hq areas, etc.), existing plans, strategies and concepts (regional development plans, climate protection strategies, previous analyses).
+- Inputs: Selected climate indicators (past and future, different scenarios), cartographic data (hazard zones, hq areas, etc.), existing plans, strategies and concepts (regional development plans, climate protection strategies, previous analyses), and most important local climate and resilience information from stakeholders.
 
-- Outputs: Target group-specific communication material (factsheets, graphs), description of the vulnerability and visualization of risk maps, adaptation measures, strategies for adaptation to climate change. In the context of this pilot alpS will elaborate a guideline that helps to find a proper workshop-setup. alpS will illustrate the guideline with two to three best practice examples. As far as possible, alpS will test its findings in ongoing consultancies.
+- Outputs: Target group-specific communication material (factsheets, graphs), description of the vulnerability and visualization of risk maps, adaptation measures, strategies for adaptation to climate change. In the context of this pilot alpS improved its communication methods and shared its findings to allow the Climate Community to copy and transform as many use-cases as possible to other locations or framework condition.
 
-- What other component(s) can interact with the component: All components that deliver dri.
+- What other component(s) can interact with the component: All components that deliver dri. Also, any component that needs user feedback or a test group, or that wants to develop data as part of a participatory process.
 
-- What OGC standards or formats does the component use (and produce): Processed local climate data, NetCDF.
+- What OGC standards or formats does the component use and produce: Processed local climate data, NetCDF.
