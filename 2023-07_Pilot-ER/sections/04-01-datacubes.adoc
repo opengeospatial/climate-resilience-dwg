@@ -2,8 +2,6 @@
 
 == Raw data to Datacubes 
 
-=== Introduction
-
 Raw data and Datacubes are two different forms of organizing and structuring data in the context of data analysis and data warehousing.
 
 . Raw Data refers to the unprocessed, unorganized, and unstructured data that is collected or generated directly from various sources. It can include a variety of forms such as text, numbers, (geo) images, audio, video, or any other form of data. Raw data often lacks formatting or context and requires further processing or manipulation before it can be effectively analyzed or used for decision-making purposes. Raw data is typically stored in databases or data storage systems.
