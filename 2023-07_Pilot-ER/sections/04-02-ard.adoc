@@ -240,7 +240,7 @@ Initially it was thought that classification rules need to more closely model im
 
 [[FME_ARD_Workflow_MB_precip]]
 .Modified ARD Worflow: NetCDF data cube to precipitation point time series in Geopackage for Manitoba
-image::FME_ARD_Workflow_MB_precip.png[FME_ARD_Workflow_MB_precip]]
+//image::FME_ARD_Workflow_MB_precip.png[FME_ARD_Workflow_MB_precip]]
 
 Modified ARD Data workflow:
 - Split data cube
