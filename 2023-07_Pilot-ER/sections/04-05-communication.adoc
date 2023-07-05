@@ -21,7 +21,7 @@ A set of questions was developed to measure the success of vulnerability worksho
 In a three-stage process, workshop participants were surveyed before the workshop, immediately after the workshop, and six months after the workshop. The following figure provides an overview of the survey process (Figure 1). In total, six communities or regions were asked for a pilot survey. Three of the communities and regions were interviewed shortly before the workshop, one community was interviewed immediately after a workshop implementation and two communities and regions were interviewed more than six months after their workshop participation. In order to supplement the comparatively small pilot survey, experiences from previous consulting cycles are also taken into account in the following.
 
 .Three-part questionnaire
-image::/alps_quest.png[images/alps_quest, 700]
+image::alps_quest.png[ /alps_quest, 700]
 
 === Main results
 
@@ -41,7 +41,7 @@ In the current workshop design of the vulnerability workshops of alpS, local cli
 
 
 .Climate impact chain for the forestry sector
-image::images/alps_chain.png[]
+image::alps_chain.png[]
 
 ==== Dealing with not controlled external influences
 Conducting a vulnerability assessment workshop as part of the adaptation process is a complex sub-process. Its success depends on many factors, some of which are controlled by the moderator but others are not. The latter are here called “external factors” and encompass influences and motivations of individual participants. The identification of the relevant external factors is important because if the existence and markedness of external factors for a particular workshop is known, adequate predefined responses can be implemented to better control the sub-process.
