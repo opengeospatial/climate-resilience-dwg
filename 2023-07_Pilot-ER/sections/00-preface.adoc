@@ -1,28 +1,2 @@
 
-////
-Preface sections must include [.preface] attribute
-in order to get them placed in the preface area (and not in the main content).
-
-Keywords specified in document preamble will display in this area
-after the abstract
-////
-:TOC:
-
-[.preface]
-== Executive Summary
-
-// Insert executive summary content including subsections as needed
-
-The OGC Climate Resilience Community brings decision makers, scientists, policy makers, data providers, software developers, and service providers together. The goal is to enable everyone to take the relevant actions to address climate change and make well informed decisions for climate change adaptation. 
-
-This pilot brought together data and processing pipelines in the form of various 'components' from lots of organizations, available at different scales for large and small areas to be integrated with scientific processes, analytical models, and simulation environments. These were all pesented, including challenges. No single organization has all the data we need to understand the consequences of climate change. As such, the OGC Climate Resilience Pilot identified, discussed, and developed these resources a bit further in a first attempt, thereby enabling the OGC community to start building the guidebooks and Best Practices. This pilot also experimented with new technologies to share data and information to collaboratively start addressing shared challenges.
-
-This pilot sets the starting point for the OGC Climate Resilience Community's vision to support efforts on climate actions and enable international partnerships (SDG 17), and move towards global interoperable open digital infrastructures providing climate resilience information on users demand. In this sense, this pilot contributes to establishing an OGC climate resilience concept store for the community where all appropriate climate information to build climate resilience information systems as open infrastructures can be found in one place, be it Information about data services, tools, software, handbooks, or a place to discuss experiences and needs. The concept store covers all phases of Climate Resilience, from initial hazards identification and mapping to vulnerability and risk analysis to options assessments, prioritization, and planning, and ends with implementation planning and monitoring capabilities. 
-
-Broadly speaking, this pilot attempts to answer questions such as:
-
-- What use-cases can be realized with the current data, services, analytical functions, and visualization capabilities that we have?
-- How much effort is it to realize these use-cases?
-- What is missing, or needs to be improved, in order to transfer the use-cases developed in the pilot to other areas?
-
-[.preface]
+//Took this out (we had a double executive summary)

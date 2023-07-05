@@ -37,7 +37,7 @@
 
 // Clauses
 include::sections/00-executive-summary.adoc[]
-include::sections/00-preface.adoc[]
+//include::sections/00-preface.adoc[] (taken out, contained also a executive-summary)
 include::sections/01-introduction.adoc[]
 include::sections/01-01-contributors_components.adoc[]
 include::sections/04-01-datacubes.adoc[]
