@@ -52,7 +52,7 @@ Good experiences have been made using OGC API standards in the past. For example
 image::FAIR_Data_Spaces.png[]
 .Schematic Architecture of a Climate Resilience Information System. By respecting FAIR principles for the Climate Building Blocks the architecture enables open infrastructures to produce and deliver information on demand of the users needs
 
-=== ECMWF - Copernicus (will be integrated with INTRODUCTION section)
+=== ECMWF - Copernicus 
 
 - Component: Copernicus services.
 
