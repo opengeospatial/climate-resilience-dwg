@@ -1,8 +1,6 @@
 
 //[[clause-reference]]
-== Pathways to a shared understanding of climate impacts at the local level
-
-Stakeholders as a starting point for processing climate information (alpS)
+== Pathways to a shared understanding of climate impacts at the local level - Stakeholders as a starting point for processing climate information (alpS)
 
 Climate change is happening, and mitigation efforts will simply not be enough  to tackle its impacts. Thus, climate action, mitigation as well as adaptation, at the local level is needed. The alpS GmbH supports communities, regions, and industrial partners in their sustainable development and in dealing with the consequences, opportunities, and risks of climate change. Over the last 20 years alpS has worked with more than 250 municipalities and industrial partners.
 
@@ -60,27 +58,27 @@ We have learned that it is a good possibility to gather information about the ba
 
 Catalog of external factors:
 
-1.	Natural space the municipality / company is located in:
-2.	Number of inhabitants / number of employees: 
-3.	Vulnerabilities are known that are affected by climate change:
-a.	strong dependence on a few infrastructures
-b.	strong dependence on a few companies / sectors of the economy
-c.	demographic characteristics
-d.	shortages in emergency responses
-4.	The municipality / company depends on its neighbors to carry out its adaptation measures (e.g. upstream/downstream riparian community set of problems).
-5.	In case of a suffered catastrophe (here or elsewhere): Have neglected precautions  led to legal or political consequences ?
-6.	The municipality / company has experience with weather extremes or unusual seasonal conditions.
-7.	The municipality / company is affected by other geophysical, geopolitical, social or economic crises.
-8.	The handling of climate change in the media is present.
-9.	Political backing is given.
-10.	Provided human resources are sufficient.
-11.	Monetary commitment for climate adaptation is sufficient.
-12.	Participants are legally obligated to take precautions.
-13.	Risks of increased devaluation of real estate, equity investments, property, plant and equipment as well as increased depreciation, interest and insurance costs exist.
-14.	Participants recognize different needs, advantages and benefits.
-15.	Individuals are willing to take responsibility.
-16.	Different perception of the environment: outdoor professionals (e.g. farmers, foresters) as well as indoor professionals are participating.
-17.	Different levels of knowledge: accepted experts for individual topics (e.g. infrastructure, public health) are participating.
+. Natural space the municipality / company is located in:
+. Number of inhabitants / number of employees: 
+. Vulnerabilities are known that are affected by climate change:
+.. strong dependence on a few infrastructures
+.. strong dependence on a few companies / sectors of the economy
+.. demographic characteristics
+.. shortages in emergency responses
+. The municipality / company depends on its neighbors to carry out its adaptation measures (e.g. upstream/downstream riparian community set of problems).
+. In case of a suffered catastrophe (here or elsewhere): Have neglected precautions  led to legal or political consequences ?
+. The municipality / company has experience with weather extremes or unusual seasonal conditions.
+. The municipality / company is affected by other geophysical, geopolitical, social or economic crises.
+. The handling of climate change in the media is present.
+. Political backing is given.
+. Provided human resources are sufficient.
+. Monetary commitment for climate adaptation is sufficient.
+. Participants are legally obligated to take precautions.
+. Risks of increased devaluation of real estate, equity investments, property, plant and equipment as well as increased depreciation, interest and insurance costs exist.
+. Participants recognize different needs, advantages and benefits.
+. Individuals are willing to take responsibility.
+. Different perception of the environment: outdoor professionals (e.g. farmers, foresters) as well as indoor professionals are participating.
+. Different levels of knowledge: accepted experts for individual topics (e.g. infrastructure, public health) are participating.
 
 
 === Outlook
