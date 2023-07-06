@@ -88,12 +88,8 @@ Overall, the consensus at the Closing Workshop in Huntsville was to focus more o
 
 === Summary
 
-- Component: Climate communication and support for adaptation.
-
-- Inputs: Selected climate indicators (past and future, different scenarios), cartographic data (hazard zones, hq areas, etc.), existing plans, strategies and concepts (regional development plans, climate protection strategies, previous analyses), and most important local climate and resilience information from stakeholders.
-
-- Outputs: Target group-specific communication material (factsheets, graphs), description of the vulnerability and visualization of risk maps, adaptation measures, strategies for adaptation to climate change. In the context of this pilot alpS improved its communication methods and shared its findings to allow the Climate Community to copy and transform as many use-cases as possible to other locations or framework condition.
-
-- What other component(s) can interact with the component: All components that deliver dri. Also, any component that needs user feedback or a test group, or that wants to develop data as part of a participatory process.
-
-- What OGC standards or formats does the component use and produce: Processed local climate data, NetCDF.
+* Component: Climate communication and support for adaptation.
+* Inputs: Selected climate indicators (past and future, different scenarios), cartographic data (hazard zones, hq areas, etc.), existing plans, strategies and concepts (regional development plans, climate protection strategies, previous analyses), and most important local climate and resilience information from stakeholders.
+*  Outputs: Target group-specific communication material (factsheets, graphs), description of the vulnerability and visualization of risk maps, adaptation measures, strategies for adaptation to climate change. In the context of this pilot alpS improved its communication methods and shared its findings to allow the Climate Community to copy and transform as many use-cases as possible to other locations or framework condition.
+*  What other component(s) can interact with the component: All components that deliver dri. Also, any component that needs user feedback or a test group, or that wants to develop data as part of a participatory process.
+* What OGC standards or formats does the component use and produce: Processed local climate data, NetCDF.
