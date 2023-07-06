@@ -131,24 +131,9 @@ Each of these activities aligns with the best practices and standards of the OGC
 .Architecture
 image::pelagis.architecture(1).svg[Pelagis-architecture, ,align=center, width=600]
 
-=== ECMWF - Copernicus (will be integrated with INTRODUCTION section)
+=== DRI: Heat Impact and Drought Impact Components - Safe Software
 
-- Component: Copernicus services.
-
-- Outputs: Copernicus Services, including Climate Data Store (CDS) https://cds.climate.copernicus.eu/ and Atmosphere Data Store (ADS) https://ads.atmosphere.copernicus.eu/.
-
-- What other component(s) can interact with the component: CDS and ADS provide access to data via different interfaces: UI and API. It also offers a toolbox with a set of expert libraries to perform advanced operations on the available data. CDS and ADS catalogue metadata is also accessible via standard CSW. https://cds.climate.copernicus.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-
-- What OGC standards or formats does the component use and produce:
-  * CDS and ADS catalogues exposed via CSW.
-  * Access to ESGF datasets via WPS.
-  * WMS is offered in some published applications.
-  * CADS 2.0 (under construction) will implement OGC APIs.
-
-
-==== DRI: Heat Impact and Drought Impact Components - Safe Software
-
-===== Heat Impact DRI Component
+==== Heat Impact DRI Component
 
 This component takes the climate scenario summary ARD results from the ARD component and analyzes them to derive estimated heat impacts over time, based on selected climate scenarios. Central to this is the identification of key heat impact indicators required by decision makers and the business rules needed to drive them. Process steps include data aggregation and statistical analysis of maximum temperature spikes, taking into account the cumulative impacts of multiple high temperature days. Heat exhaustion effects are likely dependent on duration of heat spells, in addition to high maximum temperatures on certain days.
 
@@ -164,7 +149,7 @@ image::SafeSoftware_7.png[SafeSoftware_7]
 .Town of Lytton - location where entire town was devastated by fire during the heat wave of July 2021 - same location highlighted in ARD query from heat risk query in previous figure
 image::SafeSoftware_8.png[SafeSoftware_8]
 
-===== Drought Impact DRI Component
+==== Drought Impact DRI Component
 
 This component takes the climate scenario summary ARD results from the ARD component and analyzes them to derive estimated drought risk impacts over time based on selected climate scenarios. It also feeds drought related environmental factors to other pilot DRI components for more refined drought risk analysis. For the purposes of this pilot, it was recognised that more complex indicators such as drought are likely driven by multiple environmental and physical factors. As such, our initial goal was to select and provide primary climate variable data that would be useful for deriving drought risks in combination with other inputs. Given that the primary input to drought models is precipitation, or lack thereof, we developed a data flow that extracted total precipitation per month and made this available both as a time series CSV and GeoJSON datasets, as well as OGC API features time series points. This climate scenario primary drought data was provided for the province of Manitoba and for Los Angelas. These two regions were chosen since we had pilot participants interested in each of these regions and in the case of Manitoba there is also a tie in to future work as this is an area of interest for the subsequent Disaster Pilot 2023.
 
