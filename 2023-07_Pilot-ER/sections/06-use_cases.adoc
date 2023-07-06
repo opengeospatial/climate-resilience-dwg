@@ -311,7 +311,7 @@ Ignition zones can be seen as interfaces between individual homes or structures,
 
 [[Figure2_Intact]]
 .Wildland-Urban Interface for Canada, on the left. Extraction of the WUI using satellite-derived imagery, on the right. [5]
-image::Figure2_Intact.jpg[Figure2_Intact]
+image::Figure2_Intact.png[Figure2_Intact]
 
 A more comprehensive view of the WUI considers industrial areas as well public infrastructures, such as power lines and railroads. This area is called the Wildland-Human Interface (WHI) and covers 13.0% of the national land. It is estimated that within the WHI, 19.4% of the area is in zone of wildfire recurrence ≤250 years [4]. By the end of the century, this number could increase to 28.8% under Representative Concentration Pathway (RCP) 2.6 low emissions scenario, and to 43.3% under RCP 8.5 high emissions scenario. Integrating WUI in climate scenarios can help conduct portfolio stress testing and evaluate future risk.
 
