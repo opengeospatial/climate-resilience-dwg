@@ -49,7 +49,7 @@ This OGC Climate Resilience Pilot is part of the OGC Climate Community Collabora
 
 Good experiences have been made using OGC API standards in the past. For example, the remote operations on climate simulations (roocs) use OGC API Processes for subsetting data sets to reduce the data volume being transported. Other systems use OGC STAC for metadata and data handling or OGC Earth Observation Exploitation Platform Best Practices for the deployment of climate building blocks or applications into CRIS architectures. Still data handling regarding higher complex climate impact assessments within FAIR and open infrastructures needs to be enhanced. There is no international recommendation or best practice on usage of existing API standards within individual CRIS. It is the goal of this pilot to contribute to the development of such a recommendation, respecting existing operational CRIS that are serving heterogen user groups
 
-image::FAIR_Data_Spaces.jpg[]
+image::FAIR_Data_Spaces.png[]
 .Schematic Architecture of a Climate Resilience Information System. By respecting FAIR principles for the Climate Building Blocks the architecture enables open infrastructures to produce and deliver information on demand of the users needs
 
 === Climate Indices
