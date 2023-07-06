@@ -21,8 +21,8 @@ A set of questions was developed to measure the success of vulnerability worksho
 
 In a three-stage process, workshop participants were surveyed before the workshop, immediately after the workshop, and six months after the workshop. The following figure provides an overview of the survey process (Figure 1). In total, six communities or regions were asked for a pilot survey. Three of the communities and regions were interviewed shortly before the workshop, one community was interviewed immediately after a workshop implementation and two communities and regions were interviewed more than six months after their workshop participation. In order to supplement the comparatively small pilot survey, experiences from previous consulting cycles are also taken into account in the following.
 
-//.Three-part questionnaire
-//image::alps_quest.png[]
+.Three-part questionnaire
+image::alps_quest.png[]
 
 === Main results
 
@@ -43,8 +43,8 @@ As part of the Climate Resilience Pilot, alpS was able to optimize two aspects i
 In the current workshop design of the vulnerability workshops of alpS, local climate impacts are assessed on a matrix. The responses from workshop participants highlighted the importance of clear, unambiguous, and simple language when communicating climate impacts. Inspired by the responses of the workshop participants, the wording of climate impacts was optimized and broken down in the context of an impact chain from climatic effect  to direct and indirect climate impacts (Figure 2). Thus, it is easy to understand which climatic effects drive climate impacts. This facilitates the data-driven assessment of the exposure of individual communities.
 
 
-//.Climate impact chain for the forestry sector
-//image::alps_chain.png[]
+.Climate impact chain for the forestry sector
+image::alps_chain.png[]
 
 ==== Dealing with not controlled external influences
 
