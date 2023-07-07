@@ -1,6 +1,6 @@
 
 //[[clause-reference]]
-== Pathways to a shared understanding of climate impacts at the local level - Stakeholders as a starting point for processing climate information (alpS)
+== Climate information and communication with stakeholders (alpS)
 
 Climate change is happening, and mitigation efforts will simply not be enough  to tackle its impacts. Thus, climate action, mitigation as well as adaptation, at the local level is needed. The alpS GmbH supports communities, regions, and industrial partners in their sustainable development and in dealing with the consequences, opportunities, and risks of climate change. Over the last 20 years alpS has worked with more than 250 municipalities and industrial partners.
 
@@ -81,7 +81,7 @@ Catalog of external factors:
 . Different levels of knowledge: accepted experts for individual topics (e.g. infrastructure, public health) are participating.
 
 
-=== Outlook
+=== Outlook: Stakeholders as a starting point for processing climate information
 
 Overall, the consensus at the Closing Workshop in Huntsville was to focus more on stakeholder participation and to start from the stakeholders' questions instead of the raw data. alpS is experienced in implementing and guiding participatory processes. In the coming project phase, alpS could offer a concept that enables data providers to identify their stakeholders, jointly define questions and collect targeted feedback.
 
