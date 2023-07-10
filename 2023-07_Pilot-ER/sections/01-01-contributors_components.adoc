@@ -13,7 +13,7 @@
 |Dean Hintz | Safe Software, Inc. |
 |Kailin Opaleychuk | Safe Software, Inc. |
 |Jérôme Jacovella-St-Louis | Ecere Corporation |
-|Hanna Krimm | alpS GmbH |
+|Hanna Krimm | alpS GmbH | Communication with stakeholders
 |Andrew Lavender | Pixalytics Ltd | Development of drought indicator
 |Samantha Lavender | Pixalytics Ltd | Development of drought indicator
 |Jenny Cocks | Pixalytics Ltd | Development of drought indicator
@@ -58,6 +58,10 @@ With close to 500 experts in data, artificial intelligence, machine learning and
 ==== About Pelagis
 
 Pelagis is an OceanTech venture located in Nova Scotia, Canada. Our foundation focuses on the application of open geospatial technology and standards designed to promote the sustainable use of our ocean resources. As a member of the Open Geospatial Consortium, we co-chair the Marine Domain Working Group responsible for developing a spatially-aware federated service model of marine and coastal ecosystems.
+
+==== About alpS
+
+The alpS GmbH is an international engineering and consulting firm that supports companies, municipalities, and governments in their sustainable development and in dealing with the consequences, opportunities, and risks of climate change. Over the last 20 years alpS has worked with more than 250 municipalities and industrial partners. alpS accompanied a large number of adaptation cycles from vulnerability assessments to the implementation of adaptation measures and their evaluation.
 
 [[clause-reference]]
 
