@@ -8,6 +8,7 @@ Being the first OGC Climate Pilot, there has been significant underpinning work 
 During the pilot, participants agreed to the following items were specific actions where future work would be needed:
 
 - Further integration of the contributor components so that full workflows, from raw data to visualization and communication, can be tested.
+- Make stakeholders the starting point for processing climate information and start from stakeholder questions rather than raw data.
 - Exploring additional scenario tests including comparisons with historical norms, e.g. calculating the difference between historical maximum temperatures and projected maximum temperatures. 
 - More analysis with higher resolution time steps - weekly and daily. At the outset monthly time steps have been used to make it easier to prototype workflows. Daily time step computations will take significantly more processing time.
 
