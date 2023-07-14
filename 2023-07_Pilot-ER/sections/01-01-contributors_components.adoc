@@ -12,7 +12,8 @@
 |Peng Yue | Wuhan University |
 |Dean Hintz | Safe Software, Inc. |
 |Kailin Opaleychuk | Safe Software, Inc. |
-|Jérôme Jacovella-St-Louis | Ecere Corporation |
+|Jérôme Jacovella-St-Louis | Ecere Corporation | Datacube API client and server
+|Patrick Dion | Ecere Corporation | Datacube API client and server
 |Hanna Krimm | alpS GmbH |
 |Andrew Lavender | Pixalytics Ltd | Development of drought indicator
 |Samantha Lavender | Pixalytics Ltd | Development of drought indicator
@@ -21,7 +22,6 @@
 | Eugene Yu | GMU |
 | Gil Heo | GMU |
 | Glenn Laughlin | Pelagis Data Solutions | Coastal Resilience & Climate Adaptation
-| Patrick Dion | Ecere |
 | Tom Landry | Intact Financial Corporation |
 |Nils Hempelmann | OGC | Climate resilience Pilot Coordinator |
 
@@ -58,6 +58,16 @@ With close to 500 experts in data, artificial intelligence, machine learning and
 ==== About Pelagis
 
 Pelagis is an OceanTech venture located in Nova Scotia, Canada. Our foundation focuses on the application of open geospatial technology and standards designed to promote the sustainable use of our ocean resources. As a member of the Open Geospatial Consortium, we co-chair the Marine Domain Working Group responsible for developing a spatially-aware federated service model of marine and coastal ecosystems.
+
+==== About Ecere
+
+Ecere is a small software company located in Gatineau, Québec, Canada.
+Ecere develops the https://ecere.ca/gnosis[GNOSIS cross-platform suite of geospatial software], including a map server, a Software Development Kit and a 3D visualization client.
+Ecere also develops the Free and Open Source https://ecere.org[Ecere cross-platform Software Development Kit], including a 2D/3D graphics engine, a GUI toolkit,
+an Integrated Development Environment and a compiler for the https://ec-lang.org[eC programming language].
+As a member of the OGC, Ecere is an active contributor in several Standard Working Groups as co-chair and editor, and participated in several testbeds, pilots and code sprints.
+In particular, Ecere has been a regular contributor and an early implementer for several OGC API standards in its GNOSIS Map Server and GNOSIS Cartographer client, and is also active in the efforts to modernize
+the https://www.ogc.org/standard/cdb/[OGC CDB] data store and https://github.com/opengeospatial/styles-and-symbology[OGC Styles & Symbology standard].
 
 [[clause-reference]]
 
