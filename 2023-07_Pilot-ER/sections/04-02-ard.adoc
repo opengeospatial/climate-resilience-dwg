@@ -280,9 +280,7 @@ It should also be noted that while OGC API services should be a priority for sta
 === A framework example for climate ARD generation
 // === Wuhan University (WHU)-Component
 
-Wuhan University (WHU) is a university that plays a significant role in researching and teaching all aspects of surveying and mapping, remote sensing, photogrammetry, and geospatial information sciences in China. In this Climate Resilience Pilot, WHU will contribute three components (ARD, Drought Indicator, and Data Cube) and one use-case (Drought Impact Use-cases). 
-
-==== Component: ARD 
+==== Component: Surface Reflectance ARD 
 
 - Inputs: Gaofen L1A data and Sentinel-2 L1C data
 - Outputs: Surface Reflectance ARD
@@ -290,7 +288,7 @@ Wuhan University (WHU) is a university that plays a significant role in research
 
 Surface Reflectance (SR) is the fraction of incoming solar radiation reflected from the Earth's surface for specific incidents or viewing cases. It can be used to detect the distribution and change of ground objects by leveraging the derived spectral, geometric, and textural features. Since a large amount of optical EO data has been released to the public, ARD can facilitate interoperability through time and multi-source datasets. As the probably most widely applied ARD product type, the SR ARD can contribute to climate resilience research. For example, the SR-derived NDVI series can be applied to monitor wildfire recovery by analyzing vegetation index increases. Several SR datasets have been assessed as ARD by CEOS, like the prestigious Landsat Collection 2 Level 2, and Sentinel-2 L2A, while many other datasets are still provided at a low processing level.
 
-WHU is developing a pre-processing framework for SR ARD generation. The framework supports radiometric calibration, geometric ratification, atmospheric correction, and cloud mask. To address the inconsistencies in observations from different platforms, including variations in band settings and viewing angles, we proposed a processing chain to produce harmonized ARD. This will enable us to generate SR ARD with consistent radiometric and geometric characteristics from multi-sensor data, resulting in improved temporal coverage. In the first stage of our mission, we are focusing on the harmonization of Chinese Gaofen data and Sentinel-2 data, as shown in Figure 1, the harmonization involves spatial co-registration, band conversion, and bidirectional reflectance distribution function (BRDF) correction. Figure 2 shows the Sentinel-2 data before and after pre-processing. Furthermore, we wish to seek the assessment of CEOS-ARD in our long-term plan.
+WHU is developing a pre-processing framework for SR ARD generation. The framework supports radiometric calibration, geometric ratification, atmospheric correction, and cloud mask. To address the inconsistencies in observations from different platforms, including variations in band settings and viewing angles, we proposed a processing chain to produce harmonized ARD. This will enable us to generate SR ARD with consistent radiometric and geometric characteristics from multi-sensor data, resulting in improved temporal coverage. In the first stage of our mission, we are focusing on the harmonization of Chinese Gaofen data and Sentinel-2 data, as shown in <<WHU_image1>>, the harmonization involves spatial co-registration, band conversion, and bidirectional reflectance distribution function (BRDF) correction. <<WHU_image2>> shows the Sentinel-2 data before and after pre-processing. Furthermore, we wish to seek the assessment of CEOS-ARD in our long-term plan.
 
 [[WHU_image1]]
 .The processing chain to produce harmonized ARD.
@@ -311,7 +309,7 @@ Drought is a disaster whose onset, end, and extent are difficult to detect. Orig
 
 SPEI has two main characteristics: 1) it considers the deficits between precipitation and evapotranspiration comprehensively, that is, the balance of water; 2) multi-time scale characteristics. For 1) drought is caused by insufficient water resources. Precipitation can increase water, while evapotranspiration can reduce water. The differences between the two variables simultaneously and in space can characterize the balance of water. For 2), the deficits value of different usable water sources is distinct at different time scales due to the different evolution cycles of different types, resulting in various representations in temporal. By accumulating the difference between precipitation and evapotranspiration at different time scales, agricultural (soil moisture) droughts, hydrological (groundwater, streamflow, and reservoir) droughts, and other droughts can be distinguished by SPEI.
 
-In our project, the dataset for SPEI calculation is ERA5-Land monthly averaged data from 1950 to the present. We selected years of data about partial areas of East Asia for experiments. Through the following flow of the SPEI calculation, we obtain the SPEI value for assessments of drought impact. The flow of the SPEI calculation is shown in Figure 3.
+In our project, the dataset for SPEI calculation is ERA5-Land monthly averaged data from 1950 to the present. We selected years of data about partial areas of East Asia for experiments. Through the following flow of the SPEI calculation, we obtain the SPEI value for assessments of drought impact. The flow of the SPEI calculation is shown in <<WHU_image3>>.
 
 [[WHU_image3]]
 .Flow of the SPEI calculation.
@@ -361,11 +359,10 @@ The API endpoint for retrieving the results of a job, which are encoded as :
 .The SPEI results for the date 2000_02_01.
 image::WHU_image4.png[WHU_image4]
 
-==== Component: Data Cube
-- Inputs: ERA5 temperature and precipitation data
+==== Component: Data Cube Infrastructure
 - Outputs: Results in the form of GeoTIFF after processing in Data Cubes
-- What other component(s) can interact with the component: Any components requiring access to temperature and precipitation data in part of Asia through OGC API
-- What OGC standards or formats does the component use and produce: OGC API- Coverages
+- What other component(s) can interact with the component: Any components requiring access to temperature and precipitation data, surface reflectance ARD, and drought risk map in part of Asia through OGC API
+- What OGC standards or formats does the component use and produce: OGC API- Coverages, OGC API - Processes
 
 WHU has introduced GeoCube as a cube infrastructure for the management and large-scale analysis of multi-source data. GeoCube leverages the latest generation of OGC standard service interfaces, including OGC API-Coverages, OGC API-Features, and OGC API-Processes, to offer services encompassing data discovery, access, and processing of diverse data sources. The UML model of the GeoCube is given in Figure 5, and it has four dimensions: product, spatial, temporal, and band. Product dimension specifies the thematic axis for the geospatial data cube using the product name (e.g. ERA5_Precipitation or OSM_Water), type (e.g. raster, vector, or tabular), processes, and instrument name. For example, the product dimension can describe optical image products by recording information on the instrument and band. Spatial dimension specifies the spatial axis for the geospatial data cube using the grid code, grid type, city name, and province name. The cube uses a spatial grid for tiling to enable data readiness in a high-performance form. Temporal dimension specifies the temporal axis for the geospatial data using the phenomenon time and result time. Band dimension describes the band attribute of the raster products according to the band name, polarization mode that is reserved for SAR images, and product-level band. The product-level band is the information that is extracted from the original bands. For example, the Standardized Precipitation Evapotranspiration Index (SPEI) band is a product-level band that takes into account the hydrological process and evaluates the degree of drought by calculating the balance of precipitation and evaporation.
 
@@ -374,7 +371,7 @@ WHU has introduced GeoCube as a cube infrastructure for the management and large
 image::WHU_image5.png[WHU_image5]
 
 
-WHU has organized ERA5 temperature and precipitation data into a cube and offers climate data services through the OGC API - Coverages, supporting the computation of various climate indices. The API endpoint is http://oge.whu.edu.cn/ogcapi/coverages_api, allowing users to query and retrieve the desired data from the cube. This section provides examples demonstrating how to access the data from the cube using OGC API - Coverages.
+WHU has organized ERA5 temperature and precipitation data, surface reflectance ARD, and drought risk map into cubes and offers climate data services through the OGC API - Coverages, and OGC API - Processes. The API endpoint of Processes has given in the previous chapter. The API endpoint of Coverages is http://oge.whu.edu.cn/ogcapi/coverages_api, allowing users to query and retrieve the desired data from the cube. This section provides examples demonstrating how to access the data from the cube using OGC API - Coverages.
 
 - Example：/collections
 http://oge.whu.edu.cn/ogcapi/coverages_api/collections?bbox=112.65942,29.23223,115.06959,31.36234&limit=10&time=2016-01-01T02:55:50Z/2018-01-01T02:55:50Z
