@@ -9,7 +9,7 @@ Above all, general need for data visualization arises from the complexity and vo
 Below we provide some examples of how big data can be visualized in such a way that it captures the impact of climate change on for example vegetation in urban areas, or the impact of of climate change on climate hazards. And how to overcome challenges to realize these visualizations.
 
 
-=== 5D Meta World 
+=== 5D Meta World
 
 
 Presagis offered the V5D rapid 3D (trial) Digital Twin generation capability to Laubwerk
@@ -23,7 +23,7 @@ Using V5D, Laubwerk is capable of adapting the tree model in order to demonstrat
 Presagis also provided to Laubwerk its V5D AI extracted vegetation dataset in order to complement the existing tree dataset as needed.
 
 image::presagis.png[image of the Presagis deliverable to Laubwerk. At this stage, all trees are using the same 3D model (palm tree). Laubwerk will use V5D to assign a representative 3D model based the on point feature attribution accessible in V5D. With V5D, this operation takes seconds to do and visualize the result in 3D.]
- 
+
 
 === Visualizing the Impact of Climate Change and Mitigation on Vegetation
 
@@ -100,22 +100,22 @@ This hyper-locality brings to light a number of problems with the granularity, a
 * Climate projection data is pretty widely available and generally easy to process in terms of data volume, because the areas a visualization will typically cover is pretty small compared to the resolution of most climate models. What is still a challenge is to turn climate scenario data into properties that are needed to easily model the impact on vegetation, like the probability of extreme drought, heat, or fire events. This was partially addressed by other contributions to this pilot and we expect it to see further improvements.
 * Exact data on average plant behavior in the context of relevant climate indicators is extremely patchy. Most data is only qualitatively in nature. Data gathering is complex because of the large number of factors at play when judging health of plants. This is a complex researach topic that will need more work, both to produce more reliable projections based on existing research, but also on how to gather data about or predict plant health more reliably on a large scale.
 * Information about climate change mitigation is often not present in a machine readable format. In our specific case, we gathered information manually from publicly available material, mostly websites. Part of the problem here is that several stakeholders are working on mitigation measures, from different local government organizations, over non-profit organizations, to private companies. Examples relevant to our specific example are https://www.cityplants.org/[City Plants] (a non-profit supported by Los Angeles Department of Water and Power) and the https://pw.lacounty.gov/rmd/parkwaytrees/[County of Los Angeles Parkway Trees Program]. This manual way of data gathering obviously will not scale, is prone to data being missed, and has no unified format. All of this makes automated processing next to impossible at the moment.
-* There may be further factors that need to be considered, which are not part of any of the existing data sources. In this specific case we have the pretty high average age and also various pests and diseases that the Mexican fan palm (_Washingtonia robusta_), which has become such a distinctive feature of Southern California, especially Los Angeles, is suffering from. While this isn't directly related to climate change, it still needs to be considered for any visualization to be accurate. 
+* There may be further factors that need to be considered, which are not part of any of the existing data sources. In this specific case we have the pretty high average age and also various pests and diseases that the Mexican fan palm (_Washingtonia robusta_), which has become such a distinctive feature of Southern California, especially Los Angeles, is suffering from. While this isn't directly related to climate change, it still needs to be considered for any visualization to be accurate.
 
 As was expected, the data-driven visualization of very local phenomena and changes is a challenging problem which surfaces lots of issues in terms of data availability as well as standardization and compatibility of storage formats.
 
 === ESRI's Web Application
 
-Decision makers, public authorities, and citizens will primarily access the data via a custom web application, providing a simple dashboard interface for viewing interactive maps and graphs of the indices, and output formatted reports. The indices are group by 5 climate hazard types (Wildfire, Heat, Drought, Inland Flooding, Coastal Inundation). The current US project (https://livingatlas.arcgis.com/assessment-tool/explore/details) can be explored to gain context of what the global project will be. 
+Decision makers, public authorities, and citizens will primarily access the data via a custom web application, providing a simple dashboard interface for viewing interactive maps and graphs of the indices, and output formatted reports. The indices are group by 5 climate hazard types (Wildfire, Heat, Drought, Inland Flooding, Coastal Inundation). The current US project (https://livingatlas.arcgis.com/assessment-tool/explore/details) can be explored to gain context of what the global project will be.
 
 [[esri_project]]
 .US Project view
 image::esri_project.png[esri_project]
- 
+
 [[esri_project_2]]
 .US Project view
 image::esri_project_2.png[esri_project_2]
- 
+
 The application also outputs formatted reports by county or census tract summarizing the data in a format easy to share with others.
 
 [[esri_project_3]]
@@ -133,3 +133,65 @@ For each of those 5 climate hazards there is a corresponding StoryMap to further
 •	Flooding: https://storymaps.arcgis.com/stories/4ea811276aa641018f3a8d4e28585244
 
 •	Coastal Inundation: https://storymaps.arcgis.com/stories/f3ce292c0211400699b6e36985e561a6
+
+=== Ecere's Client for NOAA's Environmental Data Retrieval API
+
+For the _D100 Client Instance_ deliverable, Ecere enhanced its GNOSIS Cartographer geospatial client to better support visualizing and accessing multi-dimensional datasets, both from local sources and
+remote sources such as through OGC API standards. Support for the _OGC API - Environmental Data Retrieval (EDR)_ standard as well as for _OGC netCDF_ was implemented in the GNOSIS Software Development Kit.
+The GNOSIS implementation of the https://ecere.com/gmt.pdf[_GNOSIS Map Tiles specification_] was also enhanced as an efficient format to store and exchange n-dimensional coverage tiles, including support for
+multiple pressure levels within a single tile packet. A pressure level selector control was added to the user interface, as seen below.
+
+[#ecere_clientPressureLevels,reftext='{figure-caption} {counter:figure-num}']
+.Ecere's GNOSIS Cartographer client accessing 4-dimensional CMIP5 air temperature dataset from GNOSIS Map Server, showing pressure level selector
+image::ecere/clientPressureLevels.png[]
+
+[#ecere_edr_client_pressureLevels_humidity,reftext='{figure-caption} {counter:figure-num}']
+.Ecere's GNOSIS Cartographer client accessing 4-dimensional ERA5 relative humidity dataset from GNOSIS Map Server, showing pressure level selector
+image::ecere/edr_client_pressureLevels_humidity.png[]
+
+Technology Integration Experiments were performed with NOAA's experimental EDR API deployment, providing feedback to its developers to help achieve conformance to the Standard,
+as well as help improving interoperability and usability. The results of visualization experiments with multiple data collections are shown below.
+
+[#ecere_edr_client_tMin_full,reftext='{figure-caption} {counter:figure-num}']
+.Ecere's GNOSIS Cartographer client accessing NOAA's EDR API (_nclimgrid-monthly_ collection, minimum daily temperature for January 2014)
+image::ecere/edr_client_tMin_full.png[]
+
+[#ecere_edr_client_tMin_2022_full,reftext='{figure-caption} {counter:figure-num}']
+.Ecere's GNOSIS Cartographer client accessing NOAA's EDR API (_nclimgrid-monthly_ collection, minimum daily temperature for January 2022)
+image::ecere/edr_client_tMin_2022_full.png[]
+
+[#ecere_edr_client_tMax_full,reftext='{figure-caption} {counter:figure-num}']
+.Ecere's GNOSIS Cartographer client accessing NOAA's EDR API (_nclimgrid-monthly_ collection, maximum daily temperature for January 2014)
+image::ecere/edr_client_tMax_full.png[]
+
+[#ecere_edr_client_tMax_2022_full,reftext='{figure-caption} {counter:figure-num}']
+.Ecere's GNOSIS Cartographer client accessing NOAA's EDR API (_nclimgrid-monthly_ collection, maximum daily temperature for January 2022)
+image::ecere/edr_client_tMax_2022_full.png[]
+
+[#ecere_edr_client_precipitations_full,reftext='{figure-caption} {counter:figure-num}']
+.Ecere's GNOSIS Cartographer client accessing NOAA's EDR API (_nclimgrid-monthly_ collection, precipitations for January 2014)
+image::ecere/edr_client_precipitations_full.png[]
+
+[#ecere_edr_client_precipitations_2022_full,reftext='{figure-caption} {counter:figure-num}']
+.Ecere's GNOSIS Cartographer client accessing NOAA's EDR API (_nclimgrid-monthly_ collection, precipitations for January 2022)
+image::ecere/edr_client_precipitations_2022_full.png[]
+
+[#ecere_edr_client_gddp_tmax,reftext='{figure-caption} {counter:figure-num}']
+.Ecere's GNOSIS Cartographer client accessing NOAA's EDR API (NASA CMIP6 Global Daily Downscaled Projections collection, maximum temperature for January 14, 2014)
+image::ecere/edr_client_gddp_tmax.png[]
+
+[#ecere_edr_client_gddp_hurs,reftext='{figure-caption} {counter:figure-num}']
+.Ecere's GNOSIS Cartographer client accessing NOAA's EDR API (NASA CMIP6 Global Daily Downscaled Projections collection, near-surface relative humidity January 15, 2014)
+image::ecere/edr_client_gddp_hurs.png[]
+
+[#ecere_edr_client_gddp_sfcWind,reftext='{figure-caption} {counter:figure-num}']
+.Ecere's GNOSIS Cartographer client accessing NOAA's EDR API (NASA CMIP6 Global Daily Downscaled Projections collection, wind speed for January 15, 2014)
+image::ecere/edr_client_gddp_sfcWind.png[]
+
+[#ecere_edr_client_livneh_wind,reftext='{figure-caption} {counter:figure-num}']
+.Ecere's GNOSIS Cartographer client accessing NOAA's EDR API (NCAR Livneh gridded wind speed for January 15, 2013)
+image::ecere/edr_client_livneh_wind.png[]
+
+[#ecere_edr_client_livneh_precipitations,reftext='{figure-caption} {counter:figure-num}']
+.Ecere's GNOSIS Cartographer client accessing NOAA's EDR API (NCAR Livneh gridded precipitations for January 15, 2013)
+image::ecere/edr_client_livneh_precipitations.png[]
