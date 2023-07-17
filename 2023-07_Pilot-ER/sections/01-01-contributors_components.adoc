@@ -16,7 +16,6 @@
 |Jenny Cocks | Pixalytics Ltd | Development of drought indicator
 |Jakub Walawender | Walawender, Jakub P. |
 |Kailin Opaleychuk | Safe Software, Inc. |
-|Jérôme Jacovella-St-Louis | Ecere Corporation |
 |Daniela Hohenwallner-Ries | alpS GmbH | Communication with stakeholders
 |Hanna Krimm | alpS GmbH | Communication with stakeholders
 |Hinnerk Ries | alpS GmbH | Communication with stakeholders
