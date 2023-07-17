@@ -3,7 +3,7 @@
 [%unnumbered]
 [width="90%",options="header"]
 |====================
-|Name |Organization |Role or Summary of contribution
+|Name | Organization | Role or Summary of contribution
 |Guy Schumann | RSS-Hydro | Lead ER Editor
 |Albert Kettner | RSS-Hydro/DFO | Lead ER Editor
 |Timm Dapper | Laubwerk GmbH |
@@ -22,10 +22,10 @@
 |Paul Schattan | alpS GmbH | Communication with stakeholders
 |Jérôme Jacovella-St-Louis | Ecere Corporation | Datacube API client and server
 |Patrick Dion | Ecere Corporation | Datacube API client and server
-| Eugene Yu | GMU |
-| Gil Heo | GMU |
-| Glenn Laughlin | Pelagis Data Solutions | Coastal Resilience & Climate Adaptation
-| Tom Landry | Intact Financial Corporation |
+|Eugene Yu | GMU |
+|Gil Heo | GMU |
+|Glenn Laughlin | Pelagis Data Solutions | Coastal Resilience & Climate Adaptation
+|Tom Landry | Intact Financial Corporation |
 |Nils Hempelmann | OGC | Climate resilience Pilot Coordinator |
 
 |====================
