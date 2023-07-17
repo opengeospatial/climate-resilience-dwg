@@ -11,11 +11,6 @@
 |Hanwen Xu | Wuhan University |
 |Peng Yue | Wuhan University |
 |Dean Hintz | Safe Software, Inc. |
-|Kailin Opaleychuk | Safe Software, Inc. |
-|Jérôme Jacovella-St-Louis | Ecere Corporation | Datacube API client and server
-|Patrick Dion | Ecere Corporation | Datacube API client and server
-|Hanna Krimm | alpS GmbH |
-|Andrew Lavender | Pixalytics Ltd | Development of drought indicator
 |Samantha Lavender | Pixalytics Ltd | Development of drought indicator
 |Jenny Cocks | Pixalytics Ltd | Development of drought indicator
 |Jakub Walawender | Walawender, Jakub P. |
@@ -59,19 +54,6 @@ With close to 500 experts in data, artificial intelligence, machine learning and
 
 Pelagis is an OceanTech venture located in Nova Scotia, Canada. Our foundation focuses on the application of open geospatial technology and standards designed to promote the sustainable use of our ocean resources. As a member of the Open Geospatial Consortium, we co-chair the Marine Domain Working Group responsible for developing a spatially-aware federated service model of marine and coastal ecosystems.
 
-==== About Ecere
-
-Ecere is a small software company located in Gatineau, Québec, Canada.
-Ecere develops the https://ecere.ca/gnosis[GNOSIS cross-platform suite of geospatial software], including a map server, a Software Development Kit and a 3D visualization client.
-Ecere also develops the Free and Open Source https://ecere.org[Ecere cross-platform Software Development Kit], including a 2D/3D graphics engine, a GUI toolkit,
-an Integrated Development Environment and a compiler for the https://ec-lang.org[eC programming language].
-As a member of the OGC, Ecere is an active contributor in several Standard Working Groups as co-chair and editor, and participated in several testbeds, pilots and code sprints.
-In particular, Ecere has been a regular contributor and an early implementer for several OGC API standards in its GNOSIS Map Server and GNOSIS Cartographer client, and is also active in the efforts to modernize
-the https://www.ogc.org/standard/cdb/[OGC CDB] data store and https://github.com/opengeospatial/styles-and-symbology[OGC Styles & Symbology standard].
-
-==== About Wuhan University
-
-Wuhan University (WHU) is a university that plays a significant role in researching and teaching all aspects of surveying and mapping, remote sensing, photogrammetry, and geospatial information sciences in China. Our group has been working on geospatial interoperability, data processing, provenance, and machine learning for many years and has wide influence among the Chinese GIS community. The group members have rich experiences in developing standards and technologies for geospatial interoperability, such as the participation in OGC innovation programs including OWS-9, OWS-10, Testbed 12, Testbed13, Testbed 17, Disaster Resilience Pilot 2019 (DRP-2019), Disaster Pilot 2021 (DP-2021), Environmental Data Retrieval (EDR) API SWG, and Training Data Markup Language for Artificial Intelligence (TrainingDML-AI) SWG. In this Climate Resilience Pilot, WHU will contribute three components (Surface Reflectance ARD, Drought Indicator, and Data Cube Infrastructure) and one use-case (Drought Impact Use cases). 
 
 
 [[clause-reference]]
