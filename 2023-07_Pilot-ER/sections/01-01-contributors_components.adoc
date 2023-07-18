@@ -77,6 +77,10 @@ As a member of the OGC, Ecere is an active contributor in several Standard Worki
 In particular, Ecere has been a regular contributor and an early implementer for several OGC API standards in its GNOSIS Map Server and GNOSIS Cartographer client, and is also active in the efforts to modernize
 the https://www.ogc.org/standard/cdb/[OGC CDB] data store and https://github.com/opengeospatial/styles-and-symbology[OGC Styles & Symbology standard].
 
+==== About Wuhan University (WHU)
+
+Wuhan University (WHU) is a university that plays a significant role in researching and teaching all aspects of surveying and mapping, remote sensing, photogrammetry, and geospatial information sciences in China. In this Climate Resilience Pilot, WHU will contribute three components (ARD, Drought Indicator, and Data Cube) and one use-case (Drought Impact Use-cases). 
+
 [[clause-reference]]
 
 === Component workflow
