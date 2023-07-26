@@ -291,7 +291,7 @@ WHU is developing a pre-processing framework for SR ARD generation. The framewor
 
 [[WHU_image1]]
 .The processing chain to produce harmonized ARD.
-image::WHU_image1.png[WHU_image1]
+image::WHU_image1.png[image]
 
 [[WHU_image2]]
 .Sentinel-2 RBG composite (red Band4, green Band3, blue Band2), over Hubei, acquired on October 22, 2020. (a) corresponds to the reflectance at the top of the atmosphere (L1C product); (b) corresponds to the surface reflectance after pre-processing.
