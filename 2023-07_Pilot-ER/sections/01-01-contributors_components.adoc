@@ -14,7 +14,7 @@
 |Samantha Lavender | Pixalytics Ltd | Development of drought indicator
 |Andrew Lavender | Pixalytics Ltd | Development of drought indicator
 |Jenny Cocks | Pixalytics Ltd | Development of drought indicator
-|Jakub Walawender | Walawender, Jakub P. |
+|Jakub P. Walawender | Freelance climate scientist and EO/GIS expert | Solar radiation use case
 |Kailin Opaleychuk | Safe Software, Inc. |
 |Daniela Hohenwallner-Ries | alpS GmbH | Communication with stakeholders
 |Hanna Krimm | alpS GmbH | Communication with stakeholders
@@ -80,6 +80,11 @@ the https://www.ogc.org/standard/cdb/[OGC CDB] data store and https://github.com
 ==== About Wuhan University (WHU)
 
 Wuhan University (WHU) is a university that plays a significant role in researching and teaching all aspects of surveying and mapping, remote sensing, photogrammetry, and geospatial information sciences in China. In this Climate Resilience Pilot, WHU will contribute three components (ARD, Drought Indicator, and Data Cube) and one use-case (Drought Impact Use-cases). 
+
+==== About Jakub P. Walawender 
+
+Jakub P. Walawender is a freelance climate scientist and EO/GIS expert who carries out his PhD research on solar radiation climatology of his home country of Poland at the Laboratory for Climatology and Remote Sensing (LCRS), Faculty of Geography, Philipps University in Marburg, Germany. Jakub specialises in the application of satellite remote sensing, GIS and geostatistics in the monitoring and analysis of climate variability and extremes. He also supports users in the application of different climate data records to tackle the effects of climate change.
+
 
 [[clause-reference]]
 
