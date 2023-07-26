@@ -3,18 +3,12 @@
 
 == Bibliography
 
-(XML Line 002607): Style override set for ordered list
-	<ol id="_8d18cf8a-52f1-4524-be30-9bd01dcd7645" type="arabic"><li><p id="_89db6934-2184-4874-ac69-bc8c19bfb5af">Applicability of open standards and specifications in support of data
+(XML Line 002612): Style override set for ordered list
+	<ol id="_9ab1be4f-f0a5-4ddd-ae3a-d7cd7d5227c6" type="arabic"><li><p id="_e68bb720-152a-4629-9734-4e8cec592451">Applicability of open standards and specifications in support of data
 	discovery, data integration, data transformation, data processing, data
 	dissemination and data visualization</p>
 	</li>
-	<li><p id="_5057a761-5f63-4895-b7dc-ed6fcc49a691">Transparency of metadata, data quality and provenance</p>
-
-
-== Anchors
-
-(XML Line 002462): Crossreference target WHU_image10 is undefined
-	<xref target="WHU_image10"/>
+	<li><p id="_cc55dded-e690-41d2-9e22-de4687ed4504">Transparency of metadata, data quality and provenance</p>
 
 
 == Metanorma XML Style Warning
@@ -201,43 +195,43 @@
 	<p id="_66a7be1a-b2b9-621c-e16d-ec8e02e2cd46">One of the biggest challenges in communicating climate change is to tie global changes to the local impact they will have. Photorealistic visualization is a critical component for assessing and communicating the impact of environmental changes, and possibilities for mitigation. For this to work, it is crucial for visualizations to reflect the underlying data accurately and allow for quick iteration. In this regard, manual visualization processes are inferior. As much as possible, visualizations of real-life scenarios should be driven directly by available data of present states and simulations of possible scenarios. Our contribution is a first attempt at doing just that, determining what already works and what doesn’t with existing data and technology.</p>
 	
 	<p id="_3cca6e77-abf3-d3f8-c5f0-bd63fd63d4e6">As our contribution to the Climate Resilience Pilot we explored such data-driven high-quality visualizations, focusing on the impact on vegetation. Due to the nature of this being a pilot, we constrained ourselves in terms of coverage area, to account for limited time and to cope with potentially limited data availability. This ensured that we were able to make the full connection from input data to final visualization, drawing valuable conclusions for broader application in the future. This size limitation will allow us to produce meaningful results if data transfer and processing is slow or even if it must be processed in manual or half-automated ways due to inconsistent formatting. It also lets us visualize a high level of detail without having to account too much for the sheer amount of data we could face with very large areas.</p>
-(XML Line 002270): Hanging paragraph in clause
+(XML Line 002271): Hanging paragraph in clause
 	<clause id="_climate_information_and_communication_with_stakeholders_alps" obligation="normative">
 	<title>Climate information and communication with stakeholders (alpS)</title>
 	<p id="_8bcea40d-6f4d-124b-91b2-30505cb76c2e">Climate change is happening, and mitigation efforts will simply not be enough  to tackle its impacts. Thus, climate action, mitigation as well as adaptation, at the local level is needed. The alpS GmbH supports communities, regions, and industrial partners in their sustainable development and in dealing with the consequences, opportunities, and risks of climate change. Over the last 20 years alpS has worked with more than 250 municipalities and industrial partners.</p>
 	
 	<p id="_54424771-5a53-3a5a-ef43-89d5128bc2b1">In the understanding of alpS, climate change consultancy services are successful, if they trigger the implementation of proactive measures that are supported by a large part of actors. However, the degree of effectiveness of the consultancy services of alpS as a function of various communication methods (e. g. intro presentations including processed local climate data, information processing, moderation techniques, discussion tools) and scientific know-how has never been systematically investigated. In the pilot project, alpS therefore evaluated its inventory of methods used in its climate change adaptation workshops and started with the improvement of the workshop setup and aspects of communication.</p>
-(XML Line 002313): Hanging paragraph in clause
+(XML Line 002314): Hanging paragraph in clause
 	<clause id="_improvement_of_the_workshop_setup_and_aspects_of_communication" obligation="normative">
 	<title>Improvement of the workshop setup and aspects of communication</title>
 	<p id="_e5a0072f-d8a5-00d8-6aab-6145855a7976">As part of the Climate Resilience Pilot, alpS was able to optimize two aspects in the adaptation process. The creation of climate impact chains for different sectors is a response to the results of the survey. The climate impact chain improves consistency and the understanding of climate impacts. A second aspect is the guideline to deal with external factors. This improvement could be introduced during the questionnaire creation. The pretest conducted before the workshop, which specifically asks about these external factors, enables a direct response and preparation for dealing with not controllable factors in the process.</p>
 	
 	<clause id="_climate_impact_chain" obligation="normative">
-(XML Line 002406): Hanging paragraph in clause
+(XML Line 002407): Hanging paragraph in clause
 	<clause id="_use_cases" obligation="normative">
 	<title>Use cases</title>
 	<p id="_bc60cdfc-d1f9-a6b0-c9a3-9ff30924b17d">In a pilot study on interoperability, a use case represents a specific scenario or application that demonstrates how different components, such as data, models, and systems, interact and exchange information to address a particular challenge or problem. In the context of droughts and fires, use cases showcase how interoperability enables seamless integration and analysis of diverse geospatial data sources, coupled with specialized models, to enhance understanding, prediction, and mitigation of drought and fire risks. These use cases provide practical demonstrations of how interoperability workflows and techniques can be applied to foster effective collaboration, decision-making, and climate resilience in the face of drought and fire-related challenges.</p>
 	
 	<clause id="_drought_impact_use_cases_wuhan_university" obligation="normative">
-(XML Line 002410): Hanging paragraph in clause
+(XML Line 002411): Hanging paragraph in clause
 	<clause id="_drought_impact_use_cases_wuhan_university" obligation="normative">
 	<title>Drought Impact Use Cases (Wuhan University)</title>
 	<p id="_ad0f0a22-dde3-a681-8723-489d9467156b">Based on the ARD, drought indicator, and data cube components, WHU develops three use-cases based on self-developed Open Geospatial Engine (OGE) for drought impact for rapid response to drought occurrences. <xref target="DroughtWildfire"/> shows the technical architecture of the OGE. It has the following features: 1) For data discovery, a catalogue service from OGE data center following OGC API is provided, allowing users to search geospatial data both available from WHU data stores and remote data stores. 2) For data integration, data can be integrated into the WHU software in the form of data cubes with three efforts: formalizing cube dimensions for multi-source geospatial data, processing geospatial data query along cube dimensions, and organizing cube data for high-performance geoprocessing. 3) For data processing, a processing chain is enabled in OGE using a code editor and modelbuilder. 4) For data visualization, a Web-based client for visualization of spatial data and statistics is provided using a virtual globe and charts.</p>
 	
 	<figure id="DroughtWildfire">
-(XML Line 002422): Table should have title
+(XML Line 002423): Table should have title
 	<table id="_7ff0c6b1-6782-2e04-ba7f-4892f0e6f84d" unnumbered="true" width="90%"><thead><tr><th valign="middle" align="left">Grade</th>
 	<th valign="middle" align="left">Type</th>
 	<th valign="middle" align="left">SPEI Value</th>
 	</tr></thead>
 	<tbody><tr><td valign="middle" align="left">1</td>
-(XML Line 002753): Hanging paragraph in clause
+(XML Line 002758): Hanging paragraph in clause
 	<clause id="_climate_resilience_for_coastal_ecosystems" obligation="normative">
 	<title>Climate Resilience for Coastal Ecosystems</title>
 	<p id="_6cffb5d2-f0c4-fd54-7b94-4f74d303fc13">The following use case(s) examine various scenarios designed to qualify the risks and pending impacts of climate change to coastal ecosystems. The scenarios are designed to leverage Analysis Ready Datasets combined with in-situ observations to draw direct relationships between a changing environment and dependent human activities.</p>
 	
 	<p id="_cf0f2742-0e35-26a3-3621-c9ea8394eef2">The core of this exercise is focused on the application of OGC standards &amp; specifications as adapters to accessing various datasets supporting key ocean and coastal climate indicators.</p>
-(XML Line 002921): Table should have title
+(XML Line 002926): Table should have title
 	<table id="_f720cf3b-1c8c-00f7-d770-beba61b1b15d" unnumbered="true" width="90%"><thead><tr><th valign="middle" align="left">Date</th>
 	<th valign="middle" align="left">Release</th>
 	<th valign="middle" align="left">Author</th>
