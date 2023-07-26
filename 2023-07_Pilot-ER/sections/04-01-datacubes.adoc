@@ -149,7 +149,7 @@ For the data cubes with multiple pressure levels, the `pressure` dimension is de
 
 ===== _OGC API - Coverages_
 
-The https://docs.ogc.org/DRAFTS/19-087.html[_OGC API - Coverage_] candidate Standard is a simple API defining fundamental functionality to retrieve access data for arbitrary fields,
+The https://docs.ogc.org/DRAFTS/19-087.html[_OGC API - Coverages_] candidate Standard is a simple API defining fundamental functionality to retrieve access data for arbitrary fields,
 area, time and resolution of interest from a data cube.
 
 The main resource to retrieve data using the _Coverages_ API is located at `/collections/{collectionId}/coverage` for each data collection.
