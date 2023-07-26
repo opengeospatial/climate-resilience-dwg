@@ -10,7 +10,6 @@ CEOS defines Analysis Ready Data as satellite data that have been processed to a
 //.CRIS overview
 //image::CRIS.png[CRIS]
 
-//=== RSS-Hydro
 === Transforming climate relevant raw data to ARD
 
 Several past successful OGC testbeds, including the DP 21 to which this pilot is linked, have looked at ARD and IRD but also in terms of use cases. In this pilot, some main technical contributions have been creating digestible OGC data types and formats for specific partner use cases, so producing ARD from publically available EO and model data, including hydrological and other type of model output as well as climate projections.
