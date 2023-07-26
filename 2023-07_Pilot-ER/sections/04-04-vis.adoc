@@ -56,9 +56,7 @@ Our visualization ties data that is very global together with data that is hyper
 The aforementioned data sources were combined to create a detailed visualization of the area in question. The pairs of images below show a visualization of the status quo as first image and then a composite of the four scenarios we visualized. The scenarios are projections of a possible climate scenario for 2045 without any 2070 without any mitigation measures (plants that were likely to die off due to adverse climate events were just removed based on a probability measure) as well as 2045 and 2070 in which plants that were removed have been replaced by plants that are more resilient and are part of the aforementioned initiatives for more climate resilience.
 
 It should be stressed that this is a visualization of a possible outcome, but there are are many factors that make hard to make exact predictions! This contribution is merely meant as an example of how data could be used to drive scenario-based hyper-local visualization.
-
 <<<
-
 .Overview of the Visualized Region (Status Quo)
 [img-laubwerk-overview]
 image::laubwerk_ogc-crp_230526_v079_jws_2020-camera6.png[Overview of the Visualized Region (Status Quo), ,align=center]
