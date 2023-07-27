@@ -20,19 +20,25 @@ Here's an example of an example term.
 // Insert abbreviated terms content
 
 ARD:: Analysis Ready Data
+ARDC:: Analysis Ready Data Cube
 ADES:: Application Deployment and Execution Service
 AP:: Application Package
 API:: Application Programming Interface
 Carrying Capacity:: An area both suitable and available for human activity based on the state of the ecosystem and competitive pressures for shared resources
 CDI:: Combined Drought Indicator
+CDR:: Climate Data Record
 CEOS:: Committee on Earth Observation Satellites
 ECV:: Essential Climate Variable
 EMS:: Exploitation Platform Management Service
+EO:: Earth Observation
+ESA:: European Space Agency
+EUMETSAT::  European Organisation for the Exploitation of Meteorological Satellites
 GOOS:: Global Ocean Observing System
 GCOS:: Global Climate Observing System
 OMSv3:: OGC Observations & Measurements 3.0
 RCI:: Regional Climate Indicator
 S3:: Simple Storage Service
+SDG:: Sustainable Development Goal
 SMA:: Soil Moisture Anomaly
 SPI:: Standardized Precipitation Index
 UNFCCC:: United Nations Framework Convention on Climate Change
