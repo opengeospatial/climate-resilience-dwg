@@ -281,7 +281,7 @@ State-of-the-art review and exploratory data analysis
 * to document existing solar radiation datasets (satellite, model and reanalysis data) and services (both freely accessible and commercial)
 * to verify the accuracy of the in situ measurements and satellite climate data records for the selected solar radiation parameters using proper statistical methods
 
-=== Wildfire resilience in insurance (Intact)
+=== Wildfire resilience in insurance
 
 The main focus of IFC's participation to this project is to better understand end-to-end hazard and risk modelling workflows, in turn supporting the climate services required for decision-making in the business. This participation is also intended to further open up Intact Lab to the outside world, by exchanging information on wildfire risks and climate resiliency in the context of the insurance industry.
 
