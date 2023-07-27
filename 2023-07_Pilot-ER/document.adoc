@@ -65,5 +65,5 @@ Add annex files as needed
 Revision History should be the last annex before the Bibliography
 Bibliography should be the last annex
 ////
-include::sections/ah-revision-history.adoc[]
+// include::sections/ah-revision-history.adoc[]
 include::sections/az-bibliography.adoc[]
