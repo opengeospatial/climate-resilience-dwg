@@ -38,6 +38,19 @@ The various organizations and institutes that contribute to the Climate Resilien
 .CRIS overview
 image::CRIS.png[CRIS]
 
+==== About RSS-Hydro
+
+RSS-Hydro is a geospatial solutions and service company focusing its R&D and commercial products in the area of water risks, with a particular emphasis on the SDGs. RSS-Hydro has been part of several successful OGC testbeds, including the DP 21 to which this pilot is linked, not only in terms of ARD and IRD but also in terms of use cases. In this pilot, RSS-Hydro’s main contribution is the lead of the Engineering report. In terms of technical contributions to various other OGC testbeds and pilots, RSS-Hydro is creating digestible OGC data types and formats for specific partner use cases, in particular producing ARD from publically available EO and model data, including hydrological model output as well as climate projections. These ARD will feed into all use cases for all participants, especially use cases proposed for Floods, Heat, Drought and Health Impacts by other participants in the pilot. The created ARD in various OGC interoperable formats will create digestible dataflows for the proposed OGC Use Cases.
+
+Specifically, RSS-Hydro can provide access to the following satellite and climate projection data:
+
+- Wildfire: Fire Radiant Power (FRP) product from Sentinel 3 (NetCDF), 5p, MODIS products (fire detection), VIIRS (NOAA); possibly biomass availability (fire fuel). 
+- Land Surface Temp: Sentinel 3 
+- Pollution: Sentinel 5p 
+- Climate Projection data (NetCDF, etc., daily downscaled possible): air temp (10 m above ground). Rainfall and possibly wind direction as well
+- Satellite-derived Discharge Data to look at Droughts/Floods etc. by basin or other scale.
+- Hydrological model simulation outputs at (sub)basin scale.
+
 ==== About Laubwerk
 
 Laubwerk is a software development company whose mission is to combine accurate, broadly applicable visualizations of vegetation with deeper information and utility that goes far beyond their visual appearance. We achieve this through building a database that combines ultra-realisting 3D representation of plants with extensive metadata that represents plant properties. This unique combination makes Laubwerk a prime partner to bridge the gap from data-driven simulation to eye-catching visualizations.
