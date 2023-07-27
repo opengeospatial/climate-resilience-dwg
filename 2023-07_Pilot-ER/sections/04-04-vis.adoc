@@ -37,9 +37,14 @@ Our visualization ties data that is very global together with data that is hyper
 
 ==== Results
 
-The aforementioned data sources were combined to create a detailed visualization of the area in question. The pairs of images below show a visualization of the status quo as first image and then a composite of the four scenarios we visualized. The scenarios are projections of a possible climate scenario for 2045 without any 2070 without any mitigation measures (plants that were likely to die off due to adverse climate events were just removed based on a probability measure) as well as 2045 and 2070 in which plants that were removed have been replaced by plants that are more resilient and are part of the aforementioned initiatives for more climate resilience.
+The aforementioned data sources were combined to create a detailed visualization of the area in question. The pairs of images below show a visualization of the status quo as first image and then a composite of the four scenarios we visualized (one scenario per vertical stripe). The scenarios are projections of possible climate scenarios with and without mitigation measures in place and are in the following order:
 
-It should be stressed that this is a visualization of a possible outcome, but there are are many factors that make hard to make exact predictions! This contribution is merely meant as an example of how data could be used to drive scenario-based hyper-local visualization.
+. Year 2045 without any mitigation measures. Plants that were likely to die off due to adverse climate events were just removed based on a probability.
+. Year 2070 without any mitigation measures with plants removed like in the scenario before.
+. Year 2045 with mitigation measures. Plants that were just removed in the two scenarios before have been replaced by plants that are more resilient and are part of the aforementioned initiatives for better climate resilience.
+. Year 2070 with mitigation measures with the same replacement logic as in the scenario before.
+
+It should be stressed that these are visualizations of possible outcomes, but there are are many factors that make hard to make exact predictions! This contribution is merely meant as an example of how data could be used to drive scenario-based hyper-local visualization.
 
 <<<
 .Overview of the Visualized Region (Status Quo)
@@ -48,7 +53,7 @@ image::laubwerk_ogc-crp_230526_v079_jws_2020-camera6.png[Overview of the Visuali
 
 .Overview of the Visualized Region (Scenarios)
 [img-laubwerk-overview-scenarios]
-image::laubwerk_ogc-crp_230526_v078_jws_camera6-composite.png[Overview of the Visualized Region (Scenarios), ,align=center]
+image::laubwerk_ogc-crp_230526_v078_jws_camera6-composite.png[Overview of the Visualized Region (Climate Projection With and Without Mitigation Scenarios as Described at the Start of the Results Section), ,align=center]
 
 .Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Status Quo)
 [img-laubwerk-sunset-blvd-n-curson-ave]
@@ -56,7 +61,7 @@ image::laubwerk_ogc-crp_230526_v079_jws_2020-camera1.png[Above the Corner Sunset
 
 .Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Scenarios)
 [img-laubwerk-sunset-blvd-n-curson-ave-scenarios]
-image::laubwerk_ogc-crp_230526_v079_jws_camera1-composite.png[Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Scenarios), ,align=center]
+image::laubwerk_ogc-crp_230526_v079_jws_camera1-composite.png[Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Climate Projection With and Without Mitigation Scenarios as Described at the Start of the Results Section), ,align=center]
 
 .Corner Franklin Ave And N Sierra Bonita Ave Looking East (Status Quo)
 [img-laubwerk-franklin-ave-n-sierra-bonita-ave]
@@ -64,7 +69,7 @@ image::laubwerk_ogc-crp_230526_v079_jws_2020-camera2.png[Corner Franklin Ave And
 
 .Corner Franklin Ave And N Sierra Bonita Ave Looking East (Scenarios)
 [img-laubwerk-franklin-ave-n-sierra-bonita-ave-scenarios]
-image::laubwerk_ogc-crp_230525_v077_jws_camera2-composite.png[Corner Franklin Ave And N Sierra Bonita Ave Looking East (Scenarios), ,align=center]
+image::laubwerk_ogc-crp_230525_v077_jws_camera2-composite.png[Corner Franklin Ave And N Sierra Bonita Ave Looking East (Climate Projection With and Without Mitigation Scenarios as Described at the Start of the Results Section), ,align=center]
 
 .Corner Hollywood Blvd And Camino Palmero St Looking Looking North (Status Quo)
 [img-laubwerk-hollywood-blvd-camino-palmero-st]
@@ -72,7 +77,7 @@ image::laubwerk_ogc-crp_230526_v079_jws_2020-camera3.png[Corner Hollywood Blvd A
 
 .Corner Hollywood Blvd And Camino Palmero St Looking Looking North (Scenarios)
 [img-laubwerk-hollywood-blvd-camino-palmero-st-scenarios]
-image::laubwerk_ogc-crp_230525_v077_jws_camera3-composite.png[Corner Hollywood Blvd And Camino Palmero St Looking Looking North (Scenarios), ,align=center]
+image::laubwerk_ogc-crp_230525_v077_jws_camera3-composite.png[Corner Hollywood Blvd And Camino Palmero St Looking Looking North (Climate Projection With and Without Mitigation Scenarios as Described at the Start of the Results Section), ,align=center]
 
 ==== Challenges and Learnings
 
