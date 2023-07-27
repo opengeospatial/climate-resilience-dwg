@@ -55,7 +55,7 @@ image::WHU_image10.png[WHU_image10]
 ---
 
 
-=== Analysis Ready Data (ARD) Use Case (D-100 Client instance by George Mason University)
+=== Analysis Ready Data (ARD) Use Case 
 
 ==== Background
 
@@ -324,6 +324,5 @@ As cities will keep sprawling as population increases, the WUI is also expected 
 
 The Canadian WUI dataset [5] is unfortunately not available for download but could be replicated with open data sources, for instance through Natural Resources Canada (NRCAN) spatial infrastructures. When developing a WUI dataset, an important parameter for users to finetune is the ember transport distance. Values can vary between the median value of maximum travel distances, which is 600m (Storey et al, 2020), and the maximum travel distance of 2400m which is the official standard in the United States. Novel wildfire risk models can also dynamically adapt fuel classes within the WUI to represent propagation more accurately [10]. Producing, hosting and integrating WUI datasets can therefore support creation of better risk indices, but also help identify vulnerable areas to support further adaptation.
 
-=== D-100 Client (Pelagis)
 // Coastal environment use cases [Pelagis]
 include::06-01-marine.adoc[]
