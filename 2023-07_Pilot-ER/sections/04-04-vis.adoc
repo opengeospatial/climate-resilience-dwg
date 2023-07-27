@@ -9,22 +9,6 @@ Above all, general need for data visualization arises from the complexity and vo
 Below we provide some examples of how big data can be visualized in such a way that it captures the impact of climate change on for example vegetation in urban areas, or the impact of of climate change on climate hazards. And how to overcome challenges to realize these visualizations.
 
 
-=== 5D Meta World
-
-
-Presagis offered the V5D rapid 3D (trial) Digital Twin generation capability to Laubwerk
-Presagis gathered open source GIS dataset for the Hollywood region in order to match the location of the tree dataset from Laubwerk
-Using V5D, Presagis created a representative 3D digital twin of the building and terrain.
-Presagis imported Laubwerk tree point dataset providing vegetation type information inside V5D
-Presagis provided V5D Unreal plugin to Laubwerk in order to allow the insertion of the Laubwerk 3D tree (as Unreal assets) into the scene.
-Using V5D, Laubwerk is capable of adapting the tree model in order to demonstrate the impact of climate change on the city vegetation
-
-
-Presagis also provided to Laubwerk its V5D AI extracted vegetation dataset in order to complement the existing tree dataset as needed.
-
-image::presagis.png[image of the Presagis deliverable to Laubwerk. At this stage, all trees are using the same 3D model (palm tree). Laubwerk will use V5D to assign a representative 3D model based the on point feature attribution accessible in V5D. With V5D, this operation takes seconds to do and visualize the result in 3D.]
-
-
 === Visualizing the Impact of Climate Change and Mitigation on Vegetation
 
 One of the biggest challenges in communicating climate change is to tie global changes to the local impact they will have. Photorealistic visualization is a critical component for assessing and communicating the impact of environmental changes, and possibilities for mitigation. For this to work, it is crucial for visualizations to reflect the underlying data accurately and allow for quick iteration. In this regard, manual visualization processes are inferior. As much as possible, visualizations of real-life scenarios should be driven directly by available data of present states and simulations of possible scenarios. Our contribution is a first attempt at doing just that, determining what already works and what doesn't with existing data and technology.
@@ -104,6 +88,22 @@ This hyper-locality brings to light a number of problems with the granularity, a
 * There may be further factors that need to be considered, which are not part of any of the existing data sources. In this specific case we have the pretty high average age and also various pests and diseases that the Mexican fan palm (_Washingtonia robusta_), which has become such a distinctive feature of Southern California, especially Los Angeles, is suffering from. While this isn't directly related to climate change, it still needs to be considered for any visualization to be accurate.
 
 As was expected, the data-driven visualization of very local phenomena and changes is a challenging problem which surfaces lots of issues in terms of data availability as well as standardization and compatibility of storage formats.
+
+
+=== 5D Meta World
+
+
+Presagis offered the V5D rapid 3D (trial) Digital Twin generation capability to Laubwerk
+Presagis gathered open source GIS dataset for the Hollywood region in order to match the location of the tree dataset from Laubwerk
+Using V5D, Presagis created a representative 3D digital twin of the building and terrain.
+Presagis imported Laubwerk tree point dataset providing vegetation type information inside V5D
+Presagis provided V5D Unreal plugin to Laubwerk in order to allow the insertion of the Laubwerk 3D tree (as Unreal assets) into the scene.
+Using V5D, Laubwerk is capable of adapting the tree model in order to demonstrate the impact of climate change on the city vegetation
+
+Presagis also provided to Laubwerk its V5D AI extracted vegetation dataset in order to complement the existing tree dataset as needed.
+
+image::presagis.png[image of the Presagis deliverable to Laubwerk. At this stage, all trees are using the same 3D model (palm tree). Laubwerk will use V5D to assign a representative 3D model based the on point feature attribution accessible in V5D. With V5D, this operation takes seconds to do and visualize the result in 3D.]
+
 
 === ESRI's Web Application
 
