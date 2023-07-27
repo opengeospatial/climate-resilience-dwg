@@ -49,35 +49,35 @@ It should be stressed that these are visualizations of possible outcomes, but th
 <<<
 .Overview of the Visualized Region (Status Quo)
 [img-laubwerk-overview]
-image::laubwerk_ogc-crp_230526_v079_jws_2020-camera6.png[Overview of the Visualized Region (Status Quo), ,align=center]
+image::laubwerk_ogc-crp_230526_v079_jws_2020-camera6.png[]
 
-.Overview of the Visualized Region (Scenarios)
+.Overview of the Visualized Region (Climate Projection With and Without Mitigation Scenarios as Described at the Start of the Results Section
 [img-laubwerk-overview-scenarios]
-image::laubwerk_ogc-crp_230526_v078_jws_camera6-composite.png[Overview of the Visualized Region (Climate Projection With and Without Mitigation Scenarios as Described at the Start of the Results Section), ,align=center]
+image::laubwerk_ogc-crp_230526_v078_jws_camera6-composite.png[]
 
 .Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Status Quo)
 [img-laubwerk-sunset-blvd-n-curson-ave]
-image::laubwerk_ogc-crp_230526_v079_jws_2020-camera1.png[Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Status Quo), ,align=center]
+image::laubwerk_ogc-crp_230526_v079_jws_2020-camera1.png[]
 
-.Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Scenarios)
+.Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Climate Projection With and Without Mitigation Scenarios as Described at the Start of the Results Section)
 [img-laubwerk-sunset-blvd-n-curson-ave-scenarios]
-image::laubwerk_ogc-crp_230526_v079_jws_camera1-composite.png[Above the Corner Sunset Blvd and N Curson Ave Looking North-East (Climate Projection With and Without Mitigation Scenarios as Described at the Start of the Results Section), ,align=center]
+image::laubwerk_ogc-crp_230526_v079_jws_camera1-composite.png[]
 
 .Corner Franklin Ave And N Sierra Bonita Ave Looking East (Status Quo)
 [img-laubwerk-franklin-ave-n-sierra-bonita-ave]
-image::laubwerk_ogc-crp_230526_v079_jws_2020-camera2.png[Corner Franklin Ave And N Sierra Bonita Ave Looking East (Status Quo), ,align=center]
+image::laubwerk_ogc-crp_230526_v079_jws_2020-camera2.png[]
 
-.Corner Franklin Ave And N Sierra Bonita Ave Looking East (Scenarios)
+.Corner Franklin Ave And N Sierra Bonita Ave Looking East (Climate Projection With and Without Mitigation Scenarios as Described at the Start of the Results Section)
 [img-laubwerk-franklin-ave-n-sierra-bonita-ave-scenarios]
-image::laubwerk_ogc-crp_230525_v077_jws_camera2-composite.png[Corner Franklin Ave And N Sierra Bonita Ave Looking East (Climate Projection With and Without Mitigation Scenarios as Described at the Start of the Results Section), ,align=center]
+image::laubwerk_ogc-crp_230525_v077_jws_camera2-composite.png[]
 
 .Corner Hollywood Blvd And Camino Palmero St Looking Looking North (Status Quo)
 [img-laubwerk-hollywood-blvd-camino-palmero-st]
-image::laubwerk_ogc-crp_230526_v079_jws_2020-camera3.png[Corner Hollywood Blvd And Camino Palmero St Looking Looking North (Status Quo), ,align=center]
+image::laubwerk_ogc-crp_230526_v079_jws_2020-camera3.png[]
 
-.Corner Hollywood Blvd And Camino Palmero St Looking Looking North (Scenarios)
+.Corner Hollywood Blvd And Camino Palmero St Looking Looking North (Climate Projection With and Without Mitigation Scenarios as Described at the Start of the Results Section)
 [img-laubwerk-hollywood-blvd-camino-palmero-st-scenarios]
-image::laubwerk_ogc-crp_230525_v077_jws_camera3-composite.png[Corner Hollywood Blvd And Camino Palmero St Looking Looking North (Climate Projection With and Without Mitigation Scenarios as Described at the Start of the Results Section), ,align=center]
+image::laubwerk_ogc-crp_230525_v077_jws_camera3-composite.png[]
 
 ==== Challenges and Learnings
 
@@ -107,7 +107,8 @@ Using V5D, Laubwerk is capable of adapting the tree model in order to demonstrat
 
 Presagis also provided to Laubwerk its V5D AI extracted vegetation dataset in order to complement the existing tree dataset as needed.
 
-image::presagis.png[image of the Presagis deliverable to Laubwerk. At this stage, all trees are using the same 3D model (palm tree). Laubwerk will use V5D to assign a representative 3D model based the on point feature attribution accessible in V5D. With V5D, this operation takes seconds to do and visualize the result in 3D.]
+.image of the Presagis deliverable to Laubwerk. At this stage, all trees are using the same 3D model (palm tree). Laubwerk will use V5D to assign a representative 3D model based the on point feature attribution accessible in V5D. With V5D, this operation takes seconds to do and visualize the result in 3D.
+image::presagis.png[]
 
 
 === A Web Application
