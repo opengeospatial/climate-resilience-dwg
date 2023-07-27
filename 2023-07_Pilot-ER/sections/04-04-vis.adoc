@@ -110,9 +110,9 @@ Presagis also provided to Laubwerk its V5D AI extracted vegetation dataset in or
 image::presagis.png[image of the Presagis deliverable to Laubwerk. At this stage, all trees are using the same 3D model (palm tree). Laubwerk will use V5D to assign a representative 3D model based the on point feature attribution accessible in V5D. With V5D, this operation takes seconds to do and visualize the result in 3D.]
 
 
-=== ESRI's Web Application
+=== A Web Application
 
-Decision makers, public authorities, and citizens will primarily access the data via a custom web application, providing a simple dashboard interface for viewing interactive maps and graphs of the indices, and output formatted reports. The indices are group by 5 climate hazard types (Wildfire, Heat, Drought, Inland Flooding, Coastal Inundation). The current US project (https://livingatlas.arcgis.com/assessment-tool/explore/details) can be explored to gain context of what the global project will be.
+Decision makers, public authorities, and citizens will primarily access the data via a custom ESRI web application, providing a simple dashboard interface for viewing interactive maps and graphs of the indices, and output formatted reports. The indices are group by 5 climate hazard types (Wildfire, Heat, Drought, Inland Flooding, Coastal Inundation). The current US project (https://livingatlas.arcgis.com/assessment-tool/explore/details) can be explored to gain context of what the global project will be.
 
 [[esri_project]]
 .US Project view
@@ -140,7 +140,7 @@ For each of those 5 climate hazards there is a corresponding StoryMap to further
 
 •	Coastal Inundation: https://storymaps.arcgis.com/stories/f3ce292c0211400699b6e36985e561a6
 
-=== Ecere's Client for NOAA's Environmental Data Retrieval API
+=== NOAA's Environmental Data Retrieval API
 
 For the _D100 Client Instance_ deliverable, Ecere enhanced its GNOSIS Cartographer geospatial client to better support visualizing and accessing multi-dimensional datasets, both from local sources and
 remote sources such as through OGC API standards. Support for the _OGC API - Environmental Data Retrieval (EDR)_ standard as well as for _OGC netCDF_ was implemented in the GNOSIS Software Development Kit.

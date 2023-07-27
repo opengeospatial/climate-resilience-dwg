@@ -392,7 +392,7 @@ The API endpoint for accessing the range type of the coverage, which is part of 
 http://oge.whu.edu.cn/ogcapi/coverages_api/collections/2m_temperature_201602/coverage/domainset 
 The API endpoint for the domain set of the coverage, which is also the domain set of the cube.
 
-=== ESRI Climate Resilience Data
+=== Climate Resilience Data
 
 ==== Climate Projection Data
 
@@ -537,6 +537,3 @@ To reuse the summarized services outside of the CRMA application or to download 
 
 On these pages, a list of buttons allow you to filter the selection to a subset by attribute or geography, download into a variety of formats, and translate the descriptive documentation for viewing in other languages.
 
-[[esri_buttons]]
-.List of buttons
-image::esri_buttons.png[esri_viewAPI]

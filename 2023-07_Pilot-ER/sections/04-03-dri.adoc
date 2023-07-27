@@ -131,7 +131,7 @@ Each of these activities aligns with the best practices and standards of the OGC
 .Architecture
 image::pelagis.architecture(1).svg[Pelagis-architecture, ,align=center, width=600]
 
-=== DRI: Heat Impact and Drought Impact Components - Safe Software
+=== DRI: Heat Impact and Drought Impact Components
 
 ==== Heat Impact DRI Component
 
