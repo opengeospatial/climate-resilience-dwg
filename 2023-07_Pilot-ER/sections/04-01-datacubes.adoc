@@ -84,25 +84,25 @@ During the course of the pilot, the following datasets relevant to climate resil
 .ESA sentinel-2 Level-2A from COGs and STAC catalogs on AWS
 image::ecere/sentinel2.png[]
 
-[#ecere_windSpeed,reftext='{figure-caption} {counter:figure-num}']
-.CMIP5 projections (wind speed) from Copernicus Climate Data Store
-image::ecere/windSpeed.png[]
+// [#ecere_windSpeed,reftext='{figure-caption} {counter:figure-num}']
+// .CMIP5 projections (wind speed) from Copernicus Climate Data Store
+// image::ecere/windSpeed.png[]
 
 [#ecere_airTemperature,reftext='{figure-caption} {counter:figure-num}']
 .CMIP5 projections (air temperature) from Copernicus Climate Data Store
 image::ecere/airTemperature.png[]
 
-[#ecere_geopotentialHeight,reftext='{figure-caption} {counter:figure-num}']
-.CMIP5 projections (geopotential height) from Copernicus Climate Data Store
-image::ecere/geopotentialHeight.png[]
+// [#ecere_geopotentialHeight,reftext='{figure-caption} {counter:figure-num}']
+// .CMIP5 projections (geopotential height) from Copernicus Climate Data Store
+// image::ecere/geopotentialHeight.png[]
 
-[#ecere_precipitation,reftext='{figure-caption} {counter:figure-num}']
-.CMIP5 projections on single pressure level (precipitation shown here) from Copernicus Climate Data Store
-image::ecere/precipitation.png[]
+// [#ecere_precipitation,reftext='{figure-caption} {counter:figure-num}']
+// .CMIP5 projections on single pressure level (precipitation shown here) from Copernicus Climate Data Store
+// image::ecere/precipitation.png[]
 
-[#ecere_relativeHumidity,reftext='{figure-caption} {counter:figure-num}']
-.ERA5 reanalysis (relative humidity) from Copernicus Climate Data Store
-image::ecere/relativeHumidity.png[]
+// [#ecere_relativeHumidity,reftext='{figure-caption} {counter:figure-num}']
+// .ERA5 reanalysis (relative humidity) from Copernicus Climate Data Store
+// image::ecere/relativeHumidity.png[]
 
 [#ecere_fireDangerIndex,reftext='{figure-caption} {counter:figure-num}']
 .ECMWF CEMS Fire Danger indices from Copernicus Climate Data Store

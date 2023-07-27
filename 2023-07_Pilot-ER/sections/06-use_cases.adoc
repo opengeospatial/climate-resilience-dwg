@@ -98,8 +98,7 @@ of the data's provenance, integrity and application to climate
 monitoring.
 
 The client is used the existing
-https://gis.csiss.gmu.edu/carbon/cwicport/pages/main.html[CEOS WGISS
-Community Portal]. The portal is capable
+https://gis.csiss.gmu.edu/carbon/cwicport/pages/main.html[CEOS WGISS Community Portal]. The portal is capable
 of providing automated discovery and customization services of ECV and
 satellite data. The client will be able to discover and access ECV and
 other remote sensing data and customize them into ARD for anywhere in
@@ -124,17 +123,11 @@ it on the portal server to provide ARD service.
 
 Most of ECV data provides don't provide such service.
 
-The following figure is a software architecture of the CEOS WGISS Carbon
-Community Portal.
+Figure <<<software-architecture>>> shows a software architecture of the CEOS WGISS Carbon Community Portal.
 
-//[cols="^",options="header",]
-//|====
-//| image::ARD_GMU-architecture.png[image]
-//|Software Architecture
-//|====
 
 .Software Architecture
-image::ARD_GMU-architecture.png[image]
+image::ARD_GMU-architecture.png[software-architecture]
 
 ECV Inventory v4.1 records are converted as a unified form of the portal
 predefined metadata format by a converting tool. Retrieve collection
@@ -235,12 +228,12 @@ following results:
 
 //[cols="^",options="header",]
 //|====
-//|  image::ARD_GMU-demo-sfsm_inst.png[image]
+//|  image::ARD_GMU-demo-sfsm_inst.png[]
 //|Surface soil moisture percentile (year 2019-2022)
 //|====
 
 .Surface soil moisture percentile (year 2019-2022)
-image::ARD_GMU-demo-sfsm_inst.png[image]
+image::ARD_GMU-demo-sfsm_inst.png[]
 
 
 
@@ -261,11 +254,6 @@ in order to:
 
 * advance development of the solar-smart society and economy in Poland
 * provide know-how and tools, which are easily reusable in other geographical regions
-
-//|===
-//|  //image::Jakub-SolarConditionAtlas.png[]
-//|Solar Climate atlas for Poland available on the IMGW website: https://klimat.imgw.pl/en/solar-atlas
-//|===
 
 .Solar Climate atlas for Poland available on the IMGW website: https://klimat.imgw.pl/en/solar-atlas
 image::Jakub-SolarConditionAtlas.png[]
