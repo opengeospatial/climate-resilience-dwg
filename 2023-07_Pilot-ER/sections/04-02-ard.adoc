@@ -67,7 +67,7 @@ Pixalytics have developed an OGC-compliant Application Programming Interface (AP
 .Pixalytics drought severity workflow architecture
 image::Pixalytics-architecture.png[Pixalytics-architecture]
 
-The Drought Severity Workflow (DSW) is built using individual drought indicators for precipitation (SPI), soil moisture (SMA), and vegetation drought that are together using the Combined Drought Indicator (CDI) as described by [<<cite_Sepulcre-Canto_2012>>]. The API access has been set up following the Building Blocks for Climate Services (https://climateintelligence.github.io/smartduck-docs/) approach.
+The Drought Severity Workflow (DSW) is built using individual drought indicators for precipitation (SPI), soil moisture (SMA), and vegetation drought that are together using the Combined Drought Indicator (CDI) as described by (https://doi.org/10.5194/nhess-12-3519-2012). The API access has been set up following the Building Blocks for Climate Services (https://climateintelligence.github.io/smartduck-docs/) approach.
 
 - Component: D100 Drought indicator.
 
@@ -130,7 +130,7 @@ The Global Drought Observatory (GDO), owned by the Copernicus Emergency Manageme
 .Global Drought Observatory Web Portal, https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2001
 image::GDO_screenshot.png[GDO-screenshot]
 
-We obtain SMA and Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) from the GDO data download service. These are provided as netCDF files and contain pre-computed anomalies, so can be assimilated directly into the back-end. The SMA uses a combination of the root soil moisture from the https://ec-jrc.github.io/lisflood-model/[LISFLOOD model], the MODIS land surface temperature and the ESA Climate Change Initiative (CCI) skin soil moisture [<<cite_Cammalleri_2016>>], and the FAPAR is from NASA optical imagery.
+We obtain SMA and Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) from the GDO data download service. These are provided as netCDF files and contain pre-computed anomalies, so can be assimilated directly into the back-end. The SMA uses a combination of the root soil moisture from the https://ec-jrc.github.io/lisflood-model/[LISFLOOD model], the MODIS land surface temperature and the ESA Climate Change Initiative (CCI) skin soil moisture (https://hess.copernicus.org/articles/21/6329/2017/), and the FAPAR is from NASA optical imagery.
 
 _ERA5 Reanalysis from ECMWF CDS_
 
