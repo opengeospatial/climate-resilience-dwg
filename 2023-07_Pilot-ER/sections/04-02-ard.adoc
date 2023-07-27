@@ -48,9 +48,8 @@ In summary, the different ARD and IRD data can be created from the following dat
 //=== GMU_CSISS
 
 Another highly relevant input are the Essential Climate Variables (ECV) Inventory (https://climatemonitoring.info/ecvinventory/) houses information on Climate Data Records (CDR) provided mostly by CEOS and CGMS member agencies. The inventory is a structured repository for the characteristics of two types of GCOS ECV CDRs:
-
-    Climate data records that exist and are accessible, including frequently updated interim CDRs;
-    Climate data records that are planned to be delivered.
+* Climate data records that exist and are accessible, including frequently updated interim CDRs;
+* Climate data records that are planned to be delivered.
 
 The ECV Inventory is an open resource to explore existing and planned data records from space agency sponsored activities and provides a unique source of information on CDRs available internationally. Access links to the data are provided within the inventory, alongside details of the data’s provenance, integrity and application to climate monitoring.
 
