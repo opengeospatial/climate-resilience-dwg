@@ -244,23 +244,23 @@ image::ARD_GMU-demo-sfsm_inst.png[image]
 
 
 
-=== Solar climate atlas for Poland - Climate Resilience Information System
+=== Solar climate atlas for Poland
 Jakub P. Walawender (Freelance climate scientist and EO/GIS expert)
 email:contact@jakubwalawender.eu
 
-The project aims at updating previously created solar climate atlas for Poland by:
+The project aims at creating analysis ready solar radaition data cube and web map service for Poland to advance development of the solar-smart society and economy and to provide know-how and tools, which are easily reusable in other geographical regions worldwide, in accordance with the FAIR principles.
 
-* increasing spatial and temporal resolution of the datasets;
-* extending time span
+The project will update a previously created solar climate atlas for Poland by:
+* increasing spatial and temporal resolution of the datasets: 0.05° x 0.05° degrees (regular lat/lon grid) → 100x100m (?)Monthly means → Daily/Hourly(tbc) means;
+* extending time period: 1991-2014 (24 yrs) → 1983-2022 (40 yrs);
 * replacing static maps with a dynamic and interactive interface;
 * using practical solar radiation parameters instead of physical variables;
-* making datasets (+ metadata) available for downloaded
-in interoperable file formats for further use
-* sharing a solar climate knowledge base and data/service user guide
+* making datasets (+ metadata) available for downloaded in interoperable file formats (for further use)
+* providing solar climate knowledge base and data/service user guides 
 
 in order to:
 
-* advance development of the solar-smart society and economy in PL
+* advance development of the solar-smart society and economy in Poland
 * provide know-how and tools, which are easily reusable in other geographical regions
 
 //|===
@@ -274,7 +274,10 @@ image::Jakub-SolarConditionAtlas.png[]
 
 Newly created *solar climate data cube and web map service* will be more *FAIR* as they will be made available online, possibly on the official website of the Polish Hydrometeorological Service (IMGW) for an increased findability, upon future agreement (to be discussed) to make them more *Findable* by the general public. The whole process of data access (including authentication) will be transparent and accompanied by appropriate instructions so that the *Accessibility* could be much higher. The format of the datasets in the data cube will be an OGC netCDF standard compliant with the CF (Climate and Forecast) convention, which is suitable for encoding gridded data for space/time-varying phenomena and commonly known in the climate science community but also easily readable with other common spatial data processing and visualization software including most of the GIS software to keep fully *Interoperable*. Finally, even though the proposed solar climate information system (maps+ dataset) are limited to the area of Poland, all processing scripts will be made available on github along with a well-described processing steps (both Jupyter notebooks and instructional videos will be considered) to provide *Reusability* for other countries or geographical regions.
 
-*Two objectives for the pilot OGC Climate Resilience Pilot are:*
+*Scope of work for the Climate Resilience Pilot:*
+State-of-the-art review and exploratory data analysis
+
+*Objectives for the Climate Resilinece Pilot #1 are:*
 
 * to document existing solar radiation datasets (satellite, model and reanalysis data) and services (both freely accessible and commercial)
 * to verify the accuracy of the in situ measurements and satellite climate data records for the selected solar radiation parameters using proper statistical methods
