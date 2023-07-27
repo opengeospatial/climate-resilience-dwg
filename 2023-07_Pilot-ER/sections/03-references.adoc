@@ -14,6 +14,9 @@ the latest edition of the referenced document (including any amendments) applies
 References are to follow the Springer LNCS style, with the exception that optional information may be appended to references: DOIs are added after the date and web resource references may include an access date at the end of the reference in parentheses. See examples from Springer and OGC below.
 ////
 
+
+
+
 // Typical reference entries (without auto-fetch)
 // Reference content will display as written
 
@@ -59,3 +62,9 @@ References are to follow the Springer LNCS style, with the exception that option
 * [[[rfc8288,RFC 8288]]], Nottingham, M.: IETF RFC 8288, *Web Linking*, 2017 http://tools.ietf.org/rfc/rfc8288.txt
 
 * [[[rfc7946,RFC 7946]]], Butler, H., Daly, M., Doyle, A., Gillies, S., Hagen, S., Schaub, T.: IETF RFC 7946, *The GeoJSON Format*, 2016 https://tools.ietf.org/rfc/rfc7946.txt
+
+Appel M., Pebesma E., 2019, On-Demand Processing of Data Cubes from Satellite Image Collections with the gdalcubes Library, Data, 4(3):92, doi: 10.3390/data4030092
+
+Kopp S., Becker P., Doshi A., Wright D.J., Zhang K., Xu H., 2019, Achieving the Full Vision of Earth Observation Data Cubes, Data, 4(3):94, doi: 10.3390/data4030094
+
+OGC, 2021, Towards Data Cube Interoperability, OGC document 21-067 (available at: https://portal.ogc.org/files/?artifact_id=99131) 
