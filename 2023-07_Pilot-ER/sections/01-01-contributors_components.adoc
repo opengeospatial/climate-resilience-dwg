@@ -98,6 +98,9 @@ Wuhan University (WHU) is a university that plays a significant role in research
 
 Jakub P. Walawender is a freelance climate scientist and EO/GIS expert who carries out his PhD research on solar radiation climatology of his home country of Poland at the Laboratory for Climatology and Remote Sensing (LCRS), Faculty of Geography, Philipps University in Marburg, Germany. Jakub specialises in the application of satellite remote sensing, GIS and geostatistics in the monitoring and analysis of climate variability and extremes. He also supports users in the application of different climate data records to tackle the effects of climate change.
 
+==== About George Mason University (GMU)
+
+George Mason University (GMU) is a public research university that conducts research and provides training to postdoctoral fellows, PhD candidates, and master’s students in Geospatial information science, remote sensing, satellite image analysis, geospatial data processing, Earth system science, geospatial interoperability and standards, geographic information systems, and other related subjects. GMU will contribute an ARD use-case.
 
 [[clause-reference]]
 
