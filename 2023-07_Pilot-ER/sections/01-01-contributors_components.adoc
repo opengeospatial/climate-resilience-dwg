@@ -7,9 +7,9 @@
 |Guy Schumann | RSS-Hydro | Lead ER Editor
 |Albert Kettner | RSS-Hydro/DFO | Lead ER Editor
 |Timm Dapper | Laubwerk GmbH |
-|Zhe Fang | Wuhan University |
-|Hanwen Xu | Wuhan University |
-|Peng Yue | Wuhan University |
+|Peng Yue | Wuhan University | Datacube component
+|Zhe Fang | Wuhan University | Climate ARD component
+|Hanwen Xu | Wuhan University | Drought impact use cases
 |Dean Hintz | Safe Software, Inc. |
 |Samantha Lavender | Pixalytics Ltd | Development of drought indicator
 |Andrew Lavender | Pixalytics Ltd | Development of drought indicator
