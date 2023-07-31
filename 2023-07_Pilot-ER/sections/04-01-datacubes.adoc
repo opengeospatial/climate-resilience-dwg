@@ -16,34 +16,102 @@ The example below highlights a climate resilience related example of how to crea
 
 
 //=== Jakub P. Walawender
-=== Analysis Ready Data Cubes (including climate data records)
+=== Analysis Ready Data Cubes - user-friendly sharing of climate data records
 
-Climate Data Record (CDR) - time series of measurements of sufficient length, consistency, and continuity to determine climate variability and change (US National Research Council). It can be also derived from a long series of satellite data.
+*Climate Data Record (CDR)* - time series of measurements of sufficient length, consistency, and continuity to determine climate variability and change (US National Research Council). It can be also derived from a long series of satellite data.
 
-Data Cube (Different approaches):
-- multidimensional arrays of data (Kopp et al., 2019),
-- 4-dimensional array with dimensions x (longitude or easting), y (latitude or northing), time, and bands sharing the same data properties (Appel and Pebesma, 2019)
-- “cube” can be a metaphor to help illustrate a data structure that can in fact be 1- dimensional, 2-dimensional, 3-dimensional, or higher-dimensional. The dimensions may be coordinates or enumerations, e.g., categories (OGC, 2021)
+*Data Cube (Different approaches):*
 
-Common (technical) definition of the Data Cube focus on data structure aspects exclusively!
+* {blank}
++
+//____
+multidimensional arrays of data
+(https://doi.org/10.3390/data4030094[Kopp et al., 2019]);
+//____
+* {blank}
++
+//____
+4-dimensional array with dimensions x (longitude or easting), y (latitude or northing), time, and bands sharing the same data properties (https://doi.org/10.3390/data4030092[Appel and Pebesma, 2019])
+//____
+* {blank}
++
+//____
+“cube” can be a metaphor to help illustrate a data structure that can in fact be 1- dimensional, 2-dimensional, 3-dimensional, or higher-dimensional. The dimensions may be coordinates or enumerations,
+e.g., categories (https://portal.ogc.org/files/?artifact_id=99131[OGC, 2021])
 
-Analysis Ready Data (ARD) - are satellite data that have been processed to a minimum set of requirements and organized into a form that allows immediate analysis with a minimum of additional user effort and interoperability both through time and with other datasets (CEOS website - https://ceos.org).
+Common (technical) definition of the Data Cube focuses on the data structure aspects exclusively!
 
-The idea behind the ARD is, that a data provider such as e.g. EUMETSAT or ESA is in general in a better position to do data pre-processing, e.g. atmospheric correction, cloud masking and re-gridding, than a user. 
-Data pre-processing for ARD may include e.g.: atmospheric correction, cloud masking, gap filling, orthorectification or re-gridding.
+*Analysis Ready Data (ARD)* - are satellite data that have been processed to a minimum set of requirements and organized into a form that allows immediate analysis with a minimum of additional user effort and interoperability both through time and with other datasets (https://ceos.org[CEOS website]).
 
-Analysis Ready Data Cubes (ARDCs)
-ARD are often made available in the form of a data cubes, which focuses on a one specific region (e.g. Swiss Data Cube) or thematic application, e.g. EUMETSAT Drought & Vegetation Data Cube (D&V Data Cube) Data cubes can also be defined by the type of data it includes (e.g. Atmospheric Composition Data Cube (ACDC), Earth System Data Cube (ESDC) + Data Analytics Toolkit (Earth System Data Lab). Continuing this logic, a data cube which includes different climate data records can be referred to as a Climate Data Cube. 
+The idea behind the ARD is, that data providers such as e.g. EUMETSAT or ESA are better suited to do data pre-processing, e.g. atmospheric correction, cloud masking and re-gridding, than users. 
+The data pre-processing for ARD may include e.g.: atmospheric correction, cloud masking, gap filling, re-gridding, etc.
 
-Example ARDCs:
-1. ESA Earth System Data Cube (ESDC) – data cube and Data Analytics Toolkit: http://earthsystemdatacube.org,
-2. EUMETSAT Drought & Vegetation Data Cube (D&V Data Cube) – a collection of data records relevant for drought and vegetation monitoring and analysis,
-3. EUMETSAT Atmospheric Composition Data Cube (ACDC) – a prototype data cube for satellite-based data on atmospheric composition (EUMETSAT),
-4. Euro Data Cube (EDC) – https://eurodatacube.com,
-5. Swiss Data Cube (SDC) – https://www.swissdatacube.org,
-6. Digital Earth Africa, previously: Africa Regional Data Cube (ARDC) – an infrastructure and a service providing analysis-ready data and Earth observations (EO) capability in support of the SDGs and other development agendas in Ghana, Kenya, Senegal, Sierra Leone and Tanzania: https://www.digitalearthafrica.org.
+*Analysis Ready Data Cubes (ARDCs)* +
+ARDs are often made available in the form of data cubes, which focus on a one specific region (e.g. https://www.swissdatacube.org[Swiss Data Cube]) or thematic application (e.g. https://training.eumetsat.int/course/view.php?id=399[EUMETSAT Drought & Vegetation Data Cube (D&V Data Cube)]). Data cubes can also be defined by the type of data it includes (e.g. https://training.eumetsat.int/course/view.php?id=437[Atmospheric Composition Data Cube (ACDC)], https://deepesdl.readthedocs.io/en/latest/datasets/ESDC[Earth System Data Cube (ESDC)] + https://www.earthsystemdatalab.net[Data Analytics Toolkit (Earth System Data Lab)]). +
+A data cube which contains various climate data records can be generally referred to as *Climate Data Cube*.
 
+.Example Climate Data Cubes
+[options="header"]
+|===
+|Data Cube name |Climate Data Records |Data Cube Provider |Year of release |Data source |Accessibility |Data format |Temporal coverage |Temporal resolution |Spatial resolution |Spatial coverage
+|https://training.eumetsat.int/course/view.php?id=399[EUMETSAT Drought & Vegetation Data Cube]
+|Solar radiation: Global Radiation, Direct normal Solar Radiation, Sunshine Duration, other: Land Surface Temperature, Reference Evapotranspiration, NDVI, Fractional Vegetation Cover, Leaf Area Index, Fraction of absorbed photosynthetically active radiation, Soil Wetness Index (root zone), Precipitation, Air temperature at 2m 
+|EUMETSAT
+|2021
+|CMSAF SARAH2 (for solar radiation), other: LSA SAF, H SAF, GPCC, ECMWF
+|Free after enrollment (EUMETSAT Prototype Satellite Data Cube)
+|CF compliant netCDF4 via a THREDDS server
+|Solar radiation: 1983-2020, other: 2004-2020, SWI 1992-2020, Precipitation 1982-2020, T2m 1979-2020
+|Solar radiation: Day, month, other: hourly (LST), 10-daily (NDVI)
+|0.05° x 0.05° degrees
+|Europe
+|https://doi.org/10.5281/zenodo.7473332[mesogeos - a Daily Datacube for the Modeling and Analysis of Wildfires in the Mediterranean]
+|Solar radiation: mean daily surface solar radiation downwards from ERA5-Land, other: dynamic variables - previous day Leaf Area Index, evapotransiration, Land Surface Temperature, meteorological data, fire variables and Fire Weather Index, static variables - roads density, population density and topography layers
+|One of many data cubes created within the Deep Cube (https://deepcube-h2020.eu/[Horizon 2020 Project “Explainable AI pipelines for big Copernicus data""])
+|2022
+|MODIS, ERA5, JRC European Drought Observatory, worldpop.org, Copernicus C3S,  Copernicus EU-DEM, EFFIS
+|Free, https://github.com/Orion-AI-Lab/mesogeos[with open code at github]
+|.zarr (file storage format for chunked, compressed, N-dimensional arrays based on an open-source specification), Jupyter Notebooks (python)
+|2002 - 2022
+|Day
+|1km x 1km
+|Mediterranean:Lon: 10.72 W, to 30.07 E, Lat: 36.74 to 47.7 N
+|https://deepesdl.readthedocs.io/en/latest/datasets/ESDC/[The Earth System Data Cube (ESDC) ]
+|Solar radiation: Surface Net Solar Radiation, other: the cube includes all important meteorological variables (the list is too long to include in this table)
+|DeepESDL Team (https://www.earthsystemdatalab.net/[ESA-funded project Earth System Data Lab])
+|2022
+|ERA5 (for solar radiation)
+|Free
+|Directory of NetCDF files based on xcube, can also be accessed via a dedicated ESDL THREDDS server which supports the OPeNDAP and WCS
+|1979 - 2021
+|1h
+|0.25 degree
+|Global
+|https://doi.org/10.5281/zenodo.7252361[MADIA - Meteorological variables for agriculture (Italy)]
+|Solar radiation: mean of daily surface solar radiation downwards (shortwave radiation), other 10-day gridded agro-meteorological data: air temperature and humidity, precipitation, wind speed, evapotranspiration
+|Council for Agricultural Research and Economics–Research Centre for Agriculture and Environment
+|2022
+|ERA5 hourly data accessed through Climate Data Store
+|Free
+|NetCDF, csv and vector file (Shapefile) for administrative regions (NUTS 2 and 3)
+|1981 - 2021
+|10-day, also climate normals, minimum, maximum and the main quantiles
+|0.25 degree
+|Italy: 34.875–48.125 N, 4.875 – 20.125 E 
+|https://ecodatacube.eu[Open Environmental Data Cube]
+|Climate: air temperature (Min, Mean, Max), land surface temperature (Min, Mean, Max), precipitation (Daily Sum), other: natural disasters, air quality, land cover, terrain, soil, forest and vegetation
+|OpenGeoHub, CVUT Prague, mundialis,Terrasigna, MultiOne (https://opendatascience.eu/geoharmonizer-project/[Horizon2020 Project: “Geo-harmonizer: EU-wide automated mapping system for harmonization of Open Data based on FOSS4G and Machine"])
+|2022
+|ERA5 (for climate variables)
+|Free
+|WFS for vector data, Cloud Optimised GeoTIFFs for raster datasets (allowing import, subset, crop and overlay parts of data for the local area.)
+|2000 - 2020 and Predictions based on Ensemble Machine Learning
+|Day
+|1km (resampled)
+|Europe
+|===
 
+Analysis Ready Data Cubes (ARDCs) play an important role in handling large volumes of data (such as satellite-based CDRs). They are often deployed on different spatial scales and consist of  datasets dedicated for particular application. This makes them more accessible, easier to use and less costly for the users.
 
 
 //=== Ecere Corporation
