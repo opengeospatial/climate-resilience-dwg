@@ -77,7 +77,7 @@ Pelagis is an OceanTech venture located in Nova Scotia, Canada. Our foundation f
 
 ==== About alpS
 
-The alpS GmbH is an international engineering and consulting firm that supports companies, municipalities, and governments in their sustainable development and in dealing with the consequences, opportunities, and risks of climate change. Over the last 20 years alpS has worked with more than 250 municipalities and industrial partners. alpS accompanied a large number of adaptation cycles from vulnerability assessments to the implementation of adaptation measures and their evaluation.
+The alpS GmbH is an international engineering and consulting firm that supports companies, municipalities, and governments in their sustainable development and in dealing with the consequences, opportunities, and risks of climate change. Over the past 20 years, alpS has worked with more than 250 municipalities and industrial partners on climate-related projects. alpS accompanied a large number of adaptation cycles from risk assessments to the implementation of adaptation measures and their evaluation.
 
 
 ==== About Ecere
