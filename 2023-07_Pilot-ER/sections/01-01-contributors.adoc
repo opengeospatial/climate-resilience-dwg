@@ -1,5 +1,8 @@
 
 == Contributors
+
+The various organizations and institutes that contribute to the Climate Resilience Pilot are described below. 
+
 [%unnumbered]
 [width="90%",options="header"]
 |====================
@@ -30,11 +33,42 @@
 
 |====================
 
-The various organizations and institutes that contribute to the Climate Resilience Pilot are described below. Their input to the pilot is indicated in the figure below <<CRIS>>.
 
 // [[CRIS]]
 // .CRIS overview
 // image::CRIS.png[CRIS]
+
+
+==== About alpS
+
+The alpS GmbH is an international engineering and consulting firm that supports companies, municipalities, and governments in their sustainable development and in dealing with the consequences, opportunities, and risks of climate change. Over the past 20 years, alpS has worked with more than 250 municipalities and industrial partners on climate-related projects. alpS accompanied a large number of adaptation cycles from risk assessments to the implementation of adaptation measures and their evaluation.
+
+
+==== About Ecere
+
+Ecere is a small software company located in Gatineau, Québec, Canada.
+Ecere develops the https://ecere.ca/gnosis[GNOSIS cross-platform suite of geospatial software], including a map server, a Software Development Kit and a 3D visualization client.
+Ecere also develops the Free and Open Source https://ecere.org[Ecere cross-platform Software Development Kit], including a 2D/3D graphics engine, a GUI toolkit,
+an Integrated Development Environment and a compiler for the https://ec-lang.org[eC programming language].
+As a member of the OGC, Ecere is an active contributor in several Standard Working Groups as co-chair and editor, and participated in several testbeds, pilots and code sprints.
+In particular, Ecere has been a regular contributor and an early implementer for several OGC API standards in its GNOSIS Map Server and GNOSIS Cartographer client, and is also active in the efforts to modernize
+the https://www.ogc.org/standard/cdb/[OGC CDB] data store and https://github.com/opengeospatial/styles-and-symbology[OGC Styles & Symbology standard].
+
+==== About George Mason University (GMU)
+
+George Mason University (GMU) is a public research university that conducts research and provides training to postdoctoral fellows, PhD candidates, and master’s students in Geospatial information science, remote sensing, satellite image analysis, geospatial data processing, Earth system science, geospatial interoperability and standards, geographic information systems, and other related subjects. GMU will contribute an ARD use-case.
+
+==== About Laubwerk
+
+Laubwerk is a software development company whose mission is to combine accurate, broadly applicable visualizations of vegetation with deeper information and utility that goes far beyond their visual appearance. We achieve this through building a database that combines ultra-realisting 3D representation of plants with extensive metadata that represents plant properties. This unique combination makes Laubwerk a prime partner to bridge the gap from data-driven simulation to eye-catching visualizations.
+
+==== About Pixalytics Ltd
+
+Pixalytics Ltd is an independent consultancy company specializing in Earth Observation (EO). We combine cutting-edge scientific knowledge with satellite and airborne data to provide answers to questions about our planet's resources and behavior. The underlying work includes developing algorithms and software, with activities including a focus on EO quality control and end-user focused applications.
+
+==== About Presagis
+
+ToDo: Description
 
 
 ==== About RSS-Hydro
@@ -50,13 +84,6 @@ Specifically, RSS-Hydro can provide access to the following satellite and climat
 - Satellite-derived Discharge Data to look at Droughts/Floods etc. by basin or other scale.
 - Hydrological model simulation outputs at (sub)basin scale.
 
-==== About Laubwerk
-
-Laubwerk is a software development company whose mission is to combine accurate, broadly applicable visualizations of vegetation with deeper information and utility that goes far beyond their visual appearance. We achieve this through building a database that combines ultra-realisting 3D representation of plants with extensive metadata that represents plant properties. This unique combination makes Laubwerk a prime partner to bridge the gap from data-driven simulation to eye-catching visualizations.
-
-==== About Pixalytics Ltd
-
-Pixalytics Ltd is an independent consultancy company specializing in Earth Observation (EO). We combine cutting-edge scientific knowledge with satellite and airborne data to provide answers to questions about our planet's resources and behavior. The underlying work includes developing algorithms and software, with activities including a focus on EO quality control and end-user focused applications.
 
 ==== About Safe Software
 
@@ -74,32 +101,14 @@ With close to 500 experts in data, artificial intelligence, machine learning and
 
 Pelagis is an OceanTech venture located in Nova Scotia, Canada. Our foundation focuses on the application of open geospatial technology and standards designed to promote the sustainable use of our ocean resources. As a member of the Open Geospatial Consortium, we co-chair the Marine Domain Working Group responsible for developing a spatially-aware federated service model of marine and coastal ecosystems.
 
-==== About alpS
-
-The alpS GmbH is an international engineering and consulting firm that supports companies, municipalities, and governments in their sustainable development and in dealing with the consequences, opportunities, and risks of climate change. Over the past 20 years, alpS has worked with more than 250 municipalities and industrial partners on climate-related projects. alpS accompanied a large number of adaptation cycles from risk assessments to the implementation of adaptation measures and their evaluation.
-
-
-==== About Ecere
-
-Ecere is a small software company located in Gatineau, Québec, Canada.
-Ecere develops the https://ecere.ca/gnosis[GNOSIS cross-platform suite of geospatial software], including a map server, a Software Development Kit and a 3D visualization client.
-Ecere also develops the Free and Open Source https://ecere.org[Ecere cross-platform Software Development Kit], including a 2D/3D graphics engine, a GUI toolkit,
-an Integrated Development Environment and a compiler for the https://ec-lang.org[eC programming language].
-As a member of the OGC, Ecere is an active contributor in several Standard Working Groups as co-chair and editor, and participated in several testbeds, pilots and code sprints.
-In particular, Ecere has been a regular contributor and an early implementer for several OGC API standards in its GNOSIS Map Server and GNOSIS Cartographer client, and is also active in the efforts to modernize
-the https://www.ogc.org/standard/cdb/[OGC CDB] data store and https://github.com/opengeospatial/styles-and-symbology[OGC Styles & Symbology standard].
-
-==== About Wuhan University (WHU)
-
-Wuhan University (WHU) is a university that plays a significant role in researching and teaching all aspects of surveying and mapping, remote sensing, photogrammetry, and geospatial information sciences in China. In this Climate Resilience Pilot, WHU will contribute three components (ARD, Drought Indicator, and Data Cube) and one use-case (Drought Impact Use-cases). 
-
 ==== About Jakub P. Walawender 
 
 Jakub P. Walawender is a freelance climate scientist and EO/GIS expert who carries out his PhD research on solar radiation climatology of his home country of Poland at the Laboratory for Climatology and Remote Sensing (LCRS), Faculty of Geography, Philipps University in Marburg, Germany. Jakub specialises in the application of satellite remote sensing, GIS and geostatistics in the monitoring and analysis of climate variability and extremes. He also supports users in the application of different climate data records to tackle the effects of climate change.
 
-==== About George Mason University (GMU)
 
-George Mason University (GMU) is a public research university that conducts research and provides training to postdoctoral fellows, PhD candidates, and master’s students in Geospatial information science, remote sensing, satellite image analysis, geospatial data processing, Earth system science, geospatial interoperability and standards, geographic information systems, and other related subjects. GMU will contribute an ARD use-case.
+==== About Wuhan University (WHU)
+
+Wuhan University (WHU) is a university that plays a significant role in researching and teaching all aspects of surveying and mapping, remote sensing, photogrammetry, and geospatial information sciences in China. In this Climate Resilience Pilot, WHU will contribute three components (ARD, Drought Indicator, and Data Cube) and one use-case (Drought Impact Use-cases). 
 
 [[clause-reference]]
 
