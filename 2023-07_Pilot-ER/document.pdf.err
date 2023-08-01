@@ -7,7 +7,7 @@ WARNING: Font 'sans-serif' (font name 'sans-serif', font style 'normal', font we
 WARNING: Font 'sans-serif' (font name 'sans-serif', font style 'italic', font weight 'normal') doesn't exist. Replaced by '/github/home/.metanorma/fonts/NotoSans-Italic.ttf'.
 WARNING: Font 'sans-serif' (font name 'sans-serif', font style 'italic', font weight 'bold') doesn't exist. Replaced by '/github/home/.metanorma/fonts/NotoSans-BoldItalic.ttf'.
 
-Page 146: Unresolved ID reference "software-architecture" found.
+Page 145: Unresolved ID reference "software-architecture" found.
 WARNING: Font 'Arial_MSFontService' (font name 'Arial_MSFontService', font style 'normal', font weight 'normal') doesn't exist. Replaced by '/github/home/.metanorma/fonts/NotoSans-Regular.ttf'.
 WARNING: Font 'Arial_MSFontService' (font name 'Arial_MSFontService', font style 'normal', font weight 'bold') doesn't exist. Replaced by '/github/home/.metanorma/fonts/NotoSans-Bold.ttf'.
 WARNING: Font 'Arial_MSFontService' (font name 'Arial_MSFontService', font style 'italic', font weight 'normal') doesn't exist. Replaced by '/github/home/.metanorma/fonts/NotoSans-Italic.ttf'.
