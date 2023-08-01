@@ -251,18 +251,19 @@ Modified ARD Data workflow:
 Further scenario tests were explored, including comparison with historical norms. Calculations were made using the difference between projected climate variables and historical climate variables. These climate variable deltas may well serve as a useful starting point for climate change risk indicator development. They also serve as an approach for normalizing climate impacts when the absolute units are not the main focus. Interesting patterns emerged for the LA area that we ran this process on deltas between projected and historical precipitation. While summers are typically dry and winters are wet and prone to flash floods. Initial data exploration seemed to show an increase in drought patterns in the spring and fall. More analysis needs to be done to see if this is a general pattern or simply one that emerged from the climate scenario we ran. However, this  is the type of trend that local planners and managers may benefit from having the ability to explore once they have better access to climate model scenario outputs along with the ability to query and analyze them.
 
 [[FME_ARD_Workflow_LA_precip_diff]]
-.Modified ARD Worflow: NetCDF data cube to precipitation delta grids (future - historical) in Geopackage for LA
+.Modified ARD Workflow: NetCDF data cube to precipitation delta grids (future - historical) in Geopackage for LA
 image::FME_ARD_Workflow_LA_precip_diff.png[FME_ARD_Workflow_LA_precip_diff]]
 
 ARD Climate Variable Delta Data workflow:
-- Split data cubes from historic and future netcdf inputs
-- Set timestep parameters
-- Compute historic mean for 1950 - 1980 per month based on historic time series input
-- Multiply historic mean by -1
-- Use RasterMosaiker to sum all future grids with -1 * historic mean grid for that month
-- Normalize environmental variable difference by dividing by historic range for that month delta / (max - min)
-- Convert grids to vector contours
-- Define monthly environment variables from band and range values
+
+1. Split data cubes from historic and future netcdf inputs
+2. Set timestep parameters
+3. Compute historic mean for 1950 - 1980 per month based on historic time series input
+4. Multiply historic mean by -1
+5. Use RasterMosaiker to sum all future grids with -1 * historic mean grid for that month
+6. Normalize environmental variable difference by dividing by historic range for that month delta / (max - min)
+7. Convert grids to vector contours
+8. Define monthly environment variables from band and range values
 
 More analysis needs to be done with higher resolution time steps - weekly and daily. At the outset monthly time steps were used to make it easier to prototype workflows. Daily time step computations will take significantly more processing time. Future pilots should explore ways of better supporting scalability of processing through automation and cloud computing approaches such as the use of cloud native formats (STAC, COG, ZARR etc).
 
