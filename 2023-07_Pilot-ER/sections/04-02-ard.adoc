@@ -169,7 +169,7 @@ Other additions to the workflow which could support future collaboration with ot
 - The ECMWF Soil Moisture data contains information for multiple depths of soil. The service currently returns the moisture of just one of these layers, however, the most applicable layer will vary with location and crop type. For some use-cases, providing the option to choose the soil layer and providing guidance on how this can be done would be beneficial to the end user.
 
 //=== Safe Software
-=== From Raw Data & Data Cubes to ARD with the FME Platform
+=== From Raw Data and Data Cubes to ARD with the FME Platform
 
 ==== Component Descriptions
 
