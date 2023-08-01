@@ -49,11 +49,12 @@ The idea behind the ARD is, that data providers such as e.g. EUMETSAT or ESA are
 ARDs are often made available in the form of data cubes, which focus on a one specific region (e.g. https://www.swissdatacube.org[Swiss Data Cube]) or thematic application (e.g. https://training.eumetsat.int/course/view.php?id=399[EUMETSAT Drought & Vegetation Data Cube (D&V Data Cube)]). Data cubes can also be defined by the type of data it includes (e.g. https://training.eumetsat.int/course/view.php?id=437[Atmospheric Composition Data Cube (ACDC)], https://deepesdl.readthedocs.io/en/latest/datasets/ESDC[Earth System Data Cube (ESDC)] + https://www.earthsystemdatalab.net[Data Analytics Toolkit (Earth System Data Lab)]). +
 A data cube which contains various climate data records can be generally referred to as *Climate Data Cube*.
 
+//|Temporal resolution |Spatial resolution |Spatial coverage
 .Example Climate Data Cubes
 [%autowidth.stretch]
 [options="header"]
 |===
-|Data Cube name |Climate Data Records |Provider |Year of release |Data source |Accessibility |Data format |Temporal coverage |Temporal resolution |Spatial resolution |Spatial coverage
+|Data Cube name |Climate Data Records |Provider |Year of release |Data source |Accessibility |Data format |Temporal coverage 
 |https://training.eumetsat.int/course/view.php?id=399[EUMETSAT Drought & Vegetation Data Cube]
 |Solar radiation: Global Radiation, Direct normal Solar Radiation, Sunshine Duration, other: Land Surface Temperature, Reference Evapotranspiration, NDVI, Fractional Vegetation Cover, Leaf Area Index, Fraction of absorbed photosynthetically active radiation, Soil Wetness Index (root zone), Precipitation, Air temperature at 2m 
 |EUMETSAT
