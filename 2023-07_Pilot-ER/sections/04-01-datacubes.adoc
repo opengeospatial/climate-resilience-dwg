@@ -54,7 +54,7 @@ A data cube which contains various climate data records can be generally referre
 [%autowidth.stretch]
 [options="header"]
 |===
-|Data Cube name |Climate Data Records |Provider |Year of release |Data source |Accessibility |Data format |Temporal coverage 
+|Data Cube name |Climate Data Records |Provider |Year of release |Data source |Accessibility |Data format |Temporal coverage |Temporal resolution |Spatial resolution |Spatial coverage
 |https://training.eumetsat.int/course/view.php?id=399[EUMETSAT Drought & Vegetation Data Cube]
 |Solar radiation: Global Radiation, Direct normal Solar Radiation, Sunshine Duration, other: Land Surface Temperature, Reference Evapotranspiration, NDVI, Fractional Vegetation Cover, Leaf Area Index, Fraction of absorbed photosynthetically active radiation, Soil Wetness Index (root zone), Precipitation, Air temperature at 2m 
 |EUMETSAT
