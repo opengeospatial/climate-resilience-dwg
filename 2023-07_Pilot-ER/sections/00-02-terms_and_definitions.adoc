@@ -1,4 +1,3 @@
-
 == Terms and definitions
 
 
@@ -19,8 +18,8 @@ Carrying Capacity:: An area both suitable and available for human activity based
 CDI:: Combined Drought Indicator
 CDR:: Climate Data Record
 CEOS:: Committee on Earth Observation Satellites
-CRIS:: Climate resilience information system
-CRMA:: 
+CRIS:: Climate Resilience Information System
+CRMA:: Climate Mapping for Resilience and Adaptation 
 ECV:: Essential Climate Variable
 EMS:: Exploitation Platform Management Service
 EO:: Earth Observation
