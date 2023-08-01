@@ -5,27 +5,27 @@
 
 === Enhancing Interoperability for Climate Resilience Information Systems
 
-The OGC Climate Resilience Pilot will be the first phase of multiple long term climate activities aiming to evolve geospatial data, technologies, and other capabilities into valuable information for decision makers, scientists, policy makers, data providers, software developers, and service providers so we can make valuable, informed decisions to improve climate action. The goal is to help the location community develop more powerful visualization and communication tools to accurately address ongoing climate threats such as heat, drought, floods, fires as well as supporting the national determined contributions for greenhouse gas emission reduction. Climate resilience is often considered the use case of our lifetime, and the OGC community is uniquely positioned to accelerate solutions through collective problem solving with this initiative.
+The OGC Climate Resilience Pilot represents the first phase of multiple long term climate activities aiming to evolve geospatial data, technologies, and other capabilities into valuable information for decision makers, scientists, policy makers, data providers, software developers, and service providers so we can make valuable, informed decisions to improve climate action. The goal was to help the location community develop more powerful visualization and communication tools to accurately address ongoing climate threats such as heat, drought, floods, fires as well as supporting the national determined contributions for greenhouse gas emission reduction. Climate resilience is often considered the use case of our lifetime, and the OGC community is uniquely positioned to accelerate solutions through collective problem solving with this initiative.
 
 image::CCS_Pilot_Concept.png[]
 
-As illustrated, big, raw data from multiple sources requires further processing in order to be ready for analysis and climate change impact assessments. Applying data enhancement steps, such as bias adjustments, re-gridding, or calculation of climate indicators and essential variables, leads to “Decision Ready Indicators.” The spatial data infrastructures required for this integration should be designed with interoperable building blocks following FAIR data principles. Heterogeneous data from multiple sources can be enhanced, adjusted, refined, or quality controlled to provide Science Services data products for Climate Resilience. The OGC Climate Change Services Pilots will also illustrate the graphical exploration of the Decision Ready Climate Data. It will demonstrate how to design FAIR climate services information systems. The OGC Pilot demonstrators will illustrate the necessary tools and the visualizations to address climate actions moving towards climate resilience.
+As illustrated, big, raw data from multiple sources requires further processing in order to be ready for analysis and climate change impact assessments. Applying data enhancement steps, such as bias adjustments, re-gridding, or calculation of climate indicators and essential variables, leads to “Decision Ready Indicators.” The spatial data infrastructures required for this integration should be designed with interoperable building blocks following FAIR data principles. Heterogeneous data from multiple sources can be enhanced, adjusted, refined, or quality controlled to provide Science Services data products for Climate Resilience. The OGC Climate Change Services Pilots also illustrated the graphical exploration of the Decision Ready Climate Data. It effectively demonstrated how to design FAIR climate services information systems. The OGC Pilot participants illustrated the necessary tools and the visualizations to address climate actions moving towards climate resilience.
 
 === The Role of the Pilot
 
-The OGC Climate Resilience Community brings decision makers, scientists, policy makers, data providers, software developers, and service providers together. The goal is to enable everyone to take the relevant actions to address climate change and make well informed decisions for climate change adaptation. This includes scientists, decision makers, city managers, politicians, and last but not least, it includes everyone of us. So what do we need? We need data from lots of organizations, available at different scales for large and small areas to be integrated with scientific processes, analytical models, and simulation environments. We need data visualization and communication tools to shape the message in the right way for any client. Many challenges can be met through resources that adhere to FAIR principles. FAIR as in: Findable, Accessible, Interoperable, and Reusable. No single organization has all the data we need to understand the consequences of climate change. The OGC Climate Resilience Community identifies, discusses, and develops these resources. The OGC community builds the guidebooks and Best Practices, it experiments with new technologies to share data and information, and collaboratively addresses shared challenges.
+The goal of this pilot was to enable everyone to take the relevant actions to address climate change and make well informed decisions for climate change adaptation. This includes scientists, decision makers, city managers, as well as politicians. So what do we need? We need data from lots of organizations, available at different scales for large and small areas to be integrated with scientific processes, analytical models, and simulation environments. We need data visualization and communication tools to shape the message in the right way for any client. Many challenges can be met through resources that adhere to FAIR principles. FAIR as in: Findable, Accessible, Interoperable, and Reusable. No single organization has all the data we need to understand the consequences of climate change. The OGC Climate Resilience Community identifies, discusses, and develops these resources.
 
-The OGC Climate Resilience Community has a vision to support efforts on climate actions and enable international partnerships (SDG 17), and move towards global interoperable open digital infrastructures providing climate resilience information on users demand. This pilot will contribute to establishing an OGC climate resilience concept store for the community where all appropriate climate information to build climate resilience information systems as open infrastructures can be found in one place, be it Information about data services, tools, software, handbooks, or a place to discuss experiences and needs. The concept store covers all phases of Climate Resilience, from initial hazards identification and mapping to vulnerability and risk analysis to options assessments, prioritization, and planning, and ends with implementation planning and monitoring capabilities. These major challenges can only be met through the combined efforts of many OGC members across government, industry, and academia.
+The OGC Climate Resilience Community has a vision to support efforts on climate actions and enable international partnerships (SDG 17), and move towards global interoperable open digital infrastructures providing climate resilience information on users demand. This pilot contributed to establishing an OGC climate resilience concept store for the community where all appropriate climate information to build climate resilience information systems as open infrastructures can be found in one place, be it Information about data services, tools, software, handbooks, or a place to discuss experiences and needs. It covers all phases of Climate Resilience, from initial hazards identification and mapping to vulnerability and risk analysis to options assessments, prioritization, and planning, and ends with implementation planning and monitoring capabilities. These major challenges can only be met through the combined efforts of many OGC members across government, industry, and academia. 
 
-This Call for Participation solicits interests from organizations to join the upcoming Climate Resilience Pilot, an OGC Collaborative Solution and Innovation Program activity. This six-months Pilot is setting the stage for a series of follow up activities. It therefore focuses on use-case development, implementation, and exploration. It answers questions such as:
+This Pilot has set the stage for a series of follow up activities. It therefore focused on use-case development, implementation, and exploration. It also answered the questions such as:
 
-- What use-cases can be realized with the current data, services, analytical functions, and visualization capabilities that we have?
+- What use-cases can be realized with the current data, services, analytical functions, and visualization capabilities that we have? This includes for example the Copernicus Services, including Climate Data Store (CDS) https://cds.climate.copernicus.eu/ and Atmosphere Data Store (ADS) https://ads.atmosphere.copernicus.eu/.
 - How much effort is it to realize these use-cases?
 - What is missing, or needs to be improved, in order to transfer the use-cases developed in the pilot to other areas?
 
 === Objectives
 
-The pilot has three objectives. First, to better understand what is currently possible with the available data and technology. Second, what additional data and technology needs to be developed in future to better meet the needs of the Climate Resilience Community; and third, to capture Best Practices, and to allow the Climate Community to copy and transform as many use-cases as possible to other locations or framework conditions.
+The pilot had three objectives. First, to better understand what is currently possible with the available data and technology. Second, what additional data and technology needs to be developed in future to better meet the needs of the Climate Resilience Community; and third, to capture Best Practices, and to allow the Climate Community to copy and transform as many use-cases as possible to other locations or framework conditions.
 
 === Background
 
@@ -52,28 +52,6 @@ Good experiences have been made using OGC API standards in the past. For example
 image::FAIR_Data_Spaces.png[]
 .Schematic Architecture of a Climate Resilience Information System. By respecting FAIR principles for the Climate Building Blocks the architecture enables open infrastructures to produce and deliver information on demand of the users needs
 
-=== ECMWF - Copernicus 
-
-- Component: Copernicus services.
-
-- Outputs: Copernicus Services, including Climate Data Store (CDS) https://cds.climate.copernicus.eu/ and Atmosphere Data Store (ADS) https://ads.atmosphere.copernicus.eu/.
-
-- What other component(s) can interact with the component: CDS and ADS provide access to data via different interfaces: UI and API. It also offers a toolbox with a set of expert libraries to perform advanced operations on the available data. CDS and ADS catalogue metadata is also accessible via standard CSW. https://cds.climate.copernicus.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-
-- What OGC standards or formats does the component use and produce:
-  * CDS and ADS catalogues exposed via CSW.
-  * Access to ESGF datasets via WPS.
-  * WMS is offered in some published applications.
-  * CADS 2.0 (under construction) will implement OGC APIs.
-
-=== Climate Indices
-
-To make planning decisions to build resilience and adapt to future climate, government officials from local to national, as well as corporate leaders and citizens need an approachable yet scientifically rigorous view of their local climate. We propose a dynamic web mapping interface and report generation tool backed by a suite of web services and downloadable data. All data and web service deliverables will be provided following FAIR principles at no cost, using the appropriate OGC standards. 
-
-The climate indices describe 47 measures of future temperature and precipitation in 3 future time periods (early, mid, late century) under 2 emission scenarios RCP 4.5 and 8.5. These indices were created to inform understanding of 5 climate hazards (Wildfire, Heat, Drought, Inland Flooding, Coastal Inundation). Wildfire and drought are the current focus of the disaster pilot and these climate indices will provide useful in those projects when considering future climate.
-
-The project will present a pattern with reproducible workflows in an open Github repo showing the full process of transforming climate science data (CMIP model outputs) into a collection of analysis ready data layers (47 temperature and precipitation indices) and transforming those into decision ready information as climate indices summarized to local geographies such as counties and other subnational boundaries. 
-
 === Technical Challenges
 
 Realizing the delivery of Decision Ready Data on demand to achieve Climate Resilience involves a number of technical challenges that have already been identified by the community. A subset will be selected and embedded in use-cases that will be defined jointly by Pilot Sponsors and the OGC team. The goal is to ensure a clear value-enhancement pipeline as illustrated in Figure 1, above. This includes, among other elements, a baseline of standardised operators for data reduction and analytics. These need to fit into an overall workflow that provides translation services between upstream model data and downstream output - basically from raw data, to analysis-ready data, to decision-ready data. The following technical challenges have been identified and will be treated in the focus areas cycles of the Pilot accordingly:
@@ -90,7 +68,7 @@ The Climate Resilience DWG will concern itself with technology and technology po
 
 The mission of the Climate Resilience DWG is to identify geospatial interoperability issues and challenges that impede climate action, then examine ways in which those challenges can be met through application of existing OGC Standards, or through development of new geospatial interoperability standards under the auspices of OGC.
 
-Activities to be undertaken by the Climate Resilience DWG include but are not limited to:
+Activities to be undertaken by the Climate Resilience DWG include, but are not limited to:
 
 * Identify the OGC interface standards and encodings useful to apply FAIR concepts to climate change services platforms;
 * Liaise with other OGC Working Groups (WGs) to drive standards evolution;
