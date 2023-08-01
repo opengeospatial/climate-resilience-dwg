@@ -3,7 +3,7 @@
 
 FAIR Climate Service:: Climate resilince information system where the entire architecture is following FAIR principles. 
 Resilience:: Ability of a system to compensate impacts
- 
+Data Cube:: In computer programming contexts, a data cube (or datacube) is a multi-dimensional ("n-D") array of values. Typically, the term data cube is applied in contexts where these arrays are massively larger than the hosting computer's main memory; examples include multi-terabyte/petabyte data warehouses and time series of image data. 
 
 === Abbreviated terms
 
