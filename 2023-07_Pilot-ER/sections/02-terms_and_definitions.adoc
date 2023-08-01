@@ -33,6 +33,7 @@ EMS:: Exploitation Platform Management Service
 EO:: Earth Observation
 ESA:: European Space Agency
 EUMETSAT::  European Organisation for the Exploitation of Meteorological Satellites
+FME:: Feature Manipulation Engine
 GOOS:: Global Ocean Observing System
 GCOS:: Global Climate Observing System
 OMSv3:: OGC Observations & Measurements 3.0
