@@ -1,12 +1,13 @@
 
 == Introduction
 
-// Insert introduction content adding subsections as needed
+The OGC Climate Resilience Pilot represents the first phase of multiple long term climate activities aiming to evolve geospatial data, technologies, and other capabilities into valuable information for decision makers, scientists, policy makers, data providers, software developers, and service providers so we can make valuable, informed decisions to improve climate action. 
 
-=== Enhancing Interoperability for Climate Resilience Information Systems
+=== Climate Resilience Information Systems
 
-The OGC Climate Resilience Pilot represents the first phase of multiple long term climate activities aiming to evolve geospatial data, technologies, and other capabilities into valuable information for decision makers, scientists, policy makers, data providers, software developers, and service providers so we can make valuable, informed decisions to improve climate action. The goal was to help the location community develop more powerful visualization and communication tools to accurately address ongoing climate threats such as heat, drought, floods, fires as well as supporting the national determined contributions for greenhouse gas emission reduction. Climate resilience is often considered the use case of our lifetime, and the OGC community is uniquely positioned to accelerate solutions through collective problem solving with this initiative.
+The goal was to help the location community develop more powerful visualization and communication tools to accurately address ongoing climate threats such as heat, drought, floods, fires as well as supporting the national determined contributions for greenhouse gas emission reduction. Climate resilience is often considered the use case of our lifetime, and the OGC community is uniquely positioned to accelerate solutions through collective problem solving with this initiative.
 
+.Value chain from raw data to climate information
 image::CCS_Pilot_Concept.png[]
 
 As illustrated, big, raw data from multiple sources requires further processing in order to be ready for analysis and climate change impact assessments. Applying data enhancement steps, such as bias adjustments, re-gridding, or calculation of climate indicators and essential variables, leads to “Decision Ready Indicators.” The spatial data infrastructures required for this integration should be designed with interoperable building blocks following FAIR data principles. Heterogeneous data from multiple sources can be enhanced, adjusted, refined, or quality controlled to provide Science Services data products for Climate Resilience. The OGC Climate Change Services Pilots also illustrated the graphical exploration of the Decision Ready Climate Data. It effectively demonstrated how to design FAIR climate services information systems. The OGC Pilot participants illustrated the necessary tools and the visualizations to address climate actions moving towards climate resilience.
@@ -35,22 +36,23 @@ CRIS are already existing and operational, like the Copernicus Climate Change Se
 
 Goals and objectives of decision makers vary at different scales. At the municipal level, municipal leaders and citizens directly face climate-related hazards. Aspects thus come into focus such as reducing vulnerability and risk, building resilience through local measures, or enhancing emergency response. At the state level, the municipal efforts can be coordinated and supported by providing funding and enacting relevant policies. The national, federal, or international level provides funding, science data, and international coordination to enable the best analysis and decisions at the lower scales.
 
-image::Interoperable_ScienceService.png[image]
 .Schematic synergies within different climate and science services due to FAIR and open Infrastructures
+image::Interoperable_ScienceService.png[image]
+
 
 Productivity and decision making are enhanced when climate building blocks are exchangeable across countries, organizations, or administrative levels (see Figure below). This OGC Climate Resilience Pilot is a contribution towards an open, multi-level infrastructure that integrates data spaces, open science, and local-to-international requirements and objectives. It contributes to the technology and governance stack that enables the integration of data including historical observations, real time sensing data, reanalyses, forecasts or future projections. It addresses data-to-decision pipelines, data analysis and representation, and bundles everything in climate resilience building blocks. These building blocks are complemented by Best Practices, guidelines, and cook-books that enable multi–stakeholder decision making for the good of society in a changing natural environment.
 
 The OGC Innovation Program brings all groups together: The various members of the stakeholder group define use cases and requirements, the technologists and data providers experiment with new tools and data products in an agile development process. The scientific community provides results in appropriate formats and enables open science by providing applications that can be parameterized and executed on demand.
 
-image::Climate_Resilience_Pilot_Interaction.png[]
 .The OGC Climate Resilience DWG and Pilot brings the climate resilience community together with infrastructure providers, policy makers, commercial companies, and the scientific community
+image::Climate_Resilience_Pilot_Interaction.png[]
 
 This OGC Climate Resilience Pilot is part of the OGC Climate Community Collaborative Solution and Innovation process, an open community process that uses the OGC as the governing body for collaborative activities among all members. A spiral approach is applied to connect technology enhancements, new data products, and scientific research with community needs and framework conditions at different scales. The spiral approach defines real world use cases, identifies gaps, produces new technology and data, and tests these against the real world use cases before entering the next iteration. Evaluation and validation cycles alternate and continuously define new work tasks. These tasks include documentation and toolbox descriptions on the consumer side, and data and service offerings, interoperability, and system architecture developments on the producer side. It is emphasized that research and development is not constrained to the data provider or infrastructure side. Many tasks need to be executed on the data consumer side in parallel and then merged with advancements on the provider side in regular intervals.
 
 Good experiences have been made using OGC API standards in the past. For example, the remote operations on climate simulations (roocs) use OGC API Processes for subsetting data sets to reduce the data volume being transported. Other systems use OGC STAC for metadata and data handling or OGC Earth Observation Exploitation Platform Best Practices for the deployment of climate building blocks or applications into CRIS architectures. Still data handling regarding higher complex climate impact assessments within FAIR and open infrastructures needs to be enhanced. There is no international recommendation or best practice on usage of existing API standards within individual CRIS. It is the goal of this pilot to contribute to the development of such a recommendation, respecting existing operational CRIS that are serving heterogen user groups
 
-image::FAIR_Data_Spaces.png[]
 .Schematic Architecture of a Climate Resilience Information System. By respecting FAIR principles for the Climate Building Blocks the architecture enables open infrastructures to produce and deliver information on demand of the users needs
+image::FAIR_Data_Spaces.png[]
 
 === Technical Challenges
 
@@ -79,10 +81,20 @@ Activities to be undertaken by the Climate Resilience DWG include, but are not l
 * Provide software toolkits to facilitate the deployment of climate change services platforms.
 
 
-=== Component workflow
+=== Value Chain from raw data to information
 
 Interoperability plays a vital role in facilitating climate resilience by enabling seamless integration and exchange of information between data, models, and various components. During this pilot, participanta have worked on a number of workflows and architectures focusing on several use cases of droughts, heatwaves, and fires. Generally speaking, such a workflow or process takes the following form and tasks. 
 
 The different component workflows of this pilot considered the process of processing raw data either directly to Analysis Ready Data (ARD) or moving big (raw) data first to data cubes for efficient handling and then processing them to ARD. Subsequently, participants illustrated how to tranform ARD into decision ready information (DRI) and climate indicators. The pilot also demonstrated the value-added of high-end 3D visualization for increasing climate resilience and for facilitating the decision-making process.   
 
 By following the above workflow process, the interoperability of data, models, and components is maximized, facilitating a comprehensive understanding of droughts, heatwaves, and fires and supporting informed decision-making for climate resilience strategies.
+
+The following documet is therefore structured into the chapters: 
+
+*  Raw data to Datacubes
+*  Raw data to Analysis Ready Data
+*  ARD to Decision Ready Indicator
+*  Raw data to Visualization
+*  Climate information and communication with stakeholders
+*  Use Cases
+*  Lessons Learned
