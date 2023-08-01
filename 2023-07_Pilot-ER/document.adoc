@@ -37,7 +37,6 @@
 
 // Clauses
 include::sections/00-executive-summary.adoc[]
-// include::sections/00-preface.adoc[]
 include::sections/01-introduction.adoc[]
 include::sections/01-01-contributors_components.adoc[]
 include::sections/02-terms_and_definitions.adoc[]
@@ -51,7 +50,6 @@ include::sections/07-lessons_learned.adoc[]
 include::sections/08-conculsion-future_work.adoc[] 
 
 
-// include::sections/02-terms_and_definitions.adoc[]
 // include::sections/03-references.adoc[]
 
 
@@ -60,11 +58,11 @@ Annexes
 Add annex files as needed
 ////
 
-// include::sections/aa-annexA.adoc[]
 
 ////
+// include::sections/aa-annexA.adoc[]
 Revision History should be the last annex before the Bibliography
 Bibliography should be the last annex
-////
 // include::sections/ah-revision-history.adoc[]
-include::sections/az-bibliography.adoc[]
+// include::sections/az-bibliography.adoc[]
+////

@@ -16,7 +16,6 @@ References are to follow the Springer LNCS style, with the exception that option
 
 
 
-
 // Typical reference entries (without auto-fetch)
 // Reference content will display as written
 
