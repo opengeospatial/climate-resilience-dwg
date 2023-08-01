@@ -112,12 +112,8 @@ As was expected, the data-driven visualization of very local phenomena and chang
 === 5D Meta World
 
 
-Presagis offered the V5D rapid 3D (trial) Digital Twin generation capability to Laubwerk
-Presagis gathered open source GIS dataset for the Hollywood region in order to match the location of the tree dataset from Laubwerk
-Using V5D, Presagis created a representative 3D digital twin of the building and terrain.
-Presagis imported Laubwerk tree point dataset providing vegetation type information inside V5D
-Presagis provided V5D Unreal plugin to Laubwerk in order to allow the insertion of the Laubwerk 3D tree (as Unreal assets) into the scene.
-Using V5D, Laubwerk is capable of adapting the tree model in order to demonstrate the impact of climate change on the city vegetation
+Presagis offered the V5D rapid 3D (trial) Digital Twin generation capability to Laubwerk Presagis gathered open source GIS dataset for the Hollywood region in order to match the location of the tree dataset from Laubwerk Using V5D, Presagis created a representative 3D digital twin of the building and terrain.
+Presagis imported Laubwerk tree point dataset providing vegetation type information inside V5 Presagis provided V5D Unreal plugin to Laubwerk in order to allow the insertion of the Laubwerk 3D tree (as Unreal assets) into the scene. Using V5D, Laubwerk is capable of adapting the tree model in order to demonstrate the impact of climate change on the city vegetation
 
 Presagis also provided to Laubwerk its V5D AI extracted vegetation dataset in order to complement the existing tree dataset as needed.
 
@@ -125,16 +121,16 @@ Presagis also provided to Laubwerk its V5D AI extracted vegetation dataset in or
 image::presagis.png[]
 
 
-=== A Web Application
+=== CRMA Web Application
 
 Decision makers, public authorities, and citizens will primarily access data via a custom ESRI web application, providing a simple dashboard interface for viewing interactive maps and graphs of the indices, and output formatted reports. The indices are grouped by 5 climate hazard types (Wildfire, Heat, Drought, Inland Flooding, Coastal Inundation). The current US project (https://livingatlas.arcgis.com/assessment-tool/explore/details) can be explored to gain context of what the global project will be.
 
 [[esri_project]]
-.Climate Mapping For Resilience and Adaptation portal, US project view
+.Climate Mapping For Resilience and Adaptation (CMRA) portal, US project view
 image::esri_project.png[esri_project]
 
 [[esri_project_2]]
-.Climate Mapping For Resilience and Adaptation portal, showing number of max temperature for the period 2023-2064
+.Climate Mapping For Resilience and Adaptation (CMRA) portal, showing number of max temperature for the period 2023-2064
 image::esri_project_2.png[esri_project_2]
 
 The application also outputs formatted reports by county or census tract summarizing the data in a format easy to share with others.
