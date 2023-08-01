@@ -54,9 +54,21 @@ As a member of the OGC, Ecere is an active contributor in several Standard Worki
 In particular, Ecere has been a regular contributor and an early implementer for several OGC API standards in its GNOSIS Map Server and GNOSIS Cartographer client, and is also active in the efforts to modernize
 the https://www.ogc.org/standard/cdb/[OGC CDB] data store and https://github.com/opengeospatial/styles-and-symbology[OGC Styles & Symbology standard].
 
+// ==== About ESRI 
+// ToDo: Description
+
+// ==== About GatewayGEO 
+// ToDo: Description
+
+
 ==== About George Mason University (GMU)
 
 George Mason University (GMU) is a public research university that conducts research and provides training to postdoctoral fellows, PhD candidates, and master’s students in Geospatial information science, remote sensing, satellite image analysis, geospatial data processing, Earth system science, geospatial interoperability and standards, geographic information systems, and other related subjects. GMU will contribute an ARD use-case.
+
+
+// ==== About GISE Hub
+// ToDo: Description
+
 
 ==== About Laubwerk
 
