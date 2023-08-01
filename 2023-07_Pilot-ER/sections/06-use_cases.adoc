@@ -242,13 +242,27 @@ image::ARD_GMU-demo-sfsm_inst.png[]
 
 The project aims at creating analysis ready solar radaition data cube and web map service for Poland to advance development of the solar-smart society and economy and to provide know-how and tools, which are easily reusable in other geographical regions worldwide, in accordance with the FAIR principles.
 
+[arabic]
 The project will update a previously created solar climate atlas for Poland by:
-* increasing spatial and temporal resolution of the datasets: 0.05° x 0.05° degrees (regular lat/lon grid) → 100x100m Monthly means → Daily/Hourly(tbc) means;
-* extending time period: 1991-2014 (24 yrs) → 1983-2022 (40 yrs);
-* replacing static maps with a dynamic and interactive interface;
-* using practical solar radiation parameters instead of physical variables;
-* making datasets (+ metadata) available for downloaded in interoperable file formats (for further use)
-* providing solar climate knowledge base and data/service user guides 
+
+* {blank}
++
+increasing spatial and temporal resolution of the datasets: 0.05° x 0.05° degrees (regular lat/lon grid) → 100x100m Monthly means → Daily/Hourly(tbc) means
+* {blank}
++
+extending time period: 1991-2014 (24 yrs) → 1983-2022 (40 yrs)
+* {blank}
++
+replacing static maps with a dynamic and interactive interface
+* {blank}
++
+using practical solar radiation parameters instead of physical variables
+* {blank}
++
+making datasets (+ metadata) available for downloaded in interoperable file formats (for further use)
+* {blank}
++
+providing solar climate knowledge base and data/service user guides 
 
 in order to:
 
@@ -261,6 +275,9 @@ image::Jakub-SolarConditionAtlas.png[]
 
 Newly created *solar climate data cube and web map service* will be more *FAIR* as they will be made available online, possibly on the official website of the Polish Hydrometeorological Service (IMGW) for an increased findability, upon future agreement (to be discussed) to make them more *Findable* by the general public. The whole process of data access (including authentication) will be transparent and accompanied by appropriate instructions so that the *Accessibility* could be much higher. The format of the datasets in the data cube will be an OGC netCDF standard compliant with the CF (Climate and Forecast) convention, which is suitable for encoding gridded data for space/time-varying phenomena and commonly known in the climate science community but also easily readable with other common spatial data processing and visualization software including most of the GIS software to keep fully *Interoperable*. Finally, even though the proposed solar climate information system (maps+ dataset) are limited to the area of Poland, all processing scripts will be made available on github along with a well-described processing steps (both Jupyter notebooks and instructional videos will be considered) to provide *Reusability* for other countries or geographical regions.
 
+*It is important to emphasise the importance of solar radiation studies in addressing the impact of climate change. Solar activity is not responsible for the global warming trend we have been experiencing in recent decades. The Sun is however primary energy source driving most of the processes in the Earth's climate system. This energy can also be used as a renewable source of electrical energy. Therefore knowledge about spatio-temporal distribution of surface incoming solar radiation is crucial for decision making in the sustainable energy transition process which allow both to rationalise energy consumption and reduce emissions of greenhouse gas (responsible for the warming effect).*
+
+
 *Scope of work for the Climate Resilience Pilot:*
 State-of-the-art review and exploratory data analysis
 
@@ -268,6 +285,322 @@ State-of-the-art review and exploratory data analysis
 
 * to document existing solar radiation datasets (satellite, model and reanalysis data) and services (both freely accessible and commercial)
 * to verify the accuracy of the in situ measurements and satellite climate data records for the selected solar radiation parameters using proper statistical methods
+
+Different solar radiation climate data records and their characteristics have been listed in the table below. All the datasets cover the area of Poland but are not ready for direct use at national level. 
+
+
+.Solar radiation climate Data Records
+[options="header"]
+|===
+|Dataset or Database name |Variables |Data provider |Year of release |Data source |Accessibility |Data format |Temporal resolution |Temporal coverage |Spatial resolution |Spatial coverage
+|http://dx.doi.org/10.5676/EUM_SAF_CM/SARAH/V003[SARAH-3 Surface Solar Radiation Climate Data Record]
+|Global radiation / surface irradiance (SIS), Direct radiation (SID), Direct normalized radiation (DNI), Sunshine duration (SDU), Photosynthetic active radiation (PAR), Daylight (DAL), Effective cloud albedo (CAL)
+|CMSAF
+|2023
+|Satellite Data
+|Free
+|NetCDF-4
+|monthly and daily mean or sum (SDU), provided every 30 min (except from SDU)
+|1983-01-01 - present (1983-2020 CDR + ICDR up to present - 5 days)
+| 0.05° x 0.05° degrees
+| ±65° longitude and ±65° latitude
+|https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=CLARA_AVHRR_V002_01[CLARA (Clouds, Albedo and Radiation dataset from AVHRR data)]
+|Surface incoming shortwave radiation (SIS), Longwave surface radiation (SDL), Surface albedo (SAL)
+|CMSAF
+|2020
+|Satellite Data
+|Free
+|NetCDF-4
+|daily- and monthly-averaged
+|1982-01-01 - 2019-06-30
+|0.25°
+|Global
+|https://nsrdb.nrel.gov/[NSRDB (National Solar Radiation Database)]
+|Global horizontal irradiance, Direct normal irradiance, Diffuse horizontal irradiance
+|National Renewable Energy Laboratory-NREL
+|2017
+|Satellite Data (GOES), Physical Solar Model (PSM) version 3
+|Free
+|.zip sent to the email address
+|30, 60-minute
+|1998-present
+|4 km
+|USA & Americas
+|https://joint-research-centre.ec.europa.eu/pvgis-online-tool/pvgis-data-download_en[PVGIS ]
+|Average global irradiance on a horizontal surface (W/m2), Average global irradiance on an optimally inclined surface (W/m2), Average global irradiance on a two-axis sun-tracking surface, Optimal inclination angle for an equator-facing plane (degrees)
+|JRC
+|2012
+|Satellite Data (CMSAF SARAH and NSRDB), partly combined with Reanalysis (Sarah2: NA filled with ERA5 reanalysis)
+|Free
+|ESRI ascii grid, GeoTIFF (SARAH 2)
+|Monthly and yearly long-term averages calculated from hourly  values over
+|CMASAF: 2007-2016, SARAH: 2005-2016, SARAH2: 2005-2020, NSRDB: 2005-2015
+|CMSAF: 0.025°, SARAH2: (0.05°) for SARAH-2 and 0.25° for ERA5, NSRDB: 0.04°
+|CMASAF: 65N-35S, 65W-65 E, SARAH: 62.5N-40S, 65W-128E, SARAH2: 72N-37S, 20W-63,5E, NSRDB: 60N-20S, 180W-22.5W
+|https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-complete?tab=overview[ERA5 (the 5th generation of ECMWF atmospheric reanalysis, after 4th: Era Interim)]
+|Clear-sky direct solar radiation at surface, Surface net solar radiation, Surface solar radiation downwards, TOA incident solar radiation, Top net solar radiation, Total sky direct solar radiation at surface
+|ECMWF, Copernicus Climate Change Service (C3S)
+|2018
+|Reanalysis 
+|Free
+|GRIB (NetCDF experimentally via C3S CDS)
+|1h
+|1940-present
+|0.25° x 0.25°
+|Global
+|https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-single-levels?tab=overview[CERRA  Copernicus European Regional ReAnalysis]
+|Surface solar radiation downwards, Surface thermal radiation downwards, Time-integrated surface direct short-wave radiation, Surface net solar radiation (clear sky), 
+|Copernicus
+|2022
+|Reanalysis 
+|Free
+|GRIB2
+|3 / 6h
+|1984 - present
+|5,5 or 11 km
+|Europe
+|https://disc.gsfc.nasa.gov/datasets?project=MERRA-2[MERRA-2 (Modern-Era Retrospective analysis for Research and Applications)]
+|Radiation diagnostics (i.e. surface albedo, cloud area fraction, in cloud optical thickness), surface incoming shortwave flux (i.e. solar radiation), surface net downward shortwave flux, and upwelling longwave flux at toa (top of atmosphere) (i.e. outgoing longwave radiation (OLR) at toa)
+|NASA Global Modeling and Assimilation Office (GMAO) 
+|2015
+|Reanalysis 
+|Free
+|NetCDF
+|1h
+|1980-present
+|0.5 x 0.625°
+|Global
+|https://opendata.dwd.de/climate_environment/REA/COSMO_REA6/[COSMO/REA]
+|Instantaneous direct radiation  surface, Instantaneous diffuse radiation surface
+|Deutscher Wetterdienst (DWD)
+|2020
+|Reanalysis 
+|Free
+|GRIB
+|1h
+|1995.01 -2019.08.
+|about 6km
+|Europe
+|https://solargis.com/[SOLARGIS]
+|GHI - Global horizontal irradiation [kWh/m2], DHI -Diffuse horizontal irradiation [kWh/m2], GTI - Global irradiation for optimally tilted surface [kWh/m2], DNI - Direct normal irradiation [kWh/m2], PVOUT - Photovoltaic power potential [kWh/kWp], OPTA - Optimum tilt to maximize yearly yield [°]
+|Solargis s.r.o.
+|2019 (free data)
+|Solar radiation data from satellite-based model developed by Solargis company (input: Meteosat PRIME and IODC by Eumetsat, GOES-East and GOES-West by NOAA, MTSAT and Himawari-8 by JMA, MACC-II/CAMS atmospheric data by ECMWF, MERRA-2 atmospheric data by NASA, GFS data by NOAA).
+|Limited data for free (e.g. avarage daily totals and yearly monthly totals), full resolution data and service are commercial 
+|GeoTIFF, ESRI ASCII GRID
+|Year, Month (free data)
+|1994-2018 (free data)
+|9 arcsec (~250m:  GHI, DIF, GTI, DNI),  30 arcsec (~1km: PVOUT) and 2 arcmin (~4km: OPTA)
+|Global
+|http://www.soda-pro.com[HelioClim-3, Version 5]
+|All radiation components (global, diffuse, direct) over horizontal, fix-tilted, and any tracker-type planes (Wh/m²)
+|The research center O.I.E. (ARMINES and MINES ParisTech, Center for Observation, Impacts, Energy) 
+|2014 (?)
+|"It exploits the Heliosat-2 method to estimates a ""cloud index"", based on the analysis of the 15 minute Meteosat Second Generation (MSG) satellite images in the visible band."
+|Demo data for free. Access to full data is based on paid subscriptions.Data are accessible either using the SoDa web portal or via automatic wget commands.
+|csv, JSON, Excel file, NetCDF
+|1 min (downscaling from 15 min Meteosat) to 1 month
+|01.02.2004 - present (+ Forecast)
+|3-12 km
+|MSG Domain
+|https://ads.atmosphere.copernicus.eu/cdsapp#!/dataset/cams-solar-radiation-timeseries?tab=overview[CAMS solar radiation time-series]
+|Cloud-free conditions only: Global Horizontal Irradiation (GHI), Direct Horizontal Irradiation (BHI), Diffuse Horizontal Irradiation(DHI), Direct Normal Irradiation (BNI)
+|The research center O.I.E. (ARMINES and MINES ParisTech, Center for Observation, Impacts, Energy) 
+|2015
+|Meteosat satellite field-of-view for all-sky parameters, McClear algorithm (clear-sky solar radiation over the world)
+|Free via CAMS for Europe (AGATE Dataset) and Africa (JADE Dataset)
+|ASCII (CSV), NetCDF (Point data, time-series)
+|1 min, 15 min, 1 h, 1 day, 1 month
+|2004 to present
+|Interpolated to the point of interest from various input data spatial resolutions (0.2°)
+|Worldwide
+|https://data.jrc.ec.europa.eu/collection/id-0055[EMHIRES (European Meteorological derived High Resolution RES) Dataset  ]
+|Solar and wind power at different aggregation levels
+|Joint Research Centre of the European Commission (JRC)
+|2018
+|CMSAF SARAH, PVGIS model
+|Free
+|Excel XLS
+|hourly time series
+|1986-2015
+|country, bidding zone (special aggregations to reflect the power market reality), NUTS-1 and NUTS-2 level 
+|European Union 
+|https://meteonorm.com/[Meteonorm]
+|Direct horizontal and normal radiation arising from a narrow solid angle of 6° centered around the sun, Diffuse radiation (arising from the upper hemisphere reduced by the direct solar radiation from the sun's disk and its surroundings (6° aperture)), Diffuse radiation (taking raised horizon into account, under clear skys), Global radiation (horizontal, taking raised horizon into account, under clear skys), multiple  meteorological parameters
+|Meteotest AG (Bern, Switzerland)
+|2012, Version 8.1: 2021
+|Radiation measurement (stations) and satellite data from Meteosat Second Generation
+|Commercial
+|TXT, CSV
+|hour, day, month, year
+|1996–2015, hourly data: 2010 - present
+|Time series for a given point worldwide
+|Global
+|===
+
+.Solar climate web map services
+[options="header"]
+|===
+|Service name |Variables & Info |Data provider |Year of first release |Data source |Accessibility |Functionality |Temporal resolution |Temporal coverage |Spatial resolution |Spatial coverage
+|https://klimat.imgw.pl/pl/solar-atlas/[Solar Atlas for Poland]
+|Global radiation / surface irradiance (SIS), Direct radiation (SID), Direct normalized radiation (DNI), Statistics: Mean, Max, Min, STD, Anomaly
+|The Institute of Meteorology and Water Management - National Research Institute (IMGW-PIB)
+|2016
+|CM SAF SARAH
+|Open Access
+|View, save a graphic, Static maps (graphics), only in polish, pixel values cannot be accessed, no metadata
+|Month, Season, Year
+|1991-2014
+|Original maps based on 0.05° degrees data
+|Poland
+|https://www.ilmateenistus.ee/kliima/solar-atlas/?lang=en[Baltic Solar Atlas]
+|Global radiation / surface irradiance (SIS), Direct radiation (SID), Direct normalized radiation (DNI), Statistics: Mean, Max, Min, STD, Anomaly
+|Lietuvos Hidrometeorologijos Tarnyba
+|2015
+|CM SAF SARAH
+|Open Access
+|View, save a graphic, Static maps (graphics), pixel values cannot be accessed, no metadata
+|Month, Season, Year
+|1991-2014
+|Original maps based on 0.05° degrees data
+|18 - 29 E, 53.5 - 60 N (whole coverage for Lithuania, Latvia, Estonia, for Poland only the North-East part)
+|https://www.dwd.de/EN/ourservices/probsunnydays/probsunnydays.html[Sunny Days Probability]
+|Probability of sunny days for selected stations worldwide based on CM SAF data. For each selected city the likelihood that a certain day throughout the year is sunny is shown. For Europe and Africa also the likelihood for a 5-day sunny period is shown
+|Deutscher Wetterdienst (DWD)
+|2017 ?
+|CM SAF SARAH and CLARA 
+|Open Access
+|View, Zoom In/Out, Charts for selected cities
+|Day of year
+|Only multiannual values (1983-2020)
+|Point data
+|Global
+|https://re.jrc.ec.europa.eu/pvg_tools/en/[PVGIS Webservice (The Photovoltaic Geographic Information System)]
+|Global horizontal irradiation, Direct normal irradiation, Global irradiation optimum angle, Global irradiation at angle,  PV performance
+|Joint Research Centre of the European Commission (JRC)
+|2012
+|Satellite Data (CMSAF SARAH and NSRDB), partly combined with Reanalysis (Sarah2: NA filled with ERA5 reanalysis)
+|Open Access
+|WebGIS, Data Download (JSON, CSV), User dedicated tools (solar resource assessment, photovoltaic (PV) performance studies)
+|Hour, Day (only point data series), Month, Year
+|Database dependent 2005 - 2015/2020
+|Database dependent
+|Global (almost complete coverage)
+|https://globalsolaratlas.info/map[Global Solar Atlas]
+|Global horizontal irradiation, Direct normal irradiation, Global irradiation optimum angle, Global irradiation at angle, Specific photovoltaic power output, Optimum tilt of PV modules, Air temperature
+|Solargis s.r.o. , supported by The World Bank Group and funded by the Energy Sector Management Assistance Program (ESMAP)
+|2016
+|SOLARGIS Data, ERA5 post-processed by Solargis (air temperature)
+|Open Access
+|Interactive maps, PV energy calculator, Solar and meteo data, area analysis for regions and custom areas, data layer download (Tabular data (XLSX) and GIS raster layers (GeoTIFF)), ready to print maps, Global PV Potential Study: Country Factsheet
+|Long-term yearly average of daily and yearly totals
+|Depending on the region: 1994/1999/2007/2018 to 2021
+|250 m to 1km dependent on variable
+|Global (almost)
+|https://www.soda-pro.com/[SoDa]
+|SoDa provides historical, real-time, and forecast solar radiation and weather data services. Solar radiation: HelioClim-3 solar radiation database (All radiation components: global, diffuse, direct over horizontal, fix-tilted, and any tracker-type planes (Wh/m²)), Solar radiation under clear-sky conditions: McClear fix-tilted service, Ultraviolet and Photosynthetically Active Radiation Data
+|The research center O.I.E. (ARMINES and MINES ParisTech, Center for Observation, Impacts, Energy), SoDa is commercialised by Transvalor S.A. since 2009
+|2003
+|Meteosat geostationary satellites, for weather data MERRA-2 and GFS
+|Part of data and services for free. Access to full data is based on paid subscriptions
+|Solar radiation database (e.g. Helioclim-3) to get long-term irradiation time-series data at a specific region, solar radiation maps (hourly, monthly, yearly avarage), real-time maps and time-series to identify solar radiation resource and cloud motion, solar forecast, Web Services and Products based on the data
+|1 min (downscaling from 15 min Meteosat) to 1 month
+|01.02.2004 - present (+ Forecast)
+|3-12 km
+|MSG Domain
+|https://www.irena.org/globalatlas[Global Atlas  for Renewable Energy]
+|Global Horizontal Irradiation (GHI), Direct Horizontal Irradiation (BHI), Diffuse Horizontal Irradiation(DHI), Global Normal Irradiation (GNI), Direct Normal Irradiation(BNI), Diffuse Normal Irradiation (DNI)
+|The International Renewable Energy Agency (IRENA), https://globalatlas.irena.org/about[Full list of partners and data providers]
+|2013
+|Multiple, e.g. HELIOCLIM3 (SODA , CAMS), ENDORSE, SOLARGIS (Global Solar Atlas), METEONORM
+|Open Access
+|Display and overlay different renewable resource and ancillary datasets (transmission and road networks, protected areas, population density, and topography) WebGIS functionality, link with other platforms, systems or software for purposes of conducting comparative analyses, conduct specific mapping functionalities to screen areas of opportunity where further assessments can be of relevance, download data over identified areas of interest
+|Long-term yearly and monthly average 
+|Database dependent, between 1994 and 2020
+|Database dependent, between 1km and 20 km
+|Global
+|http://www.webservice-energy.org/[Webservice-Energy Catalogue]
+|The platform hosts web services dedicated to solar radiation and more generally, energy. 
+|GEOSS community portal. Initiative of MINES  ParisTech, ARMINES and also the SoDa Team, several services have been developed by MINES ParisTech, others by other providers such as DLR
+|N/A
+|Multiple, e.g. SoDa, SOLEMI, PACA Solar Atlas, CAMS Radiation Service
+|Open Access
+|Access, search and discover hundreds of Energy and Environmental related resources (data, applications, tools, services). Catalogue with metadata.The website has several web services: Web Map Services, Web Processing Services, obeying OGC (Open Geospatial Consortium) or W3C (World Wide Web Consortium) standards. The W3C standard is abandoned in favour of the OGC standard
+|Various
+|Various
+|Various
+|Various
+|https://energydata.info/[ENERGYDATA.INFO ]
+|An open data platform providing access to datasets and data analytics that are relevant to the energy sector
+|The World Bank Group, list of partners at https://energydata.info/organization
+|N/A
+|Currently (2023-06-21) there is 976 datasets available
+|Open Access
+|Access, search and discover hundreds of Energy and Environmental related resources (data, applications, tools, services). Explore data by country
+|Various
+|Various
+|Various
+|Various
+|https://rezoning.energydata.info/[The Renewable Energy Zoning (REZoning) tool]
+|Available resources – solar PV, wind, or offshore wind - for a chosen country: Technical Potential, Economic Potential and Multi-criteria analysis and prioritization. Data on radiation: Global Horizontal and Tilted irradiation
+|Partners: The World Bank Group, ESMAP, UC Santa Barbara, Development SEED
+|2021 ?
+|For radiationa data: Global Solar Atlas
+|Open Access
+|Identify and explore high potential project areas for solar, onshore wind and offshore wind development. The final map can be printed in .PDF or .PNG format. Download the results of the analysis in .CSV, .SHP (for boundaries selection) or GeoTIFF format (for grid selection) for further processing
+|Long-term yearly average of daily and yearly totals
+|1994-2020
+|250m - 1km
+|Global (a few countries still missing)
+|https://atmosphere.copernicus.eu/solar-energy[Copernicus Atmospheric Monitoring Service (CAMS) - Radiation Service ]
+|Clear Sky and Total Sky Radiation. The Global, Direct and Diffuse Horizontal Irradiation, as well as the Beam Normal Irradiation are provided
+|German Aerospace Center (DLR), ARMINES, TRANSVALOR
+|2018 ?
+|SoDa Database: CAMS Clear-Sky (McClear model  based on the processing of Meteosat data) and All-Sky Radiation (Heliosat-4) products: all skies (cloudy or not) SSI within the MSG view
+|Open Access
+|Access and download data (time series)
+|1 min, 15 min, 1 h, 1 day, 1 month
+|2004 to present
+|Interpolated to the point of interest from various input data spatial resolutions
+|Global for cloud-free parameters, Meteosat satellite field-of-view for all-sky parameters
+|https://www.re-explorer.org/[RE Data Explorer]
+|For Poland: Global Horizontal Irradiance, Direct Normal Irradiance. More data for selected developing countries
+|National Renewable Energy Laboratory (NREL), USA . List of partners and data providers at https://www.re-explorer.org/about.html 
+|N/A
+|For Poland: NSRDB, METEOSAT, Global Solar Atlas 
+|Open Access
+|WebGIS, user-friendly interface, provides renewable energy data, analytical tools (Levelized Cost of Energy Mapping Tool, Technical Potential Tool, PVWatts Lite), training materials and technical assistance.
+|For Poland only multiannaul average (time series for selected develooping countries)
+|Various
+|Various
+|Global, but best data are available for developing countries (Afghanistan, Bangladesh, Columbia, Ghana, India, Kenya, Mexico, Nepal, Pakistan, Peru, Kazakhstan and Central Asia)
+|https://www.renewables.ninja/[Renewables Ninja ]
+|Ground-level solar irradiance, top of atmosphere solar irradiance, average annual capacity factors for PV, for a point of interest also daily mean and monthly capacity factor
+|ETH Zurich
+|2016 ?
+|Merra-2 Reanalysis, CMSAF SARAH
+|Open Access
+|Renewables Ninja WepPortal allows running of simulations of hourly power output from wind and solar PV farms by clicking anywhere on the map. Also download ready-made datasets for a chosen country is possible. 
+|hourly time series, daily and monthly mean for a one year (2015 or 2019)
+|MERRA-2: 1980-2019, SARAH: 1985-2016
+|Country-level or Point of interest
+|Europe (globally with data from MERRA reanalyses)
+|Meteonorm based services: https://meteonorm.com/en/product/solar-cadastre[Solar Cadastre], https://solarwebservices.ch/[SolarSat, CloudMove,  SolarForecast]
+|Global radiation on the horizontal plane, Diffuse radiation on the horizontal plane, Direct radiation on the horizontal plane, Global radiation on the inclined plane, Direct normal irradiation, Energy output
+|Meteotest AG (Bern, Switzerland)
+|N/A
+|Meteonorm Database
+|Commercial
+|SolarSat: Measured quarter-hourly radiation data for the last 24 hours, updated every hour, CloudMove: Solar radiation forecast for the next 6 hours, updated every 15 minutes, Booster option, SolarForecast: Solar radiation forecast for the next 72 hours, updated every hour
+|from 15 Min. (past 24h) to month
+|Various
+|Various
+|Global data, but MSG data for Meteosat Disc
+|===
+
+Identified datasets and services provide generalised information on spatio-temporal solar radiation patterns (high resolution grids for longer period not available at all or not for free!). A set of high-resolution data products dedicated to specific applications and in user-friendly formats at the national level to support decision-making processes is needed.
+
+This work is continued.
 
 === Wildfire resilience in insurance
 
