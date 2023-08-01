@@ -19,7 +19,7 @@ The OGC Climate Resilience Community has a vision to support efforts on climate 
 
 This Pilot has set the stage for a series of follow up activities. It therefore focused on use-case development, implementation, and exploration. It also answered the questions such as:
 
-- What use-cases can be realized with the current data, services, analytical functions, and visualization capabilities that we have? This includes for example the Copernicus Services, including Climate Data Store (CDS) https://cds.climate.copernicus.eu/ and Atmosphere Data Store (ADS) https://ads.atmosphere.copernicus.eu/.
+- What use-cases can be realized with the current data, services, analytical functions, and visualization capabilities that we have? Current data services include for example the Copernicus Services, including Climate Data Store (CDS) https://cds.climate.copernicus.eu/ and Atmosphere Data Store (ADS) https://ads.atmosphere.copernicus.eu/.
 - How much effort is it to realize these use-cases?
 - What is missing, or needs to be improved, in order to transfer the use-cases developed in the pilot to other areas?
 
