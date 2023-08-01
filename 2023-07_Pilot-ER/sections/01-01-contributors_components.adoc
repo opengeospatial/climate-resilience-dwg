@@ -110,5 +110,5 @@ Interoperability plays a vital role in facilitating climate resilience by enabli
 
 The different component workflows of this pilot considered the process of processing raw data either directly to Analysis Ready Data (ARD) or moving big (raw) data first to data cubes for efficient handling and then processing them to ARD. Subsequently, participants illustrated how to tranform ARD into decision ready information (DRI) and climate indicators. The pilot also demonstrated the value-added of high-end 3D visualization for increasing climate resilience and for facilitating the decision-making process.   
 
-By following such a processes, the interoperability of data, models, and components is maximized, facilitating a comprehensive understanding of droughts, heatwaves, and fires and supporting informed decision-making for climate resilience strategies.
+By following the above workflow process, the interoperability of data, models, and components is maximized, facilitating a comprehensive understanding of droughts, heatwaves, and fires and supporting informed decision-making for climate resilience strategies.
 
