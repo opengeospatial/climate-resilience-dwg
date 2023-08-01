@@ -1,6 +1,11 @@
 
 == Terms and definitions
 
+
+FAIR Climate Service:: Climate resilince information system where the entire architecture is following FAIR principles. 
+Resilience:: Ability of a system to compensate impacts
+ 
+
 === Abbreviated terms
 
 // Insert abbreviated terms content
@@ -14,6 +19,8 @@ Carrying Capacity:: An area both suitable and available for human activity based
 CDI:: Combined Drought Indicator
 CDR:: Climate Data Record
 CEOS:: Committee on Earth Observation Satellites
+CRIS:: Climate resilience information system
+CRMA:: 
 ECV:: Essential Climate Variable
 EMS:: Exploitation Platform Management Service
 EO:: Earth Observation
