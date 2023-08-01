@@ -18,9 +18,9 @@ The example below highlights a climate resilience related example of how to crea
 //=== Jakub P. Walawender
 === Analysis Ready Data Cubes - user-friendly sharing of climate data records
 
-*Climate Data Record (CDR)* - time series of measurements of sufficient length, consistency, and continuity to determine climate variability and change (US National Research Council). It can be also derived from a long series of satellite data.
+*Climate Data Record (CDR)* is a time serie of measurements of sufficient length, consistency, and continuity to determine potential climate variability and change (US National Research Council). These measurements can be obtained through groundbased stations or derived from a long time series of satellite data.
 
-*Data Cube (Different approaches):*
+*Data Cube (Different approaches):* Datacubes organize data into a multi-dimensional structure. They contain typically:
 
 * {blank}
 +
@@ -36,24 +36,24 @@ multidimensional arrays of data
 * {blank}
 +
 //____
-“cube” can be a metaphor to help illustrate a data structure that can in fact be 1- dimensional, 2-dimensional, 3-dimensional, or higher-dimensional. The dimensions may be coordinates or enumerations,
+where “cube” can be a metaphor to help illustrate a data structure that can in fact be 1- dimensional, 2-dimensional, 3-dimensional, or higher-dimensional. The dimensions may be coordinates or enumerations,
 e.g., categories (https://portal.ogc.org/files/?artifact_id=99131[OGC, 2021])
 
 Common (technical) definition of the Data Cube focuses on the data structure aspects exclusively!
 
-*Analysis Ready Data (ARD)* - are satellite data that have been processed to a minimum set of requirements and organized into a form that allows immediate analysis with a minimum of additional user effort and interoperability both through time and with other datasets (https://ceos.org[CEOS website]).
+*Analysis Ready Data (ARD)* - are data sets that have been processed to a minimum set of requirements and organized into a form that allows immediate analysis with a minimum of additional user effort and interoperability both through time and with other datasets. ARDs are often representing satellite data (https://ceos.org[CEOS website]).
 
 The idea behind the ARD is, that data providers such as e.g. EUMETSAT or ESA are better suited to do data pre-processing, e.g. atmospheric correction, cloud masking and re-gridding, than users. 
-The data pre-processing for ARD may include e.g.: atmospheric correction, cloud masking, gap filling, re-gridding, etc.
 
 *Analysis Ready Data Cubes (ARDCs)* +
 ARDs are often made available in the form of data cubes, which focus on a one specific region (e.g. https://www.swissdatacube.org[Swiss Data Cube]) or thematic application (e.g. https://training.eumetsat.int/course/view.php?id=399[EUMETSAT Drought & Vegetation Data Cube (D&V Data Cube)]). Data cubes can also be defined by the type of data it includes (e.g. https://training.eumetsat.int/course/view.php?id=437[Atmospheric Composition Data Cube (ACDC)], https://deepesdl.readthedocs.io/en/latest/datasets/ESDC[Earth System Data Cube (ESDC)] + https://www.earthsystemdatalab.net[Data Analytics Toolkit (Earth System Data Lab)]). +
 A data cube which contains various climate data records can be generally referred to as *Climate Data Cube*.
 
 .Example Climate Data Cubes
+[%autowidth.stretch]
 [options="header"]
 |===
-|Data Cube name |Climate Data Records |Data Cube Provider |Year of release |Data source |Accessibility |Data format |Temporal coverage |Temporal resolution |Spatial resolution |Spatial coverage
+|Data Cube name |Climate Data Records |Provider |Year of release |Data source |Accessibility |Data format |Temporal coverage |Temporal resolution |Spatial resolution |Spatial coverage
 |https://training.eumetsat.int/course/view.php?id=399[EUMETSAT Drought & Vegetation Data Cube]
 |Solar radiation: Global Radiation, Direct normal Solar Radiation, Sunshine Duration, other: Land Surface Temperature, Reference Evapotranspiration, NDVI, Fractional Vegetation Cover, Leaf Area Index, Fraction of absorbed photosynthetically active radiation, Soil Wetness Index (root zone), Precipitation, Air temperature at 2m 
 |EUMETSAT
