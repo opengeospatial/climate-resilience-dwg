@@ -24,7 +24,7 @@
 :comment: ### Role of the authors; optional. Supply only if correspoding author is an editor
 :role_2: editor
 :comment: ### Comma delimited keywords; mandatory
-:keywords: Climate Resilience, data, ARD, component, use case, FAIR, Drought, Heat, Fire, Floods,
+:keywords: Climate Resilience, data, ARD, component, use case, FAIR, Drought, Heat, Fire, Floods, Data cubes, Climate scenario, Impact, Risk, Hazard, DRI, Indicator
 :comment: ### Metanorma flavor; mandatory
 :mn-document-class: ogc
 :comment: ### Desired output formats; mandatory
