@@ -39,7 +39,6 @@
 include::sections/00-00-executive-summary.adoc[]
 include::sections/00-01-contributors.adoc[]
 include::sections/00-02-terms_and_definitions.adoc[]
-
 include::sections/01-introduction.adoc[]
 include::sections/04-01-datacubes.adoc[]
 include::sections/04-02-ard.adoc[]
@@ -49,7 +48,6 @@ include::sections/04-05-communication.adoc[]
 include::sections/06-use_cases.adoc[]
 include::sections/07-lessons_learned.adoc[]
 // include::sections/08-conculsion-future_work.adoc[] 
-
 // include::sections/03-references.adoc[]
 
 ////
