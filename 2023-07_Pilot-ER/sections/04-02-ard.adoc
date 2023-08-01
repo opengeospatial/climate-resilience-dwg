@@ -240,12 +240,13 @@ Initially it was thought that classification rules need to more closely model im
 .Modified ARD Worflow: NetCDF data cube to precipitation point time series in Geopackage for Manitoba
 //image::FME_ARD_Workflow_MB_precip.png[FME_ARD_Workflow_MB_precip]]
 
-Modified ARD Data workflow:
-- Split data cube
-- Set timestep parameters
-- Compute timestep stats by band
-- Compute time range stats by cell
-- Convert grids to vector contours
+Modified ARD Data workflow: 
+
+1. Split data cube
+2. Set timestep parameters
+3. Compute timestep stats by band 
+4. Compute time range stats by cell 
+5. Convert grids to vector points”
 
 Further scenario tests were explored, including comparison with historical norms. Calculations were made using the difference between projected climate variables and historical climate variables. These climate variable deltas may well serve as a useful starting point for climate change risk indicator development. They also serve as an approach for normalizing climate impacts when the absolute units are not the main focus. Interesting patterns emerged for the LA area that we ran this process on deltas between projected and historical precipitation. While summers are typically dry and winters are wet and prone to flash floods. Initial data exploration seemed to show an increase in drought patterns in the spring and fall. More analysis needs to be done to see if this is a general pattern or simply one that emerged from the climate scenario we ran. However, this  is the type of trend that local planners and managers may benefit from having the ability to explore once they have better access to climate model scenario outputs along with the ability to query and analyze them.
 
