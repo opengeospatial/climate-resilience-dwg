@@ -275,7 +275,7 @@ image::Jakub-SolarConditionAtlas.png[]
 
 Newly created *solar climate data cube and web map service* will be more *FAIR* as they will be made available online, possibly on the official website of the Polish Hydrometeorological Service (IMGW) for an increased findability, upon future agreement (to be discussed) to make them more *Findable* by the general public. The whole process of data access (including authentication) will be transparent and accompanied by appropriate instructions so that the *Accessibility* could be much higher. The format of the datasets in the data cube will be an OGC netCDF standard compliant with the CF (Climate and Forecast) convention, which is suitable for encoding gridded data for space/time-varying phenomena and commonly known in the climate science community but also easily readable with other common spatial data processing and visualization software including most of the GIS software to keep fully *Interoperable*. Finally, even though the proposed solar climate information system (maps+ dataset) are limited to the area of Poland, all processing scripts will be made available on github along with a well-described processing steps (both Jupyter notebooks and instructional videos will be considered) to provide *Reusability* for other countries or geographical regions.
 
-*It is important to emphasise the importance of solar radiation studies in addressing the impact of climate change. Solar activity is not responsible for the global warming trend we have been experiencing in recent decades. The Sun is however primary energy source driving most of the processes in the Earth's climate system. This energy can also be used as a renewable source of electrical energy. Therefore knowledge about spatio-temporal distribution of surface incoming solar radiation is crucial for decision making in the sustainable energy transition process which allow both to rationalise energy consumption and reduce emissions of greenhouse gas (responsible for the warming effect).*
+It is important to emphasise the importance of solar radiation studies in addressing the impact of climate change. Solar activity is not responsible for the global warming trend we have been experiencing in recent decades. The Sun is however primary energy source driving most of the processes in the Earth's climate system. This energy can also be used as a renewable source of electrical energy. Therefore knowledge about spatio-temporal distribution of surface incoming solar radiation is crucial for decision making in the sustainable energy transition process which allow both to rationalise energy consumption and reduce emissions of greenhouse gas (responsible for the warming effect).
 
 
 *Scope of work for the Climate Resilience Pilot:*
@@ -286,10 +286,10 @@ State-of-the-art review and exploratory data analysis
 * to document existing solar radiation datasets (satellite, model and reanalysis data) and services (both freely accessible and commercial)
 * to verify the accuracy of the in situ measurements and satellite climate data records for the selected solar radiation parameters using proper statistical methods
 
-Different solar radiation climate data records and their characteristics have been listed in the table below. All the datasets cover the area of Poland but are not ready for direct use at national level. 
+Different solar radiation climate data records and their characteristics have been listed in the table below.
 
 
-.Solar radiation climate Data Records
+.Solar radiation climate data records
 [options="header"]
 |===
 |Dataset or Database name |Variables |Data provider |Year of release |Data source |Accessibility |Data format |Temporal resolution |Temporal coverage |Spatial resolution |Spatial coverage
@@ -437,6 +437,13 @@ Different solar radiation climate data records and their characteristics have be
 |Time series for a given point worldwide
 |Global
 |===
+
+All the solar radiation datasets listed above cover the area of Poland but are rather not ready for direct use by a non-scientific users. They are pre-processed to meet the requirements for climate data records and quality controlled but still primarily addressed for further scientific use. Even though open source tools for managing and exploiting these datasets are often delivered by the data providers, they are not always sufficiently "attractive" due to an extensive workload, which is still required in order to make them easily integrable with additional data from other sources and ready for specific applications in support of policy- and/or decision-making processes at national level.
+
+CM SAF SARAH-3 dataset meets all the requirements for the planned solar climate data cube and web map service in terms of quality of estimates, spatial resolution and temporal coverage.
+Its accuracy is now being verified in more detail against in situ measurements for the selected solar radiation parameters using proper statistical methods.
+
+The following table includs a selection of existing solar climate web map services.
 
 .Solar climate web map services
 [options="header"]
@@ -598,9 +605,11 @@ Different solar radiation climate data records and their characteristics have be
 |Global data, but MSG data for Meteosat Disc
 |===
 
-Identified datasets and services provide generalised information on spatio-temporal solar radiation patterns (high resolution grids for longer period not available at all or not for free!). A set of high-resolution data products dedicated to specific applications and in user-friendly formats at the national level to support decision-making processes is needed.
+Identified services provide generalised information on spatio-temporal solar radiation patterns (high resolution grids for longer period not available at all or not for free!). A set of high-resolution analysis-ready data products in user-friendly formats dedicated to specific applications at national level are needed to support decision-making processes.
 
-This work is continued.
+The identified solar radiation services are currently being analised in terms of overall functional scope, usability of the interface, innovative tools and possible shortcomings. 
+The results of this analysis will be verified against detailed recognition of the potential user needs.   
+
 
 === Wildfire resilience in insurance
 
