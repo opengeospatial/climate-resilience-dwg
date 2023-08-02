@@ -1,6 +1,6 @@
 == Terms and definitions
 
-
+Carrying Capacity:: An area both suitable and available for human activity based on the state of the ecosystem and competitive pressures for shared resources
 Data Cube:: In computer programming contexts, a data cube (or datacube) is a multi-dimensional ("n-D") array of values. Typically, the term data cube is applied in contexts where these arrays are massively larger than the hosting computer's main memory; examples include multi-terabyte/petabyte data warehouses and time series of image data. 
 FAIR Climate Service:: Climate resilience information system where the entire architecture is following FAIR principles.
 FAIR principle:: Findability, Accessibility, Interoperability, and Reuse of digital assets.
@@ -14,19 +14,20 @@ Sentinel (satellite mission):: A series of next-generation Earth observation mis
 
 ACIS:: Applied Climate Information System
 ACDD:: Attribute Convention for Data Discovery
+ADES:: Application Deployment and Execution Service
+ADS:: Atmosphere Data Store
+AR:: Assessment Report
 ARD:: Analysis Ready Data
 ARDC:: Analysis Ready Data Cube
-ADES:: Application Deployment and Execution Service
 AP:: Application Package
 API:: Application Programming Interface
 AWS:: Amazon Web Service
 BCSD:: Bias Corrected Spatially Downscaled
 BRDF:: Bidirectional Reflectance Distribution Function
-Carrying Capacity:: An area both suitable and available for human activity based on the state of the ecosystem and competitive pressures for shared resources
 CCI:: Climate Change Initiative
 CDI:: Combined Drought Indicator
 CDR:: Climate Data Record
-CDS:: Common Data Service
+CDS:: Climate Data Store
 CEOS:: Committee on Earth Observation Satellites
 CF:: Climate and Forecast
 CGMS:: Coordination Group for Meteorological Satellites
@@ -71,10 +72,12 @@ IHO:: International Hydrographic Organization
 IMGW:: Polish Institute of Meteorology and Water Management
 IOOS:: Integrated Ocean Observing System
 IoT:: Internet of Things
+IPCC:: Intergovernmental Panel on Climate Change
 JSON:: JavaScript Object Notation
 KML:: Keyhole Markup Language
 LOCA:: Localized Constructed Analogs
 MERRA:: Modern Era Retrospective-Analysis for Research and Applications
+ML/AI:: Machine Learning / Artificial Intelligence 
 MODIS:: Moderate Resolution Imaging Spectroradiometer
 MSDI:: Marine Spatial Data Infrastructures
 NASA:: National Aeronautics and Space Administration
@@ -88,6 +91,7 @@ NRCan:: Natural Resources Canada
 OGC:: Open Geospatial Consortium
 OGE:: Open Geospatial Engine
 OMSv3:: OGC Observations & Measurements 3.0
+OPeNDAP:: Open-source Project for a Network Data Access Protocol
 OSM:: OpenStreetMap
 QGIS:: Quantum Geographic Information System
 RCI:: Regional Climate Indicator
