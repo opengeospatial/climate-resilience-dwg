@@ -14,6 +14,7 @@ Sentinel (satellite mission):: A series of next-generation Earth observation mis
 // Insert abbreviated terms content
 
 ACIS:: Applied Climate Information System
+ACDC:: Atmospheric Composition Data Cube
 ACDD:: Attribute Convention for Data Discovery
 ADES:: Application Deployment and Execution Service
 ADS:: Atmosphere Data Store
@@ -48,16 +49,20 @@ DWG:: Domain Working Group
 ECMWF:: European Centre for Medium-Range Weather Forecasts
 ECV:: Essential Climate Variable
 EDR:: Environmental Data Retrieval
+EFFIS:: European Forest Fire Information System
 EMS:: Exploitation Platform Management Service
 EO:: Earth Observation
 ER:: Engineering Report
 ERA5:: fifth generation ECMWF atmospheric reanalysis of the global climate
 ESA:: European Space Agency
+ESDC:: Earth System Data Cube
+ESDL:: Earth System Data Laboratory
 ESIP:: Earth Science Information Partners
 EUMETSAT::  European Organisation for the Exploitation of Meteorological Satellites
 FAIR:: Findability, Accessibility, Interoperability, and Reusability
 FAPAR:: Fraction of Absorbed Photosynthetically Active Radiation
 FME:: Feature Manipulation Engine
+FOSS4G:: Free and Open Source Software for Geospatial
 FRP:: Fire Radiant Power
 FWI:: Fire Weather Index
 GCM:: General Circulation Model
@@ -75,6 +80,7 @@ IMGW:: Polish Institute of Meteorology and Water Management
 IOOS:: Integrated Ocean Observing System
 IoT:: Internet of Things
 IPCC:: Intergovernmental Panel on Climate Change
+JRC:: Joined Research Center
 JSON:: JavaScript Object Notation
 KML:: Keyhole Markup Language
 LCRS:: Laboratory for Climatology and Remote Sensing
