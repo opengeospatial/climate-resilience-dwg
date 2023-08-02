@@ -2,7 +2,7 @@
 
 The various organizations and institutes that contribute to the Climate Resilience Pilot are described below. 
 
-[%unnumbered]
+.Contributors of this Climate Resilience Pilot
 [width="90%",options="header"]
 |====================
 |Name | Organization | Role or Summary of contribution
