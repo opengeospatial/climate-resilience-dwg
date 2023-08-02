@@ -182,7 +182,8 @@ Whereas https://docs.ogc.org/is/19-072/19-072.html[_OGC API - Common - Part 1_] 
 https://docs.ogc.org/DRAFTS/20-024.html[_Part 2_] provides a consistent mechanism to list and describe collections of geospatial data.
 The following _Common_ resources are available from the GNOSIS Map Server demonstration end-point:
 
-[%unnumbered]
+
+.Common resources that are available from the GNOSIS Map Server
 [options="header"]
 |===
 | Resource                 | Common Part | URL
@@ -196,7 +197,7 @@ The following _Common_ resources are available from the GNOSIS Map Server demons
 In addition to the common resources standardized by _Part 1_ and _Part 2_, several API building blocks are consistently re-used across the different OGC API standards.
 The following table summarizes common query parameters supported by several of the data access APIs:
 
-[%unnumbered]
+.Common query parameters
 [options="header"]
 |===
 | Query parameter       | Description                                                                                                              | APIs
@@ -227,7 +228,7 @@ area, time and resolution of interest from a data cube.
 The main resource to retrieve data using the _Coverages_ API is located at `/collections/{collectionId}/coverage` for each data collection.
 This resource supports a number of query parameters defined by optional requirements classes and extensions supported by the GNOSIS Map Server:
 
-[%unnumbered]
+.Supported query parameters defined by optional requirements classes and extensions supported by the GNOSIS Map Server
 [options="header"]
 |===
 | Query parameter       | Description                                                                                               | Requirements class
@@ -293,7 +294,7 @@ The https://docs.ogc.org/DRAFTS/20-058.html[_OGC API - Maps_] candidate Standard
 The main resource to retrieve data using the _Maps_ API is located at `/collections/{collectionId}/map` for each data collection.
 This resource supports a number of query parameters defined by optional requirements classes and extensions supported by the GNOSIS Map Server:
 
-[%unnumbered]
+.Supported query parameters defined by optional requirements classes and extensions supported by the GNOSIS Map Server
 [options="header"]
 |===
 | Query parameter       | Description                                                                                               | Requirements class
@@ -356,7 +357,7 @@ Using pre-determined partitioning schemes facilitates caching for both servers a
 
 The following _Tiles API_ resources are defined:
 
-[%unnumbered]
+._Tiles API_ resources
 [options="header"]
 |===
 | Resource                                                     | Requirements Class | Description
@@ -505,8 +506,9 @@ There are three main requirements classes for this standard:
 
 The following _DGGS API_ resources are defined:
 
-[%unnumbered]
+. _DGGS API_ resources
 [options="header"]
+
 |===
 | Resource                                | Requirements Class | Description
 | .../dggs                                | _Core_             | List of available DGGSs
@@ -564,7 +566,7 @@ requests for the corresponding TileMatrixSets.
 This requirements class supports returning data for zones whose geometry is of an arbitrary shape e.g., hexagonal or triangular.
 The zone data retrieval resource is `.../dggs/{dggsId}/zones/{zoneId}/data`, for which the GNOSIS Map Server supports a number of query parameters:
 
-[%unnumbered]
+.Query parameters supported by the GNOSIS Map Server
 [options="header"]
 |===
 | Query parameter       | Description
@@ -596,7 +598,7 @@ The _Zone Query_ requirements class allows to efficiently retrieve the results o
 The list can be compacted (the default) by replacing children zones by their parents when all children of that parent are part of the result set.
 The zone query resource is `.../dggs/{dggsId}/zones`, for which the GNOSIS Map Server supports a number of query parameters:
 
-[%unnumbered]
+.Zone query parameters supported by the GNOSIS Map Server
 [options="header"]
 |===
 | Query parameter       | Description
@@ -669,7 +671,7 @@ The https://docs.ogc.org/is/18-062r2/18-062r2.html[_OGC API - Processes_] standa
 A list of processes is available from the GNOSIS Map Server demonstration end-point at https://maps.gnosis.earth/ogcapi/processes .
 The following table summarizes the available processes and their current functionality status.
 
-[%unnumbered]
+.Available processes and their current functionality status for the GNOSIS Map Server
 [options="header"]
 |===
 | Process                                                                                                               | Status     | Description
