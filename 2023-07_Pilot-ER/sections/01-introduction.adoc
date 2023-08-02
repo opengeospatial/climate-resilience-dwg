@@ -64,7 +64,7 @@ Realizing the delivery of Decision Ready Data on demand to achieve Climate Resil
 
 - Building Blocks for processing pipelines: With a focus on Machine Learning and Artificial Intelligence which plays an increasing role in the context of data science and data integration. This focus area needs to evaluate the applicability of machine learning models in the context of the value-enhancing processing pipeline. What information needs to be provided to describe machine learning models and corresponding training data sufficiently to ensure proper usage at various steps of the pipeline? Upcoming options to deploy ML/AI within processing APIs to enhance climate services are rising challenges e.g. on how to initiate or ingest training models and the appropriate learning extensions for the production phase of ML/AI. Heterogeneity in data spaces can be bridged with Linked Data and Data Semantics. Proper and common use of shared semantics is essential to guarantee solid value-enhancement processes. At the same time, resolvable links to procedures, sampling & data process protocols, and used applications will ensure transparency and traceability of decisions and actions based on data products. What level is currently supported? What infrastructure is required to support shared semantics? What governance mechanisms need to be put in place?
 
-=== How is this Pilot Relevant to the Climate Resilience Domain Working Group?
+=== Relevance to the Climate Resilience Domain Working Group
 
 The Climate Resilience DWG will concern itself with technology and technology policy issues, focusing on geospatial information and technology interests as related to climate mitigation and adaptation as well as the means by which those issues can be appropriately factored into the OGC standards development process.
 
@@ -81,7 +81,7 @@ Activities to be undertaken by the Climate Resilience DWG include, but are not l
 * Provide software toolkits to facilitate the deployment of climate change services platforms.
 
 
-=== Value Chain from raw data to information
+=== Value Chain from raw data to Information
 
 Interoperability plays a vital role in facilitating climate resilience by enabling seamless integration and exchange of information between data, models, and various components. During this pilot, participanta have worked on a number of workflows and architectures focusing on several use cases of droughts, heatwaves, and fires. Generally speaking, such a workflow or process takes the following form and tasks. 
 
