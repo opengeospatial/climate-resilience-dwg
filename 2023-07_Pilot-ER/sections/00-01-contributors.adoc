@@ -16,7 +16,7 @@ The various organizations and institutes that contribute to the Climate Resilien
 |Samantha Lavender | Pixalytics Ltd | Development of drought indicator
 |Andrew Lavender | Pixalytics Ltd | Development of drought indicator
 |Jenny Cocks | Pixalytics Ltd | Development of drought indicator
-|Jakub P. Walawender | Freelance climate scientist and EO/GIS expert | Solar radiation use case
+|Jakub P. Walawender | Freelance climate scientist and EO/GIS expert | Analysis ready data cubes, solar radiation use case
 |Kailin Opaleychuk | Safe Software, Inc. |
 |Daniela Hohenwallner-Ries | alpS GmbH | Communication with stakeholders
 |Hanna Krimm | alpS GmbH | Communication with stakeholders
