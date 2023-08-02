@@ -1,5 +1,5 @@
 
-== Use Cases
+== Use cases
 
 In a pilot study on interoperability, a use case represents a specific scenario or application that demonstrates how different components, such as data, models, and systems, interact and exchange information to address a particular challenge or problem. In the context of droughts and fires, use cases showcase how interoperability enables seamless integration and analysis of diverse geospatial data sources, coupled with specialized models, to enhance understanding, prediction, and mitigation of drought and fire risks. These use cases provide practical demonstrations of how interoperability workflows and techniques can be applied to foster effective collaboration, decision-making, and climate resilience in the face of drought and fire-related challenges.
 
@@ -292,7 +292,7 @@ Different solar radiation climate data records and their characteristics have be
 .Solar radiation climate data records
 [options="header"]
 |===
-|Dataset or Database name |Variables |Data provider |Year of release |Data source |Accessibility |Data format |Temporal resolution |Temporal coverage |Spatial resolution |Spatial coverage
+|Dataset or Database name |Variables |Data provider |Year of release |Data source |Accessibility |Data format |Temporal resolution
 |http://dx.doi.org/10.5676/EUM_SAF_CM/SARAH/V003[SARAH-3 Surface Solar Radiation Climate Data Record]
 |Global radiation / surface irradiance (SIS), Direct radiation (SID), Direct normalized radiation (DNI), Sunshine duration (SDU), Photosynthetic active radiation (PAR), Daylight (DAL), Effective cloud albedo (CAL)
 |CMSAF
@@ -301,9 +301,6 @@ Different solar radiation climate data records and their characteristics have be
 |Free
 |NetCDF-4
 |monthly and daily mean or sum (SDU), provided every 30 min (except from SDU)
-|1983-01-01 - present (1983-2020 CDR + ICDR up to present - 5 days)
-| 0.05° x 0.05° degrees
-| ±65° longitude and ±65° latitude
 |https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=CLARA_AVHRR_V002_01[CLARA (Clouds, Albedo and Radiation dataset from AVHRR data)]
 |Surface incoming shortwave radiation (SIS), Longwave surface radiation (SDL), Surface albedo (SAL)
 |CMSAF
@@ -312,9 +309,6 @@ Different solar radiation climate data records and their characteristics have be
 |Free
 |NetCDF-4
 |daily- and monthly-averaged
-|1982-01-01 - 2019-06-30
-|0.25°
-|Global
 |https://nsrdb.nrel.gov/[NSRDB (National Solar Radiation Database)]
 |Global horizontal irradiance, Direct normal irradiance, Diffuse horizontal irradiance
 |National Renewable Energy Laboratory-NREL
@@ -323,9 +317,6 @@ Different solar radiation climate data records and their characteristics have be
 |Free
 |.zip sent to the email address
 |30, 60-minute
-|1998-present
-|4 km
-|USA & Americas
 |https://joint-research-centre.ec.europa.eu/pvgis-online-tool/pvgis-data-download_en[PVGIS ]
 |Average global irradiance on a horizontal surface (W/m2), Average global irradiance on an optimally inclined surface (W/m2), Average global irradiance on a two-axis sun-tracking surface, Optimal inclination angle for an equator-facing plane (degrees)
 |JRC
@@ -334,9 +325,6 @@ Different solar radiation climate data records and their characteristics have be
 |Free
 |ESRI ascii grid, GeoTIFF (SARAH 2)
 |Monthly and yearly long-term averages calculated from hourly  values over
-|CMASAF: 2007-2016, SARAH: 2005-2016, SARAH2: 2005-2020, NSRDB: 2005-2015
-|CMSAF: 0.025°, SARAH2: (0.05°) for SARAH-2 and 0.25° for ERA5, NSRDB: 0.04°
-|CMASAF: 65N-35S, 65W-65 E, SARAH: 62.5N-40S, 65W-128E, SARAH2: 72N-37S, 20W-63,5E, NSRDB: 60N-20S, 180W-22.5W
 |https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-complete?tab=overview[ERA5 (the 5th generation of ECMWF atmospheric reanalysis, after 4th: Era Interim)]
 |Clear-sky direct solar radiation at surface, Surface net solar radiation, Surface solar radiation downwards, TOA incident solar radiation, Top net solar radiation, Total sky direct solar radiation at surface
 |ECMWF, Copernicus Climate Change Service (C3S)
@@ -345,9 +333,6 @@ Different solar radiation climate data records and their characteristics have be
 |Free
 |GRIB (NetCDF experimentally via C3S CDS)
 |1h
-|1940-present
-|0.25° x 0.25°
-|Global
 |https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-single-levels?tab=overview[CERRA  Copernicus European Regional ReAnalysis]
 |Surface solar radiation downwards, Surface thermal radiation downwards, Time-integrated surface direct short-wave radiation, Surface net solar radiation (clear sky), 
 |Copernicus
@@ -356,9 +341,6 @@ Different solar radiation climate data records and their characteristics have be
 |Free
 |GRIB2
 |3 / 6h
-|1984 - present
-|5,5 or 11 km
-|Europe
 |https://disc.gsfc.nasa.gov/datasets?project=MERRA-2[MERRA-2 (Modern-Era Retrospective analysis for Research and Applications)]
 |Radiation diagnostics (i.e. surface albedo, cloud area fraction, in cloud optical thickness), surface incoming shortwave flux (i.e. solar radiation), surface net downward shortwave flux, and upwelling longwave flux at toa (top of atmosphere) (i.e. outgoing longwave radiation (OLR) at toa)
 |NASA Global Modeling and Assimilation Office (GMAO) 
@@ -367,9 +349,6 @@ Different solar radiation climate data records and their characteristics have be
 |Free
 |NetCDF
 |1h
-|1980-present
-|0.5 x 0.625°
-|Global
 |https://opendata.dwd.de/climate_environment/REA/COSMO_REA6/[COSMO/REA]
 |Instantaneous direct radiation  surface, Instantaneous diffuse radiation surface
 |Deutscher Wetterdienst (DWD)
@@ -378,9 +357,6 @@ Different solar radiation climate data records and their characteristics have be
 |Free
 |GRIB
 |1h
-|1995.01 -2019.08.
-|about 6km
-|Europe
 |https://solargis.com/[SOLARGIS]
 |GHI - Global horizontal irradiation [kWh/m2], DHI -Diffuse horizontal irradiation [kWh/m2], GTI - Global irradiation for optimally tilted surface [kWh/m2], DNI - Direct normal irradiation [kWh/m2], PVOUT - Photovoltaic power potential [kWh/kWp], OPTA - Optimum tilt to maximize yearly yield [°]
 |Solargis s.r.o.
@@ -389,9 +365,6 @@ Different solar radiation climate data records and their characteristics have be
 |Limited data for free (e.g. avarage daily totals and yearly monthly totals), full resolution data and service are commercial 
 |GeoTIFF, ESRI ASCII GRID
 |Year, Month (free data)
-|1994-2018 (free data)
-|9 arcsec (~250m:  GHI, DIF, GTI, DNI),  30 arcsec (~1km: PVOUT) and 2 arcmin (~4km: OPTA)
-|Global
 |http://www.soda-pro.com[HelioClim-3, Version 5]
 |All radiation components (global, diffuse, direct) over horizontal, fix-tilted, and any tracker-type planes (Wh/m²)
 |The research center O.I.E. (ARMINES and MINES ParisTech, Center for Observation, Impacts, Energy) 
@@ -400,9 +373,6 @@ Different solar radiation climate data records and their characteristics have be
 |Demo data for free. Access to full data is based on paid subscriptions.Data are accessible either using the SoDa web portal or via automatic wget commands.
 |csv, JSON, Excel file, NetCDF
 |1 min (downscaling from 15 min Meteosat) to 1 month
-|01.02.2004 - present (+ Forecast)
-|3-12 km
-|MSG Domain
 |https://ads.atmosphere.copernicus.eu/cdsapp#!/dataset/cams-solar-radiation-timeseries?tab=overview[CAMS solar radiation time-series]
 |Cloud-free conditions only: Global Horizontal Irradiation (GHI), Direct Horizontal Irradiation (BHI), Diffuse Horizontal Irradiation(DHI), Direct Normal Irradiation (BNI)
 |The research center O.I.E. (ARMINES and MINES ParisTech, Center for Observation, Impacts, Energy) 
@@ -411,9 +381,6 @@ Different solar radiation climate data records and their characteristics have be
 |Free via CAMS for Europe (AGATE Dataset) and Africa (JADE Dataset)
 |ASCII (CSV), NetCDF (Point data, time-series)
 |1 min, 15 min, 1 h, 1 day, 1 month
-|2004 to present
-|Interpolated to the point of interest from various input data spatial resolutions (0.2°)
-|Worldwide
 |https://data.jrc.ec.europa.eu/collection/id-0055[EMHIRES (European Meteorological derived High Resolution RES) Dataset  ]
 |Solar and wind power at different aggregation levels
 |Joint Research Centre of the European Commission (JRC)
@@ -422,9 +389,6 @@ Different solar radiation climate data records and their characteristics have be
 |Free
 |Excel XLS
 |hourly time series
-|1986-2015
-|country, bidding zone (special aggregations to reflect the power market reality), NUTS-1 and NUTS-2 level 
-|European Union 
 |https://meteonorm.com/[Meteonorm]
 |Direct horizontal and normal radiation arising from a narrow solid angle of 6° centered around the sun, Diffuse radiation (arising from the upper hemisphere reduced by the direct solar radiation from the sun's disk and its surroundings (6° aperture)), Diffuse radiation (taking raised horizon into account, under clear skys), Global radiation (horizontal, taking raised horizon into account, under clear skys), multiple  meteorological parameters
 |Meteotest AG (Bern, Switzerland)
@@ -433,9 +397,6 @@ Different solar radiation climate data records and their characteristics have be
 |Commercial
 |TXT, CSV
 |hour, day, month, year
-|1996–2015, hourly data: 2010 - present
-|Time series for a given point worldwide
-|Global
 |===
 
 All the solar radiation datasets listed above cover the area of Poland but are rather not ready for direct use by a non-scientific users. They are pre-processed to meet the requirements for climate data records and quality controlled but still primarily addressed for further scientific use. Even though open source tools for managing and exploiting these datasets are often delivered by the data providers, they are not always sufficiently "attractive" due to an extensive workload, which is still required in order to make them easily integrable with additional data from other sources and ready for specific applications in support of policy- and/or decision-making processes at national level.
