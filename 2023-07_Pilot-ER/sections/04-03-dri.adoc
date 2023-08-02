@@ -27,9 +27,8 @@ image::Figure3_Intact.png[Figure3_Intact]
 
 The table below shows the datasets accessed by Intact during the pilot.
 
-===== Technical Interoperability Experiments (TIE) Table
-[%unnumbered]
-[width="90%",options="header"]
+.Technical Interoperability Experiments (TIE) Table
+[options="header"]
 |====================
 |Dataset |Source |URL |Notes
 |National Fire Database fire polygon data | NRCan | https://cwfis.cfs.nrcan.gc.ca/datamart/download/nfdbpoly | Unable to establish SSL connection into private network

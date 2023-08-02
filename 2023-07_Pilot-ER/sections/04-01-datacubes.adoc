@@ -506,9 +506,8 @@ There are three main requirements classes for this standard:
 
 The following _DGGS API_ resources are defined:
 
-. _DGGS API_ resources
+.DGGS API resources
 [options="header"]
-
 |===
 | Resource                                | Requirements Class | Description
 | .../dggs                                | _Core_             | List of available DGGSs
