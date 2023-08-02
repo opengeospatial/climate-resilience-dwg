@@ -13,16 +13,16 @@ Sentinel (satellite mission):: A series of next-generation Earth observation mis
 
 // Insert abbreviated terms content
 
-ACIS:: Applied Climate Information System
 ACDC:: Atmospheric Composition Data Cube
 ACDD:: Attribute Convention for Data Discovery
+ACIS:: Applied Climate Information System
 ADES:: Application Deployment and Execution Service
 ADS:: Atmosphere Data Store
+AP:: Application Package
+API:: Application Programming Interface
 AR:: Assessment Report
 ARD:: Analysis Ready Data
 ARDC:: Analysis Ready Data Cube
-AP:: Application Package
-API:: Application Programming Interface
 AWS:: Amazon Web Service
 BCSD:: Bias Corrected Spatially Downscaled
 BRDF:: Bidirectional Reflectance Distribution Function
