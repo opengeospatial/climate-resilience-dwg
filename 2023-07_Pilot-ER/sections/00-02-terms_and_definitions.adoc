@@ -1,6 +1,7 @@
 == Terms and definitions
 
 Carrying Capacity:: An area both suitable and available for human activity based on the state of the ecosystem and competitive pressures for shared resources
+CityGML::  is an open standardised data model and exchange format to store digital 3D models of cities and landscapes.
 Data Cube:: In computer programming contexts, a data cube (or datacube) is a multi-dimensional ("n-D") array of values. Typically, the term data cube is applied in contexts where these arrays are massively larger than the hosting computer's main memory; examples include multi-terabyte/petabyte data warehouses and time series of image data. 
 FAIR Climate Service:: Climate resilience information system where the entire architecture is following FAIR principles.
 FAIR principle:: Findability, Accessibility, Interoperability, and Reuse of digital assets.
@@ -64,6 +65,7 @@ GCOS:: Global Climate Observing System
 GDO:: Global Drought Observatory
 GDP:: Gross Domestic Product
 GML:: Geography Markup Language
+GMU:: George Mason University
 GOOS:: Global Ocean Observing System
 GRACE:: Gravity Recovery and Climate Experiment
 HDF:: Hierarchical Data Format
@@ -75,6 +77,7 @@ IoT:: Internet of Things
 IPCC:: Intergovernmental Panel on Climate Change
 JSON:: JavaScript Object Notation
 KML:: Keyhole Markup Language
+LCRS:: Laboratory for Climatology and Remote Sensing
 LOCA:: Localized Constructed Analogs
 MERRA:: Modern Era Retrospective-Analysis for Research and Applications
 ML/AI:: Machine Learning / Artificial Intelligence 
@@ -118,7 +121,8 @@ WFV:: Wide Field View
 WG Climate:: Joint Working Group on Climate
 WGISS:: Working Group on Information Systems and Services
 WHI:: Wildland-Human Interface
+WHU:: Wuhan University
 WMS:: Web Map Service
 WPS:: Web Processing Service
 WUI:: Wildland-Urban Interface
-
+XML:: Extensible Markup Language 
