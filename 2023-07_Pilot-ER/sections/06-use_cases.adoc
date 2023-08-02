@@ -409,7 +409,7 @@ The following table includs a selection of existing solar climate web map servic
 .Solar climate web map services
 [options="header"]
 |===
-|Service name |Variables & Info |Data provider |Year of first release |Data source |Accessibility |Functionality |Temporal resolution |Temporal coverage |Spatial resolution |Spatial coverage
+|Service name |Variables & Info |Data provider |Year of first release |Data source |Accessibility |Functionality |Temporal resolution
 |https://klimat.imgw.pl/pl/solar-atlas/[Solar Atlas for Poland]
 |Global radiation / surface irradiance (SIS), Direct radiation (SID), Direct normalized radiation (DNI), Statistics: Mean, Max, Min, STD, Anomaly
 |The Institute of Meteorology and Water Management - National Research Institute (IMGW-PIB)
@@ -418,9 +418,6 @@ The following table includs a selection of existing solar climate web map servic
 |Open Access
 |View, save a graphic, Static maps (graphics), only in polish, pixel values cannot be accessed, no metadata
 |Month, Season, Year
-|1991-2014
-|Original maps based on 0.05° degrees data
-|Poland
 |https://www.ilmateenistus.ee/kliima/solar-atlas/?lang=en[Baltic Solar Atlas]
 |Global radiation / surface irradiance (SIS), Direct radiation (SID), Direct normalized radiation (DNI), Statistics: Mean, Max, Min, STD, Anomaly
 |Lietuvos Hidrometeorologijos Tarnyba
@@ -429,9 +426,6 @@ The following table includs a selection of existing solar climate web map servic
 |Open Access
 |View, save a graphic, Static maps (graphics), pixel values cannot be accessed, no metadata
 |Month, Season, Year
-|1991-2014
-|Original maps based on 0.05° degrees data
-|18 - 29 E, 53.5 - 60 N (whole coverage for Lithuania, Latvia, Estonia, for Poland only the North-East part)
 |https://www.dwd.de/EN/ourservices/probsunnydays/probsunnydays.html[Sunny Days Probability]
 |Probability of sunny days for selected stations worldwide based on CM SAF data. For each selected city the likelihood that a certain day throughout the year is sunny is shown. For Europe and Africa also the likelihood for a 5-day sunny period is shown
 |Deutscher Wetterdienst (DWD)
@@ -440,9 +434,6 @@ The following table includs a selection of existing solar climate web map servic
 |Open Access
 |View, Zoom In/Out, Charts for selected cities
 |Day of year
-|Only multiannual values (1983-2020)
-|Point data
-|Global
 |https://re.jrc.ec.europa.eu/pvg_tools/en/[PVGIS Webservice (The Photovoltaic Geographic Information System)]
 |Global horizontal irradiation, Direct normal irradiation, Global irradiation optimum angle, Global irradiation at angle,  PV performance
 |Joint Research Centre of the European Commission (JRC)
@@ -451,9 +442,6 @@ The following table includs a selection of existing solar climate web map servic
 |Open Access
 |WebGIS, Data Download (JSON, CSV), User dedicated tools (solar resource assessment, photovoltaic (PV) performance studies)
 |Hour, Day (only point data series), Month, Year
-|Database dependent 2005 - 2015/2020
-|Database dependent
-|Global (almost complete coverage)
 |https://globalsolaratlas.info/map[Global Solar Atlas]
 |Global horizontal irradiation, Direct normal irradiation, Global irradiation optimum angle, Global irradiation at angle, Specific photovoltaic power output, Optimum tilt of PV modules, Air temperature
 |Solargis s.r.o. , supported by The World Bank Group and funded by the Energy Sector Management Assistance Program (ESMAP)
@@ -462,9 +450,6 @@ The following table includs a selection of existing solar climate web map servic
 |Open Access
 |Interactive maps, PV energy calculator, Solar and meteo data, area analysis for regions and custom areas, data layer download (Tabular data (XLSX) and GIS raster layers (GeoTIFF)), ready to print maps, Global PV Potential Study: Country Factsheet
 |Long-term yearly average of daily and yearly totals
-|Depending on the region: 1994/1999/2007/2018 to 2021
-|250 m to 1km dependent on variable
-|Global (almost)
 |https://www.soda-pro.com/[SoDa]
 |SoDa provides historical, real-time, and forecast solar radiation and weather data services. Solar radiation: HelioClim-3 solar radiation database (All radiation components: global, diffuse, direct over horizontal, fix-tilted, and any tracker-type planes (Wh/m²)), Solar radiation under clear-sky conditions: McClear fix-tilted service, Ultraviolet and Photosynthetically Active Radiation Data
 |The research center O.I.E. (ARMINES and MINES ParisTech, Center for Observation, Impacts, Energy), SoDa is commercialised by Transvalor S.A. since 2009
@@ -473,9 +458,6 @@ The following table includs a selection of existing solar climate web map servic
 |Part of data and services for free. Access to full data is based on paid subscriptions
 |Solar radiation database (e.g. Helioclim-3) to get long-term irradiation time-series data at a specific region, solar radiation maps (hourly, monthly, yearly avarage), real-time maps and time-series to identify solar radiation resource and cloud motion, solar forecast, Web Services and Products based on the data
 |1 min (downscaling from 15 min Meteosat) to 1 month
-|01.02.2004 - present (+ Forecast)
-|3-12 km
-|MSG Domain
 |https://www.irena.org/globalatlas[Global Atlas  for Renewable Energy]
 |Global Horizontal Irradiation (GHI), Direct Horizontal Irradiation (BHI), Diffuse Horizontal Irradiation(DHI), Global Normal Irradiation (GNI), Direct Normal Irradiation(BNI), Diffuse Normal Irradiation (DNI)
 |The International Renewable Energy Agency (IRENA), https://globalatlas.irena.org/about[Full list of partners and data providers]
@@ -484,9 +466,6 @@ The following table includs a selection of existing solar climate web map servic
 |Open Access
 |Display and overlay different renewable resource and ancillary datasets (transmission and road networks, protected areas, population density, and topography) WebGIS functionality, link with other platforms, systems or software for purposes of conducting comparative analyses, conduct specific mapping functionalities to screen areas of opportunity where further assessments can be of relevance, download data over identified areas of interest
 |Long-term yearly and monthly average 
-|Database dependent, between 1994 and 2020
-|Database dependent, between 1km and 20 km
-|Global
 |http://www.webservice-energy.org/[Webservice-Energy Catalogue]
 |The platform hosts web services dedicated to solar radiation and more generally, energy. 
 |GEOSS community portal. Initiative of MINES  ParisTech, ARMINES and also the SoDa Team, several services have been developed by MINES ParisTech, others by other providers such as DLR
@@ -494,9 +473,6 @@ The following table includs a selection of existing solar climate web map servic
 |Multiple, e.g. SoDa, SOLEMI, PACA Solar Atlas, CAMS Radiation Service
 |Open Access
 |Access, search and discover hundreds of Energy and Environmental related resources (data, applications, tools, services). Catalogue with metadata.The website has several web services: Web Map Services, Web Processing Services, obeying OGC (Open Geospatial Consortium) or W3C (World Wide Web Consortium) standards. The W3C standard is abandoned in favour of the OGC standard
-|Various
-|Various
-|Various
 |Various
 |https://energydata.info/[ENERGYDATA.INFO ]
 |An open data platform providing access to datasets and data analytics that are relevant to the energy sector
@@ -506,9 +482,6 @@ The following table includs a selection of existing solar climate web map servic
 |Open Access
 |Access, search and discover hundreds of Energy and Environmental related resources (data, applications, tools, services). Explore data by country
 |Various
-|Various
-|Various
-|Various
 |https://rezoning.energydata.info/[The Renewable Energy Zoning (REZoning) tool]
 |Available resources – solar PV, wind, or offshore wind - for a chosen country: Technical Potential, Economic Potential and Multi-criteria analysis and prioritization. Data on radiation: Global Horizontal and Tilted irradiation
 |Partners: The World Bank Group, ESMAP, UC Santa Barbara, Development SEED
@@ -517,9 +490,6 @@ The following table includs a selection of existing solar climate web map servic
 |Open Access
 |Identify and explore high potential project areas for solar, onshore wind and offshore wind development. The final map can be printed in .PDF or .PNG format. Download the results of the analysis in .CSV, .SHP (for boundaries selection) or GeoTIFF format (for grid selection) for further processing
 |Long-term yearly average of daily and yearly totals
-|1994-2020
-|250m - 1km
-|Global (a few countries still missing)
 |https://atmosphere.copernicus.eu/solar-energy[Copernicus Atmospheric Monitoring Service (CAMS) - Radiation Service ]
 |Clear Sky and Total Sky Radiation. The Global, Direct and Diffuse Horizontal Irradiation, as well as the Beam Normal Irradiation are provided
 |German Aerospace Center (DLR), ARMINES, TRANSVALOR
@@ -528,9 +498,6 @@ The following table includs a selection of existing solar climate web map servic
 |Open Access
 |Access and download data (time series)
 |1 min, 15 min, 1 h, 1 day, 1 month
-|2004 to present
-|Interpolated to the point of interest from various input data spatial resolutions
-|Global for cloud-free parameters, Meteosat satellite field-of-view for all-sky parameters
 |https://www.re-explorer.org/[RE Data Explorer]
 |For Poland: Global Horizontal Irradiance, Direct Normal Irradiance. More data for selected developing countries
 |National Renewable Energy Laboratory (NREL), USA . List of partners and data providers at https://www.re-explorer.org/about.html 
@@ -539,9 +506,6 @@ The following table includs a selection of existing solar climate web map servic
 |Open Access
 |WebGIS, user-friendly interface, provides renewable energy data, analytical tools (Levelized Cost of Energy Mapping Tool, Technical Potential Tool, PVWatts Lite), training materials and technical assistance.
 |For Poland only multiannaul average (time series for selected develooping countries)
-|Various
-|Various
-|Global, but best data are available for developing countries (Afghanistan, Bangladesh, Columbia, Ghana, India, Kenya, Mexico, Nepal, Pakistan, Peru, Kazakhstan and Central Asia)
 |https://www.renewables.ninja/[Renewables Ninja ]
 |Ground-level solar irradiance, top of atmosphere solar irradiance, average annual capacity factors for PV, for a point of interest also daily mean and monthly capacity factor
 |ETH Zurich
@@ -550,9 +514,6 @@ The following table includs a selection of existing solar climate web map servic
 |Open Access
 |Renewables Ninja WepPortal allows running of simulations of hourly power output from wind and solar PV farms by clicking anywhere on the map. Also download ready-made datasets for a chosen country is possible. 
 |hourly time series, daily and monthly mean for a one year (2015 or 2019)
-|MERRA-2: 1980-2019, SARAH: 1985-2016
-|Country-level or Point of interest
-|Europe (globally with data from MERRA reanalyses)
 |Meteonorm based services: https://meteonorm.com/en/product/solar-cadastre[Solar Cadastre], https://solarwebservices.ch/[SolarSat, CloudMove,  SolarForecast]
 |Global radiation on the horizontal plane, Diffuse radiation on the horizontal plane, Direct radiation on the horizontal plane, Global radiation on the inclined plane, Direct normal irradiation, Energy output
 |Meteotest AG (Bern, Switzerland)
@@ -561,9 +522,6 @@ The following table includs a selection of existing solar climate web map servic
 |Commercial
 |SolarSat: Measured quarter-hourly radiation data for the last 24 hours, updated every hour, CloudMove: Solar radiation forecast for the next 6 hours, updated every 15 minutes, Booster option, SolarForecast: Solar radiation forecast for the next 72 hours, updated every hour
 |from 15 Min. (past 24h) to month
-|Various
-|Various
-|Global data, but MSG data for Meteosat Disc
 |===
 
 Identified services provide generalised information on spatio-temporal solar radiation patterns (high resolution grids for longer period not available at all or not for free!). A set of high-resolution analysis-ready data products in user-friendly formats dedicated to specific applications at national level are needed to support decision-making processes.
