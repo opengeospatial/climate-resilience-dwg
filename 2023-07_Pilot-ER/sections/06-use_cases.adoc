@@ -125,7 +125,7 @@ Most of ECV data provides don't provide such service.
 
 Figure <<<software-architecture>>> shows a software architecture of the CEOS WGISS Carbon Community Portal.
 
-
+[[software-architecture]]
 .Software Architecture
 image::ARD_GMU-architecture.png[software-architecture]
 
