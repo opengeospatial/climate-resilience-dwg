@@ -176,7 +176,7 @@ Other additions to the workflow which could support future collaboration with ot
 
 D100 - Client instance: Analysis Ready Data Component
 
-Our Analysis Ready Data component (ARD) uses the FME platform to consume regional climate model and EO data and generate FAIR datasets for downstream analysis and decision support. 
+Our Analysis Ready Data component (ARD) uses the FME platform to consume regional climate model and generate FAIR analysis ready datasets for downstream analysis and decision support. 
 
 The challenge to manage and mitigate the effects of climate change poses difficulties for spatial and temporal data integration. One of the biggest gaps to date has been the challenge of translating the outputs of global climate models into specific impacts at the local level.  FME is ideally suited to help explore options for bridging this gap given its ability to read datasets produced by climate models such as NetCDF or OGC WCS and then filter, aggregate, interpolate and restructure it as needed. FME can inter-relate it with higher resolution local data, and then output it to whatever format or service is most appropriate for a given application domain or user community.
 
@@ -249,6 +249,10 @@ Modified ARD Data workflow:
 3. Compute timestep stats by band 
 4. Compute time range stats by cell 
 5. Convert grids to vector points
+
+[[FME_ARD_Workflow_MB_precip_results]]
+.Modified ARD Results: NetCDF data cube to precipitation point time series in Geopackage for Manitoba
+//image::FME_ARD_MB_precip_results.png[FME_ARD_Workflow_MB_precip_results]]
 
 Further scenario tests were explored, including comparison with historical norms. Calculations were made using the difference between projected climate variables and historical climate variables. These climate variable deltas may well serve as a useful starting point for climate change risk indicator development. They also serve as an approach for normalizing climate impacts when the absolute units are not the main focus. Interesting patterns emerged for the LA area that we ran this process on deltas between projected and historical precipitation. While summers are typically dry and winters are wet and prone to flash floods. Initial data exploration seemed to show an increase in drought patterns in the spring and fall. More analysis needs to be done to see if this is a general pattern or simply one that emerged from the climate scenario we ran. However, this  is the type of trend that local planners and managers may benefit from having the ability to explore once they have better access to climate model scenario outputs along with the ability to query and analyze them.
 
