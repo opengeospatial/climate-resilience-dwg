@@ -1,5 +1,5 @@
 
-== Use cases
+== Use cases [[Chapter_Use_Cases]]
 
 In a pilot study on interoperability, a use case represents a specific scenario or application that demonstrates how different components, such as data, models, and systems, interact and exchange information to address a particular challenge or problem. In the context of droughts and fires, use cases showcase how interoperability enables seamless integration and analysis of diverse geospatial data sources, coupled with specialized models, to enhance understanding, prediction, and mitigation of drought and fire risks. These use cases provide practical demonstrations of how interoperability workflows and techniques can be applied to foster effective collaboration, decision-making, and climate resilience in the face of drought and fire-related challenges.
 
