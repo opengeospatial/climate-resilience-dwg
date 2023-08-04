@@ -286,6 +286,10 @@ Once correctly configured, OGC API feature services seemed to perform well and l
 
 It should also be noted that while OGC API services should be a priority for standards support, for a climate and disaster management context, given the relative recent nature of these standards many users may be less than familiar with or prepared to use these standards. As such, there should also be provision to access data directly in well accepted open standards such as GeoJSON, CSV, GeoTIFF, Geopackage or Shape. In this project, some users preferred direct access to GeoJSON or CSV over OGC API access.
 
+[[FME_OGCAPIFeaturesQuery_MBtemperature]]
+.Modified ARD Results: Query result for Manitoba temperature time series points, from FME OGC API Feature Service (GeoJSON served from published Geopackage)
+//image::FME_OGCAPIFeaturesQuery_MBtemperature.png[FME_OGCAPIFeaturesQuery_MBtemperature]]
+
 ==== Component Integrations
 
 One of the challenges with this pilot, particularly considering that this was the first phase, was building interoperability integrations with other components. Much of the pilot duration was spent building the individual components, so little time was left to experiment with integrations between them. That said, there were 2 notable integrations between our ARD component and other participants. Both of these integrations are also described in their respective component sections from their perspective.
