@@ -318,7 +318,7 @@ Different solar radiation climate data records and their characteristics have be
 |2012
 |Satellite Data (CMSAF SARAH and NSRDB), partly combined with Reanalysis (Sarah2: NA filled with ERA5 reanalysis)
 |Free
-|ESRI ascii grid, GeoTIFF (SARAH 2)
+|Esri ascii grid, GeoTIFF (SARAH 2)
 |Monthly and yearly long-term averages calculated from hourly  values over
 |https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-complete?tab=overview[ERA5 (the 5th generation of ECMWF atmospheric reanalysis, after 4th: Era Interim)]
 |Clear-sky direct solar radiation at surface, Surface net solar radiation, Surface solar radiation downwards, TOA incident solar radiation, Top net solar radiation, Total sky direct solar radiation at surface
@@ -358,7 +358,7 @@ Different solar radiation climate data records and their characteristics have be
 |2019 (free data)
 |Solar radiation data from satellite-based model developed by Solargis company (input: Meteosat PRIME and IODC by Eumetsat, GOES-East and GOES-West by NOAA, MTSAT and Himawari-8 by JMA, MACC-II/CAMS atmospheric data by ECMWF, MERRA-2 atmospheric data by NASA, GFS data by NOAA).
 |Limited data for free (e.g. avarage daily totals and yearly monthly totals), full resolution data and service are commercial 
-|GeoTIFF, ESRI ASCII GRID
+|GeoTIFF, Esri ASCII GRID
 |Year, Month (free data)
 |http://www.soda-pro.com[HelioClim-3, Version 5]
 |All radiation components (global, diffuse, direct) over horizontal, fix-tilted, and any tracker-type planes (Wh/m²)

@@ -318,7 +318,7 @@ http://regclim.coas.oregonstate.edu:8080/thredds/catalog/catalog.html
 http://regclim.coas.oregonstate.edu:8080/thredds/ncss/grid/regcmdata/NCEP/psw/Daily/RegCM3_Daily_psw_NCEP.ncml/dataset.html
 
 Climate Mapping for Resilience and Adaptation 
-U.S. Global Change Research Program (USGCRP) and with U.S. Federal Geographic Data Committee (FGDC). Funded by DOI and NOAA, implemented by ESRI:
+U.S. Global Change Research Program (USGCRP) and with U.S. Federal Geographic Data Committee (FGDC). Funded by DOI and NOAA, implemented by Esri:
 https://resilience.climate.gov/ 
 
 ===== Climate Model Scenarios
@@ -605,7 +605,7 @@ On these pages, a list of buttons allow you to filter the selection to a subset 
 
 ==== Future Work 
 
-For ESRI's contribution, the first version of CRMA was well received, it is widely used by the intended users and there is high interest by many others. Before the first version was released we had requests for other countries, and customizations of the project.
+For Esri's contribution, the first version of CRMA was well received, it is widely used by the intended users and there is high interest by many others. Before the first version was released we had requests for other countries, and customizations of the project.
 
 Due to many customization requests version 2 is being developed from inception with the intent for all code, from data processing python to web application Javascript to be available in Github repositories with documentation of typical customization workflows. 
 

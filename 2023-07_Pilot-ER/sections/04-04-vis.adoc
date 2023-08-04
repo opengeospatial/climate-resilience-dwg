@@ -123,7 +123,7 @@ image::presagis.png[]
 
 === CRMA Web Application
 
-Decision makers, public authorities, and citizens will primarily access data via a custom ESRI web application, providing a simple dashboard interface for viewing interactive maps and graphs of the indices, and output formatted reports. The indices are grouped by 5 climate hazard types (Wildfire, Heat, Drought, Inland Flooding, Coastal Inundation). The current US project (https://livingatlas.arcgis.com/assessment-tool/explore/details) can be explored to gain context of what the global project will be.
+Decision makers, public authorities, and citizens will primarily access data via a custom Esri web application, providing a simple dashboard interface for viewing interactive maps and graphs of the indices, and output formatted reports. The indices are grouped by 5 climate hazard types (Wildfire, Heat, Drought, Inland Flooding, Coastal Inundation). The current US project (https://livingatlas.arcgis.com/assessment-tool/explore/details) can be explored to gain context of what the global project will be.
 
 [[esri_project]]
 .Climate Mapping For Resilience and Adaptation (CMRA) portal, US project view
