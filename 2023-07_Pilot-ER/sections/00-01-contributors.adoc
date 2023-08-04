@@ -12,8 +12,8 @@ The various organizations and institutes that contribute to the Climate Resilien
 |Peng Yue | Wuhan University | Datacube component
 |Zhe Fang | Wuhan University | Climate ARD component
 |Hanwen Xu | Wuhan University | Drought impact use cases
-|Dean Hintz | Safe Software, Inc. |
-|Kailin Opaleychuk | Safe Software, Inc. |
+|Dean Hintz | Safe Software, Inc. | Climate Analysis Ready Data and Drought Indicator
+|Kailin Opaleychuk | Safe Software, Inc. | Climate Analysis Ready Data and Drought Indicator
 |Samantha Lavender | Pixalytics Ltd | Development of drought indicator
 |Andrew Lavender | Pixalytics Ltd | Development of drought indicator
 |Jenny Cocks | Pixalytics Ltd | Development of drought indicator
