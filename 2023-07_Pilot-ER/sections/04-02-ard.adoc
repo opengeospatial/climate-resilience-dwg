@@ -184,7 +184,7 @@ Our ARD component supports the consumption of climate model outputs such as NetC
 
 ===== ARD Workflow
 
-The basic workflow for generating output from the FME ARD component is as follows. The component extracts, filters, interrelates and refines these datasets according to indicator requirements. After extraction, datasets are filtered by location and transformed to an appropriate resolution and CRS. Then the workflow resamples, simplifies and reprojects the data, and then defines record level feature identifiers, ECV values, metadata and other properties to satisfy the target ARD requirements. This workflow is somewhat similar to what was needed to evaluate disaster impacts in DP21. Time ranges for climate scenarios are significantly longer - years rather than weeks for floods.
+The basic workflow for generating output from the FME ARD component is as follows. The component extracts, filters, interrelates and refines these datasets according to indicator requirements. After extraction, datasets are filtered by location and transformed to an appropriate resolution and CRS. Then the workflow resamples, simplifies and reprojects the data, and then defines record level feature identifiers, climate variable values, metadata and other properties to satisfy the target ARD requirements. This workflow is somewhat similar to what was needed to evaluate disaster impacts in DP21. Time ranges for climate scenarios are significantly longer - years rather than weeks for floods.
 
 Once the climate model, and other supporting datasets have been adequately extracted, prepared and integrated, the final step is to generate the data streams and datasets required by downstream components and clients. The FME platform is well suited to deliver data in formats as needed. This includes Geopackage format for offline use. For online access, other open standards data streams are available, such as GeoJSON, KML or GML, via WFS and OGC Features APIs and other open APIs. For this pilot we generated OGC Geopackage, GeoJSON, CSV and OGC Features API services.
 
@@ -206,12 +206,13 @@ image::SafeSoftware_1.png[SafeSoftware_1]
 image::SafeSoftware_2.png[SafeSoftware_2]
 
 Original Data workflow:
-- Split data cube
-- Set timestep parameters
-- Compute timestep stats by band
-- Compute time range stats by cell
-- Classify by cell value range
-- Convert grids to vector contours
+
+1. Split data cube
+2. Set timestep parameters
+3. Compute timestep stats by band
+4. Compute time range stats by cell
+5. Classify by cell value range
+6. Convert grids to vector contours
 
 [[SafeSoftware_3]]
 .Extracted timestep  grids: Monthly timesteps, period mean T, period max T 
@@ -231,9 +232,9 @@ image::SafeSoftware_5.png[SafeSoftware_5]
 .FME Data Inspector: RCM NetCDF data cube for Manitoba temperature 2020-2099
 image::FME_Inspector_NetCDF_MB_temp.png[FME_Inspector_NetCDF_MB_temp]]
 
-Disaster Pilot 2021 laid a good foundation for exploring data cube extraction and conversion to ARD with using the FME data integration platform.  A variety of approaches were explored for extraction, simplification and transformation including approaches to select, split, aggregate, and summarize time series. However, more experimentation was needed to generate ARD that can be queried to answer questions about climate trends. This evolution of ARD was one of the goals for this CRP. This goal includes better support for both basic queries, and analytics, statistical methods, simplification & publication methods, including cloud native - NetCDF to Geopackage, GeoJSON and OGC, APIs.
+Disaster Pilot 2021 laid a good foundation for exploring data cube extraction and conversion to ARD with using the FME data integration platform.  A variety of approaches were explored for extraction, simplification and transformation including approaches to select, split, aggregate, and summarize time series. However, more experimentation was needed to generate ARD that can be queried to answer questions about climate trends. This evolution of ARD was one of the goals for this climate pilot. This goal includes better support for both basic queries, and analytics, statistical methods, simplification & publication methods, including cloud native - NetCDF to Geopackage, GeoJSON and OGC, APIs.
 
-In consultation with other participants, we learned fairly early on in the pilot that our approach to temperature and precipitation contours or polygons inherited from our work in DP21 on flood contours involved too much data simplification to be useful. For example, contouring required grid classification into segments, such as 5 degree C or 10mm of precipitation etc. However, this effective loss of detail oversimplified the data to the point where it no longer held enough variation over local areas to be useful. In discussion with other participants, it was determined that simply converting multidimensional data cubes to vector time series point data served the purpose of simplifying the data structure for ease of access, but retained the ECV precision needed to support a wider range of data interpretations for indicator derivation. It also meant that as a data provider we did not need to anticipate or encode interpretation of indicator business rules into our data simplification process. By simply providing ECV data points, the end user was free to run queries to find locations and time steps where temp > or precipitation < some threshold of interest.
+In consultation with other participants early in the pilot, we learned that our approach to temperature and precipitation polygons inherited from our work in DP21 on flood contours involved too much data simplification to be useful. For example, contouring required grid classification into segments, such as 5 degree C or 10mm of precipitation etc. However, this effective loss of detail oversimplified the data to the point where it no longer held enough variation over local areas. Based on user feedback, it was determined that simply converting multidimensional data cubes to vector time series point data served the purpose of simplifying the data structure for ease of access, but retained the climate variable precision needed to support a wide range of data interpretations for indicator derivation. It also meant that as a data provider we did not need to anticipate or encode interpretation of indicator business rules into our data simplification process. By simply providing climate variable data points, the end user was free to run queries to find locations and time steps where temp or precipitation are within some threshold of interest.
 
 Initially it was thought that classification rules need to more closely model impacts of interest. For example, the business rules for a heat wave might use a temperature range and stat type as part of the classification process before conversion to vector. However, this imposes the burden of domain knowledge on the data provider rather than on the climate service end user who is much more likely to understand the domain they wish to apply the data to and how best to interpret it.
 
@@ -247,7 +248,7 @@ Modified ARD Data workflow:
 2. Set timestep parameters
 3. Compute timestep stats by band 
 4. Compute time range stats by cell 
-5. Convert grids to vector points”
+5. Convert grids to vector points
 
 Further scenario tests were explored, including comparison with historical norms. Calculations were made using the difference between projected climate variables and historical climate variables. These climate variable deltas may well serve as a useful starting point for climate change risk indicator development. They also serve as an approach for normalizing climate impacts when the absolute units are not the main focus. Interesting patterns emerged for the LA area that we ran this process on deltas between projected and historical precipitation. While summers are typically dry and winters are wet and prone to flash floods. Initial data exploration seemed to show an increase in drought patterns in the spring and fall. More analysis needs to be done to see if this is a general pattern or simply one that emerged from the climate scenario we ran. However, this  is the type of trend that local planners and managers may benefit from having the ability to explore once they have better access to climate model scenario outputs along with the ability to query and analyze them.
 
@@ -262,11 +263,15 @@ ARD Climate Variable Delta Data workflow:
 3. Compute historic mean for 1950 - 1980 per month based on historic time series input
 4. Multiply historic mean by -1
 5. Use RasterMosaiker to sum all future grids with -1 * historic mean grid for that month
-6. Normalize environmental variable difference by dividing by historic range for that month delta / (max - min)
-7. Convert grids to vector contours
+6. Normalize environmental variable difference by dividing by historic average for that month
+7. Convert grids to vector points
 8. Define monthly environment variables from band and range values
 
-More analysis needs to be done with higher resolution time steps - weekly and daily. At the outset monthly time steps were used to make it easier to prototype workflows. Daily time step computations will take significantly more processing time. Future pilots should explore ways of better supporting scalability of processing through automation and cloud computing approaches such as the use of cloud native formats (STAC, COG, ZARR etc).
+[[FME_ARD_Workflow_LA_precip_diff_results]]
+.NetCDF data cube to precipitation delta grids (future - historical) for LA in GeoJSON. This point dataset was fed to other components such as Laubwerk's visualization component to support interoperability.
+image::FME_ARD_Workflow_LA_precip_diff_results.png[FME_ARD_Workflow_LA_precip_diff_results]]
+
+More analysis needs to be done with higher resolution time steps - weekly and daily. At the outset monthly time steps were used to make it easier to prototype workflows. Daily time step computations will take significantly more processing time. Future pilots should further explore ways of supporting scalability of processing through automation and cloud computing approaches such as the use of cloud native formats (STAC, COG, ZARR etc).
 
 
 ===== OGC API Features Service
@@ -276,6 +281,63 @@ Compared to OGC WFS2, OGC APIs are a simpler and more modern standard based on a
 Once correctly configured, OGC API feature services seemed to perform well and likely are more efficient than the equivalent WFS2 / GML feature services. A key aspect of performance improvement was achieving query parameter continuity by passing query settings from the client all the way to the database reader configuration. For example, it was important to make sure the spatial extent and feature limits from the end user client were implemented in the database SQL extraction query and not just at an intermediate stage. We will need to explore better use of caching to further optimize performance. There may also be opportunities for pyramiding time series vector data at a lower resolution for wide area requests. This may better serve those interested in observing large area patterns who don't necessarily need full resolution at the local level.
 
 It should also be noted that while OGC API services should be a priority for standards support, for a climate and disaster management context, given the relative recent nature of these standards many users may be less than familiar with or prepared to use these standards. As such, there should also be provision to access data directly in well accepted open standards such as GeoJSON, CSV, GeoTIFF, Geopackage or Shape. In this project, some users preferred direct access to GeoJSON or CSV over OGC API access.
+
+==== Component Integrations
+
+One of the challenges with this pilot, particularly considering that this was the first phase, was building interoperability integrations with other components. Much of the pilot duration was spent building the individual components, so little time was left to experiment with integrations between them. That said, there were 2 notable integrations between our ARD component and other participants. Both of these integrations are also described in their respective component sections from their perspective.
+
+First of all, we were able to produce climate scenario data for precipitation that was used by the Pixalytics drought model component. Our component extracted data from the climate model scenario data cube and transformed it into a simple Geopackage time series. This time series was published to our FME Flow server which hosts an OGC API feature service. We also made the data available as GeoJSON point feature data with the embedded precipitation values. Pixalitics then took this GeoJSON for 2023 and 2024 and incorporated the associated climate projection variables into their drought model. This enable Pixalytics to show a continuous representation of drought risk from past to present to near future. For more information on their drought model please refer to the Pixalytics component description.
+
+Another cross component integration that was particularly interesting was the connection between our ARD component and Laubwerk’s landscape vegetation visualization component. We produced GeoJSON outputs for precipitation point features. In this case we produced environmental variable projections for a much longer time range, from 2020 to 2060. Our initial output was simply precipitation totals per month per location. However, because Laubwerk did not have a comprehensive drought model such as was the case with Pixalytics, they could not make use of raw precipitation totals on their own. So instead, we decided to produce a normalized precipitation delta based on past historical norms. They were then able to take this percent change and use that to determine whether or not specific vegetation species could survive for a given time and location. Then then reran their visualizations with Safe’s climate projection precipitation index as input. The result was a different visualization per time step that showed the effects of drought over time. Clearly this precipitation is a rather primitive proxy for a more comprehensive drought model, but as a starting point it still allowed for users to explore potential impacts for different climate scenarios over time. In addition, Laubwerk was able to model different climate resilience adaptation scenarios. After determining which species were most at risk, they reran their visualization model assuming a policy of replacing at risk tree species with more resilient ones. The result is a future landscape with much better tree survival even given the potential for reduced precipitation given anticipated climate impacts.
+
+Note that both these integrations were developed in the final weeks of the pilot just in time to present at the Climate Pilot final workshop at the Huntsville member meeting. Please refer to the member meeting video recording to review the associated demonstrations. For more information on Safe Software’s contribution to this pilot, refer to: https://community.safe.com/s/article/OGC-Climate-Resilience-Pilot
+
+==== Data Sources
+
+===== Climate Model Forecasts Online Sources
+
+Environment Canada:
+https://climate-scenarios.canada.ca/?page=statistical-downscaling
+https://climate-change.canada.ca/climate-data/#/downscaled-data 
+
+Climate Data Canada (Limited download):
+https://climatedata.ca/ 
+
+Copernicus Climate Data Store:
+https://cds.climate.copernicus.eu/cdsapp#!/dataset/projections-cmip6?tab=overview
+
+Earth System Grid
+https://www.earthsystemgrid.org/search/cordexsearch.html 
+
+USGS THREDDS Data Service
+http://regclim.coas.oregonstate.edu:8080/thredds/catalog/catalog.html 
+http://regclim.coas.oregonstate.edu:8080/thredds/catalog/regcm.html?dataset=RegCM3_Monthly_pnw_GENMOM 
+
+Climate Extracts
+http://regclim.coas.oregonstate.edu:8080/thredds/catalog/catalog.html 
+http://regclim.coas.oregonstate.edu:8080/thredds/ncss/grid/regcmdata/NCEP/psw/Daily/RegCM3_Daily_psw_NCEP.ncml/dataset.html
+
+Climate Mapping for Resilience and Adaptation 
+U.S. Global Change Research Program (USGCRP) and with U.S. Federal Geographic Data Committee (FGDC). Funded by DOI and NOAA, implemented by ESRI:
+https://resilience.climate.gov/ 
+
+===== Climate Model Scenarios
+
+RCP 4.5 is the most probable baseline scenario (no climate policies) taking into account the exhaustible character of non-renewable fuels. CMIP5 describes the RPC run version or generation (Phase 5 2012-2014), and BCSD is a statistical term about the method of downscaling used (bias-corrected and spatially downscaled). CMIP5 and BCSD are basically technical terms that wont be that meaningful to readers not familiar with climate models, but they are necessary parameters if you  want to get the same results. For more information on climate model parameters see: https://en.wikipedia.org/wiki/Coupled_Model_Intercomparison_Project
+
+Manitoba Regional Climate Model (RCM) Details
+MB Extent: Lat 49 N to 52 N
+
+Future total monthly precipitation and mean temp from RCP45 CMIP5 for 2020-2100
+Statistically downscaled climate scenarios from Environment Canada Climate Data Portal (BCSD: bias-corrected and spatially downscaled)
+RCP4.5: ‘Business as usual’
+
+Los Angeles Regional Climate Model Details
+LA area Extent
+Future total monthly precipitation from RCP45 CMIP5 BCSD 
+for 2020-2050, from CIDA – USGS THREDDS
+(BCSD: bias-correctws and spatially downscaled)
+RCP4.5: ‘Business as usual’
 
 
 === A framework example for climate ARD generation
