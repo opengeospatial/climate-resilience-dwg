@@ -86,6 +86,7 @@ JRC:: Joined Research Center
 JSON:: JavaScript Object Notation
 KML:: Keyhole Markup Language
 LCRS:: Laboratory for Climatology and Remote Sensing
+LDN:: Land Degradation Neutrality
 LOCA:: Localized Constructed Analogs
 MERRA:: Modern Era Retrospective-Analysis for Research and Applications
 ML/AI:: Machine Learning / Artificial Intelligence 
