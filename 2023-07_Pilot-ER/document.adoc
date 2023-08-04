@@ -49,7 +49,7 @@ include::sections/06-use_cases.adoc[]
 include::sections/07-lessons_learned.adoc[]
 include::sections/08-conculsion-future_work.adoc[] 
 // include::sections/03-references.adoc[]
-
+include::sections/aa-annexA.adoc[]
 ////
 Annexes
 Add annex files as needed
