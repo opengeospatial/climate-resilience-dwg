@@ -26,6 +26,7 @@ ARDC:: Analysis Ready Data Cube
 AWS:: Amazon Web Service
 BCSD:: Bias Corrected Spatially Downscaled
 BRDF:: Bidirectional Reflectance Distribution Function
+C3S:: Copernicus Climate Change Service
 CCI:: Climate Change Initiative
 CDI:: Combined Drought Indicator
 CDR:: Climate Data Record
@@ -69,6 +70,7 @@ GCM:: General Circulation Model
 GCOS:: Global Climate Observing System
 GDO:: Global Drought Observatory
 GDP:: Gross Domestic Product
+GHG:: Greenhouse Gasses
 GML:: Geography Markup Language
 GMU:: George Mason University
 GOOS:: Global Ocean Observing System
