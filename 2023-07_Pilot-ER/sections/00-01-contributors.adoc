@@ -54,8 +54,12 @@ As a member of the OGC, Ecere is an active contributor in several Standard Worki
 In particular, Ecere has been a regular contributor and an early implementer for several OGC API standards in its GNOSIS Map Server and GNOSIS Cartographer client, and is also active in the efforts to modernize
 the https://www.ogc.org/standard/cdb/[OGC CDB] data store and https://github.com/opengeospatial/styles-and-symbology[OGC Styles & Symbology standard].
 
-// ==== About ESRI 
-// ToDo: Description
+==== About Esri 
+
+Esri is a leading provider geographic information system (GIS) software, location intelligence, and mapping. Since 1969, we have supported customers (more than a half  million organizations in over 200 countries) with geographic science and geospatial analytics, taking a geographic approach to problem-solving, brought to life by modern GIS technology. The ArcGIS platform includes an integrated system of desktop, web, and mobile software products and data committed to open science.
+
+Within the context of this OGC engagement, ESRI provides the full range of capabilities from CMIP climate data processing and publishing, spatial analysis for risk assessment, climate adaption and resilience, to web application development and science communication tools.
+
 
 // ==== About GatewayGEO 
 // ToDo: Description
