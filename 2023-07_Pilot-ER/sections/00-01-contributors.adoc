@@ -28,8 +28,9 @@ The various organizations and institutes that contribute to the Climate Resilien
 |Gil Heo | GMU |
 |Glenn Laughlin | Pelagis Data Solutions | Coastal Resilience & Climate Adaptation
 |Tom Landry | Intact Financial Corporation |
+|Steve Kopp | Esri | Climate services & web interface
+|Lain Graham | Esri | Climate services & web interface
 |Nils Hempelmann | OGC | Climate resilience Pilot Coordinator |
-
 |====================
 
 
