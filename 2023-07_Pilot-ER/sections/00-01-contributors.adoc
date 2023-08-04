@@ -93,10 +93,9 @@ Pixalytics Ltd is an independent consultancy company specializing in Earth Obser
 Pelagis is an OceanTech venture located in Nova Scotia, Canada. Our foundation focuses on the application of open geospatial technology and standards designed to promote the sustainable use of our ocean resources. As a member of the Open Geospatial Consortium, we co-chair the Marine Domain Working Group responsible for developing a spatially-aware federated service model of marine and coastal ecosystems.
 
 
-==== About Presagis
+//==== About Presagis
 
-ToDo: Description
-
+//ToDo: Description
 
 ==== About RSS-Hydro
 

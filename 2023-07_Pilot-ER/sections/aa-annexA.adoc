@@ -2,13 +2,33 @@
 // If obligation is not specified, "normative" is taken by default
 [appendix,obligation="normative"]
 [[annex-reference]]
-== Annex Title
+== Data Sources - Climate Model Forecasts Online Sources
 
 // Insert annex content here
 
-Annex content.
+Environment Canada:
+https://climate-scenarios.canada.ca/?page=statistical-downscaling
+https://climate-change.canada.ca/climate-data/#/downscaled-data 
 
-[NOTE]
-====
-Place annex material in sequential order and set `obligation` attribute as "normative" (default) or "informative" according to the case.
-====
+Climate Data Canada (Limited download):
+https://climatedata.ca/ 
+
+Copernicus Climate Data Store:
+https://cds.climate.copernicus.eu/cdsapp#!/dataset/projections-cmip6?tab=overview
+
+Earth System Grid
+https://www.earthsystemgrid.org/search/cordexsearch.html 
+
+USGS THREDDS Data Service
+http://regclim.coas.oregonstate.edu:8080/thredds/catalog/catalog.html 
+http://regclim.coas.oregonstate.edu:8080/thredds/catalog/regcm.html?dataset=RegCM3_Monthly_pnw_GENMOM 
+
+Climate Extracts
+http://regclim.coas.oregonstate.edu:8080/thredds/catalog/catalog.html 
+http://regclim.coas.oregonstate.edu:8080/thredds/ncss/grid/regcmdata/NCEP/psw/Daily/RegCM3_Daily_psw_NCEP.ncml/dataset.html
+
+Climate Mapping for Resilience and Adaptation 
+U.S. Global Change Research Program (USGCRP) and with U.S. Federal Geographic Data Committee (FGDC). Funded by DOI and NOAA, implemented by Esri:
+https://resilience.climate.gov/ 
+
+
