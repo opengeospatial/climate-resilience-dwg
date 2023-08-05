@@ -151,7 +151,7 @@ For each of those 5 climate hazards there is a corresponding StoryMap to further
 
 •	Coastal Inundation: https://storymaps.arcgis.com/stories/f3ce292c0211400699b6e36985e561a6
 
-=== NOAA's Environmental Data Retrieval API
+=== Ecere’s Client for NOAA’s Environmental Data Retrieval API
 
 For the _D100 Client Instance_ deliverable, Ecere enhanced its GNOSIS Cartographer geospatial client to better support visualizing and accessing multi-dimensional datasets, both from local sources and
 remote sources such as through OGC API standards. Support for the _OGC API - Environmental Data Retrieval (EDR)_ standard as well as for _OGC netCDF_ was implemented in the GNOSIS Software Development Kit.
