@@ -2,9 +2,12 @@
 // If obligation is not specified, "normative" is taken by default
 [appendix,obligation="normative"]
 [[annex-reference]]
-== Data Sources - Climate Model Forecasts Online Sources
+== Climate Data Sources 
 
 // Insert annex content here
+
+NCAR Climate Data Guide:
+https://climatedataguide.ucar.edu - a very good repository of different climate data sources with expert guidance 
 
 Environment Canada:
 https://climate-scenarios.canada.ca/?page=statistical-downscaling
@@ -13,22 +16,38 @@ https://climate-change.canada.ca/climate-data/#/downscaled-data
 Climate Data Canada (Limited download):
 https://climatedata.ca/ 
 
-Copernicus Climate Data Store:
-https://cds.climate.copernicus.eu/cdsapp#!/dataset/projections-cmip6?tab=overview
-
-Earth System Grid
+Earth System Grid:
 https://www.earthsystemgrid.org/search/cordexsearch.html 
 
-USGS THREDDS Data Service
+USGS THREDDS Data Service:
 http://regclim.coas.oregonstate.edu:8080/thredds/catalog/catalog.html 
 http://regclim.coas.oregonstate.edu:8080/thredds/catalog/regcm.html?dataset=RegCM3_Monthly_pnw_GENMOM 
 
-Climate Extracts
+Climate Extracts:
 http://regclim.coas.oregonstate.edu:8080/thredds/catalog/catalog.html 
 http://regclim.coas.oregonstate.edu:8080/thredds/ncss/grid/regcmdata/NCEP/psw/Daily/RegCM3_Daily_psw_NCEP.ncml/dataset.html
 
-Climate Mapping for Resilience and Adaptation 
+Climate Mapping for Resilience and Adaptation:
 U.S. Global Change Research Program (USGCRP) and with U.S. Federal Geographic Data Committee (FGDC). Funded by DOI and NOAA, implemented by Esri:
 https://resilience.climate.gov/ 
 
+EUMETSAT Satellite Application Facility on Climate Monitoring (CM SAF):
+https://www.cmsaf.eu/EN/Home/home_node.html
+(Data access via Web User Interface: https://wui.cmsaf.eu/safira/action/viewHome)
+
+ESA CCI Open Data Portal:
+https://climate.esa.int/en/odp/#/dashboard
+
+EC Copernicus Climate Change Service (C3S):
+https://climate.copernicus.eu/
+(Data access via Copernicus Climate Data Store: https://cds.climate.copernicus.eu)
+
+Global Precipitation Climatology Centre (GPCC):
+https://www.dwd.de/EN/ourservices/gpcc/gpcc.html
+
+NOAA Climate Data Records (CDR):
+https://www.ncei.noaa.gov/products/climate-data-records
+
+NOAA Climate Data Online (CDO):
+https://www.ncei.noaa.gov/cdo-web/
 
