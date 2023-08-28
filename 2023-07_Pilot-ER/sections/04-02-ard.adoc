@@ -68,7 +68,7 @@ Pixalytics have developed an OGC-compliant Application Programming Interface (AP
 .Pixalytics drought severity workflow architecture
 image::Pixalytics-architecture.png[Pixalytics-architecture]
 
-The Drought Severity Workflow (DSW) is built using individual drought indicators for precipitation (SPI), soil moisture (SMA), and vegetation drought that are together using the Combined Drought Indicator (CDI) as described by (https://doi.org/10.5194/nhess-12-3519-2012). The API access has been set up following the Building Blocks for Climate Services (https://climateintelligence.github.io/smartduck-docs/) approach.
+The Drought Severity Workflow (DSW) is built using individual drought indicators for precipitation (SPI), soil moisture (SMA), and vegetation drought that are together using the Combined Drought Indicator (CDI) as described by https://doi.org/10.5194/nhess-12-3519-2012[Sepulcre-Canto et al. (2012)]. The API access has been set up following the https://climateintelligence.github.io/smartduck-docs/[Building Blocks for Climate Services] approach.
 
 - Component: D100 Drought indicator.
 
@@ -125,7 +125,7 @@ image::Pixalytics-output-example.png[Pixalytics-output]
 
 _The Global Drought Observatory_
 
-The Global Drought Observatory (GDO), owned by the Copernicus Emergency Management Services, provides a global map of coarsely-gridded agricultural drought risk, along with a breakdown of the risk for each country. The drought risk is computed using the CDI, with the variables used to compute it and other drought-related variables provided in the user portal for https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2112[download], but the CDI itself is not available for download and so is being calculated in the DSW.
+The Global Drought Observatory (GDO), part of the Copernicus Emergency Management Service, provides a global map of coarsely-gridded agricultural drought risk, along with a breakdown of the risk for each country. The drought risk is computed using the CDI, with the variables used to compute it and other drought-related variables provided in the user portal for https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2112[download], but the CDI itself is not available for download and so is being calculated in the DSW.
 
 [[GDO-screenshot]]
 .Global Drought Observatory Web Portal, https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2001
@@ -143,11 +143,11 @@ We compute SPI and SMA using variables from the CDS API. The SPI is computed fro
 
 _ERA5 Reanalysis from AWS_
 
-Input precipitation data was also tested using https://registry.opendata.aws/ecmwf-era5/[ERA5 data held within the Registry of Open Data on AWS] versus the CDS API and found the Amazon Web Service (AWS) Simple Storage Service (S3) stored data could be accessed faster once virtual Zarrs has been setup, but there is a question over provenance as the data on AWS was put there by an organization other than the data originator and the Zarr approach didn't work for more recent years as the S3 stored NetCDFs have chunking that is inconsistent. An issue was raised for the Python kerchunck library, to be able to cope with variable chunking, as this https://github.com/zarr-developers/zeps/blob/main/draft/ZEP0003.md[isn't current supported]. The issue has also been raised with the organisation storing the data on S3, and they are investigating.
+Input precipitation data was also tested using https://registry.opendata.aws/ecmwf-era5/[ERA5 data held within the Registry of Open Data on AWS] versus the CDS API and found the Amazon Web Service (AWS) Simple Storage Service (S3) stored data could be accessed faster once virtual Zarrs has been setup, but there is a question over provenance as the data on AWS was put there by an organization other than the data originator and the Zarr approach didn't work for more recent years as the S3 stored NetCDFs have chunking that is inconsistent. An issue was raised for the Python kerchunck library, to be able to cope with variable chunking, as this https://github.com/zarr-developers/zeps/blob/main/draft/ZEP0003.md[isn't current supported]. The issue has also been raised with the organization storing the data on S3, and they are investigating.
 
 _NOAA API_
 
-The NOAA Climate Environmental Data Retrieval (EDR) API is OGC-compliant and easy to access using OGC-style queries, however is still at an early stage of development and only runs from 9am to 5pm EST, Monday to Friday. Several sources of precipitation data are provided including grided observational data from NOAA's https://www.drought.gov/data-maps-tools/global-historical-climatology-network-ghcn[Global Historical Climatology Network] https://www.drought.gov/data-maps-tools/gridded-climate-datasets-noaas-nclimgrid-monthly[(nClimGrid)] and CMIP data from the https://www.nasa.gov/nex/gddp[NASA-GDDP] and https://loca.ucsd.edu/[LOCA2] downscaling projects. These datasets are only available for continental North America.
+The NOAA Climate Environmental Data Retrieval (EDR) API is OGC-compliant and easy to access using OGC-style queries, however is still at an early stage of development and only runs from 09:00 to 17:00 EST, Monday to Friday. Several sources of precipitation data are provided including gridded observational data from NOAA's https://www.drought.gov/data-maps-tools/global-historical-climatology-network-ghcn[Global Historical Climatology Network] https://www.drought.gov/data-maps-tools/gridded-climate-datasets-noaas-nclimgrid-monthly[(nClimGrid)] and CMIP data from the https://www.nasa.gov/nex/gddp[NASA-GDDP] and https://loca.ucsd.edu/[LOCA2] downscaling projects. These datasets are only available for continental North America.
 We use the precipitation parameter from nClimGrid to compute a monthly SPI with data from 1985 to the present day. This can also be incorporated into the CDI. Further work could include using the LOCA2 projections to predict the SPI in future months/years.
 
 _Safe Software extraction of climate forecast data_
