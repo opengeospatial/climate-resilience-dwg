@@ -42,6 +42,8 @@ EC Copernicus Climate Change Service (C3S):
 https://climate.copernicus.eu/
 (Data access via Copernicus Climate Data Store: https://cds.climate.copernicus.eu)
 
+Global Drought Observatory (GDO), part of the Copernicus Emergency Management Service: https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2001
+
 Global Precipitation Climatology Centre (GPCC):
 https://www.dwd.de/EN/ourservices/gpcc/gpcc.html
 
