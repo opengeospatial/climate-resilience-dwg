@@ -6,14 +6,14 @@
 
 // Insert annex content here
 
-* Base map data *
+*Base map data*
 OSM: https://www.openstreetmap.org/#map=3/71.34/-96.82
 OSM Extractor: https://extract.bbbike.org/ 
 
 INSPIRE Geoportal:
 https://inspire-geoportal.ec.europa.eu/ 
 
-* Earth Observation Data *
+*Earth Observation Data*
 
 Copernicus:
 https://www.copernicus.eu/en/copernicus-services 
@@ -23,11 +23,11 @@ https://climatemonitoring.info/ecvinventory/
 https://ceos.org/ard/index.html#datasets 
 
 
-* Elevation Models *
+*Elevation Models*
 Province of Manitoba Land Initiative:
 https://mli.gov.mb.ca/dems/index.html 
 
-* Climate related data *
+*Climate related data*
 
 Environment Canada:
 https://climate-scenarios.canada.ca/?page=statistical-downscaling
@@ -75,7 +75,6 @@ Earth System Grid: https://www.earthsystemgrid.org/search/cordexsearch.html
 USGS THREDDS Data Service: http://regclim.coas.oregonstate.edu:8080/thredds/catalog/catalog.html  http://regclim.coas.oregonstate.edu:8080/thredds/catalog/regcm.html?dataset=RegCM3_Monthly_pnw_GENMOM 
 
 EUMETSAT Satellite Application Facility on Climate Monitoring (CM SAF): https://www.cmsaf.eu/EN/Home/home_node.html (Data access via Web User Interface: https://wui.cmsaf.eu/safira/action/viewHome) 
-
 
 NOAA Climate Data Online (CDO):
 https://www.ncei.noaa.gov/cdo-web/
