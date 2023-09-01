@@ -2,53 +2,80 @@
 // If obligation is not specified, "normative" is taken by default
 [appendix,obligation="normative"]
 [[annex-reference]]
-== Climate Data Sources 
+== Data Sources 
 
 // Insert annex content here
 
-NCAR Climate Data Guide:
-https://climatedataguide.ucar.edu - a very good repository of different climate data sources with expert guidance 
+* Base map data *
+OSM: https://www.openstreetmap.org/#map=3/71.34/-96.82
+OSM Extractor: https://extract.bbbike.org/ 
+
+INSPIRE Geoportal:
+https://inspire-geoportal.ec.europa.eu/ 
+
+* Earth Observation Data *
+
+Copernicus:
+https://www.copernicus.eu/en/copernicus-services 
+
+CEOS:
+https://climatemonitoring.info/ecvinventory/ 
+https://ceos.org/ard/index.html#datasets 
+
+
+* Elevation Models *
+Province of Manitoba Land Initiative:
+https://mli.gov.mb.ca/dems/index.html 
+
+* Climate related data *
 
 Environment Canada:
 https://climate-scenarios.canada.ca/?page=statistical-downscaling
 https://climate-change.canada.ca/climate-data/#/downscaled-data 
 
-Climate Data Canada (Limited download):
+Climate Data Canada:
 https://climatedata.ca/ 
+Limited download
 
-Earth System Grid:
+Copernicus Climate Data Store:
+https://cds.climate.copernicus.eu/cdsapp#!/dataset/projections-cmip6?tab=overview
+
+Copernicus Climate Change Service (C3S):
+https://climate.copernicus.eu/ (Data access via Copernicus Climate Data Store: https://cds.climate.copernicus.eu)
+
+Global Drought Observatory (GDO), part of the Copernicus Emergency Management Service:https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2001 
+
+Earth System Grid
 https://www.earthsystemgrid.org/search/cordexsearch.html 
 
-USGS THREDDS Data Service:
+USGS THREDDS Data Service
 http://regclim.coas.oregonstate.edu:8080/thredds/catalog/catalog.html 
 http://regclim.coas.oregonstate.edu:8080/thredds/catalog/regcm.html?dataset=RegCM3_Monthly_pnw_GENMOM 
 
-Climate Extracts:
+NCAR Climate Data Guide
+https://climatedataguide.ucar.edu  — an excellent repository of different climate data sources with expert guidance
+
+NOAA
+Climate Data Records (CDR): https://www.ncei.noaa.gov/products/climate-data-records 
+Climate Data Online (CDO): https://www.ncei.noaa.gov/cdo-web/
+
+Climate Mapping for Resilience and Adaptation (CMRA) 
+https://resilience.climate.gov/ 
+
+Climate Extracts
 http://regclim.coas.oregonstate.edu:8080/thredds/catalog/catalog.html 
 http://regclim.coas.oregonstate.edu:8080/thredds/ncss/grid/regcmdata/NCEP/psw/Daily/RegCM3_Daily_psw_NCEP.ncml/dataset.html
 
-Climate Mapping for Resilience and Adaptation:
-U.S. Global Change Research Program (USGCRP) and with U.S. Federal Geographic Data Committee (FGDC). Funded by DOI and NOAA, implemented by Esri:
-https://resilience.climate.gov/ 
-
-EUMETSAT Satellite Application Facility on Climate Monitoring (CM SAF):
-https://www.cmsaf.eu/EN/Home/home_node.html
-(Data access via Web User Interface: https://wui.cmsaf.eu/safira/action/viewHome)
+Global Precipitation Climatology Centre (GPCC): https://www.dwd.de/EN/ourservices/gpcc/gpcc.html 
 
 ESA CCI Open Data Portal:
-https://climate.esa.int/en/odp/#/dashboard
+https://climate.esa.int/en/odp/#/dashboard 
 
-EC Copernicus Climate Change Service (C3S):
-https://climate.copernicus.eu/
-(Data access via Copernicus Climate Data Store: https://cds.climate.copernicus.eu)
+Earth System Grid: https://www.earthsystemgrid.org/search/cordexsearch.html
+USGS THREDDS Data Service: http://regclim.coas.oregonstate.edu:8080/thredds/catalog/catalog.html  http://regclim.coas.oregonstate.edu:8080/thredds/catalog/regcm.html?dataset=RegCM3_Monthly_pnw_GENMOM 
 
-Global Drought Observatory (GDO), part of the Copernicus Emergency Management Service: https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2001
+EUMETSAT Satellite Application Facility on Climate Monitoring (CM SAF): https://www.cmsaf.eu/EN/Home/home_node.html (Data access via Web User Interface: https://wui.cmsaf.eu/safira/action/viewHome) 
 
-Global Precipitation Climatology Centre (GPCC):
-https://www.dwd.de/EN/ourservices/gpcc/gpcc.html
-
-NOAA Climate Data Records (CDR):
-https://www.ncei.noaa.gov/products/climate-data-records
 
 NOAA Climate Data Online (CDO):
 https://www.ncei.noaa.gov/cdo-web/
