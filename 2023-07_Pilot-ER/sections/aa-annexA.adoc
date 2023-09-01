@@ -2,80 +2,82 @@
 // If obligation is not specified, "normative" is taken by default
 [appendix,obligation="normative"]
 [[annex-reference]]
+
 == Data Sources 
 
 // Insert annex content here
 
 *Base map data*
-OSM: https://www.openstreetmap.org/#map=3/71.34/-96.82
-OSM Extractor: https://extract.bbbike.org/ 
+* OSM: https://www.openstreetmap.org/#map=3/71.34/-96.82
+* OSM Extractor: https://extract.bbbike.org/ 
 
-INSPIRE Geoportal:
+* INSPIRE Geoportal:
 https://inspire-geoportal.ec.europa.eu/ 
 
 *Earth Observation Data*
 
-Copernicus:
+* Copernicus:
 https://www.copernicus.eu/en/copernicus-services 
 
-CEOS:
+* CEOS:
 https://climatemonitoring.info/ecvinventory/ 
 https://ceos.org/ard/index.html#datasets 
 
 
 *Elevation Models*
-Province of Manitoba Land Initiative:
+* Province of Manitoba Land Initiative:
 https://mli.gov.mb.ca/dems/index.html 
 
 *Climate related data*
 
-Environment Canada:
+* Environment Canada:
 https://climate-scenarios.canada.ca/?page=statistical-downscaling
 https://climate-change.canada.ca/climate-data/#/downscaled-data 
 
-Climate Data Canada:
+* Climate Data Canada:
 https://climatedata.ca/ 
 Limited download
 
-Copernicus Climate Data Store:
+* Copernicus Climate Data Store:
 https://cds.climate.copernicus.eu/cdsapp#!/dataset/projections-cmip6?tab=overview
 
-Copernicus Climate Change Service (C3S):
+* Copernicus Climate Change Service (C3S):
 https://climate.copernicus.eu/ (Data access via Copernicus Climate Data Store: https://cds.climate.copernicus.eu)
 
-Global Drought Observatory (GDO), part of the Copernicus Emergency Management Service:https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2001 
+* Global Drought Observatory (GDO), part of the Copernicus Emergency Management Service:https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2001 
 
-Earth System Grid
+* Earth System Grid
 https://www.earthsystemgrid.org/search/cordexsearch.html 
 
-USGS THREDDS Data Service
+* USGS THREDDS Data Service
 http://regclim.coas.oregonstate.edu:8080/thredds/catalog/catalog.html 
 http://regclim.coas.oregonstate.edu:8080/thredds/catalog/regcm.html?dataset=RegCM3_Monthly_pnw_GENMOM 
 
-NCAR Climate Data Guide
+* NCAR Climate Data Guide
 https://climatedataguide.ucar.edu  — an excellent repository of different climate data sources with expert guidance
 
-NOAA
+* NOAA
 Climate Data Records (CDR): https://www.ncei.noaa.gov/products/climate-data-records 
 Climate Data Online (CDO): https://www.ncei.noaa.gov/cdo-web/
 
-Climate Mapping for Resilience and Adaptation (CMRA) 
+* Climate Mapping for Resilience and Adaptation (CMRA) 
 https://resilience.climate.gov/ 
 
-Climate Extracts
+* Climate Extracts
 http://regclim.coas.oregonstate.edu:8080/thredds/catalog/catalog.html 
 http://regclim.coas.oregonstate.edu:8080/thredds/ncss/grid/regcmdata/NCEP/psw/Daily/RegCM3_Daily_psw_NCEP.ncml/dataset.html
 
-Global Precipitation Climatology Centre (GPCC): https://www.dwd.de/EN/ourservices/gpcc/gpcc.html 
+* Global Precipitation Climatology Centre (GPCC): https://www.dwd.de/EN/ourservices/gpcc/gpcc.html 
 
-ESA CCI Open Data Portal:
+* ESA CCI Open Data Portal:
 https://climate.esa.int/en/odp/#/dashboard 
 
-Earth System Grid: https://www.earthsystemgrid.org/search/cordexsearch.html
-USGS THREDDS Data Service: http://regclim.coas.oregonstate.edu:8080/thredds/catalog/catalog.html  http://regclim.coas.oregonstate.edu:8080/thredds/catalog/regcm.html?dataset=RegCM3_Monthly_pnw_GENMOM 
+* Earth System Grid: https://www.earthsystemgrid.org/search/cordexsearch.html
 
-EUMETSAT Satellite Application Facility on Climate Monitoring (CM SAF): https://www.cmsaf.eu/EN/Home/home_node.html (Data access via Web User Interface: https://wui.cmsaf.eu/safira/action/viewHome) 
+* USGS THREDDS Data Service: http://regclim.coas.oregonstate.edu:8080/thredds/catalog/catalog.html  http://regclim.coas.oregonstate.edu:8080/thredds/catalog/regcm.html?dataset=RegCM3_Monthly_pnw_GENMOM 
 
-NOAA Climate Data Online (CDO):
+* EUMETSAT Satellite Application Facility on Climate Monitoring (CM SAF): https://www.cmsaf.eu/EN/Home/home_node.html (Data access via Web User Interface: https://wui.cmsaf.eu/safira/action/viewHome) 
+
+* NOAA Climate Data Online (CDO):
 https://www.ncei.noaa.gov/cdo-web/
 
