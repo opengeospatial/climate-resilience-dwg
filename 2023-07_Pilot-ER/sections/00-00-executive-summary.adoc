@@ -35,6 +35,7 @@ This report also demonstrates the workflow from data to 3D visualization, cateri
 The pilot acknowledges the significant challenges of effectively conveying information to decision-makers. This necessitates a thorough examination of communication methods. Consequently, a dedicated chapter emphasizes unique approaches to facilitate effective communication with non-technical individuals, who frequently hold responsibility for local climate resilience action strategies. The development and implementation of a stakeholder survey provides insight into the strengths and weaknesses of past adaptation processes and allows for the derivation of opportunities for improvement. By prioritizing communication, the pilot aims to bridge the gap between technical and non-technical stakeholders, ensuring accurate and comprehensive information transmission for the benefit of both sides. The addition of this chapter demonstrates the pilot’s aim to enhance communication strategies to foster improved decision-making in the realm of climate resilience.
 
 Overall, this engineering report presents: 
+
 •	various workflow processes, 
 •	illustrating the seamless exchange of data, models, and components like climate application packages, 
 •	emphasizing the potential for optimization using OGC Standards. 
