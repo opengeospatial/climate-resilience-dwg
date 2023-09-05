@@ -2,13 +2,13 @@
 :comment: ### Document type; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
 :doctype: engineering-report
 :comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
-:status: revision 1 (r1)
+:status: revision 2 (r2)
 :comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
 :committee: technical 
 :comment: ### Internal reference number; mandatory
-:docnumber: 23-020r1
+:docnumber: 23-020r2
 :comment: ### Date on which the standard was updated; mandatory
-:received-date: # 2023-08-04
+:received-date: # 2023-09-05
 :comment: ### Date on which the standard was approved by the issuing authority; mandatory
 :issued-date: # 2023-XX-XX
 :comment: ### Date on which the standard was published; mandatory
