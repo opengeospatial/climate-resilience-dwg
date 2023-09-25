@@ -8,6 +8,7 @@ The various organizations and institutes that contribute to the Climate Resilien
 |Name | Organization | Role or Summary of contribution
 |Guy Schumann | RSS-Hydro | Lead ER Editor
 |Albert Kettner | RSS-Hydro/DFO | Lead ER Editor
+|Sacha Leprêtre | CAE,  Presagis (CAE Subsidiary)  | Use of AI DigitalTwin and Simulation for climate (5D Meta World demo with Laubwerk).
 |Timm Dapper | Laubwerk GmbH |
 |Peng Yue | Wuhan University | Datacube component
 |Zhe Fang | Wuhan University | Climate ARD component
@@ -43,6 +44,15 @@ The various organizations and institutes that contribute to the Climate Resilien
 
 The alpS GmbH is an international engineering and consulting firm that supports companies, municipalities, and governments in their sustainable development and in dealing with the consequences, opportunities, and risks of climate change. Over the past 20 years, alpS has worked with more than 250 municipalities and industrial partners on climate-related projects. alpS accompanied a large number of adaptation cycles from risk assessments to the implementation of adaptation measures and their evaluation.
 
+==== CAE
+
+CAE is a high-tech company with a mission and vision focused on safety, efficiency, and readiness.
+As a technology company, we digitalize the physical world, deploying simulation training and critical operations support solutions.
+Above all else, we empower pilots, airlines, defense and security forces, and healthcare practitioners to perform at their best every day and when the stakes are the highest.
+CAE represents 75 years of industry firsts—the highest-fidelity flight, future mission, and medical simulators, and personalized training programs powered by artificial intelligence.
+We’re investing our time and resources into building the next generation of cutting-edge, digitally immersive training and critical operations solutions while keeping positive environmental, social and governance (ESG) impact at the core of our mission.        
+Presagis is part of CAE and is specialized in developing 3D Modeling & Simulation Software.
+Presagis has developed VELOCITY 5D (V5D) a Next Generation 3D Digital Twins Creation and Simulation geospatial platform leveraging artificial intelligence.
 
 ==== About Ecere
 
