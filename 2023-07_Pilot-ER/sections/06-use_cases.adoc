@@ -394,12 +394,12 @@ Different solar radiation climate data records and their characteristics have be
 |hour, day, month, year
 |===
 
-All the solar radiation datasets listed above cover the area of Poland but are rather not ready for direct use by a non-scientific users. They are pre-processed to meet the requirements for climate data records and quality controlled but still primarily addressed for further scientific use. Even though open source tools for managing and exploiting these datasets are often delivered by the data providers, they are not always sufficiently "attractive" due to an extensive workload, which is still required in order to make them easily integrable with additional data from other sources and ready for specific applications in support of policy- and/or decision-making processes at national level.
+All the solar radiation datasets listed above cover the area of Poland but are rather not ready for direct use by non-scientific users. They are pre-processed to meet the requirements for climate data records and quality controlled but still primarily addressed for further scientific use or not available for free (SOLARGIS). Even though open source tools for managing and exploiting these datasets are often delivered by the data providers, they are not always sufficiently "attractive" due to an extensive workload, which is still required in order to make them easily integrable with additional data from other sources and ready for specific applications in support of policy- and/or decision-making processes at national level.
 
 CM SAF SARAH-3 dataset meets all the requirements for the planned solar climate data cube and web map service in terms of quality of estimates, spatial resolution and temporal coverage.
 Its accuracy is now being verified in more detail against in situ measurements for the selected solar radiation parameters using proper statistical methods.
 
-The following table includs a selection of existing solar climate web map services.
+The following table includes a selection of existing solar climate web map services.
 
 .Solar climate web map services
 [options="header"]
@@ -521,7 +521,7 @@ The following table includs a selection of existing solar climate web map servic
 
 Identified services provide generalised information on spatio-temporal solar radiation patterns (high resolution grids for longer period not available at all or not for free!). A set of high-resolution analysis-ready data products in user-friendly formats dedicated to specific applications at national level are needed to support decision-making processes.
 
-The identified solar radiation services are currently being analised in terms of overall functional scope, usability of the interface, innovative tools and possible shortcomings. 
+The identified solar radiation services are currently being analized in terms of overall functional scope, usability of the interface, innovative tools and possible shortcomings. 
 The results of this analysis will be verified against detailed recognition of the potential user needs.   
 
 
