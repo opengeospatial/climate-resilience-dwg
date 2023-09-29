@@ -8,7 +8,7 @@ The various organizations and institutes that contribute to the Climate Resilien
 |Name | Organization | Role or Summary of contribution
 |Guy Schumann | RSS-Hydro | Lead ER Editor
 |Albert Kettner | RSS-Hydro/DFO | Lead ER Editor
-|Sacha Leprêtre | CAE,  Presagis (CAE Subsidiary)  | Use of AI DigitalTwin and Simulation for climate (5D Meta World demo with Laubwerk).
+|Sacha Lepretre | CAE,  Presagis (CAE Subsidiary)  | Use of AI DigitalTwin and Simulation for climate (5D Meta World demo with Laubwerk).
 |Timm Dapper | Laubwerk GmbH |
 |Peng Yue | Wuhan University | Datacube component
 |Zhe Fang | Wuhan University | Climate ARD component
