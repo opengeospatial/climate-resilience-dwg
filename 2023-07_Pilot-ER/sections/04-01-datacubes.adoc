@@ -69,7 +69,7 @@ A data cube which contains various climate data records can be generally referre
 |One of many data cubes created within the Deep Cube (https://deepcube-h2020.eu/[Horizon 2020 Project “Explainable AI pipelines for big Copernicus data""])
 |2022
 |MODIS, ERA5, JRC European Drought Observatory, worldpop.org, Copernicus C3S,  Copernicus EU-DEM, EFFIS
-|Free, https://github.com/Orion-AI-Lab/mesogeos[with open code at github]
+|Free, https://github.com/Orion-AI-Lab/mesogeos[open code on github]
 |.zarr (file storage format for chunked, compressed, N-dimensional arrays based on an open-source specification), Jupyter Notebooks (python)
 |2002 - 2022
 
@@ -92,8 +92,8 @@ A data cube which contains various climate data records can be generally referre
 |1981 - 2021
 
 |https://ecodatacube.eu[Open Environmental Data Cube]
-|Climate: air temperature (Min, Mean, Max), land surface temperature (Min, Mean, Max), precipitation (Daily Sum), other: natural disasters, air quality, land cover, terrain, soil, forest and vegetation
-|OpenGeoHub, CVUT Prague, mundialis,Terrasigna, MultiOne (https://opendatascience.eu/geoharmonizer-project/[Horizon2020 Project: “Geo-harmonizer: EU-wide automated mapping system for harmonization of Open Data based on FOSS4G and Machine"])
+|Climate: air temperature (Min, Mean, Max), land surface temperature (Min, Mean, Max), precipitation (Daily Sum), Other: natural disasters, air quality, land cover, terrain, soil, forest and vegetation
+|OpenGeoHub, CVUT Prague, mundialis,Terrasigna, MultiOne (https://opendatascience.eu/geoharmonizer-project/[Horizon2020 Project: “Geo-harmonizer: EU-wide automated mapping system for harmonization of Open Data based on FOSS4G and Machine Learning"])
 |2022
 |ERA5 (for climate variables)
 |Free
