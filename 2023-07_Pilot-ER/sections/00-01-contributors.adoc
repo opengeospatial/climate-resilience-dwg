@@ -23,7 +23,7 @@ The various organizations and institutes that contribute to the Climate Resilien
 |Hanna Krimm | alpS GmbH | Communication with stakeholders
 |Hinnerk Ries | alpS GmbH | Communication with stakeholders
 |Paul Schattan | alpS GmbH | Communication with stakeholders
-// |Jérôme Jacovella-St-Louis | Ecere Corporation | Datacube API client and server
+|Jérôme Jacovella-St-Louis | Ecere Corporation | Datacube API client and server
 |Patrick Dion | Ecere Corporation | Datacube API client and server
 |Eugene Yu | GMU |
 |Gil Heo | GMU |
