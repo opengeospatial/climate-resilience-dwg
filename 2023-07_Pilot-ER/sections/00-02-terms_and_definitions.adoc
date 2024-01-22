@@ -1,12 +1,18 @@
 == Terms and definitions
 
-Carrying Capacity:: An area both suitable and available for human activity based on the state of the ecosystem and competitive pressures for shared resources
-CityGML::  is an open standardised data model and exchange format to store digital 3D models of cities and landscapes.
+Carrying Capacity:: an area both suitable and available for human activity based on the state of the ecosystem and competitive pressures for shared resources
+
+CityGML::  an open standardized data model and exchange format to store digital 3D models of cities and landscapes
+
 Data Cube:: In computer programming contexts, a data cube (or datacube) is a multi-dimensional ("n-D") array of values. Typically, the term data cube is applied in contexts where these arrays are massively larger than the hosting computer's main memory; examples include multi-terabyte/petabyte data warehouses and time series of image data. 
-FAIR Climate Service:: Climate resilience information system where the entire architecture is following FAIR principles.
-FAIR principles footnote:[further reading: https://www.go-fair.org/fair-principles/]:: The approach of making digital assets Findable, Accessible, Interoperable, and Reusable.
-Resilience:: Ability of a system to compensate impacts.
-Sentinel (satellite mission):: A series of next-generation Earth observation missions developed by the European Space Agency (ESA), on behalf of the joint ESA/European Commission initiative Copernicus.
+
+FAIR Climate Service:: a climate resilience information system where the entire architecture follows FAIR principles
+
+FAIR principles footnote:[further reading: https://www.go-fair.org/fair-principles/]:: the concept of making digital assets Findable, Accessible, Interoperable, and Reusable
+
+Resilience:: the ability of a system to compensate impacts
+
+Sentinel (satellite mission):: a series of next-generation Earth observation missions developed by the European Space Agency (ESA) on behalf of the joint ESA/European Commission initiative Copernicus
 
 
 === Abbreviated terms

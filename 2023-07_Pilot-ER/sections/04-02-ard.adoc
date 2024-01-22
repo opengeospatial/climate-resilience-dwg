@@ -1,11 +1,9 @@
 
 //[[clause-reference]]
 
-== Raw data and Datacubes to Analysis Ready Data (ARD) [[Chapter_ARD]]
+== Raw Data and Datacubes to Analysis Ready Data (ARD) [[Chapter_ARD]]
 
-CEOS defines Analysis Ready Data as satellite data that have been processed to a minimum set of requirements and organized into a form that allows immediate analysis with a minimum of additional user effort and interoperability both through time and with other datasets. See https://ceos.org/ard/, and especially the information for data producers: https://ceos.org/ard/files/CARD4L_Info_Note_Producers_v1.0.pdf.
-
-
+CEOS defines Analysis Ready Data (ARD) as satellite data that have been processed to a minimum set of requirements and organized into a form that allows immediate analysis with a minimum of additional user effort. ARD incorporates interoperability both through time and with other datasets. See https://ceos.org/ard/, and especially the information for data producers: https://ceos.org/ard/files/CARD4L_Info_Note_Producers_v1.0.pdf.
 
 //[[CRIS]]
 //.CRIS overview
@@ -13,56 +11,55 @@ CEOS defines Analysis Ready Data as satellite data that have been processed to a
 
 === Transforming climate relevant raw data to ARD
 
-Several past successful OGC testbeds, including the DP 21 to which this pilot is linked, have looked at ARD and IRD but also in terms of use cases. In this pilot, some main technical contributions have been creating digestible OGC data types and formats for specific partner use cases, so producing ARD from publically available EO and model data, including hydrological and other type of model output as well as climate projections.
+Several successful OGC testbeds, including DP 21--which is linked to this pilot--have looked at ARD and IRD in terms of use cases. In this pilot, some main technical contributions have created digestible OGC data types and formats for specific partner use cases and have produced ARD from publicly available EO and model data, including hydrological and other types of model outputs, as well as climate projections.
 
-These ARD will feed into all use cases for all participants, with a particular focus toward the use cases proposed for Heat, Drought and Health Impacts by participants in the pilot. 
+These ARD will feed into all use cases for all participants with a particular focus toward the use cases proposed for heat, drought, and health impacts by participants in the pilot. 
 
-Specifically, participants provide access to the following satellite and climate projection data:
+Specifically, participants provide access to the following satellite and climate projection data.
 
-- Wildfire: Fire Radiant Power (FRP) product from Sentinel 3 (NetCDF), 5p, MODIS products (fire detection), VIIRS (NOAA); possibly biomass availability (fire fuel).
+- Wildfire: Fire Radiant Power (FRP) product from Sentinel 3 (NetCDF), 5p, MODIS products (fire detection), VIIRS (NOAA); possibly biomass availability (fire fuel)
 
 - Land Surface Temp - Sentinel 3
 
 - Pollution - Sentinel 5p
 
-- Climate Projection data (NetCDF, etc., daily downscaled possible): air temp (10 m above ground). Rainfall and possibly wind direction as well
+- Climate Projection data (NetCDF, etc., daily downscaling possible): air temp (10 m above ground), rainfall and possibly wind direction as well
 
-- Satellite-derived Discharge Data to look at Droughts/Floods etc. by basin or other scale
+- Satellite-derived Discharge Data to look at droughts/floods, etc., by basin or other scale
 
 - Hydrological model simulation outputs at (sub)basin scale (within reason)
 
-The created ARD in various OGC interoperable formats created digestible dataflows for the proposed OGC Use Cases. This proposed data chain by several participants is similar to DP21, in which contributors, like RSS-Hydro, SafeSoftware, and others also participated. A generated climate indicator or EO remotely sensed data (NASA, NOAA, ESA,  etc.) from various sources are "simplified"to GeoTIFF and / or vectorized geopackage per time step by other participants' tools, such as the FME software (by SafeSoftware). Another option as an intermediate data type (IRD) can be COG - cloud optimized geotiff which would make access more efficient. The COG GeoTIFFs are optimized for cloud so data sharing can be made more efficient. ARD and IRD should become more service / cloud based wherever possible.
+The ARD in various OGC interoperable formats creates digestible data flows for the proposed OGC use cases. This proposed data chain by several participants is similar to DP21, in which contributors, like RSS-Hydro, SafeSoftware, and others also participated. A generated climate indicator, or EO, uses remotely sensed data from various sources (NASA, NOAA, ESA, etc.) that are "simplified" to GeoTIFF and/or vectorized geopackage per time step by other participants' tools, such as the FME software (by SafeSoftware). Another option as an intermediate data type (IRD) can be COG --cloud optimized geotiff--which would make access more efficient. The COG GeoTIFFs are optimized for the cloud so data sharing can be made more efficient. ARD and IRD should become more service/cloud based wherever possible.
 
-Besides the data format, data structures and semantics required to support the desired DRI’s are important. The time series / raster, and classification to vector contour transform is an approach that worked well in DP21 and has been a good starting point also in this pilot. For example, together in the FME processing engine, time series grids can be aggregated across timesteps to mean or max values, then classify them into ranges suitable for decision making, and then write them out and expose them as time tagged vector contour tables.
+Besides the data format, the data structures and semantics required to support the desired DRI’s are important. The time series/raster and classification to vector contour transform is an approach that worked well in DP21 and has also been a good starting point in this pilot. For example, in the FME processing engine, time series grids can be aggregated across timesteps to mean or max values, then classified into ranges suitable for decision making. These time series grids can then be published  as time tagged vector contour tables.
 
-In summary, the different ARD and IRD data can be created from the following data sources:
+In summary, ARD and IRD data can be created from the following data sources.
 
-- Inputs: EO (US sources fire related: MODIS, VIIRS); Climate projections, sub catchment polygons, ESA sources; Sentinel-3, Sentinel 5-P.
+- Inputs: EO (US sources fire related: MODIS, VIIRS), Climate projections, sub catchment polygons, ESA sources, Sentinel-3, Sentinel 5-P
 
-- Outputs forma & instances: WCS, GeoTIFF spatial / temporal subset, Shape; NetCDF.
+- Outputs forma & instances: WCS, GeoTIFF spatial/temporal subset, Shape, NetCDF
 
-- Output parameters: e.g. hydrological condition of a basin (historically/current). So drought / flood etc.
+- Output parameters: e.g., the hydrological condition (drought, flood, etc.) of a basin, both historically and current 
 
-- Output themes: downscaled / subset outputs, hydrologic scenarios.
-
+- Output themes: downscaled/subset outputs, hydrologic scenarios.
 
 //=== GMU_CSISS
 
-Another highly relevant input are the Essential Climate Variables (ECV) Inventory (https://climatemonitoring.info/ecvinventory/) houses information on Climate Data Records (CDR) provided mostly by CEOS and CGMS member agencies. The inventory is a structured repository for the characteristics of two types of GCOS ECV CDRs:
-* Climate data records that exist and are accessible, including frequently updated interim CDRs;
-* Climate data records that are planned to be delivered.
+Another highly relevant input is the Essential Climate Variables (ECV) Inventory (https://climatemonitoring.info/ecvinventory/) houses information on Climate Data Records (CDR) provided mostly by CEOS and CGMS member agencies. The inventory is a structured repository for the characteristics of two types of GCOS ECV CDRs:
+* climate data records that exist and are accessible, including frequently updated interim CDRs; and
+* climate data records that are planned for delivery.
 
-The ECV Inventory is an open resource to explore existing and planned data records from space agency sponsored activities and provides a unique source of information on CDRs available internationally. Access links to the data are provided within the inventory, alongside details of the data’s provenance, integrity and application to climate monitoring.
+The ECV Inventory is an open resource to explore existing and planned data records from space agency sponsored activities and provides a unique source of information on CDRs available internationally. Access links to the data are provided within the inventory alongside details of the data’s provenance, integrity, and application to climate monitoring.
 
-Participants, particularly GMU CSISS have demonstrated the use of ECV record information as input with OpenSearch service endpoint (currently CMR(CWIC) and FedEO), and downloading URLs for accessing NetCDF or HDF files. 
+Participants, particularly GMU CSISS, have demonstrated the use of ECV record information as input with OpenSearch service endpoints (currently CMR(CWIC) and FedEO), and for downloading URLs for accessing NetCDF or HDF files. 
 
-Outputs in this case include WCS service endpoint for accessing selected granule level product images (GeoTIFF, PNG, JPEG, etc.), focusing on the WCS for downloading images and WMS for showing layers on a basemap.
+Outputs in this case include WCS service endpoints for accessing selected granule level product images (GeoTIFF, PNG, JPEG, etc.) focusing on the WCS for downloading images and WMS for showing layers on a base map.
 
 === Use of API services for climate related use cases
 
 //=== Pixalytics
 
-Pixalytics have developed an OGC-compliant Application Programming Interface (API) service, see <<Pixalytics_architecture>>, which will provide global information on droughts. The approach is to take global open data/datasets from organizations such as ESA/Copernicus, NASA/NOAA, and the WMO and combine meteorology, hydrology, and remote sensing data to produce ARD data based on a composite of different indicators. Where globally calculated drought indicators already exist, these are being used in preference to their re-calculation, although consistency and the presence of uncertainties are also being considered.
+Pixalytics has developed an OGC-compliant Application Programming Interface (API) service, see <<Pixalytics_architecture>>, which will provide global information on droughts. The approach is to take global open data/datasets from organizations such as ESA/Copernicus, NASA/NOAA, and WMO and combine meteorology, hydrology, and remote sensing data to produce ARD data based on a composite of different indicators. Where globally calculated drought indicators already exist, these are used in preference to their re-calculation, although consistency and the presence of uncertainties are also considered.
 
 [[Pixalytics_architecture]]
 .Pixalytics drought severity workflow architecture
@@ -70,15 +67,15 @@ image::Pixalytics-architecture.png[Pixalytics-architecture]
 
 The Drought Severity Workflow (DSW) is built using individual drought indicators for precipitation (SPI), soil moisture (SMA), and vegetation drought that are together using the Combined Drought Indicator (CDI) as described by https://doi.org/10.5194/nhess-12-3519-2012[Sepulcre-Canto et al. (2012)]. The API access has been set up following the https://climateintelligence.github.io/smartduck-docs/[Building Blocks for Climate Services] approach.
 
-- Component: D100 Drought indicator.
+- Component: D100 Drought indicator
 
-- Inputs: Meteorological data, including Precipitation, plus Land Surface Temperature, Soil Moisture, and Vegetation Index (or optical data to calculate it from).
+- Inputs: Meteorological data, including Precipitation, plus Land Surface Temperature, Soil Moisture, and Vegetation Index (or optical data to from which calculate it)
 
-- Outputs: Drought Indices - default is CDI - as a time-series dataset output in a choice of download able formats: CSV, GeoJSON (default), CoverageJSON and NetCDF for point data and then COG for areas (to be developed).
+- Outputs: Drought Indices - default is CDI - as a time-series dataset output in a choice of download able formats: CSV, GeoJSON (default), CoverageJSON and NetCDF for point data and then COG for areas (to be developed)
 
-- What other component(s) can interact with the component: a desire to link to visualization/DRI analysis components. A QGIS plugin called WPS Client has been https://github.com/pixalytics-ltd/qgis-wps-plugin[updated] to be able to perform a request and view the outputted JSON file, with and a second QGIS plugin called https://github.com/ghtmtt/DataPlotly[Data Ploty] used to visualize the time-series data. The Web Processing Service (WPS) link to access the drought indicator is: https://api.pixalytics.com/climate/wps?request=GetCapabilities&service=wps
+- What other component(s) can interact with the component: a desire to link to visualization/DRI analysis components. A QGIS plugin called WPS Client has been https://github.com/pixalytics-ltd/qgis-wps-plugin[updated] to be able to perform a request and view the outputted JSON file and a second QGIS plugin called https://github.com/ghtmtt/DataPlotly[Data Ploty] used to visualize the time-series data. The Web Processing Service (WPS) link to access the drought indicator is: https://api.pixalytics.com/climate/wps?request=GetCapabilities&service=wps
 
-An example Python query for a location in Canada (Latitude: 55.5 N Longitude: 99.1 W) for the SPI time series, with data for these dates/this location already cached, so runs quicker:
+An example Python query for a location in Canada (Latitude: 55.5 N Longitude: 99.1 W) for the SPI time series, with data for these dates is already cached and therefore runs more quickly.
 
 .Drought indicator calling code that generated the default output, which is the CDI in GeoJSON format
 ----
@@ -112,7 +109,7 @@ An example Python query for a location in Canada (Latitude: 55.5 N Longitude: 99
         print("Error: ",error.code, error.locator, error.text)
 ----
 
-- What OGC standards or formats does the component use and produce: Producing data on-the-fly using the WPS, so need to pull data through preferably an API route. The speed that the input data can be made available (i.e., extracting time-series subsets) governs the speed that the drought indicator provides data. To speed this up, input data that is not changing is being cached so that it runs significantly quicker when the API is called for a second time. 
+- What OGC standards or formats does the component use and produce: Producing data on-the-fly using the WPS, so there is a need to pull data through, preferably, an API route. The speed that the input data can be made available (i.e., extracting time-series subsets) governs the speed that the drought indicator provides data. To speed this, input data that is not changing is being cached so that it runs significantly more quickly when the API is called for a second time. 
 
 <<Pixalytics_output>> shows an example of the output visualized within Python using Streamlit with the intermediate data (cached as NetCDF files) as input.
 
@@ -120,54 +117,53 @@ An example Python query for a location in Canada (Latitude: 55.5 N Longitude: 99
 .Plot of the CDI for a point location in Canada (Latitude: 55.5 N Longitude: 99.1 W); generated using Copernicus Emergency Management Service information [2023]
 image::Pixalytics-output-example.png[Pixalytics-output]
 
-
 ==== Data Sources
 
 _The Global Drought Observatory_
 
-The Global Drought Observatory (GDO), part of the Copernicus Emergency Management Service, provides a global map of coarsely-gridded agricultural drought risk, along with a breakdown of the risk for each country. The drought risk is computed using the CDI, with the variables used to compute it and other drought-related variables provided in the user portal for https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2112[download], but the CDI itself is not available for download and so is being calculated in the DSW.
+The Global Drought Observatory (GDO), part of the Copernicus Emergency Management Service, provides a global map of coarsely-gridded agricultural drought risks, along with a breakdown of the risks for each country. The drought risks are computed using the CDI, with the variables used to compute them and other drought-related variables provided in the user portal for https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2112[download], but the CDI itself is not available for download and so is being calculated in the DSW.
 
 [[GDO-screenshot]]
 .Global Drought Observatory Web Portal, https://edo.jrc.ec.europa.eu/gdo/php/index.php?id=2001
 image::GDO_screenshot.png[GDO-screenshot]
 
-We obtain SMA and Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) from the GDO data download service. These are provided as netCDF files and contain pre-computed anomalies, so can be assimilated directly into the back-end. The SMA uses a combination of the root soil moisture from the https://ec-jrc.github.io/lisflood-model/[LISFLOOD model], the MODIS land surface temperature and the ESA Climate Change Initiative (CCI) skin soil moisture (https://hess.copernicus.org/articles/21/6329/2017/), and the FAPAR is from NASA optical imagery.
+The SMA and Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) are obtained from the GDO data download service. These are provided as netCDF files and contain pre-computed anomalies, so they can be assimilated directly into the back-end. The SMA uses a combination of the root soil moisture from the https://ec-jrc.github.io/lisflood-model/[LISFLOOD model], the MODIS land surface temperature and the ESA Climate Change Initiative (CCI) skin soil moisture (https://hess.copernicus.org/articles/21/6329/2017/), and the FAPAR is from NASA optical imagery.
 
 _ERA5 Reanalysis from ECMWF CDS_
 
-The CDS portal provides an API interface to return either hourly or monthly averages of the ERA5 variables. Requesting the hourly data is necessary to compute anything which requires a frequency greater than monthly, which is the case for most drought indicators (e.g. SMA) which are in dekads. To ensure there is no anti-aliasing, the full 24hr dataset for each day of the month must be downloaded. This is very time-consuming and requests will fail if the number of data points exceeds the limit, which will occur for a period of 2 years or more, even for a single location.
+The CDS portal provides an API interface to return either hourly or monthly averages of the ERA5 variables. Requesting the hourly data is necessary to compute anything which requires a frequency greater than monthly, which is the case for most drought indicators (e.g., SMA). To ensure there is no anti-aliasing, the full 24hr dataset for each day of the month must be downloaded. This is very time-consuming and requests will fail if the number of data points exceeds the limit, which will occur for a period of 2 years or more, even for a single location.
 
-There is a separate application, which can also be accessed via API, to return daily data. The CDS employs a queue management system, which determines the priority of each request based partially on the computational demand of the request. The daily data retrieval relies upon an underlying service to compute the daily statistics from the hourly data, demanding more resources than simply extracting the hourly or monthly data which are pre-computed. This means the request is held in the queue for a long time (up to hours), so there is no time benefit over using the hourly data. However, for a longer time-period which would be rejected if requested hourly, this provides a workaround. A further benefit of requesting daily, rather than hourly, data is that the downloaded file is smaller.
+There is a separate application, which can also be accessed via API, to return daily data. The CDS employs a queue management system, which determines the priority of each request based partially on the computational demand of the request. The daily data retrieval relies upon an underlying service to compute the daily statistics from the hourly data, demanding more resources than simply extracting the hourly or monthly data which are pre-computed. This means the request is held in the queue for a long time (up to hours), so there is no time benefit over using the hourly data. However, for a longer time-period, which would be rejected if requested hourly, this provides a workaround. A further benefit of requesting daily, rather than hourly, data is that the downloaded file is smaller.
 
-We compute SPI and SMA using variables from the CDS API. The SPI is computed from the total precipitation in monthly intervals. The SMA is computed from the soil water volume, which is available for 4 depth levels. The SMA for each depth is computed by calculating the z-score against a long term mean, using the same baseline time period as the SPI. The most relevant depth layer can then be selected by the user; for instance, a user interested in the health of crops with shallow roots may wish to access the surfacemost layer.
+SPI and SMA are computed using variables from the CDS API. The SPI is computed from the total precipitation in monthly intervals. The SMA is computed from the soil water volume, which is available for 4 depth levels. The SMA for each depth is computed by calculating the z-score against a long term mean, using the same baseline time period as the SPI. The most relevant depth layer can then be selected by the user. For instance, a user interested in the health of crops with shallow roots may wish to access the surface-most layer.
 
 _ERA5 Reanalysis from AWS_
 
-Input precipitation data was also tested using https://registry.opendata.aws/ecmwf-era5/[ERA5 data held within the Registry of Open Data on AWS] versus the CDS API and found the Amazon Web Service (AWS) Simple Storage Service (S3) stored data could be accessed faster once virtual Zarrs has been setup, but there is a question over provenance as the data on AWS was put there by an organization other than the data originator and the Zarr approach didn't work for more recent years as the S3 stored NetCDFs have chunking that is inconsistent. An issue was raised for the Python kerchunck library, to be able to cope with variable chunking, as this https://github.com/zarr-developers/zeps/blob/main/draft/ZEP0003.md[isn't current supported]. The issue has also been raised with the organization storing the data on S3, and they are investigating.
+Input precipitation data was also tested using https://registry.opendata.aws/ecmwf-era5/[ERA5 data held within the Registry of Open Data on AWS] versus the CDS API and found the Amazon Web Service (AWS) Simple Storage Service (S3) stored data could be accessed faster once virtual Zarrs has been set up. There is a question over provenance, as the data on AWS were put there by an organization other than the data originator and the Zarr approach didn't work for more recent years as the S3 stored NetCDFs have chunking that is inconsistent. An issue was raised for the Python kerchunck library, to be able to cope with variable chunking, as this https://github.com/zarr-developers/zeps/blob/main/draft/ZEP0003.md[isn't current supported]. The issue is being investigated by the organization storing the data on S3.
 
 _NOAA API_
 
-The NOAA Climate Environmental Data Retrieval (EDR) API is OGC-compliant and easy to access using OGC-style queries, however is still at an early stage of development and only runs from 09:00 to 17:00 EST, Monday to Friday. Several sources of precipitation data are provided including gridded observational data from NOAA's https://www.drought.gov/data-maps-tools/global-historical-climatology-network-ghcn[Global Historical Climatology Network] https://www.drought.gov/data-maps-tools/gridded-climate-datasets-noaas-nclimgrid-monthly[(nClimGrid)] and CMIP data from the https://www.nasa.gov/nex/gddp[NASA-GDDP] and https://loca.ucsd.edu/[LOCA2] downscaling projects. These datasets are only available for continental North America.
+The NOAA Climate Environmental Data Retrieval (EDR) API is OGC-compliant and easy to access using OGC-style queries. it is still at an early stage of development,however, and only runs from 09:00 to 17:00 EST, Monday to Friday. Several sources of precipitation data are provided including gridded observational data from NOAA's https://www.drought.gov/data-maps-tools/global-historical-climatology-network-ghcn[Global Historical Climatology Network] https://www.drought.gov/data-maps-tools/gridded-climate-datasets-noaas-nclimgrid-monthly[(nClimGrid)] and CMIP data from the https://www.nasa.gov/nex/gddp[NASA-GDDP] and https://loca.ucsd.edu/[LOCA2] downscaling projects. These datasets are only available for continental North America.
 We use the precipitation parameter from nClimGrid to compute a monthly SPI with data from 1985 to the present day. This can also be incorporated into the CDI. Further work could include using the LOCA2 projections to predict the SPI in future months/years.
 
 _Safe Software extraction of climate forecast data_
 
-We reviewed the GeoJSON Feature point data extracted from the https://climate-change.canada.ca/climate-data/#/downscaled-data[Climate scenario RCP4.5 downscaled for Canada] provided by Safe Software. As a preliminary test of combining the reanalysis and forecast data the SPI was calculated using reanalysis data up until the end of 2022 and then forecast data for 2023 and 2024; see comparisons in <<Pixalytics_forecast>>. 
+The GeoJSON Feature point data extracted from the https://climate-change.canada.ca/climate-data/#/downscaled-data[Climate scenario RCP4.5 downscaled for Canada] provided by Safe Software was reviewed. As a preliminary test of combining the reanalysis and forecast data, the SPI was calculated using reanalysis data up until the end of 2022 and then forecast data for 2023 and 2024 (see comparisons in <<Pixalytics_forecast>>). 
 
 [[Pixalytics_forecast]]
-.Plot of the ECMWF precipitation and SPI, extended using the Canadian climate forecast data, compared to the GDO calculated SPI; generated using Copernicus Emergency Management Service information, Copernicus Climate Service and  Canadian Centre for Climate Services data [2023]
+.Plot of the ECMWF precipitation and SPI, extended using the Canadian climate forecast data, compared to the GDO calculated SPI; generated using Copernicus Emergency Management Service information, Copernicus Climate Service and Canadian Centre for Climate Services data [2023]
 image::Pixalytics-forecast.png[Pixalytics-forecast-example]
 
 ==== Further work
 
-The work in this Pilot has focused on building this initial version of the workflow, deploying it via WPS and pulling data from different sources to understand the advantages and disadvantages of the different sources, including straightforwardness and speed of accessibility. For future Pilot activities we plan to continue to build the robustness of the approach, including testing and improving on the robustness of the interfaces to the input data sources and output provided to other Pilot components.
+The work in this Pilot has focused on building this initial version of the workflow, deploying it via WPS, and pulling data from different sources to understand the advantages and disadvantages of the different sources, including straightforwardness and speed of accessibility. Future Pilot activities are planned, including testing and improving on the robustness of the interfaces to the input data sources and output provided to other Pilot components.
 
-Other additions to the workflow which could support future collaboration with other OGC contributors include:
+Other additions to the workflow which could support future collaboration with other OGC contributors include the following.
 
 - The current work has focused on the extraction and generation of a point time-series, and so there are plans to expand the code to the extraction and generation of a 3D data cube. This might involve changing the output API interface to the OGC EDR API standard.
-- The sources used to calculate the combined indicator currently includes only historical data. If Soil Moisture or FAPAR projections can be obtained, these could be combined with future predictions of precipitation from Safe Software and NOAA to project the CDI into the future.
-- We currently focus on the CDI, a combination of precipitation, soil moisture and vegetation health data,  which is most useful in agricultural contexts. Other combined indicators could be developed which are more applicable to other challenges; for instance, combining rainfall and temperature indicators may produce a drought warning more applicable to public health.
-- The ECMWF Soil Moisture data contains information for multiple depths of soil. The service currently returns the moisture of just one of these layers, however, the most applicable layer will vary with location and crop type. For some use-cases, providing the option to choose the soil layer and providing guidance on how this can be done would be beneficial to the end user.
+- The sources used to calculate the combined indicator currently include only historical data. If Soil Moisture or FAPAR projections can be obtained, these could be combined with predictions of precipitation from Safe Software and NOAA to project the CDI into the future.
+- The current focus is on the CDI, a combination of precipitation, soil moisture, and vegetation health data, which is most useful in agricultural contexts. Other combined indicators could be developed which are more applicable to other challenges. For instance, combining rainfall and temperature indicators may produce a drought warning applicable to public health.
+- The ECMWF Soil Moisture data contains information for multiple depths of soil. The service currently provides the moisture of just one of these layers, however, the most applicable layer will vary with location and crop type. For some use-cases, providing the option to choose the soil layer and providing guidance on how this can be done would be beneficial to the end user.
 
 //=== Safe Software
 === From Raw Data and Data Cubes to ARD with the FME Platform
@@ -176,29 +172,28 @@ Other additions to the workflow which could support future collaboration with ot
 
 D100 - Client instance: Analysis Ready Data Component
 
-Our Analysis Ready Data component (ARD) uses the FME platform to consume regional climate model and generate FAIR analysis ready datasets for downstream analysis and decision support. 
+Our Analysis Ready Data component (ARD) uses the FME platform to consume regional climate models and generate FAIR analysis-ready datasets for downstream analysis and decision support. 
 
-The challenge to manage and mitigate the effects of climate change poses difficulties for spatial and temporal data integration. One of the biggest gaps to date has been the challenge of translating the outputs of global climate models into specific impacts at the local level.  FME is ideally suited to help explore options for bridging this gap given its ability to read datasets produced by climate models such as NetCDF or OGC WCS and then filter, aggregate, interpolate and restructure it as needed. FME can inter-relate it with higher resolution local data, and then output it to whatever format or service is most appropriate for a given application domain or user community.
+The challenge to manage and mitigate the effects of climate change poses difficulties for spatial and temporal data integration. One of the biggest gaps to date has been translating the outputs of global climate models into specific impacts at the local level. FME is ideally suited to help explore options for bridging this gap given its ability to read datasets produced by climate models such as NetCDF or OGC WCS and then filter, aggregate, interpolate, and restructure it as needed. FME can inter-relate it with higher resolution local data, and then output it to whatever format or service is most appropriate for a given application domain or user community.
 
-Our ARD component supports the consumption of climate model outputs such as NetCDF. It also has the capacity to consume earth observation (EO) data, and the base map datasets necessary for downstream workflows, though given time and resource constraints during this phase we did not pursue consumption of other data types besides climate data. 
+Our ARD component supports the consumption of climate model outputs such as NetCDF. It also has the capacity to consume earth observation (EO) data and the base map datasets necessary for downstream workflows, though given time and resource constraints during this phase we did not pursue consumption of other data types besides climate data. 
 
 ===== ARD Workflow
 
-The basic workflow for generating output from the FME ARD component is as follows. The component extracts, filters, interrelates and refines these datasets according to indicator requirements. After extraction, datasets are filtered by location and transformed to an appropriate resolution and CRS. Then the workflow resamples, simplifies and reprojects the data, and then defines record level feature identifiers, climate variable values, metadata and other properties to satisfy the target ARD requirements. This workflow is somewhat similar to what was needed to evaluate disaster impacts in DP21. Time ranges for climate scenarios are significantly longer - years rather than weeks for floods.
+The basic workflow for generating output from the FME ARD component is as follows. The component extracts, filters, interrelates, and refines these datasets according to indicator requirements. After extraction, datasets are filtered by location and transformed to an appropriate resolution and CRS. Next, the workflow resamples, simplifies, and reprojects the data, and then defines record level feature identifiers, climate variable values, metadata, and other properties to satisfy the target ARD requirements. This workflow is somewhat similar to what was needed to evaluate disaster impacts in DP21. Time ranges for climate scenarios are significantly longer - years rather than weeks for floods.
 
-Once the climate model, and other supporting datasets have been adequately extracted, prepared and integrated, the final step is to generate the data streams and datasets required by downstream components and clients. The FME platform is well suited to deliver data in formats as needed. This includes Geopackage format for offline use. For online access, other open standards data streams are available, such as GeoJSON, KML or GML, via WFS and OGC Features APIs and other open APIs. For this pilot we generated OGC Geopackage, GeoJSON, CSV and OGC Features API services.
+Once the climate model and other supporting datasets have been adequately extracted, prepared, and integrated, the final step is to generate the data streams and datasets required by downstream components and clients. The FME platform is well suited to deliver data in various formats as needed. This includes Geopackage format for offline use. For online access, other open standard data streams are available, such as GeoJSON, KML, or GML, via WFS and OGC Features APIs and other open APIs. For this pilot, we generated OGC Geopackage, GeoJSON, CSV, and OGC Features API services.
 
 [[FMEARDworkflow]]
 .High level FME ARD workflow showing generation of climate scenario ARD and impacts from climate model, EO, IoT, infrastructure and base map inputs
 image::FME_ARD_workflow.PNG[FME_ARD_workflow]
 
-As our understanding of end user requirements continues to evolve, this will necessitate changes in which data sources are selected and how they are refined, using a model based rapid prototyping approach. We anticipate that any operational system will need to support a growing range of climate change impacts and related domains. Tools and processes must be able to absorb and integrate new datasets into existing workflows with relative ease. As the pilot develops, data volumes increase, requiring scalability methods to maintain performance and avoid overloading downstream components. Cloud based processing near cloud data sources using OGC API web services supports data scaling. Regarding the FME platform, this involves deployment of FME workflows to FME Cloud. Note that in future phases, we are likely to test how cloud native datasets (COG, STAC, ZARR) and caching can be used to scale performance as data transactions and volume requirements increase.
+As our understanding of end user requirements continues to evolve, this will necessitate changes in which data sources are selected and how they are refined using a model based rapid prototyping approach. We anticipate that any operational system will need to support a growing range of climate change impacts and related domains. Tools and processes must be able to absorb and integrate new datasets into existing workflows with relative ease. As the pilot develops, data volumes increase, requiring scalability methods to maintain performance and avoid overloading downstream components. Cloud based processing near cloud data sources using OGC API web services supports data scaling. Regarding the FME platform, this involves deployment of FME workflows to FME Cloud. Note that in future phases, we are likely to test how cloud native datasets (COG, STAC, ZARR) and caching can be used to scale performance as data transactions and volume requirements increase.
 
-It is worth underlining that our ARD component depends on the appropriate data sources in order to produce the appropriate decision ready data (DRI) for downstream components. Risk factors include being able to locate and access suitable climate models of sufficient quality, resolution and timeliness to support indicators as the requirements and business rules associated with them evolve. Any data gaps encountered are documented under this section under Challenges and Opportunities and in the common Lessons Learned chapter and the end of the ER. 
-
+It is worth underlining that our ARD component depends on the appropriate data sources in order to produce the appropriate decision ready data (DRI) for downstream components. Risk factors include being able to locate and access suitable climate models of sufficient quality, resolution and timeliness to support indicators as the requirements, and changing business rules associated with them. Any data gaps encountered are documented under this under this document's Challenges and Opportunities section and in the Lessons Learned chapter and the end of the ER. 
 
 [[SafeSoftware_1]]
-.Environment Canada NetCDF GCM  time series downscaled to Vancouver area. From: https://climate-change.canada.ca/climate-data/#/downscaled-data 
+.Environment Canada NetCDF GCM time series downscaled to Vancouver area. From: https://climate-change.canada.ca/climate-data/#/downscaled-data 
 image::SafeSoftware_1.png[SafeSoftware_1]
 
 [[SafeSoftware_2]]
@@ -215,7 +210,7 @@ Original Data workflow:
 6. Convert grids to vector contours
 
 [[SafeSoftware_3]]
-.Extracted timestep  grids: Monthly timesteps, period mean T, period max T 
+.Extracted timestep grids: Monthly timesteps, period mean T, period max T 
 image::SafeSoftware_3.png[SafeSoftware_3]
 
 [[SafeSoftware_4]]
@@ -232,17 +227,17 @@ image::SafeSoftware_5.png[SafeSoftware_5]
 .FME Data Inspector: RCM NetCDF data cube for Manitoba temperature 2020-2099
 image::FME_Inspector_NetCDF_MB_temp.png[FME_Inspector_NetCDF_MB_temp]]
 
-Disaster Pilot 2021 laid a good foundation for exploring data cube extraction and conversion to ARD with using the FME data integration platform.  A variety of approaches were explored for extraction, simplification and transformation including approaches to select, split, aggregate, and summarize time series. However, more experimentation was needed to generate ARD that can be queried to answer questions about climate trends. This evolution of ARD was one of the goals for this climate pilot. This goal includes better support for both basic queries, and analytics, statistical methods, simplification & publication methods, including cloud native - NetCDF to Geopackage, GeoJSON and OGC, APIs.
+Disaster Pilot 2021 laid a good foundation for exploring data cube extraction and conversion to ARD using the FME data integration platform. A variety of approaches were explored for extraction, simplification, and transformation including approaches to select, split, aggregate, and summarize time series. However, more experimentation was needed to generate ARD that can be queried to answer questions about climate trends. This evolution of ARD was one of the goals for this pilot. This goal includes better support for both basic queries, and analytics, statistical methods, simplification, and publication methods, including cloud native - NetCDF to Geopackage, GeoJSON, and OGC APIs.
 
-In consultation with other participants early in the pilot, we learned that our approach to temperature and precipitation polygons inherited from our work in DP21 on flood contours involved too much data simplification to be useful. For example, contouring required grid classification into segments, such as 5 degree C or 10mm of precipitation etc. However, this effective loss of detail oversimplified the data to the point where it no longer held enough variation over local areas. Based on user feedback, it was determined that simply converting multidimensional data cubes to vector time series point data served the purpose of simplifying the data structure for ease of access, but retained the climate variable precision needed to support a wide range of data interpretations for indicator derivation. It also meant that as a data provider we did not need to anticipate or encode interpretation of indicator business rules into our data simplification process. By simply providing climate variable data points, the end user was free to run queries to find locations and time steps where temp or precipitation are within some threshold of interest.
+In consultation with other participants early in the pilot, we learned that our approach to temperature and precipitation polygons inherited from our work in DP21 on flood contours involved too much data simplification to be useful. For example, contouring required grid classification into segments, such as 5°C or 10 mm of precipitation, etc. However, this effective loss of detail oversimplified the data to the point where it no longer held enough variation over local areas. Based on user feedback, it was determined that simply converting multidimensional data cubes to vector time series point data served the purpose of simplifying the data structure for ease of access, but retained the climate variable precision needed to support a wide range of data interpretations for indicator derivation. It also meant that as a data provider, we did not need to anticipate or encode interpretation of indicator business rules into our data simplification process. By merely providing climate variable data points, the end user was free to run queries to find locations and time steps where temperature or precipitation values are within their threshold of interest.
 
-Initially it was thought that classification rules need to more closely model impacts of interest. For example, the business rules for a heat wave might use a temperature range and stat type as part of the classification process before conversion to vector. However, this imposes the burden of domain knowledge on the data provider rather than on the climate service end user who is much more likely to understand the domain they wish to apply the data to and how best to interpret it.
+Initially, it was thought that classification rules needed to more closely model impacts of interest. For example, the business rules for a heat wave might use a temperature range and stat type as part of the classification process before conversion to vector. However, this imposes the burden of domain knowledge on the data provider rather than on the climate service end user who is much more likely to understand the domain they wish to apply to the data and how best to interpret it.
 
 [[FME_ARD_Workflow_MB_precip]]
 .Modified ARD Worflow: NetCDF data cube to precipitation point time series in Geopackage for Manitoba
 image::FME_ARD_Workflow_MB_precip.png[FME_ARD_Workflow_MB_precip]]
 
-Modified ARD Data workflow: 
+Modified ARD Data workflow 
 
 1. Split data cube
 2. Set timestep parameters
@@ -254,13 +249,13 @@ Modified ARD Data workflow:
 .Modified ARD Results: Manitoba future precipitation time series points from FME OGC API Feature Service (GeoJSON served from published Geopackage)
 image::FME_ARD_MB_precip_results.png[FME_ARD_MB_precip_results]]
 
-Further scenario tests were explored, including comparison with historical norms. Calculations were made using the difference between projected climate variables and historical climate variables. These climate variable deltas may well serve as a useful starting point for climate change risk indicator development. They also serve as an approach for normalizing climate impacts when the absolute units are not the main focus. Interesting patterns emerged for the LA area that we ran this process on deltas between projected and historical precipitation. While summers are typically dry and winters are wet and prone to flash floods. Initial data exploration seemed to show an increase in drought patterns in the spring and fall. More analysis needs to be done to see if this is a general pattern or simply one that emerged from the climate scenario we ran. However, this  is the type of trend that local planners and managers may benefit from having the ability to explore once they have better access to climate model scenario outputs along with the ability to query and analyze them.
+Further scenario tests were explored, including comparison with historical norms. Calculations were made using the difference between projected climate variables and historical climate variables. These climate variable deltas may well serve as a useful starting point for climate change risk indicator development. They also serve as an approach for normalizing climate impacts when the absolute units are not the main focus. Interesting patterns emerged for the LA area when we ran this process on deltas between projected and historical precipitation. While summers are typically dry, winters are wet and prone to flash flooding. Initial data exploration seemed to show an increase in drought patterns in the spring and fall. More analysis needs to be done to see if this is a general pattern or simply one that emerged from the climate scenario we ran. However, this is the type of trend that local planners and managers may benefit from by having the ability to explore once they have better access to climate model scenario outputs along with the ability to query and analyze the information.
 
 [[FME_ARD_Workflow_LA_precip_diff]]
 .Modified ARD Workflow: NetCDF data cube to precipitation delta grids (future - historical) in Geopackage for LA
 image::FME_ARD_Workflow_LA_precip_diff.png[FME_ARD_Workflow_LA_precip_diff]]
 
-ARD Climate Variable Delta Data workflow:
+ARD Climate Variable Delta Data workflow
 
 1. Split data cubes from historic and future netcdf inputs
 2. Set timestep parameters
@@ -275,16 +270,15 @@ ARD Climate Variable Delta Data workflow:
 .NetCDF data cube to precipitation delta grids (future - historical) for LA in GeoJSON. This point dataset was fed to other components such as Laubwerk's visualization component to support interoperability.
 image::FME_ARD_Workflow_LA_precip_diff_results.png[FME_ARD_Workflow_LA_precip_diff_results]]
 
-More analysis needs to be done with higher resolution time steps - weekly and daily. At the outset monthly time steps were used to make it easier to prototype workflows. Daily time step computations will take significantly more processing time. Future pilots should further explore ways of supporting scalability of processing through automation and cloud computing approaches such as the use of cloud native formats (STAC, COG, ZARR etc).
-
+More analysis needs to be done with higher resolution time steps - weekly and daily. At the outset, monthly time steps were used to make it easier to prototype workflows. Daily time step computations will take significantly more processing time. Future pilots should further explore ways of supporting scalability of processing through automation and cloud computing approaches such as the use of cloud native formats (STAC, COG, ZARR, etc.).
 
 ===== OGC API Features Service
 
-Compared to OGC WFS2, OGC APIs are a simpler and more modern standard based on a REST and JSON / openAPI approach. However we found implementation of OGC API services somewhat challenging. There seems to be more complexity in terms of number of ways for requesting features, and too many options for representing service descriptions. As every client tends to interpret and use the standard a bit differently - it becomes a challenge to derive how to configure service for a wide range of clients. In particular, QGIS / ArcPro were a challenge to debug given limited logging. For QGIS, we had to examine cache files in the operating system temp directories to look for and resolve errors.
+Compared to OGC WFS2, OGC APIs are a simpler and more modern standard based on a REST and JSON / openAPI approach. However, we found implementation of OGC API services somewhat challenging. There seems to be more complexity in terms of the number of ways for requesting features and too many options for representing service descriptions. As every client tends to interpret and use the standard a bit differently, it becomes a challenge to derive how to configure services for a wide range of clients. In particular, QGIS / ArcPro was a challenge to debug given limited logging. For QGIS, we had to examine cache files in the operating system temp directories to look for and resolve errors.
 
-Once correctly configured, OGC API feature services seemed to perform well and likely are more efficient than the equivalent WFS2 / GML feature services. A key aspect of performance improvement was achieving query parameter continuity by passing query settings from the client all the way to the database reader configuration. For example, it was important to make sure the spatial extent and feature limits from the end user client were implemented in the database SQL extraction query and not just at an intermediate stage. We will need to explore better use of caching to further optimize performance. There may also be opportunities for pyramiding time series vector data at a lower resolution for wide area requests. This may better serve those interested in observing large area patterns who don't necessarily need full resolution at the local level.
+Once correctly configured, OGC API feature services seemed to perform well and likely are more efficient than the equivalent WFS2 / GML feature services. A key aspect of performance improvement was achieving query parameter continuity by passing query settings from the client all the way to the database reader configuration. For example, it was important to make sure the spatial extent and feature limits from the end user client were implemented in the database SQL extraction query and not just at an intermediate stage. We will need to explore a better use of caching to further optimize performance. There may also be opportunities for pyramiding time series vector data at a lower resolution for wide area requests. This may better serve those interested in observing large area patterns and who don't necessarily need full resolution at the local level.
 
-It should also be noted that while OGC API services should be a priority for standards support, for a climate and disaster management context, given the relative recent nature of these standards many users may be less than familiar with or prepared to use these standards. As such, there should also be provision to access data directly in well accepted open standards such as GeoJSON, CSV, GeoTIFF, Geopackage or Shape. In this project, some users preferred direct access to GeoJSON or CSV over OGC API access.
+It should also be noted that while OGC API services should be a priority for standards support, for a climate and disaster management context, given the relative recent nature of these standards, many users may be less familiar with or prepared to use these standards. As such, there should also be provision to access data directly in well accepted open standards such as GeoJSON, CSV, GeoTIFF, Geopackage, or Shape. In this project, some users preferred direct access to GeoJSON or CSV over OGC API access.
 
 [[FME_OGCAPIFeaturesQuery_MBtemperature]]
 .Modified ARD Results: Query result for Manitoba temperature time series points, from FME OGC API Feature Service (GeoJSON served from published Geopackage)
@@ -292,13 +286,13 @@ image::FME_OGCAPIFeaturesQuery_MBtemperature.png[FME_OGCAPIFeaturesQuery_MBtempe
 
 ==== Component Integrations
 
-One of the challenges with this pilot, particularly considering that this was the first phase, was building interoperability integrations with other components. Much of the pilot duration was spent building the individual components, so little time was left to experiment with integrations between them. That said, there were 2 notable integrations between our ARD component and other participants. Both of these integrations are also described in their respective component sections from their perspective.
+One of the challenges with this pilot, particularly considering that this was the first phase, was building interoperability integrations with other components. Much of the pilot duration was spent building the individual components, so little time was left to experiment with integrations between them. That said, there were two notable integrations between our ARD component and other participants. Both of these integrations are also described in their respective component sections from their perspective.
 
-First of all, we were able to produce climate scenario data for precipitation that was used by the Pixalytics drought model component. Our component extracted data from the climate model scenario data cube and transformed it into a simple Geopackage time series. This time series was published to our FME Flow server which hosts an OGC API feature service. We also made the data available as GeoJSON point feature data with the embedded precipitation values. Pixalitics then took this GeoJSON for 2023 and 2024 and incorporated the associated climate projection variables into their drought model. This enable Pixalytics to show a continuous representation of drought risk from past to present to near future. For more information on their drought model please refer to the Pixalytics component description.
+First of all, we were able to produce climate scenario data for precipitation that was used by the Pixalytics drought model component. Our component extracted data from the climate model scenario data cube and transformed the data into a simple Geopackage time series. This time series was published to our FME Flow server which hosts an OGC API feature service. We also made the data available as GeoJSON point feature data with the embedded precipitation values. Pixalitics then took this GeoJSON for 2023 and 2024 and incorporated the associated climate projection variables into the Pixalitics drought model. This enabled Pixalytics to show a continuous representation of drought risk from past to present to near future. For more information on the Pixalitics drought model please refer to the Pixalytics component description.
 
-Another cross component integration that was particularly interesting was the connection between our ARD component and Laubwerk’s landscape vegetation visualization component. We produced GeoJSON outputs for precipitation point features. In this case we produced environmental variable projections for a much longer time range, from 2020 to 2060. Our initial output was simply precipitation totals per month per location. However, because Laubwerk did not have a comprehensive drought model such as was the case with Pixalytics, they could not make use of raw precipitation totals on their own. So instead, we decided to produce a normalized precipitation delta based on past historical norms. They were then able to take this percent change and use that to determine whether or not specific vegetation species could survive for a given time and location. Then then reran their visualizations with Safe’s climate projection precipitation index as input. The result was a different visualization per time step that showed the effects of drought over time. Clearly this precipitation is a rather primitive proxy for a more comprehensive drought model, but as a starting point it still allowed for users to explore potential impacts for different climate scenarios over time. In addition, Laubwerk was able to model different climate resilience adaptation scenarios. After determining which species were most at risk, they reran their visualization model assuming a policy of replacing at risk tree species with more resilient ones. The result is a future landscape with much better tree survival even given the potential for reduced precipitation given anticipated climate impacts.
+Another cross component integration that was particularly interesting was the connection between our ARD component and Laubwerk’s landscape vegetation visualization component. We produced GeoJSON outputs for precipitation point features. In this case we produced environmental variable projections for a much longer time range, from 2020 to 2060. Our initial output was simply precipitation totals per month per location. However, because Laubwerk did not have a comprehensive drought model, such as was the case with Pixalytics, they could not make use of raw precipitation totals on their own. So instead, we decided to produce a normalized precipitation delta based on past historical norms. Laubwerk was then able to take this percent change and determine whether or not specific vegetation species could survive for a given time and location. Laubwerk then reran the visualizations with Safe’s climate projection precipitation index as input. The result was a different visualization per time step that showed the effects of drought over time. Clearly this precipitation is a rather primitive proxy for a more comprehensive drought model, but as a starting point it still allowed users to explore potential impacts for different climate scenarios over time. In addition, Laubwerk was able to model different climate resilience adaptation scenarios. After determining which species were most at-risk, at-risk tree species were replaced in the visualization model for more resilient ones. The result was a future potential landscape with improved tree survival rates even given the potential for reduced precipitation due to anticipated climate impacts.
 
-For more information on the Pixalytics drought model, see their ARD description above. For more info on the Laubwerk component see their component description in the Data to Visualization chapter. For more details on Safe Software's drought and heat impact / DRI components driven by the ARD from this component see the DRI Heat and Drought Impact Components section in the ARD to DRI chapter. Note that the integrations descrived above were developed in the final weeks of the pilot and presented at the Climate Pilot final workshop at the Huntsville member meeting. Please refer to the member meeting video recording to review the associated demonstrations. For more information on Safe Software’s contribution to this pilot, refer to: https://community.safe.com/s/article/OGC-Climate-Resilience-Pilot
+For more information on the Pixalytics drought model, see the ARD description above. For more info on the Laubwerk component see the Laubwerk component description in the Data to Visualization chapter. For more details on Safe Software's drought and heat impact / DRI components driven by the ARD from this component see the DRI Heat and Drought Impact Components section in the ARD to DRI chapter. Note that the integrations described above were developed in the final weeks of the pilot and presented at the Climate Pilot final workshop at the Huntsville member meeting. Please refer to the member meeting video recording to review the associated demonstrations. For more information on Safe Software’s contribution to this pilot, refer to: https://community.safe.com/s/article/OGC-Climate-Resilience-Pilot
 
 ==== Data Sources
 
@@ -331,7 +325,7 @@ https://resilience.climate.gov/
 
 ===== Climate Model Scenarios
 
-RCP 4.5 is the most probable baseline scenario (no climate policies) taking into account the exhaustible character of non-renewable fuels. CMIP5 describes the RPC run version or generation (Phase 5 2012-2014), and BCSD is a statistical term about the method of downscaling used (bias-corrected and spatially downscaled). CMIP5 and BCSD are basically technical terms that wont be that meaningful to readers not familiar with climate models, but they are necessary parameters if you  want to get the same results. For more information on climate model parameters see: https://en.wikipedia.org/wiki/Coupled_Model_Intercomparison_Project
+RCP 4.5 is the most probable baseline scenario (no climate policies) taking into account the exhaustible character of non-renewable fuels. CMIP5 describes the RPC run version or generation (Phase 5 2012-2014) and BCSD is a statistical term about the method of downscaling used (bias-corrected and spatially downscaled). CMIP5 and BCSD are basically technical terms that would not be meaningful to readers not familiar with climate models, but are necessary parameters if one wants to get the same results. For more information on climate model parameters see: https://en.wikipedia.org/wiki/Coupled_Model_Intercomparison_Project
 
 Manitoba Regional Climate Model (RCM) Details
 MB Extent: Lat 49 N to 52 N
@@ -347,7 +341,6 @@ for 2020-2050, from CIDA – USGS THREDDS
 (BCSD: bias-correctws and spatially downscaled)
 RCP4.5: ‘Business as usual’
 
-
 === A framework example for climate ARD generation
 // === Wuhan University (WHU)-Component
 
@@ -355,11 +348,11 @@ RCP4.5: ‘Business as usual’
 
 - Inputs: Gaofen L1A data and Sentinel-2 L1C data
 - Outputs: Surface Reflectance ARD
-- What other component(s) can interact with the component: Any components requiring access to surface reflectance data
+- What other component(s) can interact with the component: any components requiring access to surface reflectance data
 
-Surface Reflectance (SR) is the fraction of incoming solar radiation reflected from the Earth's surface for specific incidents or viewing cases. It can be used to detect the distribution and change of ground objects by leveraging the derived spectral, geometric, and textural features. Since a large amount of optical EO data has been released to the public, ARD can facilitate interoperability through time and multi-source datasets. As the probably most widely applied ARD product type, the SR ARD can contribute to climate resilience research. For example, the SR-derived NDVI series can be applied to monitor wildfire recovery by analyzing vegetation index increases. Several SR datasets have been assessed as ARD by CEOS, like the prestigious Landsat Collection 2 Level 2, and Sentinel-2 L2A, while many other datasets are still provided at a low processing level.
+Surface Reflectance (SR) is the fraction of incoming solar radiation reflected from the Earth's surface for specific incidents or viewing cases. It can be used to detect the distribution and change of ground objects by leveraging the derived spectral, geometric, and textural features. Since a large amount of optical EO data has been released to the public, ARD can facilitate interoperability through time and multi-source datasets. As the probably most widely applied ARD product type, the SR ARD can contribute to climate resilience research. For example, the SR-derived NDVI series can be applied to monitor wildfire recovery by analyzing vegetation index increases. Several SR datasets have been assessed as ARD by CEOS, such as the prestigious Landsat Collection 2 Level 2 and Sentinel-2 L2A, while many other datasets are still provided at a low processing level.
 
-WHU is developing a pre-processing framework for SR ARD generation. The framework supports radiometric calibration, geometric ratification, atmospheric correction, and cloud mask. To address the inconsistencies in observations from different platforms, including variations in band settings and viewing angles, we proposed a processing chain to produce harmonized ARD. This will enable us to generate SR ARD with consistent radiometric and geometric characteristics from multi-sensor data, resulting in improved temporal coverage. In the first stage of our mission, we are focusing on the harmonization of Chinese Gaofen data and Sentinel-2 data, as shown in <<WHU_image1>>, the harmonization involves spatial co-registration, band conversion, and bidirectional reflectance distribution function (BRDF) correction. <<WHU_image2>> shows the Sentinel-2 data before and after pre-processing. Furthermore, we wish to seek the assessment of CEOS-ARD in our long-term plan.
+WHU is developing a pre-processing framework for SR ARD generation. The framework supports radiometric calibration, geometric ratification, atmospheric correction, and cloud mask. To address the inconsistencies in observations from different platforms, including variations in band settings and viewing angles, a processing chain to produce harmonized ARD is proposed which will enable the generatation of SR ARD with consistent radiometric and geometric characteristics from multi-sensor data, resulting in improved temporal coverage. In the first stage of this mission, the focus is on the harmonization of Chinese Gaofen data and Sentinel-2 data, as shown in <<WHU_image1>>. The harmonization involves spatial co-registration, band conversion, and bidirectional reflectance distribution function (BRDF) correction. <<WHU_image2>> shows the Sentinel-2 data before and after pre-processing. Furthermore, there is a desire to seek the assessment of CEOS-ARD in the long-term plan.
 
 [[WHU_image1]]
 .The processing chain to produce harmonized ARD.
@@ -369,18 +362,17 @@ image::WHU_image1.png[image]
 .Sentinel-2 RBG composite (red Band4, green Band3, blue Band2), over Hubei, acquired on October 22, 2020. (a) corresponds to the reflectance at the top of the atmosphere (L1C product); (b) corresponds to the surface reflectance after pre-processing.
 image::WHU_image2.png[WHU_image2]
 
-
 ==== Component: Drought Indicator 
 - Inputs: Climate data, including precipitation and temperature
 - Outputs: Drought risk map derived from drought indicator
-- What other component(s) can interact with the component: Any components requiring access to drought risk map through OGC API
+- What other component(s) can interact with the component: any components requiring access to drought risk map through OGC API
 - What OGC standards or formats does the component use and produce: OGC API - Processes
 
 Drought is a disaster whose onset, end, and extent are difficult to detect. Original meteorological data, such as precipitation, can be obtained through satellites and radar, which can be used for drought monitoring. However, the accuracy is easily affected by detection instruments and terrain occlusion, and the ability to retrieve special shapes, such as solid precipitation, is limited. In addition, many meteorological monitoring stations on the ground can provide local raw meteorological observation data. The SPEI is a model to monitor, quantitatively analyze, and determine the spatiotemporal range of the occurrence of drought using meteorological observation data from various regions. It should supplement the result of drought monitoring with satellite and radar.
 
-SPEI has two main characteristics: 1) it considers the deficits between precipitation and evapotranspiration comprehensively, that is, the balance of water; 2) multi-time scale characteristics. For 1) drought is caused by insufficient water resources. Precipitation can increase water, while evapotranspiration can reduce water. The differences between the two variables simultaneously and in space can characterize the balance of water. For 2), the deficits value of different usable water sources is distinct at different time scales due to the different evolution cycles of different types, resulting in various representations in temporal. By accumulating the difference between precipitation and evapotranspiration at different time scales, agricultural (soil moisture) droughts, hydrological (groundwater, streamflow, and reservoir) droughts, and other droughts can be distinguished by SPEI.
+SPEI has two main characteristics: 1) it considers the deficits between precipitation and evapotranspiration comprehensively, that is, the balance of water; 2) multi-time scale characteristics. For the first characteristic, drought is caused by insufficient water resources. Precipitation can increase water, while evapotranspiration can reduce water. The differences between the two variables simultaneously, and in space, can characterize the balance of water. For the second characteristic, the deficits value of different usable water sources is distinct at different time scales due to the different evolution cycles of different types, resulting in various temporal representations. By accumulating the difference between precipitation and evapotranspiration at different time scales, agricultural (soil moisture) droughts, hydrological (groundwater, streamflow, and reservoir) droughts, and other droughts can be distinguished by SPEI.
 
-In our project, the dataset for SPEI calculation is ERA5-Land monthly averaged data from 1950 to the present. We selected years of data about partial areas of East Asia for experiments. Through the following flow of the SPEI calculation, we obtain the SPEI value for assessments of drought impact. The flow of the SPEI calculation is shown in <<WHU_image3>>.
+In our project, the dataset for SPEI calculation is ERA5-Land monthly averaged data from 1950 to the present. Years of data about partial areas of East Asia were selected for experiments. Through the following flow of the SPEI calculation, the SPEI value for assessments of drought impact were obtained. The flow of the SPEI calculation is shown in <<WHU_image3>>.
 
 [[WHU_image3]]
 .Flow of the SPEI calculation.
@@ -393,7 +385,7 @@ http://oge.whu.edu.cn/ogcapi/processes_api/processes
 The API endpoint for retrieving the processes list.
 - Example：/processes/{processId}
 http://oge.whu.edu.cn/ogcapi/processes_api/processes/spei
-The API endpoint for retrieving a process description (e.g. spei). This returns the description of "spei" process, which contains the inputs and outputs information.
+The API endpoint for retrieving a process description (e.g., spei). This returns the description of "spei" process, which contains the inputs and outputs information.
 - Example：/processes/{processId}/execution
 http://oge.whu.edu.cn/ogcapi/processes_api/processes/spei/execution
 The API endpoint for executing the process. The spei process exclusively supports asynchronous execution, resulting in the creation of a job for processing.
@@ -432,27 +424,26 @@ image::WHU_image4.png[WHU_image4]
 
 ==== Component: Data Cube Infrastructure
 - Outputs: Results in the form of GeoTIFF after processing in Data Cubes
-- What other component(s) can interact with the component: Any components requiring access to temperature and precipitation data, surface reflectance ARD, and drought risk map in part of Asia through OGC API
+- What other component(s) can interact with the component: any components requiring access to temperature and precipitation data, surface reflectance ARD, and drought risk map in part of Asia through OGC API
 - What OGC standards or formats does the component use and produce: OGC API- Coverages, OGC API - Processes
 
-WHU has introduced GeoCube as a cube infrastructure for the management and large-scale analysis of multi-source data. GeoCube leverages the latest generation of OGC standard service interfaces, including OGC API-Coverages, OGC API-Features, and OGC API-Processes, to offer services encompassing data discovery, access, and processing of diverse data sources. The UML model of the GeoCube is given in Figure 5, and it has four dimensions: product, spatial, temporal, and band. Product dimension specifies the thematic axis for the geospatial data cube using the product name (e.g. ERA5_Precipitation or OSM_Water), type (e.g. raster, vector, or tabular), processes, and instrument name. For example, the product dimension can describe optical image products by recording information on the instrument and band. Spatial dimension specifies the spatial axis for the geospatial data cube using the grid code, grid type, city name, and province name. The cube uses a spatial grid for tiling to enable data readiness in a high-performance form. Temporal dimension specifies the temporal axis for the geospatial data using the phenomenon time and result time. Band dimension describes the band attribute of the raster products according to the band name, polarization mode that is reserved for SAR images, and product-level band. The product-level band is the information that is extracted from the original bands. For example, the Standardized Precipitation Evapotranspiration Index (SPEI) band is a product-level band that takes into account the hydrological process and evaluates the degree of drought by calculating the balance of precipitation and evaporation.
+WHU has introduced GeoCube as a cube infrastructure for the management and large-scale analysis of multi-source data. GeoCube leverages the latest generation of OGC standard service interfaces, including OGC API-Coverages, OGC API-Features, and OGC API-Processes, to offer services encompassing data discovery, access, and processing of diverse data sources. The UML model of the GeoCube is given in Figure 5, and has four dimensions: product, spatial, temporal, and band. Product dimension specifies the thematic axis for the geospatial data cube using the product name (e.g., ERA5_Precipitation or OSM_Water), type (e.g., raster, vector, or tabular), processes, and instrument name. For example, the product dimension can describe optical image products by recording information on the instrument and band. Spatial dimension specifies the spatial axis for the geospatial data cube using the grid code, grid type, city name, and province name. The cube uses a spatial grid for tiling to enable data readiness in a high-performance form. Temporal dimension specifies the temporal axis for the geospatial data using the phenomenon time and result time. Band dimension describes the band attribute of the raster products according to the band name and polarization mode that is reserved for SAR images and product-level band. The product-level band is the information that is extracted from the original bands. For example, the Standardized Precipitation Evapotranspiration Index (SPEI) band is a product-level band that takes into account the hydrological process and evaluates the degree of drought by calculating the balance of precipitation and evaporation.
 
 [[WHU_image5]]
 .The UML model of WHU Data Cube.
 image::WHU_image5.png[WHU_image5]
 
-
-WHU has organized ERA5 temperature and precipitation data, surface reflectance ARD, and drought risk map into cubes and offers climate data services through the OGC API - Coverages, and OGC API - Processes. The API endpoint of Processes has given in the previous chapter. The API endpoint of Coverages is http://oge.whu.edu.cn/ogcapi/coverages_api, allowing users to query and retrieve the desired data from the cube. This section provides examples demonstrating how to access the data from the cube using OGC API - Coverages.
+WHU has organized ERA5 temperature and precipitation data, surface reflectance ARD, and drought risk map into cubes and offers climate data services through the OGC API - Coverages and OGC API - Processes. The API endpoint of Processes was given in the previous chapter. The API endpoint of Coverages is http://oge.whu.edu.cn/ogcapi/coverages_api, allowing users to query and retrieve the desired data from the cube. This section provides examples demonstrating how to access the data from the cube using OGC API - Coverages.
 
 - Example：/collections
 http://oge.whu.edu.cn/ogcapi/coverages_api/collections?bbox=112.65942,29.23223,115.06959,31.36234&limit=10&time=2016-01-01T02:55:50Z/2018-01-01T02:55:50Z
-The API endpoint for querying datasets from the cube, and the query parameters including limit, bbox, and time.
+The API endpoint for querying datasets from the cube and the query parameters including limit, bbox, and time.
 - Example：/collections/{collectionId}
 http://oge.whu.edu.cn/ogcapi/coverages_api/collections/2m_temperature_201602
 The API endpoint for retrieving the description of the coverage with the specified ID from the cube. 
 - Example：/collections/{collectionId}/coverage
 http://oge.whu.edu.cn/ogcapi/coverages_api/collections/2m_temperature_201602/coverage
-The API endpoint for retrieving the coverage in GeoTIFF format for the specified ID. Here is an example of the response:
+The API endpoint for retrieving the coverage in GeoTIFF format for the specified ID.  An example of the response:
 
 [[WHU_image6]]
 .The coverage with the ID "2m_temperature_201602" in the Asian region.
@@ -469,7 +460,7 @@ The API endpoint for the domain set of the coverage, which is also the domain se
 
 ==== Climate Projection Data
 
-To make climate projection data more easily usable we transformed CMIP5 data (version 1 of our project), now working on CMIP6, into an Analysis Ready Data collection of indices of future temperature and precipitation. Climate summaries for the contiguous 48 states were derived from data generated for the 4th National Climate Assessment. These data were accessed from the Scenarios for the National Climate Assessment website. The 30-year mean values for 4 time periods (historic, early-, mid-, and late-century) and two climate scenarios (RCP 4.5 and 8.5) were derived from the Localized Constructed Analogs (LOCA) downscaled climate model ensembles, processed by the Technical Support Unit at NOAA’s National Center for Environmental Information. 
+To make climate projection data more easily usable we transformed CMIP5 data (version 1 of our project, now working on CMIP6) into an Analysis Ready Data collection of indices of future temperature and precipitation. Climate summaries for the contiguous 48 states were derived from data generated for the 4th National Climate Assessment. These data were accessed from the Scenarios for the National Climate Assessment website. The 30-year mean values for four time periods (historic, early-, mid-, and late-century) and two climate scenarios (RCP 4.5 and 8.5) were derived from the Localized Constructed Analogs (LOCA) downscaled climate model ensembles, processed by the Technical Support Unit at NOAA’s National Center for Environmental Information. 
 
 •	Historical: 1976-2005
 •	Early-Century: 2016-2045
@@ -494,13 +485,13 @@ To provide a more approachable context to future climate, a collection of 47 ind
 
 •	Consecutive Wet Days: Annual maximum number of consecutive wet days (days with total precipitation greater than or equal to 0.01 inches)
 
-•	First Freeze Day: Date of the first fall freeze (annual first occurrence of a minimum temperature at or below 32degF in the fall)
+•	First Freeze Day: Date of the first fall freeze (annual first occurrence of a minimum temperature at or below 32°F in the fall)
 
 •	Growing Degree Days: Growing degree days, base 50 (annual cumulative number of degrees by which the daily average temperature is greater than 50°F) [degree days (degF)]
 
 •	Growing Degree Days Modified: Modified growing degree days, base 50 (annual cumulative number of degrees by which the daily average temperature is greater than 50°F; before calculating the daily average temperatures, daily maximum temperatures above 86°F and daily minimum temperatures below 50°F are set to those values) [degree days (degF)]
 
-•	Growing-season: Length of the growing (frost-free) season (the number of days between the last occurrence of a minimum temperature at or below 32degF in the spring and the first occurrence of a minimum temperature at or below 32degF in the fall)
+•	Growing-season: Length of the growing (frost-free) season (the number of days between the last occurrence of a minimum temperature at or below 32°F in the spring and the first occurrence of a minimum temperature at or below 32°F in the fall)
 
 •	Growing Season 28F: Length of the growing season, 28°F threshold (the number of days between the last occurrence of a minimum temperature at or below 28°F in the spring and the first occurrence of a minimum temperature at or below 28°F in the fall)
 
@@ -508,7 +499,7 @@ To provide a more approachable context to future climate, a collection of 47 ind
 
 •	Heating Degree Days: Heating degree days (annual cumulative number of degrees by which the daily average temperature is less than 65°F) [degree days (degF)]
 
-•	Last Freeze Day: Date of the last spring freeze (annual last occurrence of a minimum temperature at or below 32degF in the spring)
+•	Last Freeze Day: Date of the last spring freeze (annual last occurrence of a minimum temperature at or below 32°F in the spring)
 
 •	Precip Above 99th pctl: Annual total precipitation for all days exceeding the 99th percentile, calculated with reference to 1976-2005 [inches]
 
@@ -528,57 +519,57 @@ To provide a more approachable context to future climate, a collection of 47 ind
 
 •	Precip Max 5 Day: Annual highest precipitation total over a 5-day period [inches]
 
-•	Daily Avg Temperature: Daily average temperature [degF]
+•	Daily Avg Temperature: Daily average temperature [°F]
 
-•	Daily Max Temperature: Daily maximum temperature [degF]
+•	Daily Max Temperature: Daily maximum temperature [°F]
 
 •	Temp Max Days Above 99th pctl: Annual number of days with maximum temperature greater than the 99th percentile, calculated with reference to 1976-2005
 
 •	Temp Max Days Below 1st pctl: Annual number of days with maximum temperature lower than the 1st percentile, calculated with reference to 1976-2005
 
-•	Days Above 100F: Annual number of days with a maximum temperature greater than 100degF
+•	Days Above 100F: Annual number of days with a maximum temperature greater than 100°F
 
-•	Days Above 105F: Annual number of days with a maximum temperature greater than 105degF
+•	Days Above 105F: Annual number of days with a maximum temperature greater than 105°F
 
-•	Days Above 110F: Annual number of days with a maximum temperature greater than 110degF
+•	Days Above 110F: Annual number of days with a maximum temperature greater than 110°F
 
-•	Days Above 115F: Annual number of days with a maximum temperature greater than 115degF
+•	Days Above 115F: Annual number of days with a maximum temperature greater than 115°F
 
-•	Temp Max 1 Day: Annual single highest maximum temperature [degF]
+•	Temp Max 1 Day: Annual single highest maximum temperature [°F]
 
-•	Days Above 32F: Annual number of icing days (days with a maximum temperature less than 32degF)
+•	Days Below 32F: Annual number of icing days (days with a maximum temperature less than 32°F)
 
-•	Temp Max 5 Day: Annual highest maximum temperature averaged over a 5-day period [degF]
+•	Temp Max 5 Day: Annual highest maximum temperature averaged over a 5-day period [°F]
 
-•	Days Above 86F: Annual number of days with a maximum temperature greater than 86degF
+•	Days Above 86F: Annual number of days with a maximum temperature greater than 86°F
 
-•	Days Above 90F: Annual number of days with a maximum temperature greater than 90degF
+•	Days Above 90F: Annual number of days with a maximum temperature greater than 90°F
 
-•	Days Above 95F: Annual number of days with a maximum temperature greater than 95degF
+•	Days Above 95F: Annual number of days with a maximum temperature greater than 95°F
 
-•	Temp Min: Daily minimum temperature [degF]
+•	Temp Min: Daily minimum temperature [°F]
 
-•	Temp Min Days Above 75F: Annual number of days with a minimum temperature greater than 75degF
+•	Temp Min Days Above 75F: Annual number of days with a minimum temperature greater than 75°F
 
-•	Temp Min Days Above 80F: Annual number of days with a minimum temperature greater than 80degF
+•	Temp Min Days Above 80F: Annual number of days with a minimum temperature greater than 80°F
 
-•	Temp Min Days Above 85F: Annual number of days with a minimum temperature greater than 85degF
+•	Temp Min Days Above 85F: Annual number of days with a minimum temperature greater than 8°F
 
-•	Temp Min Days Above 90F: Annual number of days with a minimum temperature greater than 90degF
+•	Temp Min Days Above 90F: Annual number of days with a minimum temperature greater than 90°F
 
 •	Temp Min Days Above 99th pctl: Annual number of days with minimum temperature greater than the 99th percentile, calculated with reference to 1976-2005
 
 •	Temp Min Days Below 1st pctl: Annual number of days with minimum temperature lower than the 1st percentile, calculated with reference to 1976-2005
 
-•	Temp Min Days Below 28F: Annual number of days with a minimum temperature less than 28degF
+•	Temp Min Days Below 28F: Annual number of days with a minimum temperature less than 28°F
 
-•	Temp Min Max 5 Day: Annual highest minimum temperature averaged over a 5-day period [degF]
+•	Temp Min Max 5 Day: Annual highest minimum temperature averaged over a 5-day period [°F]
 
-•	Temp Min 1 Day: Annual single lowest minimum temperature [degF]
+•	Temp Min 1 Day: Annual single lowest minimum temperature [°F]
 
-•	Temp Min 32F: Annual number of frost days (days with a minimum temperature less than 32degF)
+•	Temp Min 32F: Annual number of frost days (days with a minimum temperature less than 32°F)
 
-•	Temp Min 5 Day: Annual lowest minimum temperature averaged over a 5-day period [degF]
+•	Temp Min 5 Day: Annual lowest minimum temperature averaged over a 5-day period [°F]
 
 The individual web services of climate indices and raster data for download can be accessed at: https://resilience.climate.gov/pages/climate-model-content-gallery
 
@@ -600,7 +591,7 @@ image::esri_viewAPI.png[esri_viewAPI]
 
 ==== Summarized Indices for Locations
 
-To support easier interpretation and local decision making, the above indices were summarized by county, census tract, and tribal areas using the Zonal Statistics as Table utility in ArcGIS Pro. The results were joined into the corresponding geography polygons. A minimum, maximum, and mean value for each variable was calculated. This process was repeated for each time range and scenario. Precomputing enables quick map and graph response in the web application, and also provides as easily reusable download for someone who wants to utilize the data elsewhere.
+To support easier interpretation and local decision making, the above indices were summarized by county, census tract, and tribal areas using the Zonal Statistics as Table utility in ArcGIS Pro. The results were joined into the corresponding geography polygons. A minimum, maximum, and mean value for each variable was calculated. This process was repeated for each time range and scenario. Precomputing enables quick map and graph response in the web application and also provides as easily reusable download for someone who wants to utilize the data elsewhere.
 
 To reuse the summarized services outside of the CRMA application or to download the processed data visit the links below for the geography of interest. 
 
@@ -608,14 +599,13 @@ To reuse the summarized services outside of the CRMA application or to download 
 - Census Tracts: https://resilience.climate.gov/datasets/nationalclimate::climate-mapping-resilience-and-adaptation-cmra-climate-assessment-data/explore?layer=1&location=-0.000000%2C0.000000%2C2.76
 - American Indian/Alaska Native/Native Hawaiian Areas: https://resilience.climate.gov/datasets/nationalclimate::climate-mapping-resilience-and-adaptation-cmra-climate-assessment-data/explore?layer=2&location=-0.000000%2C0.000000%2C2.71 
 
-On these pages, a list of buttons allow you to filter the selection to a subset by attribute or geography, download into a variety of formats, and translate the descriptive documentation for viewing in other languages.
-
+On these pages, a list of buttons allows the user to filter the selection to a subset by attribute or geography, download into a variety of formats, and translate the descriptive documentation for viewing in other languages.
 
 ==== Future Work 
 
-For Esri's contribution, the first version of CRMA was well received, it is widely used by the intended users and there is high interest by many others. Before the first version was released we had requests for other countries, and customizations of the project.
+For Esri's contribution, the first version of CRMA was well received. It is widely used by the intended users and there is high interest by many others. Before the first version was released there were requests for other countries and customizations of the project.
 
-Due to many customization requests version 2 is being developed from inception with the intent for all code, from data processing python to web application Javascript to be available in Github repositories with documentation of typical customization workflows. 
+Due to many customization requests, version 2 is being developed from inception with the intent for all code, from data processing python to web application Javascript, to be available in Github repositories with documentation of typical customization workflows. 
 
 •	Use other climate projection data
 
@@ -625,7 +615,7 @@ Due to many customization requests version 2 is being developed from inception w
 
 •	Customize the web application
 
-The project is not only a solution, but a pattern for others to adapt to their data, geography, goals.
+The project is not only a solution, but a pattern for others to adapt to their data, geography, and goals.
 
-Version 2 data development is underway and will include more indices, both imperial and metric units, and min/max/mean for statistics instead of only areal mean. We will update all modeling to to CMIP6, and expand from US to global. Anticipated release in Q4 2023.
+Version 2 data development is underway and will include more indices, both imperial and metric units, and min/max/mean for statistics instead of only areal mean. All modeling will be updated to CMIP6 and expanded from US to global. The release is anticipated in Q4 2023.
 

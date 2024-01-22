@@ -4,7 +4,8 @@
 In a pilot study on interoperability, a use case represents a specific scenario or application that demonstrates how different components, such as data, models, and systems, interact and exchange information to address a particular challenge or problem. In the context of droughts and fires, use cases showcase how interoperability enables seamless integration and analysis of diverse geospatial data sources, coupled with specialized models, to enhance understanding, prediction, and mitigation of drought and fire risks. These use cases provide practical demonstrations of how interoperability workflows and techniques can be applied to foster effective collaboration, decision-making, and climate resilience in the face of drought and fire-related challenges.
 
 === Drought Impact Use Cases
-Based on the ARD, drought indicator, and data cube components, WHU develops three use-cases based on self-developed Open Geospatial Engine (OGE) for drought impact for rapid response to drought occurrences. <<DroughtWildfire>> shows the technical architecture of the OGE. It has the following features: 1) For data discovery, a catalogue service from OGE data center following OGC API is provided, allowing users to search geospatial data both available from WHU data stores and remote data stores. 2) For data integration, data can be integrated into the WHU software in the form of data cubes with three efforts: formalizing cube dimensions for multi-source geospatial data, processing geospatial data query along cube dimensions, and organizing cube data for high-performance geoprocessing. 3) For data processing, a processing chain is enabled in OGE using a code editor and modelbuilder. 4) For data visualization, a Web-based client for visualization of spatial data and statistics is provided using a virtual globe and charts.
+
+Based on the ARD, drought indicator, and data cube components, WHU developed three use-cases based on a self-developed Open Geospatial Engine (OGE) for drought impact for rapid response to drought occurrences. <<DroughtWildfire>> shows the technical architecture of the OGE. It has the following features: 1) For data discovery, a catalog service from the OGE data center following OGC API is provided, allowing users to search geospatial data both available from WHU data stores and remote data stores; 2) For data integration, data can be integrated into the WHU software in the form of data cubes with three efforts: formalizing cube dimensions for multi-source geospatial data, processing geospatial data query along cube dimensions, and organizing cube data for high-performance geoprocessing; 3) For data processing, a processing chain is enabled in OGE using a code editor and model builder; and 4) For data visualization, a Web-based client for visualization of spatial data and statistics is provided using a virtual globe and charts.
 
 [[DroughtWildfire]]
 .The technical architecture of the use-case for drought impact.
@@ -12,7 +13,7 @@ image::WHU-drought-wildfire-impact.png[DroughtWildfire]
 
 ==== Case study 1: Visualization for drought indicator
 
-On the fundament of SPEI and OGE, we visualize the drought risk map on a virtual globe, as given in <<WHU_image7>> (a). The color matching of the visualization result is referred to the classification standard for the drought grade of SPEI illustrated in the table. The red and orange area in the visualization result represents a trend of drought (SPEI≤-0.5), while the green and blue represent wetness. The SPEI is calculated for each month of the input dataset, and users can visualize the SPEI of any month on the virtual globe for flexible drought analysis. Meanwhile, the use case also supports cubes-based SPEI visualization for time series drought analysis as given in <<WHU_image7>> (b), where the height of the cube is a range of time arranged in order of month, and each layer in the cube represents drought impact of one month.
+A drought risk map on a virtual globe, incorporating SPEI and OGE, was created as shown in <<WHU_image7>> (a). The color matching of the visualization result is referenced to the classification standard for the drought grade of SPEI illustrated in the table. The red and orange area in the visualization result represents a trend of drought (SPEI≤-0.5), while the green and blue represent wetness. The SPEI is calculated for each month of the input dataset and users can visualize the SPEI of any month on the virtual globe for flexible drought analysis. Meanwhile, the use case also supports cube-based SPEI visualization for a time series drought analysis as given in <<WHU_image7>> (b), where the height of the cube is a range of time arranged in order of month and each layer in the cube represents the drought impact of one month.
 
 .Gradations of drought specified by SPEI
 [width="90%",options="header"]
@@ -31,7 +32,7 @@ image::WHU_image7.png[WHU_image7]
 
 ==== Case study 2: Drought Risk analysis of Yangtze River basin
 
-In the summer of 2022, an extreme drought hit the Yangtze River basin, posing huge impacts on agriculture, the ecosystem, and human livelihoods. It developed rapidly in the upper, middle, and lower reaches of the Yangtze River, intensifying on a large scale in 10 provinces (municipalities) in the basin (https://doi.org/10.1002/rvr2.23). The water area of Poyang Lake has been reduced by 90%, threatening the habitat for fish and migratory birds, etc. To analyze drought trends in the Yangtze River Basin, we visualized monthly SPEI for 2022, as shown in <<WHU_image8>>. From the Figure, it can be seen that the drought index in the Yangtze River Basin has been rising since March. In July, the drought risk map turned light yellow, indicating a moderate drought. In August and September, the drought further intensified and reached an extreme drought situation. In October, the drought eased somewhat, and it had subsided mainly by November.
+In the summer of 2022, an extreme drought hit the Yangtze River basin, posing huge impacts on agriculture, the ecosystem, and human livelihoods. It developed rapidly in the upper, middle, and lower reaches of the Yangtze River, intensifying on a large scale in 10 provinces (municipalities) in the basin (https://doi.org/10.1002/rvr2.23). The water area of Poyang Lake has been reduced by 90%, threatening the habitat for fish and migratory birds, etc. To analyze drought trends in the Yangtze River Basin, the monthly SPEI for 2022 is shown in <<WHU_image8>>. From the figure, it can be seen that the drought index in the Yangtze River Basin has been rising since March. In July, the drought risk map turned light yellow, indicating a moderate drought. In August and September, the drought further intensified and reached an extreme drought situation. In October, the drought eased somewhat, and it had mostly subsided by November.
 
 [[WHU_image8]]
 .Drought risk map in part of China.
@@ -40,9 +41,9 @@ image::WHU_image8.png[WHU_image8]
 
 ==== Case study 3: Drought risk analysis of Poyang Lake
 
-Due to the extreme drought in the Yangtze River Basin, the water inflow into Poyang Lake, the largest freshwater lake in China, declined dramatically due to continuous hot weather with little rain since early summer. Hence, we developed a use case of drought analysis applying multi-source SR ARD.
+Due to the extreme drought in the Yangtze River Basin, the water inflow into Poyang Lake, the largest freshwater lake in China, declined dramatically due to continuous hot weather with little rain since early summer. Hence, a use case of drought analysis applying multi-source SR ARD was developed.
 
-In this use case, we collected Sentinel-2 SR and Landsat-8 SR, and produced Gaofen-1 WFV SR data in the center area of Poyang Lake (As shown in <<WHU_image9>>) before and during the drought period. NDWI indices were calculated to monitor water area changes in Poyang Lake. Water bodies typically exhibit positive NDWI values, making it an effortless method to extract water areas. As illustrated in <<WHU_image10>>, the first column represents Poyang Lake before the drought, while the last three columns represent Poyang Lake which was currently experiencing the drought. It is evident from the RGB composite that the water body of Poyang Lake has significantly decreased due to the drought weather. The water body extraction results by NDWI indicate that from May to October, the water area in the study area decreased from ~1800 square kilometers to ~350 square kilometers, representing a reduction of ~ 80% in water area.
+In this use case, Sentinel-2 SR and Landsat-8 SR were collected, and Gaofen-1 WFV SR data in the center area of Poyang Lake was produced (As shown in <<WHU_image9>>) before and during the drought period. NDWI indices were calculated to monitor water area changes in Poyang Lake. Water bodies typically exhibit positive NDWI values, making it an effortless method to extract water areas. As illustrated in <<WHU_image10>>, the first column represents Poyang Lake before the drought, while the last three columns represent Poyang Lake which was currently experiencing the drought. It is evident from the RGB composite that the water body of Poyang Lake has significantly decreased due to the drought. The water body extraction results by NDWI indicate that from May to October, the water area in the study area decreased from ~1800 square kilometers to ~350 square kilometers, representing a reduction of ~ 80% in water area.
 
 [[WHU_image9]]
 .The study area of the Poyang Lake case.
@@ -54,28 +55,23 @@ image::WHU_image10.png[WHU_image10]
 
 ---
 
-
 === Analysis Ready Data (ARD) Use Case 
 
 ==== Background
 
-Definition of Analysis Ready Data (ARD) (defined by CEOS):
-
-[%unnumbered]
-
-
+[quote,Analysis Ready Data (ARD) as defined by CEOS]
 Analysis Ready Data (ARD) is remote sensing data and products that have been pre-processed and organized to allow immediate analysis with little additional user effort and interoperability both through time and with other datasets.
 
 Major steps in preparing satellite data into ARD include conversion of
-raw reading into radiometric quantity, quality assessment, quantity
+raw readings into radiometric quantity, quality assessment, quantity
 normalization, and temporal integration. The ARD should follow the FAIR
 (Findable, Accessible, Interoperable, and Reusable) Data Principles.
 
 Immediate analysis requires that data obtained by the data users exactly
-matches users' specification in the format, projection, spatial/temporal
+match users' specification in the format, projection, spatial/temporal
 coverage and resolution, and parameters so that it can be ingested into
 user's analysis system immediately without further efforts. Since
-individual data users and projects have different requirements
+individual data users and projects have different requirements,
 personalized services for customizing the data must be provided in order
 to meet the requirement of immediate analysis, which we call ARD
 services.
@@ -86,18 +82,18 @@ houses information on Climate Data Records (CDR) provided mostly by CEOS
 and CGMS member agencies. The inventory is a structured repository for
 the characteristics of two types of GCOS ECV CDRs:
 
-* Climate data records that exist and are accessible, including
-frequently updated interim CDRs
-* Climate data records that are planned to be delivered.
+* climate data records that exist and are accessible, including
+frequently updated interim CDRs; and
+* climate data records that are planned to be delivered.
 
 The ECV Inventory is an open resource to explore existing and planned
 data records from space agency sponsored activities and provides a
 unique source of information on CDRs available internationally. Access
 links to the data are provided within the inventory, alongside details
-of the data's provenance, integrity and application to climate
+of the data's provenance, integrity, and application to climate
 monitoring.
 
-The client is used the existing
+The client used the existing
 https://gis.csiss.gmu.edu/carbon/cwicport/pages/main.html[CEOS WGISS Community Portal]. The portal is capable
 of providing automated discovery and customization services of ECV and
 satellite data. The client will be able to discover and access ECV and
@@ -109,19 +105,19 @@ the world to support various climate change resilience analysis.
 The client instance is implemented as a Web application to support the
 creation and delivery of ARD for climate change impact assessment.
 
-The Carbon Portal conducted data discovery and access in two steps:
+The Carbon Portal conducted data discovery and access in the following two steps.
 
-* step 1: Data collection search
-* step 2: Granule search to search granules in the collection
+* Step 1: Data collection search
+* Step 2: Granule search to search granules in the collection
 
 ARD services are enabled on results of granule search if the collection
 is an ECV. If the ECV data provider has implemented the WCS service for
-the dataset, the portal will directly communicate with ECV provider's
+the dataset, the portal will directly communicate with the ECV provider's
 WCS server for ARD service. If the ECV data provider does not have the
-WCS service, the portal's server will download entire granule and stage
+WCS service, the portal's server will download the entire granule and stage
 it on the portal server to provide ARD service.
 
-Most of ECV data provides don't provide such service.
+Most of ECV data provides do not provide such service.
 
 Figure <<software-architecture>> shows a software architecture of the CEOS WGISS Carbon Community Portal.
 
@@ -130,41 +126,41 @@ Figure <<software-architecture>> shows a software architecture of the CEOS WGISS
 image::ARD_GMU-architecture.png[software-architecture]
 
 ECV Inventory v4.1 records are converted as a unified form of the portal
-predefined metadata format by a converting tool. Retrieve collection
+predefined metadata format by a converting tool to retrieve collection
 metadata for ECV entries from CWIC/FedEO OpenSearch referred by Data
-Record Information. There is 1251 ECV inventory records (Same as
+Record Information. There are 1251 ECV inventory records (the same as
 WGClimate, 870 for Existing, 381 for Planned). The portal supports
-totally 1910 predefined ECV relative collection datasets from ECV
+a total of 1910 predefined ECV relative collection datasets from ECV
 Records.
 
-ARD service for ECVs in case that providers have no WCS services:
+ARD service for ECVs in case providers have no WCS services:
 
-* Support when user select one granule entry
-* Download granule dataset file from given repository, and manipulate it
-for serving WCS
-* Stage the data in portal backend server and generate a list of all
-coverages in the granule
-* User specifies the specifications of data to download
-* User obtains the customized data by downloading via WCS GetCoverage
-request
+* support when the user selects one granule entry;
+* download granule dataset file from the given repository and manipulate it
+for serving WCS;
+* stage the data in the portal backend server and generate a list of all
+coverages in the granule;
+* the user determines the specifications of data to download; and
+* the user obtains the customized data by downloading via WCS GetCoverage
+request.
 
 ARD service for ECVs with data providers’ WCS:
 
-* Directly talk to provider’s WCS
-* Without granule downloading and stage steps in the portal’s backend
+* directly talk to provider’s WCS; and
+* without granule downloading and stage steps in the portal’s backend
 server.
 
 ==== Use Case: The climate change impact on crop production in Turkmenistan
 
-The use case of the climate change impact on crop production in
+This use case is for the climate change impact on crop production in
 Turkmenistan. However, the portal can switch to another use case or
-support multiple use cases if this pilot requests us to do so.
+support multiple use cases if necessary.
 
 Drought is one of the major climate-related natural hazards that cause
 significant crop production loss in Turkmenistan. Climate change
 increases the risk of drought in Turkmenistan. Crop models (such as
 WOFOST) are often used to support the decision-making in long-term
-adaptation and mitigation. The client will be used to prepare data to be
+adaptation and mitigation. The client prepare data to be
 readily used as parameters and drivers in such modeling processes.
 Drought impact analysis data may include long time series of
 precipitation, temperature, or indices for crop conditions, water
@@ -177,14 +173,14 @@ impact assessment in Turkmenistan.
 The drought impact ARD case will demonstrate:
 
 [arabic]
-. Applicability of open standards and specifications in support of data
+. the applicability of open standards and specifications in support of data
 discovery, data integration, data transformation, data processing, data
-dissemination and data visualization
-. Transparency of metadata, data quality and provenance
-. Efficiency of using ARD in modeling and analysis
-. Interoperable dissemination of ARD abiding by FAIR principles
+dissemination, and data visualization;
+. transparency of metadata, data quality, and provenance;
+. efficiency of using ARD in modeling and analysis; and
+. interoperable dissemination of ARD abiding by FAIR principles.
 
-The searching is starting with the following information:
+The search starts with the following information.
 
 * Keyword: surface soil moisture
 * Filter: daily
@@ -226,118 +222,111 @@ sfsm_inst (Surface soil moisture percentile)
 Adjust legend color (0 is the least soil moisture), and get the
 following results:
 
-
 .Surface soil moisture percentile (year 2019-2022)
 image::ARD_GMU-demo-sfsm_inst.png[]
 
-
-
 === Solar climate atlas for Poland
 
-
-The project aims at creating analysis ready solar radaition data cube and web map service for Poland to advance development of the solar-smart society and economy and to provide know-how and tools, which are easily reusable in other geographical regions worldwide, in accordance with the FAIR principles.
+The project aims at creating analysis ready solar radiation data cube and web map services for Poland to advance development of the solar-smart society and economy and to provide know-how and tools which are easily reusable in other geographical regions worldwide, in accordance with the FAIR principles.
 
 [arabic]
 The project will update a previously created solar climate atlas for Poland by:
 
 * {blank}
 +
-increasing spatial and temporal resolution of the datasets: 0.05° x 0.05° degrees (regular lat/lon grid) → 100x100m Monthly means → Daily/Hourly(tbc) means
+increasing spatial and temporal resolution of the datasets: 0.05° x 0.05° degrees (regular lat/lon grid) → 100x100m Monthly means → Daily/Hourly(tbc) means;
 * {blank}
 +
-extending time period: 1991-2014 (24 yrs) → 1983-2022 (40 yrs)
+extending time period: 1991-2014 (24 yrs) → 1983-2022 (40 yrs);
 * {blank}
 +
-replacing static maps with a dynamic and interactive interface
+replacing static maps with a dynamic and interactive interface;
 * {blank}
 +
-using practical solar radiation parameters instead of physical variables
+using practical solar radiation parameters instead of physical variables;
 * {blank}
 +
-making datasets (+ metadata) available for downloaded in interoperable file formats (for further use)
+making datasets (+ metadata) available for downloaded in interoperable file formats (for further use); and
 * {blank}
 +
 providing solar climate knowledge base and data/service user guides 
 
 in order to:
 
-* advance development of the solar-smart society and economy in Poland
-* provide know-how and tools, which are easily reusable in other geographical regions
+* advance development of the solar-smart society and economy in Poland; and
+* provide know-how and tools, which are easily reusable in other geographical regions.
 
 .Solar Climate atlas for Poland available on the IMGW website: https://klimat.imgw.pl/en/solar-atlas
 image::Jakub-SolarConditionAtlas.png[]
 
+Newly created *solar climate data cube and web map services* will be more *FAIR* as they will be made available online, possibly on the official website of the Polish Hydrometeorological Service (IMGW) for an increased findability, upon future agreement (to be discussed) to make them more *Findable* by the general public. The whole process of data access (including authentication) will be transparent and accompanied by appropriate instructions so that the *Accessibility* could be much higher. The format of the datasets in the data cube will be an OGC netCDF standard compliant with the CF (Climate and Forecast) convention, which is suitable for encoding a gridded data for space/time-varying phenomena and commonly known in the climate science community but also easily readable with other common spatial data processing and visualization software including most of the GIS software to keep fully *Interoperable*. Finally, even though the proposed solar climate information system (maps+ dataset) are limited to the area of Poland, all processing scripts will be made available on github along with well-described processing steps (both Jupyter notebooks and instructional videos will be considered) to provide *Reusability* for other countries or geographical regions.
 
-Newly created *solar climate data cube and web map service* will be more *FAIR* as they will be made available online, possibly on the official website of the Polish Hydrometeorological Service (IMGW) for an increased findability, upon future agreement (to be discussed) to make them more *Findable* by the general public. The whole process of data access (including authentication) will be transparent and accompanied by appropriate instructions so that the *Accessibility* could be much higher. The format of the datasets in the data cube will be an OGC netCDF standard compliant with the CF (Climate and Forecast) convention, which is suitable for encoding gridded data for space/time-varying phenomena and commonly known in the climate science community but also easily readable with other common spatial data processing and visualization software including most of the GIS software to keep fully *Interoperable*. Finally, even though the proposed solar climate information system (maps+ dataset) are limited to the area of Poland, all processing scripts will be made available on github along with a well-described processing steps (both Jupyter notebooks and instructional videos will be considered) to provide *Reusability* for other countries or geographical regions.
-
-It is important to emphasise the importance of solar radiation studies in addressing the impact of climate change. Solar activity is not responsible for the global warming trend we have been experiencing in recent decades. The Sun is however primary energy source driving most of the processes in the Earth's climate system. This energy can also be used as a renewable source of electrical energy. Therefore knowledge about spatio-temporal distribution of surface incoming solar radiation is crucial for decision making in the sustainable energy transition process which allow both to rationalise energy consumption and reduce emissions of greenhouse gas (responsible for the warming effect).
-
+It is important to emphasize the importance of solar radiation studies in addressing the impact of climate change. Solar activity is not responsible for the global warming trend we have been experiencing in recent decades. The Sun is, however,a primary energy source driving most of the processes in the Earth's climate system. This energy can also be used as a renewable source of electrical energy. Therefore, knowledge about the spatio-temporal distribution of surface incoming solar radiation is crucial for decision making in the sustainable energy transition process which allow both to rationalize energy consumption and reduce emissions of greenhouse gas (responsible for global warming effects).
 
 *Scope of work for the Climate Resilience Pilot:*
 State-of-the-art review and exploratory data analysis
 
 *Objectives for the Climate Resilinece Pilot #1 are:*
 
-* to document existing solar radiation datasets (satellite, model and reanalysis data) and services (both freely accessible and commercial)
+* to document existing solar radiation datasets (satellite, model, and reanalysis data) and services (both freely accessible and commercial); and
 * to verify the accuracy of the in situ measurements and satellite climate data records for the selected solar radiation parameters using proper statistical methods
 
 Different solar radiation climate data records and their characteristics have been listed in the table below.
-
 
 .Solar radiation climate data records
 [options="header"]
 |===
 |Dataset or Database name |Variables |Data provider |Year of release |Data source |Accessibility |Data format |Temporal resolution
 |http://dx.doi.org/10.5676/EUM_SAF_CM/SARAH/V003[SARAH-3 Surface Solar Radiation Climate Data Record]
-|Global radiation / surface irradiance (SIS), Direct radiation (SID), Direct normalized radiation (DNI), Sunshine duration (SDU), Photosynthetic active radiation (PAR), Daylight (DAL), Effective cloud albedo (CAL)
+|Global Radiation/Surface Irradiance (SIS), Direct Radiation (SID), Direct Normalized Radiation (DNI), Sunshine Duration (SDU), Photosynthetic Active Radiation (PAR), Daylight (DAL), Effective Cloud Albedo (CAL)
 |CMSAF
 |2023
 |Satellite Data
-|Free
+Free
 |NetCDF-4
-|monthly and daily mean or sum (SDU), provided every 30 min (except from SDU)
-|https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=CLARA_AVHRR_V002_01[CLARA (Clouds, Albedo and Radiation dataset from AVHRR data)]
-|Surface incoming shortwave radiation (SIS), Longwave surface radiation (SDL), Surface albedo (SAL)
+|Monthly and daily mean or sum (SDU), provided every 30 min (except from SDU)
+|https://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=CLARA_AVHRR_V002_01[CLARA (clouds, albedo and radiation dataset from AVHRR data)]
+|Surface Incoming Shortwave Radiation (SIS), Longwave Surface Radiation (SDL), Surface Albedo (SAL)
 |CMSAF
 |2020
 |Satellite Data
 |Free
 |NetCDF-4
-|daily- and monthly-averaged
+|Daily- and monthly-averaged
 |https://nsrdb.nrel.gov/[NSRDB (National Solar Radiation Database)]
-|Global horizontal irradiance, Direct normal irradiance, Diffuse horizontal irradiance
+|Global Horizontal Irradiance, Direct Normal Irradiance, Diffuse Horizontal Irradiance
 |National Renewable Energy Laboratory-NREL
 |2017
-|Satellite Data (GOES), Physical Solar Model (PSM) version 3
+|Satellite data (GOES), physical solar model (PSM) version 3
 |Free
 |.zip sent to the email address
 |30, 60-minute
 |https://joint-research-centre.ec.europa.eu/pvgis-online-tool/pvgis-data-download_en[PVGIS ]
-|Average global irradiance on a horizontal surface (W/m2), Average global irradiance on an optimally inclined surface (W/m2), Average global irradiance on a two-axis sun-tracking surface, Optimal inclination angle for an equator-facing plane (degrees)
+|Average Global Irradiance on a Horizontal Surface (W/m2), Average Global Irradiance on an Optimally Inclined Surface (W/m2), Average Global Irradiance on a Two-axis Sun-tracking Surface, Optimal Inclination Angle for an Equator-facing Plane (degrees)
 |JRC
 |2012
 |Satellite Data (CMSAF SARAH and NSRDB), partly combined with Reanalysis (Sarah2: NA filled with ERA5 reanalysis)
 |Free
 |Esri ascii grid, GeoTIFF (SARAH 2)
-|Monthly and yearly long-term averages calculated from hourly  values over
+|Monthly and yearly long-term averages calculated from hourly values over
 |https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-complete?tab=overview[ERA5 (the 5th generation of ECMWF atmospheric reanalysis, after 4th: Era Interim)]
-|Clear-sky direct solar radiation at surface, Surface net solar radiation, Surface solar radiation downwards, TOA incident solar radiation, Top net solar radiation, Total sky direct solar radiation at surface
+|Clear-sky Direct Solar Radiation at Surface, Surface Net Solar Radiation, Surface Solar Radiation Downwards, TOA Incident Solar Radiation, Top Net Solar Radiation, Total Sky Direct Solar Radiation at Surface
 |ECMWF, Copernicus Climate Change Service (C3S)
 |2018
 |Reanalysis 
 |Free
 |GRIB (NetCDF experimentally via C3S CDS)
 |1h
-|https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-single-levels?tab=overview[CERRA  Copernicus European Regional ReAnalysis]
-|Surface solar radiation downwards, Surface thermal radiation downwards, Time-integrated surface direct short-wave radiation, Surface net solar radiation (clear sky), 
+|https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-cerra-single-levels?tab=overview[CERRA Copernicus European Regional ReAnalysis]
+|Surface Solar Radiation Downwards, Surface Thermal Radiation Downwards, Iime-integrated Surface Direct Short-wave Radiation, Surface Net Solar Radiation (Clear Sky)
 |Copernicus
 |2022
 |Reanalysis 
 |Free
 |GRIB2
 |3 / 6h
-|https://disc.gsfc.nasa.gov/datasets?project=MERRA-2[MERRA-2 (Modern-Era Retrospective analysis for Research and Applications)]
-|Radiation diagnostics (i.e. surface albedo, cloud area fraction, in cloud optical thickness), surface incoming shortwave flux (i.e. solar radiation), surface net downward shortwave flux, and upwelling longwave flux at toa (top of atmosphere) (i.e. outgoing longwave radiation (OLR) at toa)
+|https://disc.gsfc.nasa.gov/datasets?project=MERRA-2[MERRA-2 (Modern-Era Retrospective Analysis for Research and Applications)]
+|Radiation Diagnostics (i.e., surface albedo, cloud area fraction, in cloud optical thickness), Surface Incoming Shortwave Flux (i.e., solar radiation), Surface Net Downward Shortwave Flux, and Upwelling Longwave Flux at TOA (top of atmosphere) (i.e., Outgoing Longwave Radiation (OLR) at TOA)
 |NASA Global Modeling and Assimilation Office (GMAO) 
 |2015
 |Reanalysis 
@@ -345,7 +334,7 @@ Different solar radiation climate data records and their characteristics have be
 |NetCDF
 |1h
 |https://opendata.dwd.de/climate_environment/REA/COSMO_REA6/[COSMO/REA]
-|Instantaneous direct radiation  surface, Instantaneous diffuse radiation surface
+|Instantaneous Direct Radiation Surface, instantaneous diffuse Radiation Surface
 |Deutscher Wetterdienst (DWD)
 |2020
 |Reanalysis 
@@ -353,11 +342,11 @@ Different solar radiation climate data records and their characteristics have be
 |GRIB
 |1h
 |https://solargis.com/[SOLARGIS]
-|GHI - Global horizontal irradiation [kWh/m2], DHI -Diffuse horizontal irradiation [kWh/m2], GTI - Global irradiation for optimally tilted surface [kWh/m2], DNI - Direct normal irradiation [kWh/m2], PVOUT - Photovoltaic power potential [kWh/kWp], OPTA - Optimum tilt to maximize yearly yield [°]
+|GHI - Global Horizontal Irradiation [kWh/m2], DHI -Diffuse Horizontal Irradiation [kWh/m2], GTI - Global Irradiation for Optimally Tilted Surface [kWh/m2], DNI - Direct Normal Irradiation [kWh/m2], PVOUT - Photovoltaic Power Potential [kWh/kWp], OPTA - Optimum Tilt to Maximize Yearly Yield [°]
 |Solargis s.r.o.
 |2019 (free data)
-|Solar radiation data from satellite-based model developed by Solargis company (input: Meteosat PRIME and IODC by Eumetsat, GOES-East and GOES-West by NOAA, MTSAT and Himawari-8 by JMA, MACC-II/CAMS atmospheric data by ECMWF, MERRA-2 atmospheric data by NASA, GFS data by NOAA).
-|Limited data for free (e.g. avarage daily totals and yearly monthly totals), full resolution data and service are commercial 
+|Solar Radiation Data from satellite-based model developed by Solargis company (input: Meteosat PRIME and IODC by Eumetsat, GOES-East and GOES-West by NOAA, MTSAT and Himawari-8 by JMA, MACC-II/CAMS atmospheric data by ECMWF, MERRA-2 atmospheric data by NASA, GFS data by NOAA).
+|Limited data for free (e.g., average daily totals and yearly monthly totals), full resolution data and service are commercial 
 |GeoTIFF, Esri ASCII GRID
 |Year, Month (free data)
 |http://www.soda-pro.com[HelioClim-3, Version 5]
@@ -365,27 +354,27 @@ Different solar radiation climate data records and their characteristics have be
 |The research center O.I.E. (ARMINES and MINES ParisTech, Center for Observation, Impacts, Energy) 
 |2014 (?)
 |"It exploits the Heliosat-2 method to estimates a ""cloud index"", based on the analysis of the 15 minute Meteosat Second Generation (MSG) satellite images in the visible band."
-|Demo data for free. Access to full data is based on paid subscriptions.Data are accessible either using the SoDa web portal or via automatic wget commands.
+|Demo data for free. Access to full data is based on paid subscriptions. Data are accessible either using the SoDa web portal or via automatic wget commands.
 |csv, JSON, Excel file, NetCDF
 |1 min (downscaling from 15 min Meteosat) to 1 month
 |https://ads.atmosphere.copernicus.eu/cdsapp#!/dataset/cams-solar-radiation-timeseries?tab=overview[CAMS solar radiation time-series]
-|Cloud-free conditions only: Global Horizontal Irradiation (GHI), Direct Horizontal Irradiation (BHI), Diffuse Horizontal Irradiation(DHI), Direct Normal Irradiation (BNI)
+|Cloud-free conditions only: Global Horizontal irradiation (GHI), Direct Horizontal Irradiation (BHI), Diffuse Horizontal Irradiation(DHI), Direct Normal Irradiation (BNI)
 |The research center O.I.E. (ARMINES and MINES ParisTech, Center for Observation, Impacts, Energy) 
 |2015
 |Meteosat satellite field-of-view for all-sky parameters, McClear algorithm (clear-sky solar radiation over the world)
 |Free via CAMS for Europe (AGATE Dataset) and Africa (JADE Dataset)
 |ASCII (CSV), NetCDF (Point data, time-series)
 |1 min, 15 min, 1 h, 1 day, 1 month
-|https://data.jrc.ec.europa.eu/collection/id-0055[EMHIRES (European Meteorological derived High Resolution RES) Dataset  ]
+|https://data.jrc.ec.europa.eu/collection/id-0055[EMHIRES (European Meteorological derived High Resolution RES) Dataset]
 |Solar and wind power at different aggregation levels
 |Joint Research Centre of the European Commission (JRC)
 |2018
 |CMSAF SARAH, PVGIS model
 |Free
 |Excel XLS
-|hourly time series
+|Hourly time series
 |https://meteonorm.com/[Meteonorm]
-|Direct horizontal and normal radiation arising from a narrow solid angle of 6° centered around the sun, Diffuse radiation (arising from the upper hemisphere reduced by the direct solar radiation from the sun's disk and its surroundings (6° aperture)), Diffuse radiation (taking raised horizon into account, under clear skys), Global radiation (horizontal, taking raised horizon into account, under clear skys), multiple  meteorological parameters
+|Direct horizontal and normal radiation arising from a narrow solid angle of 6° centered around the sun, diffuse radiation (arising from the upper hemisphere reduced by the direct solar radiation from the sun's disk and its surroundings (6° aperture)), diffuse radiation (taking raised horizon into account, under clear skys), global radiation (horizontal, taking raised horizon into account, under clear skys), multiple meteorological parameters
 |Meteotest AG (Bern, Switzerland)
 |2012, Version 8.1: 2021
 |Radiation measurement (stations) and satellite data from Meteosat Second Generation
@@ -394,9 +383,9 @@ Different solar radiation climate data records and their characteristics have be
 |hour, day, month, year
 |===
 
-All the solar radiation datasets listed above cover the area of Poland but are rather not ready for direct use by non-scientific users. They are pre-processed to meet the requirements for climate data records and quality controlled but still primarily addressed for further scientific use or not available for free (SOLARGIS). Even though open source tools for managing and exploiting these datasets are often delivered by the data providers, they are not always sufficiently "attractive" due to an extensive workload, which is still required in order to make them easily integrable with additional data from other sources and ready for specific applications in support of policy- and/or decision-making processes at national level.
+All the solar radiation datasets listed above cover the area of Poland but are not ready for direct use by non-scientific users. They are pre-processed to meet the requirements for climate data records and quality controlled but still primarily addressed for further scientific use or not available for free (SOLARGIS). Even though open source tools for managing and exploiting these datasets are often delivered by the data providers, they are not always sufficiently "attractive" due to an extensive workload, which is still required in order to make them easily integrated with additional data from other sources and ready for specific applications in support of policy- and/or decision-making processes at the national level.
 
-CM SAF SARAH-3 dataset meets all the requirements for the planned solar climate data cube and web map service in terms of quality of estimates, spatial resolution and temporal coverage.
+The CM SAF SARAH-3 dataset meets all the requirements for the planned solar climate data cube and web map service in terms of quality of estimates, spatial resolution, and temporal coverage.
 Its accuracy is now being verified in more detail against in situ measurements for the selected solar radiation parameters using proper statistical methods.
 
 The following table includes a selection of existing solar climate web map services.
@@ -406,7 +395,7 @@ The following table includes a selection of existing solar climate web map servi
 |===
 |Service name |Variables & Info |Data provider |Year of first release |Data source |Accessibility |Functionality |Temporal resolution
 |https://klimat.imgw.pl/pl/solar-atlas/[Solar Atlas for Poland]
-|Global radiation / surface irradiance (SIS), Direct radiation (SID), Direct normalized radiation (DNI), Statistics: Mean, Max, Min, STD, Anomaly
+|Global Radiation / Surface Irradiance (SIS), Direct Radiation (SID), Direct Normalized Radiation (DNI), Statistics: Mean, Max, Min, STD, Anomaly
 |The Institute of Meteorology and Water Management - National Research Institute (IMGW-PIB)
 |2016
 |CM SAF SARAH
@@ -414,12 +403,12 @@ The following table includes a selection of existing solar climate web map servi
 |View, save a graphic, Static maps (graphics), only in polish, pixel values cannot be accessed, no metadata
 |Month, Season, Year
 |https://www.ilmateenistus.ee/kliima/solar-atlas/?lang=en[Baltic Solar Atlas]
-|Global radiation / surface irradiance (SIS), Direct radiation (SID), Direct normalized radiation (DNI), Statistics: Mean, Max, Min, STD, Anomaly
+|Global Radiation / Surface Irradiance (SIS), Direct Radiation (SID), Direct Normalized Radiation (DNI), Statistics: Mean, Max, Min, STD, Anomaly
 |Lietuvos Hidrometeorologijos Tarnyba
 |2015
 |CM SAF SARAH
 |Open Access
-|View, save a graphic, Static maps (graphics), pixel values cannot be accessed, no metadata
+|View, save a graphic, Static maps (graphis), pixel values cannot be accessed, no metadata
 |Month, Season, Year
 |https://www.dwd.de/EN/ourservices/probsunnydays/probsunnydays.html[Sunny Days Probability]
 |Probability of sunny days for selected stations worldwide based on CM SAF data. For each selected city the likelihood that a certain day throughout the year is sunny is shown. For Europe and Africa also the likelihood for a 5-day sunny period is shown
@@ -430,15 +419,15 @@ The following table includes a selection of existing solar climate web map servi
 |View, Zoom In/Out, Charts for selected cities
 |Day of year
 |https://re.jrc.ec.europa.eu/pvg_tools/en/[PVGIS Webservice (The Photovoltaic Geographic Information System)]
-|Global horizontal irradiation, Direct normal irradiation, Global irradiation optimum angle, Global irradiation at angle,  PV performance
+|Global Horizontal Irradiation, Direct Normal Irradiation, Global Irradiation Optimum Angle, Global Irradiation at Angle, PV Performance
 |Joint Research Centre of the European Commission (JRC)
 |2012
-|Satellite Data (CMSAF SARAH and NSRDB), partly combined with Reanalysis (Sarah2: NA filled with ERA5 reanalysis)
+|Satellite Data (CMSAF SARAH and NSRDB), partly combine with Reanalysis (Sarah2: NA filled with ERA5 reanalysis)
 |Open Access
 |WebGIS, Data Download (JSON, CSV), User dedicated tools (solar resource assessment, photovoltaic (PV) performance studies)
 |Hour, Day (only point data series), Month, Year
 |https://globalsolaratlas.info/map[Global Solar Atlas]
-|Global horizontal irradiation, Direct normal irradiation, Global irradiation optimum angle, Global irradiation at angle, Specific photovoltaic power output, Optimum tilt of PV modules, Air temperature
+|Global Horizontal Irradiation, Direct Normal Irradiation, Global Irradiation Optimum Angle, Global Irradiation at Angle, Specific Photovoltaic Power Output, Optimum Tilt of PV Modules, Air Temperature
 |Solargis s.r.o. , supported by The World Bank Group and funded by the Energy Sector Management Assistance Program (ESMAP)
 |2016
 |SOLARGIS Data, ERA5 post-processed by Solargis (air temperature)
@@ -451,23 +440,23 @@ The following table includes a selection of existing solar climate web map servi
 |2003
 |Meteosat geostationary satellites, for weather data MERRA-2 and GFS
 |Part of data and services for free. Access to full data is based on paid subscriptions
-|Solar radiation database (e.g. Helioclim-3) to get long-term irradiation time-series data at a specific region, solar radiation maps (hourly, monthly, yearly avarage), real-time maps and time-series to identify solar radiation resource and cloud motion, solar forecast, Web Services and Products based on the data
+|Solar radiation database (e.g., Helioclim-3) to get long-term irradiation time-series data at a specific region, solar radiation maps (hourly, monthly, yearly avarage), real-time maps and time-series to identify solar radiation resource and cloud motion, solar forecast, Web Services and Products based on the data
 |1 min (downscaling from 15 min Meteosat) to 1 month
-|https://www.irena.org/globalatlas[Global Atlas  for Renewable Energy]
+|https://www.irena.org/globalatlas[Global Atlas for Renewable Energy]
 |Global Horizontal Irradiation (GHI), Direct Horizontal Irradiation (BHI), Diffuse Horizontal Irradiation(DHI), Global Normal Irradiation (GNI), Direct Normal Irradiation(BNI), Diffuse Normal Irradiation (DNI)
 |The International Renewable Energy Agency (IRENA), https://globalatlas.irena.org/about[Full list of partners and data providers]
 |2013
-|Multiple, e.g. HELIOCLIM3 (SODA , CAMS), ENDORSE, SOLARGIS (Global Solar Atlas), METEONORM
+|Multiple, e.g., HELIOCLIM3 (SODA , CAMS), ENDORSE, SOLARGIS (Global Solar Atlas), METEONORM
 |Open Access
 |Display and overlay different renewable resource and ancillary datasets (transmission and road networks, protected areas, population density, and topography) WebGIS functionality, link with other platforms, systems or software for purposes of conducting comparative analyses, conduct specific mapping functionalities to screen areas of opportunity where further assessments can be of relevance, download data over identified areas of interest
 |Long-term yearly and monthly average 
 |http://www.webservice-energy.org/[Webservice-Energy Catalogue]
 |The platform hosts web services dedicated to solar radiation and more generally, energy. 
-|GEOSS community portal. Initiative of MINES  ParisTech, ARMINES and also the SoDa Team, several services have been developed by MINES ParisTech, others by other providers such as DLR
+|GEOSS community portal. Initiative of MINES ParisTech, ARMINES and also the SoDa Team, several services have been developed by MINES ParisTech, others by other providers such as DLR
 |N/A
-|Multiple, e.g. SoDa, SOLEMI, PACA Solar Atlas, CAMS Radiation Service
+|Multiple, e.g., SoDa, SOLEMI, PACA Solar Atlas, CAMS Radiation Service
 |Open Access
-|Access, search and discover hundreds of Energy and Environmental related resources (data, applications, tools, services). Catalogue with metadata.The website has several web services: Web Map Services, Web Processing Services, obeying OGC (Open Geospatial Consortium) or W3C (World Wide Web Consortium) standards. The W3C standard is abandoned in favour of the OGC standard
+|Access, search and discover hundreds of Energy and Environmental related resources (data, applications, tools, services). Catalog with metadata. The website has several web services: Web Map Services, Web Processing Services, obeying OGC (Open Geospatial Consortium) or W3C (World Wide Web Consortium) standards. The W3C standard is abandoned in favor of the OGC standard
 |Various
 |https://energydata.info/[ENERGYDATA.INFO ]
 |An open data platform providing access to datasets and data analytics that are relevant to the energy sector
@@ -478,18 +467,18 @@ The following table includes a selection of existing solar climate web map servi
 |Access, search and discover hundreds of Energy and Environmental related resources (data, applications, tools, services). Explore data by country
 |Various
 |https://rezoning.energydata.info/[The Renewable Energy Zoning (REZoning) tool]
-|Available resources – solar PV, wind, or offshore wind - for a chosen country: Technical Potential, Economic Potential and Multi-criteria analysis and prioritization. Data on radiation: Global Horizontal and Tilted irradiation
+|Available resources – solar PV, wind, or offshore wind - for a chosen country: Technical Potential, Economic Potential and Multi-criteria analysis and prioritization. Data on radiation: Global Horizontal and Tilted Irradiation
 |Partners: The World Bank Group, ESMAP, UC Santa Barbara, Development SEED
 |2021 ?
 |For radiationa data: Global Solar Atlas
 |Open Access
-|Identify and explore high potential project areas for solar, onshore wind and offshore wind development. The final map can be printed in .PDF or .PNG format. Download the results of the analysis in .CSV, .SHP (for boundaries selection) or GeoTIFF format (for grid selection) for further processing
+|Identify and explore high potential project areas for solar, onshore wind, and offshore wind development. The final map can be printed in .PDF or .PNG format. Download the results of the analysis in .CSV, .SHP (for boundaries selection) or GeoTIFF format (for grid selection) for further processing
 |Long-term yearly average of daily and yearly totals
-|https://atmosphere.copernicus.eu/solar-energy[Copernicus Atmospheric Monitoring Service (CAMS) - Radiation Service ]
-|Clear Sky and Total Sky Radiation. The Global, Direct and Diffuse Horizontal Irradiation, as well as the Beam Normal Irradiation are provided
+|https://atmosphere.copernicus.eu/solar-energy[Copernicus Atmospheric Monitoring Service (CAMS) - Radiation Service]
+|Clear Sky and Total Sky Radiation. The Global, Direct, and Diffuse Horizontal Irradiation, as well as the Beam Normal Irradiation are provided
 |German Aerospace Center (DLR), ARMINES, TRANSVALOR
 |2018 ?
-|SoDa Database: CAMS Clear-Sky (McClear model  based on the processing of Meteosat data) and All-Sky Radiation (Heliosat-4) products: all skies (cloudy or not) SSI within the MSG view
+|SoDa Database: CAMS Clear-Sky (McClear model based on the processing of Meteosat data) and All-Sky Radiation (Heliosat-4) products: all skies (cloudy or not) SSI within the MSG view
 |Open Access
 |Access and download data (time series)
 |1 min, 15 min, 1 h, 1 day, 1 month
@@ -502,15 +491,15 @@ The following table includes a selection of existing solar climate web map servi
 |WebGIS, user-friendly interface, provides renewable energy data, analytical tools (Levelized Cost of Energy Mapping Tool, Technical Potential Tool, PVWatts Lite), training materials and technical assistance.
 |For Poland only multiannaul average (time series for selected develooping countries)
 |https://www.renewables.ninja/[Renewables Ninja ]
-|Ground-level solar irradiance, top of atmosphere solar irradiance, average annual capacity factors for PV, for a point of interest also daily mean and monthly capacity factor
-|ETH Zurich
+|Ground-level Solar Irradiance, Top of Atmosphere Solar Irradiance, Average Annual Capacity Factors for PV, for a Point of Interest also Daily Mean and Monthly Capacity Factor
+|ETH Zuich
 |2016 ?
 |Merra-2 Reanalysis, CMSAF SARAH
 |Open Access
 |Renewables Ninja WepPortal allows running of simulations of hourly power output from wind and solar PV farms by clicking anywhere on the map. Also download ready-made datasets for a chosen country is possible. 
 |hourly time series, daily and monthly mean for a one year (2015 or 2019)
-|Meteonorm based services: https://meteonorm.com/en/product/solar-cadastre[Solar Cadastre], https://solarwebservices.ch/[SolarSat, CloudMove,  SolarForecast]
-|Global radiation on the horizontal plane, Diffuse radiation on the horizontal plane, Direct radiation on the horizontal plane, Global radiation on the inclined plane, Direct normal irradiation, Energy output
+|Meteonorm based services: https://meteonorm.com/en/product/solar-cadastre[Solar Cadastre], https://solarwebservices.ch/[SolarSat, CloudMove, SolarForecast]
+|Global Radiation on the Horizontal Plane, Diffuse Radiation on the Horizontal Plane, Direct Radiation on the Horizontal Plane, Global Radiation on the Inclined Plane, Direct Normal Irradiation, Energy Output
 |Meteotest AG (Bern, Switzerland)
 |N/A
 |Meteonorm Database
@@ -519,33 +508,32 @@ The following table includes a selection of existing solar climate web map servi
 |from 15 Min. (past 24h) to month
 |===
 
-Identified services provide generalised information on spatio-temporal solar radiation patterns (high resolution grids for longer period not available at all or not for free!). A set of high-resolution analysis-ready data products in user-friendly formats dedicated to specific applications at national level are needed to support decision-making processes.
+Identified services provide generalised information on spatio-temporal solar radiation patterns (high resolution grids for longer periods not available at all or not for free!). A set of high-resolution analysis-ready data products in user-friendly formats dedicated to specific applications at national level are needed to support decision-making processes.
 
-The identified solar radiation services are currently being analized in terms of overall functional scope, usability of the interface, innovative tools and possible shortcomings. 
-The results of this analysis will be verified against detailed recognition of the potential user needs.   
-
+The identified solar radiation services are currently being analyzed in terms of overall functional scope, usability of the interface, innovative tools, and possible shortcomings. 
+The results of this analysis will be verified against a detailed recognition of the potential user needs.
 
 === Wildfire resilience in insurance
 
-The main focus of IFC's participation to this project is to better understand end-to-end hazard and risk modelling workflows, in turn supporting the climate services required for decision-making in the business. This participation is also intended to further open up Intact Lab to the outside world, by exchanging information on wildfire risks and climate resiliency in the context of the insurance industry.
+The main focus of IFC's participation to this project is to better understand end-to-end hazard and risk modeling workflows, in turn supporting the climate services required for decision-making in the business. This participation is also intended to further open up Intact Lab to the outside world, by exchanging information on wildfire risks and climate resiliency in the context of the insurance industry.
 
 The project centered the efforts around these challenges:
 
-•	Identify current usages of wildfire maps at Intact by interviewing various business units;
+* identify current usages of wildfire maps at Intact by interviewing various business units;
 
-•	Revisit and update previous wildfire hazard map, using external open data sources;
+* revisit and update previous wildfire hazard maps, using external open data sources;
 
-•	Identify and seek collaboration opportunities with pilot participants;
+* identify and seek collaboration opportunities with pilot participants;
 
-•	Inform internal architectural, infrastructure and procurement processes of new geospatial standards and trends;
+* inform internal architectural, infrastructure, and procurement processes of new geospatial standards and trends; and
 
-•	Identify and develop insurance wildfires risk use cases to help build resilient communities.
+* identify and develop insurance wildfires risk use cases to help build resilient communities.
 
 These activities should align with the best practices and standards of the OGC and current and proposed themes in OGC’s climate resilience Domain Working Group (DWG).
 
-Wildfire risk in Canada is prominent and even though major events do not occur every year, they can cause unprecedented damage. Costs from the wildfire events of summer 2021 in British Columbia reached $77 and $78 millions in insured damage at White Rock Lake and Lytton, respectively (https://doi.org/10.5194/nhess-12-3519-2012). Wildfire activity is expected to go up due to an increase in fire-prone conditions across the country (https://doi.org/10.5194/hess-21-6329-2017).
+Wildfire risk in Canada is prominent and even though major events do not occur every year, they can cause unprecedented damage. Costs from the wildfire events of the summer of 2021 in British Columbia reached $77 and $78 millions in insured damage at White Rock Lake and Lytton, respectively (https://doi.org/10.5194/nhess-12-3519-2012). Wildfire activity is expected to go up due to an increase in fire-prone conditions across the country (https://doi.org/10.5194/hess-21-6329-2017).
 
-In an insurance company, wildfire risk impacts the work of a wide array of users, such as claim adjusters, insurance brokers, engineers, data scientists, actuaries, portfolio managers, and executives. IFC’s stakeholders were invited to provide information about current and potential uses of wildfire risk products within their operations. This information was used to identify use cases supporting this pilot project, as well as prospective proof-of-concepts for wildfire resiliency. It was determined that wildfires can impact numerous activities in the business, including but not limited to restoration, claims, portfolio management, CAT modelling, risk management and loss prevention. A resiliency and adaptation use case relevant to the topic of climate resilience is presented below.
+In an insurance company, wildfire risk impacts the work of a wide array of users, such as claim adjusters, insurance brokers, engineers, data scientists, actuaries, portfolio managers, and executives. IFC’s stakeholders were invited to provide information about current and potential uses of wildfire risk products within their operations. This information was used to identify use cases supporting this pilot project, as well as prospective proof-of-concepts for wildfire resiliency. It was determined that wildfires can impact numerous activities in the business, including but not limited to, restoration, claims, portfolio management, CAT modeling, risk management, and loss prevention. A resiliency and adaptation use case relevant to the topic of climate resilience is presented below.
 
 Through granting programs, Intact is investing in communities across Canada to protect people from the effects of climate change and build more resilient communities (ESIP: Attribute Convention for Data Discovery (ACDD) – http://wiki.esipfed.org/index.php/). The Regional Municipality of Wood Buffalo and the community of Lac La Biche are both at an increased risk of being affected by wildfires. Their respective programs provide rebates and other incentives to residents to participate in home FireSmart assessments, and to upgrade their homes.
 
@@ -553,19 +541,19 @@ Through granting programs, Intact is investing in communities across Canada to p
 .FireSmart Canada’s Home Ignition Zones (Lawrence Livermore National Laboratory: NetCDF CF Metadata Conventions – http://cfconventions.org/)
 image::Figure1_Intact.png[Figure1_Intact]
 
-Homeowners are informed of building materials options in the immediate zone to reduce their risk of serious property damage. Residents and communities are also presented with landscaping practices for the intermediate zone, further helping reduce the risk of wildfires in the area. The Acadia First Nation’s member communities are acting in the extended zone, creating 10 to 30 meters fire breaks to increase time for emergency response in case of fire and decrease the risk of fire spread.
+Homeowners are informed of building material options in the immediate zone to reduce their risk of serious property damage. Residents and communities are also presented with landscaping practices for intermediate zones, further helping reduce the risk of wildfires in the area. The Acadia First Nation’s member communities are acting in the extended zone, creating 10 to 30 meter fire breaks to increase time for emergency response in case of fire and to decrease the risk of fire spread.
 
-Ignition zones can be seen as interfaces between individual homes or structures, and the surrounding area. In the scientific literature, the area where wildland meets or mixes with human-built structures is called the Wildland-Urban Interface (WUI). As the WUI is the area that is the most at risk of wildfire, it is important to closely consider it when modelling risk. The first WUI dataset for Canada was generated in 2018, and it was identified that 3.8% of the national land area is located in the WUI (https://doi.org/10.5220/0006681102050210).
+Ignition zones can be seen as interfaces between individual homes or structures and the surrounding area. In the scientific literature, the area where wildland meets or mixes with human-built structures is called the Wildland-Urban Interface (WUI). As the WUI is the area that is the most at risk of wildfire, it is important to closely consider it when modeling risk. The first WUI dataset for Canada was generated in 2018, and it was identified that 3.8% of the national land area is located in the WUI (https://doi.org/10.5220/0006681102050210).
 
 [[Figure2_Intact]]
 .Wildland-Urban Interface for Canada, on the left. Extraction of the WUI using satellite-derived imagery, on the right (https://doi.org/10.5220/0006681102050210).
 image::Figure2_Intact.png[Figure2_Intact]
 
-A more comprehensive view of the WUI considers industrial areas as well public infrastructures, such as power lines and railroads. This area is called the Wildland-Human Interface (WHI) and covers 13.0% of the national land. It is estimated that within the WHI, 19.4% of the area is in zone of wildfire recurrence ≤ 250 years (OGC: OGC 11-165r2: CF-netCDF3 Data Model Extension standard, 2012). By the end of the century, this number could increase to 28.8% under Representative Concentration Pathway (RCP) 2.6 low emissions scenario, and to 43.3% under RCP 8.5 high emissions scenario. Integrating WUI in climate scenarios can help conduct portfolio stress testing and evaluate future risk.
+A more comprehensive view of the WUI considers industrial areas as well public infrastructures, such as power lines and railroads. This area is called the Wildland-Human Interface (WHI) and covers 13.0% of the national land. It is estimated that within the WHI, 19.4% of the area is in the zone of wildfire recurrence ≤ 250 years (OGC: OGC 11-165r2: CF-netCDF3 Data Model Extension standard, 2012). By the end of the century, this number could increase to 28.8% under Representative Concentration Pathway (RCP) 2.6 low emissions scenario, and to 43.3% under RCP 8.5 high emissions scenario. Integrating WUI in climate scenarios can help in conducting portfolio stress testing and evaluation of future risk.
 
-As cities will keep sprawling as population increases, the WUI is also expected to grow. This is an issue since increased fire activity due to climate change is to be expected. Furthermore, this increased exposure will reach more vulnerable communities. It was shown that WUI is significantly related to socioeconomic variables such as GDP per capita, population density, road density and proportion of population above 65 years old (https://docs.ogc.org/is/14-083r2/14-083r2.html).
+As cities will keep sprawling as population increases, the WUI is also expected to grow. This is an issue since increased fire activity due to climate change is to be expected. Furthermore, this increased exposure will reach more vulnerable communities. It was shown that WUI is significantly related to socioeconomic variables such as GDP per capita, population density, road density, and the proportion of the population above 65 years old (https://docs.ogc.org/is/14-083r2/14-083r2.html).
 
-The Canadian WUI dataset (https://doi.org/10.5220/0006681102050210) is unfortunately not available for download but could be replicated with open data sources, for instance through Natural Resources Canada (NRCAN) spatial infrastructures. When developing a WUI dataset, an important parameter for users to finetune is the ember transport distance. Values can vary between the median value of maximum travel distances, which is 600m (https://doi.org/10.3390/fire3020010), and the maximum travel distance of 2400m which is the official standard in the United States. Novel wildfire risk models can also dynamically adapt fuel classes within the WUI to represent propagation more accurately. Producing, hosting and integrating WUI datasets can therefore support creation of better risk indices, but also help identify vulnerable areas to support further adaptation.
+The Canadian WUI dataset (https://doi.org/10.5220/0006681102050210) is unfortunately not available for download but could be replicated with open data sources, for instance through Natural Resources Canada (NRCAN) spatial infrastructures. When developing a WUI dataset, an important parameter for users to fine tune is the ember transport distance. Values can vary between the median value of maximum travel distances, which is 600 m (https://doi.org/10.3390/fire3020010), and the maximum travel distance of 2400 m which is the official standard in the United States. Novel wildfire risk models can also dynamically adapt fuel classes within the WUI to represent propagation more accurately. Producing, hosting and integrating WUI datasets can therefore support creation of better risk indices and also help identify vulnerable areas to support further adaptation.
 
 // Coastal environment use cases Pelagis]
 include::06-01-marine.adoc[]

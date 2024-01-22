@@ -2,23 +2,24 @@
 
 == Raw data to Datacubes [[Chapter_Raw_data_datacubes]]
 
-Raw data and Datacubes are two different forms of organizing and structuring data in the context of data analysis and data warehousing.
+Raw data and Datacubes are two different forms for organizing and structuring data in the context of data analysis and data warehousing.
 
 . Raw Data refers to the unprocessed, unorganized, and unstructured data that is collected or generated directly from various sources. It can include a variety of forms such as text, numbers, (geo) images, audio, video, or any other form of data. Raw data often lacks formatting or context and requires further processing or manipulation before it can be effectively analyzed or used for decision-making purposes. Raw data is typically stored in databases or data storage systems.
-. Datacubes, also known as multidimensional cubes are a structured form of data representation that organizes and aggregates raw data into a multi-dimensional format. Datacubes are designed to facilitate efficient and fast analysis of data from different dimensions or perspectives. They are commonly used in data warehousing.
+
+. Datacubes, also known as multidimensional cubes, are a structured form of data representation that organizes and aggregates raw data into a multi-dimensional format. Datacubes are designed to facilitate efficient and fast analysis of data from different dimensions or perspectives. They are commonly used in data warehousing.
 
 Datacubes organize data into a multi-dimensional structure typically comprising dimensions, hierarchies, and cells. Dimensions represent various attributes or factors that define the data, such as time, geography, or products. Hierarchies represent the levels of detail within each dimension. Cells typically store the aggregated data values at the intersection of dimensions.
 
 Datacubes enable users to perform complex analytical operations like slicing, dicing, drilling down, or rolling up data across different dimensions.
-They provide a summarized and pre-aggregated view of data that can significantly speed up query processing and analysis compared to working directly with raw data,
-something that is very valuable for the climate resilience community. Therefore, Datacubes are often used to support decision-making processes.
+They provide a summarized and pre-aggregated view of data that can significantly speed query processing and analysis compared to working directly with raw data,
+which is very valuable for the climate resilience community. Therefore, Datacubes are often used to support decision-making processes.
 The example below highlights a climate resilience related example of how to create and make available Datacubes for wildfire risk analysis.
 
 
 //=== Jakub P. Walawender
 === Analysis Ready Data Cubes - user-friendly sharing of climate data records
 
-*Climate Data Record (CDR)* is a time serie of measurements of sufficient length, consistency, and continuity to determine potential climate variability and change (US National Research Council). These measurements can be obtained through groundbased stations or derived from a long time series of satellite data.
+*Climate Data Record (CDR)* is a time series of measurements of sufficient length, consistency, and continuity to determine potential climate variability and change (US National Research Council). These measurements can be obtained through ground based stations or derived from a long time series of satellite data.
 
 *Data Cube (Different approaches):* Datacubes organize data into a multi-dimensional structure. They contain typically:
 
@@ -31,22 +32,22 @@ multidimensional arrays of data
 * {blank}
 +
 //____
-4-dimensional array with dimensions x (longitude or easting), y (latitude or northing), time, and bands sharing the same data properties (https://doi.org/10.3390/data4030092[Appel and Pebesma, 2019])
+4-dimensional arrays with dimensions x (longitude or easting), y (latitude or northing), time, and bands sharing the same data properties (https://doi.org/10.3390/data4030092[Appel and Pebesma, 2019]); and
 //____
 * {blank}
 +
 //____
-where “cube” can be a metaphor to help illustrate a data structure that can in fact be 1- dimensional, 2-dimensional, 3-dimensional, or higher-dimensional. The dimensions may be coordinates or enumerations,
-e.g., categories (https://portal.ogc.org/files/?artifact_id=99131[OGC, 2021])
+the term “cube” can be a metaphor to help illustrate a data structure that can in fact be 1- dimensional, 2-dimensional, 3-dimensional, or higher-dimensional. The dimensions may be coordinates or enumerations,
+e.g., categories (https://portal.ogc.org/files/?artifact_id=99131[OGC, 2021]).
 
-Common (technical) definition of the Data Cube focuses on the data structure aspects exclusively!
+The common (technical) definition of the Data Cube focuses on the data structure aspects exclusively!
 
-*Analysis Ready Data (ARD)* - are data sets that have been processed to a minimum set of requirements and organized into a form that allows immediate analysis with a minimum of additional user effort and interoperability both through time and with other datasets. ARDs are often representing satellite data (https://ceos.org[CEOS website]).
+*Analysis Ready Data (ARD)* - are data sets that have been processed to a minimum set of requirements and organized into a form that allows immediate analysis with a minimum of additional user effort and interoperability both through time and with other datasets. ARDs often represent satellite data (https://ceos.org[CEOS website]).
 
-The idea behind the ARD is, that data providers such as e.g. EUMETSAT or ESA are better suited to do data pre-processing, e.g. atmospheric correction, cloud masking and re-gridding, than users. 
+The idea behind the ARD is that data providers, such as EUMETSAT or ESA, are better suited to perform data pre-processing, e.g., atmospheric correction, cloud masking, and re-gridding, than users. 
 
 *Analysis Ready Data Cubes (ARDCs)* +
-ARDs are often made available in the form of data cubes, which focus on a one specific region (e.g. https://www.swissdatacube.org[Swiss Data Cube]) or thematic application (e.g. https://training.eumetsat.int/course/view.php?id=399[EUMETSAT Drought & Vegetation Data Cube (D&V Data Cube)]). Data cubes can also be defined by the type of data it includes (e.g. https://training.eumetsat.int/course/view.php?id=437[Atmospheric Composition Data Cube (ACDC)], https://deepesdl.readthedocs.io/en/latest/datasets/ESDC[Earth System Data Cube (ESDC)] + https://www.earthsystemdatalab.net[Data Analytics Toolkit (Earth System Data Lab)]). +
+ARDCs are often made available in the form of data cubes which focus on one specific region (e.g., https://www.swissdatacube.org[Swiss Data Cube]) or thematic application (e.g., https://training.eumetsat.int/course/view.php?id=399[EUMETSAT Drought & Vegetation Data Cube (D&V Data Cube)]). Data cubes can also be defined by the type of data they include (e.g., https://training.eumetsat.int/course/view.php?id=437[Atmospheric Composition Data Cube (ACDC)], https://deepesdl.readthedocs.io/en/latest/datasets/ESDC[Earth System Data Cube (ESDC)] + https://www.earthsystemdatalab.net[Data Analytics Toolkit (Earth System Data Lab)]). +
 A data cube which contains various climate data records can be generally referred to as *Climate Data Cube*.
 
 //|Temporal resolution |Spatial resolution |Spatial coverage
@@ -65,7 +66,9 @@ A data cube which contains various climate data records can be generally referre
 |Solar radiation: 1983-2020, other: 2004-2020, SWI 1992-2020, Precipitation 1982-2020, T2m 1979-2020
 
 |https://doi.org/10.5281/zenodo.7473332[mesogeos - a Daily Datacube for the Modeling and Analysis of Wildfires in the Mediterranean]
-|Solar radiation: mean daily surface solar radiation downwards from ERA5-Land, other: dynamic variables - previous day Leaf Area Index, evapotransiration, Land Surface Temperature, meteorological data, fire variables and Fire Weather Index, static variables - roads density, population density and topography layers
+|Solar radiation: mean daily surface solar radiation downwards from ERA5-Land, other: dynamic variables - previous day Leaf Area Index, evapotranspiration, Land Surface Temperature, meteorological data, fire variables, and Fire Weather Index
+
+static variables - roads density, population density, and topography layers
 |One of many data cubes created within the Deep Cube (https://deepcube-h2020.eu/[Horizon 2020 Project “Explainable AI pipelines for big Copernicus data""])
 |2022
 |MODIS, ERA5, JRC European Drought Observatory, worldpop.org, Copernicus C3S,  Copernicus EU-DEM, EFFIS
@@ -74,7 +77,9 @@ A data cube which contains various climate data records can be generally referre
 |2002 - 2022
 
 |https://deepesdl.readthedocs.io/en/latest/datasets/ESDC/[The Earth System Data Cube (ESDC) ]
-|Solar radiation: Surface Net Solar Radiation, other: the cube includes all important meteorological variables (the list is too long to include in this table)
+|Solar radiation: Surface Net Solar Radiation
+
+Other: the cube includes all important meteorological variables (the list is too long to include in this table)
 |DeepESDL Team (https://www.earthsystemdatalab.net/[ESA-funded project Earth System Data Lab])
 |2022
 |ERA5 (for solar radiation)
@@ -92,30 +97,31 @@ A data cube which contains various climate data records can be generally referre
 |1981 - 2021
 
 |https://ecodatacube.eu[Open Environmental Data Cube]
-|Climate: air temperature (Min, Mean, Max), land surface temperature (Min, Mean, Max), precipitation (Daily Sum), Other: natural disasters, air quality, land cover, terrain, soil, forest and vegetation
+|Climate: air temperature (Min, Mean, Max), land surface temperature (Min, Mean, Max), precipitation (Daily Sum)
+
+Other: natural disasters, air quality, land cover, terrain, soil, forest, and vegetation
 |OpenGeoHub, CVUT Prague, mundialis,Terrasigna, MultiOne (https://opendatascience.eu/geoharmonizer-project/[Horizon2020 Project: “Geo-harmonizer: EU-wide automated mapping system for harmonization of Open Data based on FOSS4G and Machine Learning"])
 |2022
 |ERA5 (for climate variables)
 |Free
-|WFS for vector data, Cloud Optimised GeoTIFFs for raster datasets (allowing import, subset, crop and overlay parts of data for the local area.)
+|WFS for vector data, Cloud Optimized GeoTIFFs for raster datasets (allowing import, subset, crop, and overlay parts of data for the local area.)
 |2000 - 2020 and Predictions based on Ensemble Machine Learning
 |===
 
-Analysis Ready Data Cubes (ARDCs) play an important role in handling large volumes of data (such as satellite-based CDRs). They are often deployed on different spatial scales and consist of  datasets dedicated for particular application. This makes them more accessible, easier to use and less costly for the users.
-
+Analysis Ready Data Cubes (ARDCs) play an important role in handling large volumes of data (such as satellite-based CDRs). They are often deployed on different spatial scales and consist of  datasets dedicated for particular application. This makes them more accessible, easier to use, and less costly for the users.
 
 //=== Ecere Corporation
 === Data cubes to support wildfire risk analysis
 
 To support the pilot activities, Ecere provided, as an in-kind contribution, a deployment of its http://ecere.ca/gnosis/[GNOSIS Map Server] implementing several OGC API standards enabling efficient access to data cubes.
-The API and backend functionality for these data cubes, improved throughout this pilot, are also supporting a Wildland Fire Fuel indicator workflow for the OGC Disaster Pilot taking place until the end of September 2023.
-As an end goal of that Disaster Pilot, the data cube API should support machine learning prediction for classifying wildland fire fuel vegetation type from Earth Observation imagery.
+The API and backend functionality for these data cubes, improved throughout this pilot, also support a Wildland Fire Fuel indicator workflow for the OGC Disaster Pilot taking place until the end of September 2023.
+As an end goal of that Disaster Pilot, the data cube API should support machine learning predictions for classifying wildland fire fuel vegetation type from Earth Observation imagery.
 A number of climate datasets and wildland fire danger indices were also made accessible through that same data cube API.
-Additional machine learning predictions experiments may be performed based on those datasets as well.
+Additional machine learning prediction experiments may be performed based on those datasets as well.
 
 The API and datasets were provided in the hope that they would prove useful to other participants and could be part of Technology Integration Experiments (TIEs) for the pilot and other related OGC initiatives.
 Mainly due to the exploratory nature of this first phase of the pilot, no successful TIE with these resources with other participants were noted during its execution.
-However, these resources will remain operational, and successful TIEs are expected with them as part of the Disaster Pilot, the OGC Testbed 19 Geo Data Cube tasks as well as future phases of the climate resilience pilot.
+However, these resources will remain operational and successful TIEs are expected with them as part of the Disaster Pilot, the OGC Testbed 19 Geo Data Cube tasks, and  as future phases of the climate resilience pilot.
 
 ==== Climate resilience data cubes
 
@@ -129,7 +135,7 @@ During the course of the pilot, the following datasets relevant to climate resil
 | https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:byPressureLevel:windSpeed[CMIP5 projections (wind speed)]| Eastward and Northward wind velocity | 2016 to 2025 | daily | Global | 2.5° longitude x 2° latitude | 8 pressure levels | https://cds.climate.copernicus.eu/cdsapp#!/dataset/projections-cmip5-daily-pressure-levels[Copernicus Climate Data Store]
 | https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:byPressureLevel:temperature[CMIP5 projections (air temperature)]| Air temperature | 2016 to 2025 | daily | Global | 2.5° longitude x 2° latitude | 8 pressure levels | https://cds.climate.copernicus.eu/cdsapp#!/dataset/projections-cmip5-daily-pressure-levels[Copernicus Climate Data Store]
 | https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:byPressureLevel:gpHeight[CMIP5 projections (geopotential height)]| Geopotential height | 2016 to 2025 | daily | Global | 2.5° longitude x 2° latitude | 8 pressure levels | https://cds.climate.copernicus.eu/cdsapp#!/dataset/projections-cmip5-daily-pressure-levels[Copernicus Climate Data Store]
-| https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure[CMIP5 projections on single level]| Near-surface specific humidity, Precipitation, Snowfall flux, Sea level pressure, Surface downwelling shortwave radiation, Daily-mean near-surface wind speed, Average, Minimum and Maximum
+| https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure[CMIP5 projections on single level]| Near-surface specific humidity, Precipitation, Snowfall flux, Sea level pressure, Surface downwelling shortwave radiation, Daily-mean near-surface wind speed, Average, Minimum and Maximum,
    near-surface air temperature | 2016 to 2025 | daily | Global | 2.5° longitude x 2° latitude | N/A | https://cds.climate.copernicus.eu/cdsapp#!/dataset/projections-cmip5-daily-single-levels/[Copernicus Climate Data Store]
 | https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity[ERA5 reanalysis (relative humidity)] | Relative humidity | April 1 to 6, 2023 | hourly | Global | 0.25° longitude x 0.25° latitude | 37 pressure levels | https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-pressure-levels?tab=overview[Copernicus Climate Data Store]
 | https://maps.gnosis.earth/ogcapi/collections/wildfire:fireDangerIndices[ECMWF CEMS Fire Danger indices] | Burning index, Build-up index, Danger risk, Drought code, Duff moisture code, Fire danger severity rating,
@@ -178,7 +184,7 @@ This section describes some of these supported standards and illustrates their u
 ===== _OGC API - Common_
 
 The OGC API standards form a complementary set of functionality for efficiently accessing data and processing resources, combining together through the _OGC API - Common_ framework.
-Whereas https://docs.ogc.org/is/19-072/19-072.html[_OGC API - Common - Part 1_] standardizes how the API can present a landing page, describe itself and declare conformance to specific standards,
+Whereas https://docs.ogc.org/is/19-072/19-072.html[_OGC API - Common - Part 1_] standardizes how the API can present a landing page, describe itself, and declare conformance to specific standards,
 https://docs.ogc.org/DRAFTS/20-024.html[_Part 2_] provides a consistent mechanism to list and describe collections of geospatial data.
 The following _Common_ resources are available from the GNOSIS Map Server demonstration end-point:
 
@@ -213,20 +219,20 @@ The following table summarizes common query parameters supported by several of t
 | `height`              | For specifying the height of the output (resampling)                                                                     | Coverages, Maps
 |===
 
-With _Coverages_ and _Maps_, a spatial area of interest can be specified using either e.g., `bbox=10,20,30,40` or `subset=Lat(20:40),Lon(10:30)`.
+With _Coverages_ and _Maps_, a spatial area of interest can be specified using either, e.g., `bbox=10,20,30,40` or `subset=Lat(20:40),Lon(10:30)`.
 
-For temporal datasets, a specific time can be requested using e.g., `datetime=2022-03-01` or `subset=time("2022-03-01")`.
+For temporal datasets, a specific time can be requested using, e.g., `datetime=2022-03-01` or `subset=time("2022-03-01")`.
 
 For the data cubes with multiple pressure levels, the `pressure` dimension is defined and can be used with the `subset` query parameter with all of the data access OGC API standards
-(_Coverages_, _Tiles_, _DGGS_ and _Maps_) e.g., `subset=pressure(500)`.
+(_Coverages_, _Tiles_, _DGGS_ and _Maps_), e.g., `subset=pressure(500)`.
 
 ===== _OGC API - Coverages_
 
 The https://docs.ogc.org/DRAFTS/19-087.html[_OGC API - Coverages_] candidate Standard is a simple API defining fundamental functionality to retrieve access data for arbitrary fields,
-area, time and resolution of interest from a data cube.
+area, time, and resolution of interest from a data cube.
 
 The main resource to retrieve data using the _Coverages_ API is located at `/collections/{collectionId}/coverage` for each data collection.
-This resource supports a number of query parameters defined by optional requirements classes and extensions supported by the GNOSIS Map Server:
+This resource supports a number of query parameters defined by optional requirements classes and extensions supported by the GNOSIS Map Server.
 
 .Supported query parameters defined by optional requirements classes and extensions supported by the GNOSIS Map Server
 [options="header"]
@@ -251,27 +257,28 @@ The _Coverages_ draft currently also specifies a _DomainSet_ JSON object which i
 which may be included either within the collection description itself, or at a dedicated resource (`/collections/{collectionId}/coverage/domainset`).
 The schema for this _DomainSet_ object describes the domain of the coverage (the extent and resolution of its dimensions / axes) and follows the https://docs.ogc.org/is/09-146r8/09-146r8.html[Coverages Implementation Schema (CIS) 1.1.1].
 An example of such a domain set resource can be found at https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:byPressureLevel:windSpeed/coverage/domainset?f=json .
-At the time of writing this report, discussions are underway to potentially simplify the API by fully describing the domain directly within the collection description resource,
+
+At the time of writing this report discussions are underway to potentially simplify the API by fully describing the domain directly within the collection description resource,
 using _uniform additional dimensions_, as well as the `grid` property, inside the `extent` property, which can describe both regular as well as irregular grids, removing the need for this extra resource.
 For example, see the collection description for the https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure?f=json[CMIP5 single pressure level data]
 and its corresponding https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/coverage/domainset?f=json[CIS domain set resource].
 
 The _Coverages_ draft currently also specifies a _RangeType_ JSON object which is linked using the `[ogc-rel:coverage-rangetype]` link relation from the collection description,
-which may be included either within the collection description itself, or at a dedicated resource (`/collections/{collectionId}/coverage/domainset`).
+which may be included either within the collection description itself or at a dedicated resource (`/collections/{collectionId}/coverage/domainset`).
 The schema for this _RangeType_ object describes the range type of the coverage (the extent and resolution of its dimensions / axes) and follows the https://docs.ogc.org/is/09-146r8/09-146r8.html[Coverages Implementation Schema (CIS) 1.1.1].
 An example of such a range type resource can be found at https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:byPressureLevel:windSpeed/coverage/rangetype?f=json .
 It might be possible to also describe the range type in a common way across the different OGC APIs using a JSON schema with semantic annotations, as per the work
 undertaken for https://github.com/opengeospatial/ogcapi-features/projects/11[_OGC API - Features - Part 5: Schemas_].
 
 A _Coverage Tiles_ requirements class is defined in _OGC API - Coverages_, leveraging the _OGC API - Tiles_ standard while clarifying requirements for coverage tile responses.
-Example of coverage tiles requests are described below in the _OGC API - Tiles_ section.
+Examples of coverage tile requests are described below in the _OGC API - Tiles_ section.
 
 At the moment, the GNOSIS Map Server implementation of _Coverages_ is limited to the following 2D (spatial dimensions) output formats:
 
-- GeoTIFF (multiple fields, two-dimensional),
+- GeoTIFF (multiple fields, two-dimensional); and
 - PNG (single field, 16-bit output, currently using fixed scale (2.98) and offset (16384) modifiers).
 
-There is a plan to add support for n-dimensional output formats, including netCDF, CIS JSON and eventually CoverageJSON as well.
+There is a plan to add support for n-dimensional output formats, including netCDF, CIS JSON, and eventually CoverageJSON, as well.
 For coverages with more than two dimensions, a specific time and/or pressure slice must therefore be selected, currently requiring separate API requests to retrieve a range of time or pressure levels.
 
 Some example of coverage requests:
@@ -292,7 +299,7 @@ https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/covera
 
 The https://docs.ogc.org/DRAFTS/20-058.html[_OGC API - Maps_] candidate Standard defines the ability to retrieve a visual representation of geospatial data.
 The main resource to retrieve data using the _Maps_ API is located at `/collections/{collectionId}/map` for each data collection.
-This resource supports a number of query parameters defined by optional requirements classes and extensions supported by the GNOSIS Map Server:
+This resource supports a number of query parameters defined by optional requirements classes and extensions supported by the GNOSIS Map Server.
 
 .Supported query parameters defined by optional requirements classes and extensions supported by the GNOSIS Map Server
 [options="header"]
@@ -318,7 +325,7 @@ https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/map?w
 https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:byPressureLevel:windSpeed/map?subset=pressure(850)&height=1024
 
 NOTE: Proper symbolization for this wind velocity map (above request) would require support for wind barbs.
-In the meantime, the Eastward and Northward velocity are assigned to the green and blue color channels.
+In the meantime, the Eastward and Northward velocities are assigned to the green and blue color channels.
 
 https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:byPressureLevel:temperature/map?subset=pressure(850)[https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:byPressureLevel:temperature/map?subset=pressure(850)]
 
@@ -345,14 +352,14 @@ image::ecere/s2_map_scl.png[]
 https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/styles/scl/map?subset=Lat(-16.259765625:-16.2158203125),Lon(124.4091796875:124.453125)&datetime=2022-06-28
 
 A _Map Tilesets_ requirements class is defined in _OGC API - Maps_, leveraging the _OGC API - Tiles_ stand while clarifying requirements for map tile responses.
-Example of map tiles requests are described below in the _OGC API - Tiles_ section.
+Examples of map tiles requests are described below in the _OGC API - Tiles_ section.
 
 ===== _OGC API - Tiles_
 
 The https://docs.ogc.org/is/20-057/20-057.html[_OGC API - Tiles_] Standard defines the ability to retrieve geospatial data as tiles based on the https://docs.ogc.org/is/17-083r4/17-083r4.html[_OGC 2D Tile Matrix Set and Tileset Metadata_] Standard,
 originally defined as part of the https://www.ogc.org/standard/wmts/[_Web Map Tile Service (WMTS)_] Standard.
-Unlike WMTS which focused strictly on pre-rendered or server-side rendered _Map_ tiles, the _Tiles API_ was designed to also enable the use of data tiles such as _Coverages Tiles_ and _Vector Tiles_
-which can be styled, rendered and used for data analytics performed on the client side.
+Unlike WMTS, which focused strictly on pre-rendered or server-side rendered _Map_ tiles, the _Tiles API_ was designed to also enable the use of data tiles such as _Coverages Tiles_ and _Vector Tiles_
+which can be styled, rendered, and used for data analytics performed on the client side.
 Using pre-determined partitioning schemes facilitates caching for both servers and clients, resulting in more responsive dynamic maps.
 
 The following _Tiles API_ resources are defined:
@@ -378,11 +385,11 @@ The GNOSIS Map Server supports a number of _2D Tile Matrix Sets_ for all of the 
 
 The GNOSIS Map Server currently supports the following coverage tile formats:
 
-- https://ecere.com/gmt.pdf[GNOSIS Map Tiles] (multiple fields, n-dimensional)
-- GeoTIFF (multiple fields, two-dimensional)
-- PNG (single field, 16-bit value using fixed scale (2.98) and offset (16384) modifiers)
+- https://ecere.com/gmt.pdf[GNOSIS Map Tiles] (multiple fields, n-dimensional);
+- GeoTIFF (multiple fields, two-dimensional); and
+- PNG (single field, 16-bit value using fixed scale (2.98) and offset (16384) modifiers).
 
-Support is planned for netCDF, CIS JSON, and eventually CoverageJSON as well as additional formats.
+Support is planned for netCDF, CIS JSON, and eventually CoverageJSON, as well as additional formats.
 
 Example coverage tile queries:
 
@@ -449,13 +456,13 @@ https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/styles
 
 ===== _OGC Common Query Language (CQL2)_
 
-The https://docs.ogc.org/DRAFTS/21-065.html[_OGC Common Query Language_], abbreviated _CQL2_, allows to define query expressions.
-Although introduced as a language to specify a boolean predicate for _OGC API - Features - Part 3: Filtering_, the language is easily extended for additional use cases
-such as filtering the range set of a coverage request, or to deriving new fields using expressions (that can return non-boolean values) including performing coverage band arithmetics,
+The https://docs.ogc.org/DRAFTS/21-065.html[_OGC Common Query Language_], abbreviated _CQL2_, allows the user to define query expressions.
+Although introduced as a language to specify a boolean predicate for _OGC API - Features - Part 3: Filtering_, the language is easily extended for additional use cases,
+such as filtering the range set of a coverage request, or deriving new fields using expressions--that can return non-boolean values--including performing coverage band arithmetics,
 such as calculating vegetation indices.
 
 Support for CQL2 in the `filter` parameter is implemented in the GNOSIS Map Server for _Coverages_, _Features_, _Maps_, _Tiles_ as well as _DGGS_.
-For example, to request all data from the https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure[CMIP5 single pressure level collection]
+For example, requesting all data from the https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure[CMIP5 single pressure level collection]
 where the maximum daily temperature is greater than 300 Kelvins, `filter=tasmax>300` (unmatched cells will be replaced by NODATA values).
 
 Support for CQL2 in the `properties` parameter is currently implemented for _Coverages_, _Tiles_ and _DGGS_.
@@ -497,12 +504,12 @@ https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/cover
 
 ===== _OGC API - Discrete Global Grid Systems_
 
-The https://opengeospatial.github.io/ogcna-auto-review/21-038.html[_OGC API - DGGS_] candidate Standard allows to retrieve data and perform spatial queries based on hierarchical multi-resolution discrete grids covering the entirety of the Earth.
-There are three main requirements classes for this standard:
+The https://opengeospatial.github.io/ogcna-auto-review/21-038.html[_OGC API - DGGS_] candidate Standard allows the retrieval of data and performance of spatial queries based on hierarchical multi-resolution discrete grids covering the entirety of the Earth.
+There are three main requirement classes for this standard:
 
-- Core (DGGS definition and zone information resource),
-- Zone Data Retrieval (_What is here?_),
-- Zones Query (_Where is it?_)
+- Core (DGGS definition and zone information resource);
+- Zone Data Retrieval (_What is here?_); and
+- Zones Query (_Where is it?_).
 
 The following _DGGS API_ resources are defined:
 
@@ -517,30 +524,32 @@ The following _DGGS API_ resources are defined:
 | .../dggs/{dggsId}/zones/{zoneId}/data   | _Data Retrieval_   | For retrieving data for a specific zone
 |===
 
-_DGGS API_ requests imply the use a particular grid understood by both the client and the server, associated with the `{dggsId}` of the resource on which the request is performed.
+_DGGS API_ requests imply the use a particular grid, understood by both the client and the server, associated with the `{dggsId}` of the resource on which the request is performed.
 Several different discrete global grids have been defined. The GNOSIS Map Server currently supports two discrete global grids:
 
 :url-isea9r: https://docs.ogc.org/per/23-010.html#_dggs_based_on_the_icosahedral_snyder_equal_area_isea_projection
 
 - the _GNOSIS Global Grid_, based on the https://maps.gnosis.earth/ogcapi/tileMatrixSets/GNOSISGlobalGrid[2D Tile Matrix Set of the same name] defined in the EPSG:4326 geographic CRS, axis-aligned with latitude and longitude,
-and using variable width tile matrices to approach equal area (maximum variation is ~48% up to a very detailed zoom level),
+and using variable width tile matrices to approach equal area (maximum variation is ~48% up to a very detailed zoom level); and
 - the {url-isea9r}[_ISEA9R_] (Icosahedral Snyder Equal Area aperture 9 Rhombus) grid, a dual DGGS of ISEA3H (aperture 3 hexagonal) for its even levels, using rhombuses/diamonds which, compared to hexagons,
-are much simpler to index and for which it is much easier to encode data in a rectilinear formats such as GeoTIFF. The area values of ISEA3H hexagons can be transported as points
-on the rhombus vertices for those ISEA3H even levels. The ISEA9R grid is also axis-aligned to a CRS defined by rotating and skewing the ISEA projection, also allowing to define
+are much simpler to index and for which it is much easier to encode data in rectilinear formats such as GeoTIFF. The area values of ISEA3H hexagons can be transported as points
+on the rhombus vertices for those ISEA3H even levels. The ISEA9R grid is also axis-aligned to a CRS defined by rotating and skewing the ISEA projection, also allowing the definition of
 a https://maps.gnosis.earth/ogcapi/tileMatrixSets/ISEA9Diamonds[2D Tile Matrix Set for it].
 
-A client will normally opt to use _OGC API - DGGS_ if it shares an understanding and internal use of the same grid with the server.
-Although for axis-aligned DGGS that can be represented as a 2D Tile Matrix Set _OGC API - Tiles_ can be used to retrieve data for specific zones,
-the DGGS API enables zone data retrieval for other DGGS which are not axis-aligned or whose geometry makes that impossible (e.g., hexagons).
+A client will normally opt to use _OGC API - DGGS_ if the client shares an understanding and internal use of the same grid with the server.
+Although, for axis-aligned DGGS that can be represented as a 2D Tile Matrix Set _OGC, API - Tiles_ can be used to retrieve data for specific zones.
+The DGGS API enables zone data retrieval for other DGGS which are not axis-aligned or whose geometry makes that impossible (e.g., hexagons).
 Another important use of the DGGS API is the ability to efficiently retrieve the results of a spatial query (e.g., using CQL2) in the form of a compacted list of zone IDs.
 
 ====== Core
 
-The core requirements class defines requirements to list available DGGS, describe each of them and provide information for individual zones.
+The core requirements class defines requirements for listing available DGGS, describing each of them, and providing information for individual zones.
 
-In the GNOSIS Map Server implementation of the zone information resource, since both supported DGGS also correspond to a 2D Tile Matrix Set, the Level, Row and Column
+In the GNOSIS Map Server implementation of the zone information resource, since both supported DGGS also correspond to a 2D Tile Matrix Set, the Level, Row, and Column
 for the equivalent _OGC API - Tiles_ request is displayed on the information page, as can be seen below.
-For the DGGS `{zoneId}`, the level, row and column is encoded differently in a compact hexadecimal identifier.
+
+For the DGGS `{zoneId}`, the level, row, and column are encoded differently in a compact hexadecimal identifier.
+
 Some example zone information requests:
 
 [#ecere_dggs_zone_info_GGG_5-25-6E,reftext='{figure-caption} {counter:figure-num}']
@@ -559,10 +568,11 @@ https://maps.gnosis.earth/ogcapi/collections/sentinel2-l2a/dggs/ISEA9Diamonds/zo
 
 ====== Zone Data Retrieval: _What is here?_
 
-The _Zone Data Retrieval_ requirements class allows to retrieve data for a specific DGGS zone.
-For axis-aligned DGGSs whose zone geometry can be described by a 2D Tile Matrix Set such as the _GNOSISGlobalGrid_, _ISEA9R_ or _rHealPix_, this capability is equivalent to _Coverage Tiles_
+The _Zone Data Retrieval_ requirements class allows the retrieval of data for a specific DGGS zone.
+For axis-aligned DGGSs whose zone geometry can be described by a 2D Tile Matrix Set, such as the _GNOSISGlobalGrid_, _ISEA9R_, or _rHealPix_, this capability is equivalent to _Coverage Tiles_
 requests for the corresponding TileMatrixSets.
-This requirements class supports returning data for zones whose geometry is of an arbitrary shape e.g., hexagonal or triangular.
+This requirements class supports returning data for zones whose geometries are of an arbitrary shape, e.g., hexagonal or triangular.
+
 The zone data retrieval resource is `.../dggs/{dggsId}/zones/{zoneId}/data`, for which the GNOSIS Map Server supports a number of query parameters:
 
 .Query parameters supported by the GNOSIS Map Server
@@ -593,7 +603,7 @@ https://maps.gnosis.earth/ogcapi/collections/climate:cmip5:singlePressure/dggs/I
 
 ====== Zone Queries: _Where is it?_
 
-The _Zone Query_ requirements class allows to efficiently retrieve the results of a spatial query in the form of compact list of zone IDs.
+The _Zone Query_ requirements class allows the efficient retrieval of the results of a spatial query in the form of a compact list of zone IDs.
 The list can be compacted (the default) by replacing children zones by their parents when all children of that parent are part of the result set.
 The zone query resource is `.../dggs/{dggsId}/zones`, for which the GNOSIS Map Server supports a number of query parameters:
 
@@ -612,15 +622,15 @@ The zone query resource is `.../dggs/{dggsId}/zones`, for which the GNOSIS Map S
 |===
 
 By creating a kind of mask at a specifically requested resolution level, DGGS Zones Query can potentially greatly help parallelization and orchestration of spatial queries
-combining multiple datasets across multiple services, allowing to perform early optimizations with lazy evaluation.
+combining multiple datasets across multiple services, allowing the performance of early optimizations with lazy evaluations.
 
 NOTE: There are currently some limitations to the GNOSIS Map Server implementation of the _Zones Query_ requirements class.
 
 Examples of zone queries:
 
-*_Where is relative humidity at 850 hPa greater than 80% on April 3rd, 2023? (at precision level of GNOSIS Global Grid level 6)_*
+*_Where is relative the humidity at 850 hPa greater than 80% on April 3rd, 2023? (at the precision level of GNOSIS Global Grid level 6)_*
 
-(using the default `compact-zones=true` where children zones are replaced by parent zone if all children zones are included)
+(using the default `compact-zones=true` where children zones are replaced by parent zones if all children zones are included)
 
 https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/dggs/GNOSISGlobalGrid/zones?subset=pressure(850)&datetime=2023-04-03&filter=r%3E80&zone-level=6&f=json
 (Plain Zone ID list output)
@@ -637,7 +647,7 @@ image::ecere/dggs_zoneQuery1.png[]
 
 https://maps.gnosis.earth/ogcapi/collections/climate:era5:relativeHumidity/dggs/GNOSISGlobalGrid/zones?subset=pressure(850)&datetime=2023-04-03&filter=r%3E80&zone-level=6&f=geojson
 
-*_Where is maximum daily temperature greater than 300 degrees Kelvins on September 4, 2022? (at precision level of GNOSIS Global Grid level 6)_*
+*_Where is the maximum daily temperature greater than 300 degrees Kelvin on September 4, 2022? (at precision level of GNOSIS Global Grid level 6)_*
 
 (using the default `compact-zones=true` where children zones are replaced by parent zone if all children zones are included)
 
@@ -680,33 +690,33 @@ The following table summarizes the available processes and their current functio
 | https://maps.gnosis.earth/ogcapi/processes/OSMERE[OSM Ecere Routing Engine (OSMERE)]                                  | Working    | This process computes a route from waypoints based on an OSM roads network.
 | https://maps.gnosis.earth/ogcapi/processes/RenderMap[Maps rendering process]                                          | Working    | This process renders a map from input data layers.
 | https://maps.gnosis.earth/ogcapi/processes/PassThrough[Passthrough process]                                           | Working for features (coverage support to implement) | This process integrates inputs passing them through as an output, providing an opportunity to apply field modifiers.
-| https://maps.gnosis.earth/ogcapi/processes/echo[Echo Process]                                                         | Working (passing TeamEngine CITE test) | This process accepts any number of input and simply echoes each input as an output.
-| https://maps.gnosis.earth/ogcapi/processes/PCGridify[Point Cloud Gridifier]                                           | (Currently requires a local Point Cloud collection, and none is loaded) | Generate a Digital Elevation Model or orthorectified imagery from a point cloud
+| https://maps.gnosis.earth/ogcapi/processes/echo[Echo Process]                                                         | Working (passing TeamEngine CITE test) | This process accepts any number of inputs and simply echoes each input as an output.
+| https://maps.gnosis.earth/ogcapi/processes/PCGridify[Point Cloud Gridifier]                                           | (Currently requires a local Point Cloud collection, and none is loaded) | This process generates a Digital Elevation Model or orthorectified imagery from a point cloud
 | https://maps.gnosis.earth/ogcapi/processes/PointCloudElevation[Point Cloud Elevation]                                 | (Currently requires a local Point Cloud collection, and none is loaded) | This process extracts elevation values from a point cloud and applies them as attributes to vector features.
-| https://maps.gnosis.earth/ogcapi/processes/RFClassify[Random Forest Classification]                                   | (To be tested again with local sentinel2-l2a collection) | Output random-forest classified image using imagery and training feature dataset
+| https://maps.gnosis.earth/ogcapi/processes/RFClassify[Random Forest Classification]                                   | (To be tested again with local sentinel2-l2a collection) | This process outputs random-forest classified images using an imagery and training feature dataset
 | https://maps.gnosis.earth/ogcapi/processes/WCPSAdapter[MOAW-WCPS adapter]                                             | (To be tested again with WCPS implementation) | This process integrates a WCPS service as part of a Modular OGC API Workflow.
 |===
 
 The description of each individual process is available at `/processes/{processId}`, listing available inputs and outputs, whereas the execution end-point for each process is at `/processes/{processId}/execution`,
 supporting a `POST` operation in which the client includes an https://github.com/opengeospatial/ogcapi-processes/blob/master/openapi/schemas/processes-core/execute.yaml[execution request] as a payload.
-At this time, only synchronous execution and (Part 3) _collection output_ deferred execution is supported.
+At this time, only synchronous execution and (Part 3) _collection output_ deferred execution are supported.
 
-A new process is being developed to classify fuel vegetation types using machine learning prediction in the context of the OGC Disaster Pilot 2023.
-This process will accept as input data from the sentinel-2 Level-2A collection and return fuel vegetation types.
+A new process is being developed to classify fuel vegetation types using machine learning predictions in the context of the OGC Disaster Pilot 2023.
+This process will accept input data from the sentinel-2 Level-2A collection and will return fuel vegetation types.
 The fuel vegetation type coverage for continental United States from landfire.gov will be used as initial training data.
 This process was not yet operational at the time of writing this report.
 
 ===== _OGC API - Processes - Part 3: Workflows and Chaining_
 
-The https://docs.ogc.org/DRAFTS/21-009.html[_Part 3: Workflows and Chaining_] candidate Standard extends _OGC API - Processes_ enabling the chaining of nested local and remote processing capabilities,
+The https://docs.ogc.org/DRAFTS/21-009.html[_Part 3: Workflows and Chaining_] candidate Standard extends _OGC API - Processes_ enabling the chaining of nested local and remote processing capabilities
 and their integration with local and remote OGC API data collections.
 
-The GNOSIS Map Server currently supports the following extensions defined by _Part 3: Workflows and Chaining_ to the process execution capabilities of _Part 1_:
+The GNOSIS Map Server currently supports the following extensions defined by _Part 3: Workflows and Chaining_ to the process execution capabilities of _Part 1_.
 
-* extending execution requests submitted to `/processes/{processId}/execution` by:
-   ** referencing local and remote nested processes as inputs (`"process"`),
-   ** referencing local and remote OGC API collections as inputs (`"collection"`),
-   ** modifying data accessed as inputs and returned as outputs (currently only for the _PassThrough_ process) by filtering with `"filter"`, as well as selecting and deriving fields with `"properties"`,
-* requesting output data from virtual OGC API data collections to trigger processing execution (_collection output_), using `response=collection` query parameter and value.
+* Extending execution requests submitted to `/processes/{processId}/execution` by:
+   ** referencing local and remote nested processes as inputs (`"process"`);
+   ** referencing local and remote OGC API collections as inputs (`"collection"`); and
+   ** modifying data accessed as inputs and returned as outputs (currently only for the _PassThrough_ process) by filtering with `"filter"`, as well as selecting and deriving fields with `"properties"`.
+* Requesting output data from virtual OGC API data collections to trigger processing executions (_collection output_) using `response=collection` query parameters and values.
 
 Work is ongoing to enhance the data integration capabilities and cross-collection queries to achieve the full potential of _Part 3_ bringing together local and remote OGC API data and processing capabilities.
